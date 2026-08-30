@@ -1,0 +1,30 @@
+==============================================================================
+STONE T -- first contact with the T gate (Clifford+T, exact)
+==============================================================================
+[PASS] TB1 ring: sqrt2 multiply/divide round-trip exact; conj(w)= -w^3; sqrt2^2 = 2
+[PASS] TB1 unitarity: H, S, T unitary (U U+ = I mod phase); H^2 = I, S^4 = I mod phase
+[PASS] TB1 Clifford: <H,S> mod phase has exactly 24 elements
+
+--- TB2: BFS layers vs Matsumoto-Amano words (the skeleton) ---
+  reached K = 9; layer sizes [24, 72, 144, 288, 576, 1152, 2304, 4608, 9216, 18432]; total 36816
+[PASS] TB2 growth: layer sizes = 24, then 72 * 2^(k-1): exact rate-2 free growth (the crystal's 4*2^(l-1) skeleton, in the T world)
+[PASS] TB2 MA = BFS: Matsumoto-Amano words reproduce every BFS layer AS A SET for all k <= K: normal-form uniqueness AND T-optimality verified on range  [classical: Matsumoto-Amano 2008]
+
+--- TB3: the denominator certificate (registered headline) ---
+[PASS] TB3 REGISTERED OUTCOME: the locked candidate invariant (global sde, sorted entry-depths) is NOT single-valued even on the fit window k <= 3 — the naive denominator certificate is INCOMPLETE, refuted at the diagonal (witnesses: S has T-count 0 and T has T-count 1 with the IDENTICAL invariant).  Recorded as the registered headline finding  -> first collision: invariant (0, (0, 0, 0, 0)) -> T-counts [0, 1]; 6 colliding invariants over the full range
+python : Traceback (most recent call last):
+At line:1 char:364
++ ... p\Scar_merkabit"; python -X utf8 verify_stone_t_tgate.py 2>&1 | Tee-O ...
++                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "C:\Users\selin\OneDrive\Desktop\Scar_merkabit\verify_stone_t_tgate.py", line 227, in <module>
+    for u in layers[k]: g2[invariant2(u)].add(k)
+                           ~~~~~~~~~~^^^
+  File "C:\Users\selin\OneDrive\Desktop\Scar_merkabit\verify_stone_t_tgate.py", line 224, in invariant2
+    return (s, tuple(sorted(ent)))
+                     ~~~~~~^^^^^
+TypeError: '<' not supported between instances of 'str' and 'int'
+
+[exited with code 1]

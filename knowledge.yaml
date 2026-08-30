@@ -67,13 +67,47 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.14 -- rows SM-001..SM-016"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.15 -- rows SM-001..SM-017"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: 2e3faddc9f58a6cafc3f396916639f542587a54e6c2d14812d7f75ae76b23143
+    sha256: a4679aef9cc09d775eb4c19d25d202a86faf7f7b9bea5216e5d70dd9dd1cb5a4
+
+  - id: stone-t-brief
+    path: BRIEF_STONE_T_TGATE.md
+    title: "Stone T brief (sha-locked before code; lock + pre-reveal amendment)"
+    intent: >
+      Pre-registered bars TB1..TB5 for first Clifford+T contact; the
+      locked fit/test protocol whose refutation branch fired; amendment
+      instantiated the sample and cap pre-reveal.
+    scope: brief
+    sha256: fa6816e965e0e3eeb3a685a7143bf61f407717ce5739b0c94ef2b253c2c86a93
+
+  - id: stone-t-doc
+    path: STONE_T_TGATE.md
+    title: "SM-017 -- Stone T: first contact with the T gate"
+    intent: >
+      Exhaustive n=1 ground truth (36,816 unitaries, T-count <= 9, exact
+      Z[omega]): free skeleton survives (72*2^(k-1); MA = BFS on range);
+      counting certificates refuted (sde = bracket only, k in [2s-3,2s]);
+      the Clifford+T contingency table = channel matrices mod 24 proper
+      signed perms at canonical sqrt2-scale (528/528; one coset per layer
+      k<=3); bitangent skeleton = exactly the T-free stratum (normalizer
+      theorem). Open problem #3 boundary, final form.
+    scope: theorem
+    sha256: e090bd7e2f71de5e234e557db13256ad33e8c3ae2ee79a7f79df79a47b66ffd9
+
+  - id: stone-t-verifier
+    path: verify_stone_t_tgate.py
+    title: "Stone T verifier (11 checks, ~5 min)"
+    intent: >
+      Exact Z[omega] arithmetic, BFS layers C(TC)^k mod phase, MA word
+      enumeration, locked invariant protocol, channel canonicalization
+      (proper rotations, canonical scale), n=3 phase-point exit checks.
+    scope: verifier
+    sha256: fc859263ef087ab3c6ec4da889535a11c35bc6f827d3e881fdeda9156d19aadd
 
   - id: stone-r-brief
     path: BRIEF_STONE_R_ALTITUDE.md

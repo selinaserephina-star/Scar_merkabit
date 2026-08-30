@@ -1,0 +1,29 @@
+﻿==============================================================================
+STONE T -- first contact with the T gate (Clifford+T, exact)
+==============================================================================
+[PASS] TB1 ring: sqrt2 multiply/divide round-trip exact; conj(w)= -w^3; sqrt2^2 = 2
+[PASS] TB1 unitarity: H, S, T unitary (U U+ = I mod phase); H^2 = I, S^4 = I mod phase
+[PASS] TB1 Clifford: <H,S> mod phase has exactly 24 elements
+
+--- TB2: BFS layers vs Matsumoto-Amano words (the skeleton) ---
+  reached K = 9; layer sizes [24, 72, 144, 288, 576, 1152, 2304, 4608, 9216, 18432]; total 36816
+[PASS] TB2 growth: layer sizes = 24, then 72 * 2^(k-1): exact rate-2 free growth (the crystal's 4*2^(l-1) skeleton, in the T world)
+[PASS] TB2 MA = BFS: Matsumoto-Amano words reproduce every BFS layer AS A SET for all k <= K: normal-form uniqueness AND T-optimality verified on range  [classical: Matsumoto-Amano 2008]
+
+--- TB3: the denominator certificate (registered headline) ---
+[PASS] TB3 REGISTERED OUTCOME: the locked candidate invariant (global sde, sorted entry-depths) is NOT single-valued even on the fit window k <= 3 — the naive denominator certificate is INCOMPLETE, refuted at the diagonal (witnesses: S has T-count 0 and T has T-count 1 with the IDENTICAL invariant).  Recorded as the registered headline finding  -> first collision: invariant (0, (0, 0, 0, 0)) -> T-counts [0, 1]; 6 colliding invariants over the full range
+[PASS] TB3 post-hoc refinement: adding per-entry residues mod sqrt2 (the omega-parity layer): tested for single-valuedness over the FULL range — measured, labelled post-hoc  -> single-valued: False; colliding invariants: 8; first: (1, ((1, (0, 1)), (1, (0, 1)), (1, (1, 0)), (1, (1, 0)))) -> [1, 2]
+  global sde s -> T-counts present: s=0: [0, 1]; s=1: [0, 1, 2]; s=2: [1, 2, 3, 4]; s=3: [3, 4, 5, 6]; s=4: [5, 6, 7, 8]; s=5: [7, 8, 9]; s=6: [9]
+
+--- TB4: channel representation = the Clifford+T table ---
+[PASS] TB4 signed perms: every Clifford's channel matrix is a signed permutation of the 3 Pauli axes (one nonzero per row and column) [classical]
+[FAIL] TB4 table = coset: on the declared sample (all T-count <= 3, 528 elements): channel canonical forms induce EXACTLY the double-coset partition — the C.U.C invariant IS a matrix modulo signed permutations: the Clifford+T contingency table  [P: the channel is phase-faithful; C on range]  -> 4 double cosets on the sample
+  double cosets per T-count on sample: k=0: 1, k=1: 1, k=2: 1, k=3: 1
+
+--- TB5: the phase points are the T-free stratum (n = 3) ---
+[PASS] TB5 premise: every phase point has ALL 64 Pauli coefficients +-1/8 (coefficient recovery exact): preserving the phase-point set forces mapping the signed Pauli frame to itself, i.e. membership in the normalizer = the Clifford group BY DEFINITION [P]
+[PASS] TB5 exit: T (qubit 1) conjugates sampled phase points OFF the set {+-A_c} (min sup-distance > 0.2): T-magic leaves the finite bitangent skeleton instantly; the skeleton = EXACTLY the T-count-0 stratum.  Contrast: the 56-machine's clock-magic stays inside S_56.  The two magics differ in KIND: counting certificates vs ring arithmetic — the final form of open problem #3's boundary  -> min distances [0.541, 0.541, 0.541]
+
+==============================================================================
+RESULT: 10 checks passed, 1 failed  (K = 9)
+==============================================================================

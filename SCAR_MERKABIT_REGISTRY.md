@@ -38,6 +38,8 @@ parties have seen it; sends and publication require both parties' word.**
 | SM-015 | **Stone Q: the Clifford transport** | Sp₆(2) = W(E₇)/± **IS the 3-qubit Clifford group mod phases and Paulis** — identity exhibited computationally (both sides from scratch, same matrix group in shared coordinates). The bridge transported: 28 bitangents = the 28 **odd Pauli sign-functions**; W(E₆) = the Clifford stabilizer of one; PSL(2,7) = a Clifford subgroup transitive on all 28 (fingerprint [28]/[1,7,7,21]/S₃ lands intact); the Coxeter clock = the 7-gate circuit **H1·CX13·S1·H2·H3·CX23·CX12**. MEMBERSHIP BOUNDARY: **Ψ has NO Clifford shadow** (ιΨι=Ψ⁻¹ vs central ι — the true clock is nonlinear, it does not even act on the 28 pairs), pr ∉ W(E₇) (odd vs even image), ι ↦ 1 (chirality erased). **SHADOW COLLAPSE: shadow magic-depth = 1** (H-orbits [1,27], two double cosets, 51840+51840·27=1451520 exact) — the depth-2/W-depth-4 structure lives STRICTLY ABOVE the Clifford quotient ⇒ open problem #3 cannot be won in the quotient; certificates for Clifford+T must engage the unitary level. Auditor's registered expectation q(r)=ℓ_v(r)=0 **REFUTED**: both = 1, the pair forms descend by CANCELLATION (the 56 weights are exactly the shifts that repair the descent). [obs]: all 64 phase-point operators share one spectrum — the Arf split is orbit-theoretic, not spectral. 35 checks. | [C]/[P] | `STONEQ_CLIFFORD.md`, `verify_stoneq_clifford.py`, `BRIEF_STONEQ_CLIFFORD.md` (+lock), fail-first log |
 | SM-016 | **Stone R: the altitude** | The **linearity gap** ν(g) = min d_H(g, W(E₇)) computed EXACTLY by full enumeration (2,903,040 elements, BSGS transversal chain [56,27,16,10,6,2]). **ν(pr) = 2**: the unique nearest Weyl element differs at pr's two fixed points = the E₆ vacua — **pr∘(vacuum swap) ∈ W(E₇)**, the mirror is one vacuum-trade from linear (the same swap SM-009's typed group needed). **Clock family flies high**: ν(Ψ)=38, ν(Ψ⁹)=36, ν(Ψ²)=ν(Ψ⁶)=44, ν(Ψ³)=46. TWO auditor guesses refuted on the data (equal prominence, fail-first logs kept): Ψ's minimizers are NOT the disguised Coxeter class (they are [2¹⁰,6⁶], char poly x⁷+2x⁶−3x⁴−3x³+2x+1, at 38 vs Coxeter 42) and their 18 contact points are NOT one orbit (spread (2,4,5,7)). **The clock's own antipode**: every conjugator g (Ψ=gcg⁻¹, none in B₂₈ — all scramble chirality) gives gc⁹g⁻¹ = Ψ⁹ independent of g; its matching meets ι's in exactly the 4 axis pairs (SM-004's refuted guess becomes the right theorem); [obs] ι∘Ψ⁹ = involution [1⁸,2²⁴] fixing the 8 axis points. **Stone Q's two opens CLOSED**: one-spectrum [obs] explained (Pauli translations mix Arf classes — Clifford-with-Paulis transitive on all 64 phase points; the 36/28 split = a Pauli sign gauge choice); sign flips UNITARILY IMPOSSIBLE downstairs (tr A_c = 1 conserved) — chirality is a gauge bit, not an operator; the beam-splitter machine is purchasable only in the ℂ⁵⁶ lift. 17 checks. | [C]/[P]/[obs] | `STONE_R_ALTITUDE.md`, `verify_stone_r_altitude.py`, `BRIEF_STONE_R_ALTITUDE.md` (+lock), two fail-first logs |
 
+| SM-017 | **Stone T: first contact with the T gate** | Genuine Clifford+T on exhaustive 1-qubit ground truth (ALL 36,816 unitaries of T-count ≤ 9 mod phase, exact ℤ[ω]). **Skeleton survives**: layers exactly 72·2^{k−1} — the crystal's rate-2 free growth (CN-012) in the T world; Matsumoto–Amano words = BFS layers AS SETS ∀k (uniqueness + T-optimality verified on range). **Certificate currency does NOT survive**: locked denominator invariant REFUTED at the diagonal (S/T collide; 6 collisions); residue refinement ALSO fails (8; witness s=1→{1,2}); sde only BRACKETS T-count (k ∈ [2s−3, 2s], table recorded) — at n=1 the exact certificate is the NORMAL FORM: syntax, not entry arithmetic. **Table shape survives**: C·U·C double cosets = channel matrices mod the 24 PROPER signed permutations at canonical √2-scale — the Clifford+T contingency table, verified 528/528; each layer k ≤ 3 is ONE double coset. Two instructive implementation refutations kept (chirality of the table's symmetry group; canonical scale). **Skeleton theorem (n=3)**: preserving the 64 phase points ⟺ Clifford [P] ⇒ the bitangent geometry = EXACTLY the T-free stratum; one T exits at sup-distance 0.541. Boundary of open problem #3, final form: our certificates price motion within a finite skeleton; T-magic moves between skeletons. 11 checks; 3 fail-first logs. | [C]/[P]/[obs] | `STONE_T_TGATE.md`, `verify_stone_t_tgate.py`, `BRIEF_STONE_T_TGATE.md` (+lock), `AMENDMENT_STONE_T_2026-08-30.md` (+lock), three fail-first logs |
+
 ## Open questions (the joint program)
 
 - ~~DQ-1~~ CLOSED by SM-013: orbits [28,28]; the ± doubling is equivariantly trivial.
@@ -47,6 +49,7 @@ parties have seen it; sends and publication require both parties' word.**
 - **DQ-5**: frame-fixing as a literal 56→27 descent operation.
 - **NEW (F-c)**: the mixed regime ⟨cheap, W, Ψ⟩ — magic depth when scrambling and superposition interleave (open problem #3, now concretely posed).
 - **SHARPENED by SM-015**: open problem #3 cannot be won inside the Clifford quotient (shadow depth = 1); a Clifford+T certificate must engage the unitary level, where SM-014's W-certificate is the existing foothold.
+- **RESOLVED-AS-BOUNDARY by SM-017** (on range): at n=1 the exact Clifford+T certificate is the normal form (syntax); sde brackets, tables do the double-coset bookkeeping. NEW successor: the n=2 channel-table composition calculus.
 - Inherited crystal opens: exact Cayley diameter (conj. 91–95), shortest pr/Ψ⁴ relation.
 
 ## Sends & publication status
@@ -72,6 +75,16 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Changelog
 
+- **v0.15 (2026-08-30)** — **Stone T run on Selina's "fork 1 it is"**:
+  SM-017 sealed (brief locked fa6816e9… before code; pre-reveal
+  amendment 4ffaed1e…; verifier 11/11; THREE fail-first logs). First
+  genuine Clifford+T contact: the free skeleton survives into the T
+  world, the counting certificate does not (two candidates refuted,
+  witnesses recorded; sde = bracket only), the contingency-table shape
+  survives as channel-matrices-mod-proper-signed-perms (528/528), and
+  the bitangent skeleton is proven to be exactly the T-free stratum.
+  Open problem #3's boundary reaches final form; successor = the n=2
+  table composition calculus.
 - **v0.14 (2026-08-30)** — **Stone R run on Selina's "open up the
   exploration"**: SM-016 sealed (brief locked 57db98a7… before code;
   verifier 17/17; two fail-first logs). The altitude measured: ν(pr)=2
