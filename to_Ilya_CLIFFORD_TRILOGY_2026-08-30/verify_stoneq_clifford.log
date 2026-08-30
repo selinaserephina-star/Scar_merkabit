@@ -1,0 +1,54 @@
+﻿==============================================================================
+STONE Q -- the Clifford transport: Sp6(2) = C3/(phases*Paulis)
+==============================================================================
+
+--- C1/QB1: 3-qubit Clifford tableau -> Sp6(2) ---
+[PASS] tableau symplectic: all 12 generator images preserve omega (basis x full space, 12 matrices)
+[PASS] QB1: the 12 tableau images generate order 1451520 = |Sp6(2)| — the 3-qubit Clifford group mod phases and Paulis  [classical]  -> order 1451520
+
+--- C2/QB2: the 64 refinements, Arf split, phase-point spectra ---
+[PASS] Arf split: 64 refinements = 36 even (36 zeros) + 28 odd (28 zeros)
+[PASS] QB2 orbits: Clifford orbits on forms = the two Arf classes [36], [28]; stabilizer orders 40320 = 8! and 51840 = |W(E6)| [classical]
+[PASS] phase points [obs]: the 64 Hermitian sign-operators A_c = (1/8) sum (-1)^{q_c} T_x have trace 1, ONE common spectrum for ALL 64 forms (products of (1 +- sqrt(3))/2) — the 36/28 Arf split is invisible to the spectrum; it is a Clifford-ORBIT distinction, not a spectral one  -> common spectrum [-0.683013, -0.683013, -0.683013, -0.049038, 0.183013, 0.183013, 0.183013, 2.549038]
+
+--- C3/QB3: phi: W(E7) -> Sp6(2) and the pair->form dictionary ---
+[PASS] W(E7): reflections generate order 2903040 on the 56 (SM-013 anchor)
+[PASS] radical: the mod-2 radical of the E7 Cartan form is 1-dimensional (det C7 = 2)  -> generator bits [0, 1, 0, 0, 1, 0, 1]
+[PASS] polar identity: q(x+y)+q(x)+q(y) = B(x,y) on F2^7 (sampled rows x full space)
+[PASS] descent obstructions: q(r) = 1 and ell_v(r) = 1 for ALL 56 weights — the brief's registered expectation (both = 0) is REFUTED: neither q nor ell_v lives on the quotient alone
+[PASS] THE CANCELLATION: q_v(x + r) = q_v(x) for all x in F2^7 and all 28 pairs — the two obstructions cancel and the pair forms DO descend: the transport stands on the combination, not the pieces
+[PASS] phi image: phi(W(E7)) has order 1451520; index 2 in |W(E7)| — kernel exactly {+-1} (iota = -1 is trivial mod 2)
+[PASS] frames = iota-pairs: FRAME groups the 56 into the 28 antipodal pairs, and q_v = q_{-v}
+[PASS] 28 odd forms: the 28 pair forms are 28 DISTINCT refinements of B-bar, all odd (28 zeros): pairs -> odd forms is a bijection
+[PASS] equivariance: q_{s_i v}(u) = q_v(phi(s_i) u) for all 7 reflections x all 28 pairs — the dictionary is W(E7)-equivariant
+[PASS] basis change: T: quotient -> F2^6 is a bijection carrying B-bar to the standard omega
+[PASS] QB3 TRANSPORT: in standard coordinates phi(W(E7)) and the Clifford tableau group are the SAME group of order 1451520: W(E7)/{+-1} = the 3-qubit Clifford group mod phases and Paulis
+[PASS] labels: the 28 transported pair forms are exactly the 28 odd labels of the standard model (TBR's odd theta characteristics)
+
+--- C4: the bridge-class PSL(2,7) pushed through the dictionary ---
+[PASS] bridge class: the transitive-on-28 PSL(2,7) of Stone F(b) reproduced (seed 728)
+[PASS] perfect part: canonical lift K = PSL(2,7), order 168
+[PASS] matrix recovery: each K generator's symplectic matrix recovered from the odd-form dictionary alone (affine label action verified 28/28)
+[PASS] TBR fingerprint: K on the Clifford side: TRANSITIVE on the 28 odd forms, orbits [1,7,7,21] on the 36 even forms — SM-003's bitangent-class fingerprint lands intact
+[PASS] shared S3: |K| enumerated = 168; the K-stabilizer of one odd form has order 6, element orders {1,2,2,2,3,3} = S3 — SM-003's shared S3 = N(<z3>), now a statement inside the 3-qubit Clifford group
+
+--- QB4: which gates have a Clifford shadow ---
+[PASS] parities: every simple reflection is an EVEN permutation of the 56; pr has 27 transpositions (ODD)  -> (fixed, 2-cycles) per reflection = [(32, 12), (32, 12), (32, 12), (32, 12), (32, 12), (32, 12), (32, 12)]
+[PASS] QB4a iota: iota IS in W(E7)  (= -1 = w0, central)
+[PASS] QB4b Psi NOT Clifford: iota Psi iota = Psi^-1 with ord(Psi) = 18 > 2 and iota central in W(E7) => Psi cannot lie in W(E7); BSGS strip agrees — the machine's true clock has NO Clifford shadow
+[PASS] QB4c pr NOT Clifford: pr is odd, W(E7)'s image on the 56 is even => pr not in W(E7); strip agrees — the odd mirror lives above the quotient too
+[PASS] QB4d no 28-shadow of Psi: Psi iota Psi^-1 = iota Psi^-2 != iota: Psi does not even preserve the 28 iota-pairs — the quotient cannot see the clock at all, only its linear stand-in
+[PASS] Coxeter clock: c = s1...s7: cycle type [2,18,18,18] on the 56, [1,9,9,9] on the 28 pairs — Psi's census (SM-012), realized LINEARLY: the clock's Clifford stand-in
+[PASS] phi(c): the Coxeter matrix via the form dictionary = the product of the seven transported reflection matrices (two independent routes agree)
+[PASS] QB4e circuit: an explicit H/S/CNOT word for phi(c), verified by recomposition — the Coxeter clock as a 3-qubit Clifford circuit (mod Pauli and phase)  -> length 7: H1 CX13 S1 H2 H3 CX23 CX12 (rightmost applied first)
+
+--- QB5: the shadow depth (REGISTERED HEADLINE) ---
+[PASS] faithful on 28: Sp6(2) acts faithfully on the 28 odd forms (order 1451520 as a 28-point group)
+[PASS] transitive: G transitive on the 28 (orbit of base = 28)
+[PASS] H = W(E6): the point stabilizer has order 51840 = |W(E6)| — the typed subgroup of the shadow machine  [classical: O6-(2)]
+[PASS] QB5 rank: H-orbits on the 28 = [1, 27] (W(E6) transitive on the 27 lines) => exactly TWO (H,H) double cosets
+[PASS] QB5 SHADOW COLLAPSE: phi(c) moves the base form, <H, phi(c)> = Sp6(2), and |H| + |H|*27 = 51840 + 1399680 = 1451520 EXACTLY: shadow magic-depth = 1 for every non-typed element (H c H is the single non-trivial double coset).  The 56-machine's two-tier depth structure (depth 2 both grammars, W-depth 4, 3718 frame classes) lives STRICTLY ABOVE its Clifford quotient (2 classes, depth 1).  PASS-COLLAPSE
+
+==============================================================================
+RESULT: 35 checks passed, 0 failed
+==============================================================================

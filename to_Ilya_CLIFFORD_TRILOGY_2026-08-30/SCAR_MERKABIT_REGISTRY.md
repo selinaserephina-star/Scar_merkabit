@@ -72,27 +72,9 @@ parties have seen it; sends and publication require both parties' word.**
   pass and his word on publishing.
 - The 56-Machine artifact is private; sharing its link is a send (not
   included in the package — Selina's separate call).
-- **PREPARED 2026-08-30 (on Selina's "seal, sha and summary for Ilya"):
-  the Clifford Trilogy package** — `to_Ilya_CLIFFORD_TRILOGY_2026-08-30/`
-  (30 files, SEAL.sha256 over the folder) zipped as
-  `package/Clifford_Trilogy_2026-08-30.zip` (106,508 bytes, **sha256
-  393be9b52343a28c44337dba0169cb3effb2f10e6ea27ed50cbb853a04b17337**,
-  hash kept outside in `package/COVER_TRILOGY_SHA256.txt`). Contents:
-  cover summary (.md/.docx) + the complete SM-015..SM-017 record (stone
-  docs, verifiers + scar56_data.json, sha-locked briefs + the pre-reveal
-  amendment, all six fail-first logs, registry v0.15 + KCP snapshots,
-  SHA256SUMS). **NOT SENT** — handing it over is the send, Selina's to
-  make; recorded here when made.
 
 ## Changelog
 
-- **v0.16 (2026-08-30)** — **Clifford Trilogy package sealed** on
-  Selina's word: fresh `to_Ilya_CLIFFORD_TRILOGY_2026-08-30/` (cover
-  note for a reader who holds the COMPLETE package; the full
-  SM-015..SM-017 record incl. briefs, locks, amendment, six fail-first
-  logs, data, snapshots; folder SEAL + SHA256SUMS), zipped with the
-  hash outside (393be9b5…7337, 106,508 B). PREPARED-NOT-SENT; the send
-  is Selina's and will be recorded in the Sends section when made.
 - **v0.15 (2026-08-30)** — **Stone T run on Selina's "fork 1 it is"**:
   SM-017 sealed (brief locked fa6816e9… before code; pre-reveal
   amendment 4ffaed1e…; verifier 11/11; THREE fail-first logs). First

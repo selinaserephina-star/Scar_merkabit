@@ -1,0 +1,41 @@
+﻿==============================================================================
+STONE R -- the altitude: how far above the Clifford floor
+==============================================================================
+[PASS] W(E7): order 2903040 with a transversal chain (sizes [56, 27, 16, 10, 6, 2])
+
+--- R1: the conjugator (the clock as a disguised Coxeter) ---
+[PASS] cycle match: c and Psi both have cycle type [2,18,18,18]
+[PASS] RB1 conjugator: an explicit g with Psi = g c g^-1 (cycle alignment), verified
+[PASS] RB1 corollary: no conjugator lies in C(iota) = B28: if g commuted with iota then Psi = g c g^-1 would commute with iota (c does), contradicting iota Psi iota = Psi^-1; our g indeed moves iota
+
+--- R2: full enumeration -- the linearity gaps (headline) ---
+[PASS] memberships: strip test: NO panel gate lies in W(E7) (nu > 0 for all six)  -> {'Psi': False, 'Psi^2': False, 'Psi^3': False, 'Psi^6': False, 'Psi^9': False, 'pr': False}
+[PASS] enumeration size: transversal products enumerate all 2,903,040 elements  -> 56 chunks x 51840 rows
+  linearity gaps nu(g) = min Hamming distance to W(E7), exact:
+    nu(Psi   ) = 38   (agreement 18/56; 2 minimizers)
+    nu(Psi^2 ) = 44   (agreement 12/56; 1 minimizers)
+    nu(Psi^3 ) = 46   (agreement 10/56; 2 minimizers)
+    nu(Psi^6 ) = 44   (agreement 12/56; 3 minimizers)
+    nu(Psi^9 ) = 36   (agreement 20/56; 1 minimizers)
+    nu(pr    ) =  2   (agreement 54/56; 1 minimizers)
+[PASS] RB2 measured: all six gaps computed exactly over the full group
+[PASS] char poly anchor: the Coxeter element's characteristic polynomial = Phi_18 * Phi_2 = x^7+x^6-x^4-x^3+x+1
+[PASS] RB2 guess REFUTED: the brief's registered guess is FALSE: the clock's nearest Weyl elements are NOT its disguised Coxeter class (that class sits at 42) but order-6 elements of cycle type [2^10, 6^6] at distance 38  -> witness (cycle type, char poly): ([2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 6, 6, 6, 6, 6, 6], [1, 2, 0, -3, -3, 0, 2, 1])
+  direct: d_H(Psi, c) = 42;  d_H(Psi^9, iota) = 48
+  post-hoc characterization of the minimizers:
+[PASS] post-hoc: pr's repair: the unique nearest Weyl element to pr differs exactly at pr's TWO FIXED POINTS = the two E6 vacua (branch singlets): pr o (vacuum swap) IS a Weyl element — the odd mirror becomes linear the moment the vacua trade places (the same vacuum swap SM-009's typed group needed)  -> diff positions [27, 28], their COMP classes [2, 3]
+[PASS] post-hoc: Psi's contact geometry: the 18 agreement points of each minimizer, distributed over the clock's orbits [2,18,18,18] — measured, not guessed (two dead guesses on the record: Coxeter-class minimizer; single-orbit contact)  -> agreement per orbit (sorted) for the 2 minimizers: [(2, 4, 5, 7), (2, 4, 5, 7)]
+
+--- R3: tau(Psi) anchor + the clock's own antipode ---
+[PASS] RB3 anchor: tau(Psi) from M0 U Psi(M0) = [1,9,9,9] — SM-009's coset type reproduced
+[PASS] the clock's antipode: iota_Psi := g w0 g^-1 is INDEPENDENT of the conjugator: c^9 = w0 = iota, so g c^9 g^-1 = Psi^9 for EVERY g — the clock's own antipode is Psi^9, a fixed-point-free involution commuting with Psi
+[PASS] two antipodes: the clock's matching M_Psi shares exactly 4 pairs with iota's M0 — SM-004's refuted guess ('Psi^9-pairing = iota') lands as the theorem 'Psi^9-pairing = the CONJUGATED antipode', touching iota only on the axis pairs (DQ-4)  -> |M_Psi ^ M0| = 4/28
+[PASS] interference [obs]: iota o iota_Psi = iota o Psi^9 = the two antipodes' interference word  -> cycle type [1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2], order 2
+
+--- R4: gauge and obstruction (Stone Q's two opens closed) ---
+[PASS] RB4a gauge: Pauli conjugation T_a T_x T_a+ = (-1)^omega(a,x) T_x verified on operators; the induced label translations c -> c ^ swap(a) are TRANSITIVE on all 64 forms and MIX the Arf classes: Clifford-with-Paulis has ONE orbit of phase points — Stone Q's one-spectrum [obs] is explained, and the 36/28 split is exactly a choice of Pauli sign gauge
+[PASS] RB4b obstruction: tr A_c = 1 for ALL 64 phase points; unitary conjugation preserves trace, and tr(-A_c) = -1: NO unitary realizes a sign flip A_c -> -A_c'.  The 56 = 28 odd forms x sign exists only as a set: iota (the global flip) and the beam-splitter machine (SM-014) have no unitary-conjugation realization on phase points — chirality downstairs is a GAUGE BIT, not an operator
+
+==============================================================================
+RESULT: 17 checks passed, 0 failed
+==============================================================================
