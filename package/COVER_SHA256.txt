@@ -1,0 +1,14 @@
+SCAR-MERKABIT PACKAGE -- COVER NOTE (keep outside the zip)
+==========================================================
+File   : Scar_merkabit_2026-08-30.zip
+Size   : 144023 bytes
+SHA256 : c4194b93ac8bc58afe4b046da5e582058ab8e259937bd52c37eea0f8cfaf727b
+
+Contents: the complete joint world as of 2026-08-30 -- registry v0.1
+(SM-001..SM-008), the lane KCP, both audit/bridge thread docs, all four
+verifiers (94 checks total), the 56-machine (HTML instrument + data), the
+design brief, both reports, and the co-authored paper draft v0.1
+(Bitangent_Bridge). Inside the zip, MANIFEST_SHA256.txt lists every file's
+hash; verify the zip itself against the SHA256 above.
+
+Sealed-not-sent until both parties' word; prepared for Ilya on Selina's.

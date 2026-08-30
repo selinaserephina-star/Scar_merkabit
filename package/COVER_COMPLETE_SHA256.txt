@@ -1,0 +1,15 @@
+SCAR-MERKABIT COMPLETE PACKAGE -- COVER NOTE (keep outside the zip)
+==================================================================
+File   : Scar_merkabit_COMPLETE_2026-08-30.zip
+Size   : 464611 bytes
+SHA256 : d74cdb6400ddc28ff431fe0025e64f0a074d589fcc3aa70496d4d0430f0d1539
+
+The whole joint world as of 2026-08-30 evening: registry v0.10
+(SM-001..SM-014), the KCP, all eleven verifiers (~150 checks + 3718
+witnesses), both joint paper drafts, the compendium letter (START THERE:
+to_Ilya/Joint_World_Compendium_2026-08-30), the 56-State Machine source,
+the design brief, the exact hyperoctahedral support tables and witness
+cache. Supersedes this morning's v0.2 zip.
+
+Sent on Selina's word only; the KCP's two-party rule governs everything
+onward from Ilya's side.

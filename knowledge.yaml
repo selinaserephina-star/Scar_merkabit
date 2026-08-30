@@ -1,0 +1,391 @@
+kcp_version: "0.12"
+project: scar-merkabit-joint
+version: "0.1"
+description: >
+  THE JOINT WORLD (self-governing, TWO-PARTY). The lane where the Merkabit
+  program (Stenberg: E6 minuscule crystal, the 27, rowmotion/promotion
+  dynamics, magic monotone) and the Scar-Cat program (Balashov: PSL(2,7),
+  the 168, representation-ring selection rules) meet. Contents: the T-SC
+  audit of the Scar-Cat master registry (35+ rows re-verified, corrections
+  R-SC-1..5); the bitangent-bridge theorem (both frameworks inside
+  Sp6(2)=W(E7)/±: W(E6)=stabilizer of one bitangent, PSL(2,7) transitive on
+  all 28, intersection = S3 = N(<z3>)); the chiral-Fano-pair result on the
+  7-channel syndrome; THE RESURRECTION THEOREM (E6-branching of the E7 56 =
+  27+27bar+1+1 with pr the sheet-mirror — v1's dual-spinor picture, refuted
+  at E6, true at E7) with the bilingual-gates corollary; the 56-State
+  Machine instrument; the joint paper draft (Stenberg-Balashov). Registry
+  SCAR_MERKABIT_REGISTRY.md, rows SM-001..SM-014 (v0.1, 2026-08-30). House
+  rules: compute never assert; refutations at equal prominence; Rule 3;
+  fit-until-derived; control substrates; backport rule T-SC-P1. DRAFT /
+  sealed-not-sent except as the registry records sends. Not RH/GRH; no
+  physical constant; no novelty claim beyond flagged [obs] items.
+
+maintainer:
+  - selina@exoreaction.com          # Merkabit side
+  - "Ilya Balashov (ORCID 0009-0001-1954-8872, OSF 10.17605/OSF.IO/3TFNY)"  # Scar-Cat side
+
+updated: "2026-08-30"
+
+# --- TRUST -------------------------------------------------------------------
+trust:
+  provenance:
+    publisher: Stenberg x Balashov (with Claude)
+    contact:
+      - selina@exoreaction.com
+
+# --- AUTHORITY (JOINT) -------------------------------------------------------
+authority:
+  read: initiative
+  summarize: initiative
+  modify: registry-discipline-only
+  execute: initiative               # verifiers are self-contained, safe to rerun
+  share_externally: requires_both_parties   # THE JOINT RULE: a send or a
+                                            # publication needs Selina's AND
+                                            # Ilya's word, each recorded in
+                                            # the registry's Sends section.
+
+# --- VISIBILITY --------------------------------------------------------------
+visibility:
+  default: internal
+  intent: >
+    Publication intent recorded (registry v0.1): the joint paper to
+    arXiv/OSF after Ilya's review pass; the lane to a public repo on the
+    joint go.
+
+# --- HINTS -------------------------------------------------------------------
+hints:
+  recommended_entry_point: joint-registry
+  house_rules: >
+    Read README + SCAR_MERKABIT_REGISTRY before any claim from this lane.
+    Every [C] traces to a listed verifier (Python 3 + numpy, no GAP);
+    rerun before citing. [obs] = possibly-new observation, flagged for
+    expert readers, never called novel. The two parent lanes govern
+    themselves (CRYSTAL_NATIVE_v2 KCP; Ilya's registry) — this KCP wires
+    ACROSS them, not over them.
+
+units:
+
+  - id: joint-registry
+    path: SCAR_MERKABIT_REGISTRY.md
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.11 -- rows SM-001..SM-014"
+    intent: >
+      The joint world's single source of truth: eight sealed units, the open
+      program DQ-1..5+, the sends/publication ledger, the changelog.
+    scope: registry
+    hints: { load_strategy: eager, priority: primary }
+    sha256: b4d9817f78b1981e8432cd9252f026b063cff91b108c5c9b5cc3187a3f172013
+
+  - id: readme
+    path: README.md
+    title: "Lane orientation"
+    intent: Founding, contents table, house rules, pointers to parent lanes.
+    scope: orientation
+    sha256: 263b2d3c133181458ab9f859b2c96ec78b84162a3330789f0c7567f0d2289c06
+
+  - id: tsc-audit
+    path: TSC_SCARCAT.md
+    title: "T-SC -- the Scar-Cat registry audit"
+    intent: >
+      Independent recomputation of the Scar-Cat master registry: character
+      table derived by Burnside-Dixon, 35+ GAP rows confirmed, 9 classical,
+      corrections R-SC-1..5 (incl. lambda=1/8 -> m_H 13-sigma), note-7
+      credited, backport rule prescribed.
+    scope: audit
+    sha256: 46a6cba76194948623fb6f72accb23f1700d3dee4d90a0b34108d7553008ba2f
+
+  - id: tsc-verifier
+    path: verify_tsc_scarcat.py
+    title: "T-SC verifier (48 checks)"
+    intent: Exact Q(sqrt(-7)) machinery; the 2 designed FAILs are R-SC-1/2.
+    scope: verifier
+    sha256: 01c7da523521b28e15e0e71f151a6606d979cc5888f03b907b741fe60b9b24a9
+
+  - id: tbr-bridge
+    path: TBR_BRIDGE.md
+    title: "T-BR -- the bitangent bridge"
+    intent: >
+      Fields (zeta_21 = the two character fields, disjoint), E6 no-go,
+      Sp6(2) home with the shared S3, 56 = 2x28, both Lie branchings of the
+      27. Closes the Scar-Cat 'Bridge' conjecture row.
+    scope: theorem
+    sha256: 4656a4438a0543232fb347384ae4888ae442a0f53531f283580d0450df264c28
+
+  - id: tbr-verifier
+    path: verify_tbr_bridge.py
+    title: "T-BR verifier (20 checks)"
+    intent: Symplectic F2^6 model, theta characteristics, orbits, branchings.
+    scope: verifier
+    sha256: 6bdf3ea2530774a4c54b5c7d79fbeb1f9ebed9164841f4dd8e7a9a621d5a2ee3
+
+  - id: fano-verifier
+    path: verify_fano_syndrome.py
+    title: "The chiral Fano pair (14 checks)"
+    intent: >
+      The 7-channel syndrome's motion group is S3; native incidence = affine
+      E6 tree; exactly 2 invariant Fanos (chiral pair, 3 shared centre-lines,
+      swapped by inner/outer duality). One bit from Fano; never forced.
+    scope: verifier
+    sha256: cd435086af210e7371c9ab9468e59d14c096d47c6cd04c30cb7901596197509d
+
+  - id: dq6-resurrection
+    path: verify_dq6_resurrection.py
+    title: "THE RESURRECTION THEOREM (12 checks) + machine data emitter"
+    intent: >
+      E6-branching of the E7 56 = 27+27bar+1+1; pr fixes the two singlets
+      and cross-pairs the sheets; iota = second duality (3/27 shared); Psi
+      crosses the wall. Corollary: pr,iota bilingual; the clock is the sole
+      magic source. Emits scar56_data.json.
+    scope: verifier
+    sha256: a39cfdf60fd40af7a500b4b131da6626f6272243375fe31d420fb29bb69d5699
+
+  - id: machine-data
+    path: scar56_data.json
+    title: "56-machine tables (verifier output)"
+    intent: PSI/PR/IOTA permutations, branching, frames, CSP census, edges.
+    scope: data
+    sha256: 0a817fc5a2aa7cd4695436eaa6662810ff2e4dd012fbfb604fe0d6579c88fb66
+
+  - id: machine-artifact
+    path: artifact_56/machine56.html
+    title: "The 56-State Machine (interactive instrument)"
+    intent: >
+      Mirrored two-sheet board; frame view; WAVES view (standing waves
+      phase-painted, axis frame, depth ladder); exact dual magic
+      meters (28x28 assignment in-browser, validated vs scipy); parity lamp;
+      clock census. Published (private):
+      https://claude.ai/code/artifact/a7d069f2-be97-45fa-b5af-6524e858eb82
+    scope: instrument
+    sha256: 1de0c5e7f2f1248f0bdac2065c9e2661492dc39fde67bbf6d46627944c9d043f
+
+  - id: brief-56
+    path: 56_MACHINE_BRIEF.md
+    title: "The 56-machine design brief (+ post-brief updates)"
+    intent: >
+      The joint architecture: frames x chirality, three gate families,
+      two-axis resource theory, DQ-1..5; sec 7 records DQ-6 answered and
+      DQ-2 partial.
+    scope: design
+    sha256: bac9976a42fbd36b047937b0ce9d7bd5fed0a73a979386274fe182d4fdcf1eb7
+
+  - id: joint-paper
+    path: joint_paper/Bitangent_Bridge_DRAFT.md
+    title: "The Bitangent Bridge -- Stenberg . Balashov, draft v0.1"
+    intent: >
+      The publishable synthesis (secs 1-9 incl. 7.5 resurrection +
+      bilingual gates); awaiting Ilya's review pass + joint bibliography.
+      Rendered .docx alongside.
+    scope: paper
+    sha256: 30c82d5ade1056405c3de18343a1f7553a94cb7eb45334606d0527c54a1bc2ec
+
+  - id: report-verification
+    path: to_Ilya/Scar_Cat_Verification_Report_2026-08-30.md
+    title: "Verification report (sent-form of T-SC)"
+    intent: Letter form; corrections C1-C5 each with a GAP one-liner.
+    scope: correspondence
+    sha256: ff41a258f2297c8b74493a234f1c2467b7f7571e136a74a0d622d685bfd02c1e
+
+  - id: report-bridge
+    path: to_Ilya/The_Bridge_Report_2026-08-30.md
+    title: "Bridge report (sent-form of T-BR)"
+    intent: Letter form; closes the Bridge conjecture row; proposals 1-3.
+    scope: correspondence
+    sha256: 6624cbbf3c3e731176670e19b1736219bfa0dca9c34d858e51929084cb06870f
+
+  - id: stone1-certificate
+    path: verify_stone1_certificate.py
+    title: "Stone 1: transportation certificate, generalized (9 checks)"
+    intent: >
+      Abstract Young/wreath magic-depth certificate; anchor 27-wreath=2
+      (=CN-012), new theorems 27-Young=3, 56-Young=5, 56-wreath=2 (the
+      mirror is worth three magic gates); hyperoctahedral frontier mapped.
+      Companion doc STONE1_CERTIFICATE.md (sha in registry row SM-009 era).
+    scope: verifier
+    sha256: 89d498e4742431db29b872913ff1060368a97548fbc80806dcab2c554fa16997
+
+  - id: stone1b-calculus
+    path: verify_stone1b_hyperoct.py
+    title: "Stone 1b: hyperoctahedral calculus (tables, mining, validation)"
+    intent: >
+      Exact (S_2n,B_n) support tables n<=7; triangle necessity; two refuted
+      law guesses; BFS validation 4/4; scaled preview depth 2. Companion
+      straggler/close scripts + witness cache complete the campaign.
+    scope: verifier
+    sha256: 958ff4029fd96e6f4082d7101fc47811160291fe3bb967a106bc58adae1a633d
+
+  - id: stone1b-witnesses
+    path: stone1b_witnesses.json
+    title: "3718 verified depth-2 witnesses (frame grammar theorem)"
+    intent: Every coset type's explicit M2; re-verifiable in seconds.
+    scope: data
+    sha256: b33de3b16cf0920dd568bdc1f495b4184008cbf0c7a533e433fd8cc2d6ea1cbb
+
+  - id: stone1-doc
+    path: STONE1_CERTIFICATE.md
+    title: "Stone 1 write-up: the transportation certificate generalizes"
+    intent: Results table (3/2, 5/2), exchange-rate corollaries, frontier.
+    scope: theorem
+    sha256: d41cbb11a5882175a14ef5d33f993933af16a9766078b144d05388144276830e
+
+  - id: stone1b-doc
+    path: STONE1B_HYPEROCT.md
+    title: "Stone 1b write-up: hyperoctahedral calculus + second depth-2 theorem"
+    intent: Coset-type calculus, refuted laws, witness-campaign theorem.
+    scope: theorem
+    sha256: b575fd5144f48a35d8fdb810d950a26271c9f6b40a45ed5aa95d964cba1a09f0
+
+  - id: stone1b-stragglers
+    path: verify_stone1b_stragglers.py
+    title: "Witness campaign pass 2 (soft dual-cost annealing)"
+    intent: 1.2M samples + annealing; closed 2039 of 2112 stragglers.
+    scope: verifier
+    sha256: a7e3bfdb1f445d162d38873a4d62d1a9507ba22b67637c209e137ac07bb2d185
+
+  - id: stone1b-close73
+    path: verify_stone1b_close73.py
+    title: "Witness campaign pass 3 (dual-direction orbit sampling)"
+    intent: Closed the final 73 types; completed the 3718-witness theorem.
+    scope: verifier
+    sha256: 263ef9b20a229c161d4436602d81c4e745e8ede3f5bd902707b4feee3b56f4e4
+
+  - id: methods-note
+    path: joint_paper/Magic_Depth_Methods_DRAFT.md
+    title: "Magic Depth by Transportation Certificates and Witness Campaigns -- draft v0.1"
+    intent: >
+      The second joint paper: certificate theorem, four exact depth
+      results, exchange rates, witness-campaign theorem, lessons,
+      benchmarks, three open problems. Awaiting Ilya's review pass.
+    scope: paper
+    sha256: 85aec92c263af7cc66812055030cd5f52d72a1a5b1fdffb4c6489ccf04b4088a
+
+  - id: stonef-field
+    path: verify_stonef_field.py
+    title: "Stone F(a): the field machine (13 checks)"
+    intent: >
+      Standing-wave spectrum; CSP = trace formula; sector masses; the axis
+      frame; DQ-4 closed; pr frequency-mixing; chirality-odd quark sectors
+      (character level). Doc STONEF_FIELD.md.
+    scope: verifier
+    sha256: 43d9055f0bdfdad94c70e4953fdfe3647e56137b905ed92c12b6ead4a4c770ef
+
+  - id: stonef-doc
+    path: STONEF_FIELD.md
+    title: "Stone F(a) write-up"
+    intent: The field lift's results and the F(b)-(d) programme.
+    scope: theorem
+    sha256: 1109e56c011c1d46204bfb22f0add297aec207c02f379b6642398c4fcef43b30
+
+  - id: stonef-b-dq1
+    path: verify_stonef_b_dq1.py
+    title: "Stone F(b): DQ-1 answered + SM-012 erratum (11 checks)"
+    intent: >
+      Explicit W(E7) on the 56; canonical bridge-class PSL(2,7); orbits
+      [28,28]; C^56 = 2*pi_28 (untwisted lift unique); quark sectors absent
+      from the Weyl action; second class = Fano-doubled. Erratum backported
+      into STONEF_FIELD.md.
+    scope: verifier
+    sha256: 317525b2b11f7c7889fdf84b5dc3a4dfcf9c68d6d39f9dd008e0fc12d6f8cfec
+
+  - id: stonef-c-quantum
+    path: verify_stonef_c_quantum.py
+    title: "Stone F(c): the beam-splitter machine (12 checks)"
+    intent: >
+      Exact D16 local algebra; W-depth = max local H-length + parity
+      superselection (exhaustive n=2,3 validation); 56 group order
+      2*8^28*28!, W-depth 4; mixed-regime frontier located. Doc
+      STONEF_C_QUANTUM.md.
+    scope: verifier
+    sha256: c4fdea00115d6ea7b31058109964014a0b2aa44128be2d9503db495b206d2273
+
+  - id: stonef-c-doc
+    path: STONEF_C_QUANTUM.md
+    title: "Stone F(c) write-up"
+    intent: The quantum lift's certificate, theorems, and the day's depth ladder.
+    scope: theorem
+    sha256: aedf16102dc007ad91b635512223f0f01acfacebf5b23afcd505b4732aaaec00
+
+  - id: compendium
+    path: to_Ilya/Joint_World_Compendium_2026-08-30.md
+    title: "The Joint World -- complete findings compendium (letter)"
+    intent: >
+      The map of everything for Ilya (who has seen only the bridge):
+      audit, resurrection, depth + field theorems, refutations ledger,
+      open problems, invitations. Entry point of the COMPLETE package.
+    scope: correspondence
+    sha256: d05ba5b850dc4b8be349fac3c4f00ffa7991f9e92159fda9923f6617ec2bed83
+
+# --- EXTERNAL ANCHORS (not governed here) ------------------------------------
+  - id: "external:scar-cat-registry"
+    path: "../Ilya/theorem_master_registry-27 (1).md"
+    title: "Scar-Cat Master Theorem Registry v4.9 (Balashov) -- AUDITED OBJECT"
+    scope: external
+  - id: "external:crystal-native-v2"
+    path: "../Crystal_information/CRYSTAL_NATIVE_v2/knowledge.yaml"
+    title: "CRYSTAL_NATIVE_v2 lane KCP (self-governing parent, Merkabit side)"
+    scope: external
+  - id: "external:merkabit-crystal"
+    path: "../Merkabit_crystal"
+    title: "E6/E7 crystal bedrock (15 verifiers; A27 capstone; E7 thread)"
+    scope: external
+  - id: "external:corpus-triage"
+    path: "../Corpus_triage/TRIAGE_REGISTRY.md"
+    title: "Corpus triage registry (this lane's pre-history, v0.20-v0.25)"
+    scope: external
+  - id: "external:ternary-v1"
+    path: "../Crystal_information/Ternary_Architecture_v1_2026-08-13 (1).docx"
+    title: "v1 architecture paper (the dual-spinor intuition's origin)"
+    scope: external
+
+edges:
+
+  # audit spine
+  - { from: tsc-verifier,  to: tsc-audit,      type: backs,        class: evidence-audit, status: registered }
+  - { from: tsc-audit,     to: "external:scar-cat-registry", type: audits, class: evidence-audit, status: registered }
+  - { from: report-verification, to: tsc-audit, type: derives-from, class: correspondence, status: sent-2026-08-30 }
+
+  # bridge spine
+  - { from: tbr-verifier,  to: tbr-bridge,     type: backs,        class: evidence-audit, status: registered }
+  - { from: tbr-bridge,    to: tsc-audit,      type: builds-on,    class: dependency,     status: registered }
+  - { from: tbr-bridge,    to: "external:merkabit-crystal", type: builds-on, class: dependency, status: registered }
+  - { from: tbr-bridge,    to: "external:scar-cat-registry", type: closes-conjecture, class: resolution, status: registered }   # the 'Bridge' row
+  - { from: report-bridge, to: tbr-bridge,     type: derives-from, class: correspondence, status: sent-2026-08-30 }
+
+  # machine spine
+  - { from: fano-verifier, to: "external:crystal-native-v2", type: probes, class: evidence-audit, status: registered }  # CN-001's 7-channel syndrome
+  - { from: fano-verifier, to: tbr-bridge,     type: refines,      class: dependency,     status: registered }
+  - { from: dq6-resurrection, to: "external:merkabit-crystal", type: builds-on, class: dependency, status: registered }  # the E7 thread
+  - { from: dq6-resurrection, to: "external:ternary-v1", type: resurrects-one-floor-up, class: reinterpretation, status: registered }  # refuted at E6, true at E7
+  - { from: machine-data,  to: dq6-resurrection, type: emitted-by, class: provenance,     status: registered }
+  - { from: machine-artifact, to: machine-data, type: realizes,    class: instrument,     status: registered }
+  - { from: machine-artifact, to: brief-56,    type: realizes,     class: instrument,     status: registered }
+  - { from: brief-56,      to: tbr-bridge,     type: builds-on,    class: dependency,     status: registered }
+
+  # synthesis
+  - { from: joint-paper,   to: tsc-audit,      type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: tbr-bridge,     type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: fano-verifier,  type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: dq6-resurrection, type: synthesizes, class: synthesis,     status: registered }
+
+  # governance
+  - { from: joint-registry, to: "external:corpus-triage", type: continues, class: governance, status: registered }
+  - { from: joint-registry, to: "external:crystal-native-v2", type: peers-with, class: governance, status: registered }
+  - { from: stone1-certificate, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
+  - { from: stone1-certificate, to: "external:crystal-native-v2", type: generalizes, class: method, status: registered }   # CN-012's depth-2 proof
+  - { from: stone1b-calculus, to: stone1-certificate, type: extends, class: dependency, status: registered }
+  - { from: stone1b-witnesses, to: stone1b-calculus, type: backs, class: evidence-audit, status: registered }
+  - { from: stone1-doc, to: stone1-certificate, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-doc, to: stone1b-calculus, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-doc, to: stone1b-witnesses, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-stragglers, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
+  - { from: stone1b-close73, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
+  - { from: methods-note, to: stone1-doc, type: synthesizes, class: synthesis, status: registered }
+  - { from: methods-note, to: stone1b-doc, type: synthesizes, class: synthesis, status: registered }
+  - { from: methods-note, to: joint-paper, type: companion-of, class: synthesis, status: registered }
+  - { from: stonef-doc, to: stonef-field, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stonef-field, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-field, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-b-dq1, to: stonef-field, type: corrects, class: erratum, status: registered }
+  - { from: stonef-b-dq1, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-c-doc, to: stonef-c-quantum, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stonef-c-quantum, to: stonef-field, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-c-quantum, to: methods-note, type: answers-open-problem-partially, class: resolution, status: registered }
+  - { from: compendium, to: joint-registry, type: summarizes, class: correspondence, status: registered }

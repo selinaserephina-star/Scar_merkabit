@@ -1,0 +1,482 @@
+<title>The 56-State Machine</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --bg:#F7F7F9; --panel:#FFFFFF; --panel2:#EFEFF3; --ink:#1F2229; --ink2:#5A5E6A;
+  --line:#D9DAE1; --sheetA:#3E63C9; --sheetB:#C2492B; --vac:#A87B2D;
+  --frame:#1E8A4A; --sheetAbg:#E8EDFA; --sheetBbg:#F8E9E4; --vacbg:#F5EDDC;
+  --lamp-even:#5A5E6A; --lamp-odd:#C2492B; --tokenring:#1F2229;
+}
+:root:not([data-theme="light"]){ }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171C; --panel:#1D2026; --panel2:#23262E; --ink:#E8E9ED; --ink2:#9CA0AC;
+    --line:#33363F; --sheetA:#6E93E0; --sheetB:#CE6748; --vac:#C9A25A;
+    --frame:#3FA974; --sheetAbg:#232C40; --sheetBbg:#3A2822; --vacbg:#332C1D;
+    --lamp-even:#9CA0AC; --lamp-odd:#CE6748; --tokenring:#E8E9ED;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171C; --panel:#1D2026; --panel2:#23262E; --ink:#E8E9ED; --ink2:#9CA0AC;
+  --line:#33363F; --sheetA:#6E93E0; --sheetB:#CE6748; --vac:#C9A25A;
+  --frame:#3FA974; --sheetAbg:#232C40; --sheetBbg:#3A2822; --vacbg:#332C1D;
+  --lamp-even:#9CA0AC; --lamp-odd:#CE6748; --tokenring:#E8E9ED;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;
+  font-family:"IBM Plex Sans",system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:1060px;margin:0 auto;padding:28px 20px 64px}
+header h1{font-family:Spectral,Georgia,serif;font-weight:600;font-size:2.1rem;
+  margin:0 0 4px;text-wrap:balance}
+header p.lede{margin:0;color:var(--ink2);max-width:62ch}
+.eyebrow{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink2);margin-bottom:6px}
+.machine{display:grid;grid-template-columns:1fr 250px;gap:18px;margin-top:26px}
+@media(max-width:820px){.machine{grid-template-columns:1fr}}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:16px}
+.board-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px}
+.board-head .vt{font-size:.8rem;color:var(--ink2)}
+.viewtoggle button{font:inherit;font-size:.8rem;background:var(--panel2);
+  color:var(--ink);border:1px solid var(--line);padding:4px 10px;cursor:pointer}
+.viewtoggle button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.viewtoggle button:first-child{border-radius:5px 0 0 5px}
+.viewtoggle button:last-child{border-radius:0 5px 5px 0;margin-left:-1px}
+/* branch view */
+.branch{display:flex;flex-direction:column;gap:10px}
+.sheet{display:grid;grid-template-columns:repeat(9,1fr);gap:4px;padding:8px;
+  border-radius:7px}
+.sheet.A{background:var(--sheetAbg)} .sheet.B{background:var(--sheetBbg)}
+.sheetlabel{font-family:"IBM Plex Mono",monospace;font-size:.72rem;
+  text-align:center;margin-top:6px;color:var(--ink2)}
+.vaccol{display:flex;gap:10px;align-items:center;justify-content:center}
+.vaclab{font-family:"IBM Plex Mono",monospace;font-size:.68rem;color:var(--ink2)}
+.cell{aspect-ratio:1;border-radius:4px;display:flex;align-items:center;
+  justify-content:center;font-family:"IBM Plex Mono",monospace;font-size:.68rem;
+  color:var(--ink2);position:relative;background:var(--panel);
+  border:1px solid var(--line);cursor:default}
+.sheet.A .cell{border-color:color-mix(in srgb,var(--sheetA) 35%,transparent)}
+.sheet.B .cell{border-color:color-mix(in srgb,var(--sheetB) 35%,transparent)}
+.cell.vac{width:46px;background:var(--vacbg);border-color:var(--vac);color:var(--ink)}
+.cell.tok{outline:2.5px solid var(--tokenring);outline-offset:1px;
+  color:var(--ink);font-weight:500}
+.cell.tok::after{content:"";position:absolute;inset:-7px;border-radius:6px;
+  border:1px solid var(--tokenring);opacity:.35}
+/* frame view */
+.framegrid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.framecell{border:1px solid var(--line);border-radius:5px;overflow:hidden}
+.framecell.vacf{border-color:var(--vac)}
+.fhalf{display:flex;align-items:center;justify-content:center;
+  font-family:"IBM Plex Mono",monospace;font-size:.62rem;height:26px;color:var(--ink2)}
+.fhalf.plus{border-bottom:1px dashed var(--line)}
+.fhalf.tok{background:color-mix(in srgb,var(--frame) 22%,transparent);
+  color:var(--ink);font-weight:500}
+.flab{font-size:.58rem;text-align:center;color:var(--ink2);
+  padding:2px 0;background:var(--panel2)}
+/* gates */
+.gates{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.gates button{font-family:"IBM Plex Mono",monospace;font-size:.9rem;
+  padding:9px 15px;border-radius:6px;border:1px solid var(--line);
+  background:var(--panel2);color:var(--ink);cursor:pointer}
+.gates button:hover{border-color:var(--ink2)}
+.gates button:focus-visible{outline:2px solid var(--frame);outline-offset:2px}
+.gates button.odd{border-color:color-mix(in srgb,var(--sheetB) 55%,transparent)}
+.gates button.reset{margin-left:auto;color:var(--ink2)}
+.gatenote{font-size:.72rem;color:var(--ink2);margin-top:8px}
+/* meters */
+.meter{margin-bottom:14px}
+.meter .mlabel{display:flex;justify-content:space-between;font-size:.74rem;
+  color:var(--ink2);margin-bottom:4px}
+.meter .mlabel b{color:var(--ink);font-weight:500;
+  font-family:"IBM Plex Mono",monospace}
+.bar{height:8px;background:var(--panel2);border-radius:4px;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:4px;transition:width .25s}
+@media (prefers-reduced-motion: reduce){.bar i{transition:none}}
+.bar.mA i{background:var(--sheetA)} .bar.mF i{background:var(--frame)}
+.lamps{display:flex;gap:8px;margin:14px 0}
+.lamp{flex:1;text-align:center;border:1px solid var(--line);border-radius:6px;
+  padding:7px 4px;font-size:.72rem;color:var(--ink2)}
+.lamp b{display:block;font-family:"IBM Plex Mono",monospace;font-size:.95rem;
+  font-weight:500;color:var(--ink)}
+.lamp.odd b{color:var(--lamp-odd)}
+.csp{display:flex;gap:2px;align-items:flex-end;height:34px;margin-top:4px}
+.csp i{flex:1;background:var(--ink2);opacity:.55;border-radius:1px 1px 0 0}
+.csp i.z{opacity:.18;height:2px !important}
+.csplab{font-size:.68rem;color:var(--ink2);margin-top:3px}
+.tokinfo{font-size:.78rem;color:var(--ink2);border-top:1px solid var(--line);
+  padding-top:10px;margin-top:2px}
+.tokinfo b{font-family:"IBM Plex Mono",monospace;font-weight:500;color:var(--ink)}
+/* theorem */
+.theorem{margin-top:26px;border-left:3px solid var(--vac)}
+.theorem h2{font-family:Spectral,Georgia,serif;font-weight:600;font-size:1.3rem;
+  margin:0 0 8px}
+.theorem p{max-width:70ch;margin:0 0 10px}
+.theorem .fine{font-size:.8rem;color:var(--ink2)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+@media(max-width:700px){.grid2{grid-template-columns:1fr}}
+.spec h3{font-size:.85rem;margin:0 0 8px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink2);font-weight:600}
+.spec table{border-collapse:collapse;font-size:.8rem;width:100%}
+.spec td{padding:4px 8px 4px 0;border-bottom:1px solid var(--line);
+  vertical-align:top}
+.spec td:first-child{font-family:"IBM Plex Mono",monospace;white-space:nowrap;
+  color:var(--ink2)}
+footer{margin-top:30px;font-size:.78rem;color:var(--ink2);max-width:72ch}
+footer a{color:var(--frame)}
+.swapflash .sheet{animation:flash .5s}
+@keyframes flash{50%{filter:brightness(1.25)}}
+@media (prefers-reduced-motion: reduce){.swapflash .sheet{animation:none}}
+/* wave view */
+#wavectl{display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  margin-bottom:12px;padding:8px 10px;background:var(--panel2);border-radius:6px}
+.wlab{font-size:.74rem;color:var(--ink2);display:flex;align-items:center;gap:6px}
+.wlab input{accent-color:var(--frame)}
+.wplay{font:inherit;font-size:.76rem;background:var(--panel);color:var(--ink);
+  border:1px solid var(--line);border-radius:5px;padding:3px 10px;cursor:pointer}
+.wplay[aria-pressed="true"]{background:var(--frame);color:#fff;border-color:var(--frame)}
+.winfo{font-size:.72rem;color:var(--ink2);flex-basis:100%;
+  font-family:"IBM Plex Mono",monospace}
+.cell.wave{color:#fff;font-weight:500;border-color:transparent}
+.cell.dimmed{opacity:.28}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Scar ✕ Merkabit · the joint architecture · E₇ minuscule crystal</div>
+  <h1>The 56-State Machine</h1>
+  <p class="lede">Fifty-six states: the 27 and its mirror 27̄, hinged on two vacuum
+  states. The odd gate <b>pr</b> exchanges the sheets — the picture that was refuted
+  on the 27 and is a theorem here. Drive the machine and watch both grammars price
+  your program.</p>
+</header>
+
+<div class="machine">
+  <div class="panel" id="boardpanel">
+    <div class="board-head">
+      <span class="vt" id="viewnote">branch view — the two sheets, mirrored by pr</span>
+      <span class="viewtoggle">
+        <button id="bv" class="on">Branch</button><button id="fv">Frames</button><button id="wv">Waves</button>
+      </span>
+    </div>
+    <div id="wavectl" style="display:none">
+      <span class="eyebrow" style="margin:0 8px 0 0">standing wave</span>
+      <span class="viewtoggle" id="orbbtns"></span>
+      <label class="wlab">harmonic j
+        <input type="range" id="harm" min="0" max="17" value="1"></label>
+      <button id="play" class="wplay" aria-pressed="false">▶ tick</button>
+      <div class="winfo" id="winfo"></div>
+    </div>
+    <div id="board"></div>
+    <div class="gates">
+      <button data-g="PSI">Ψ</button>
+      <button data-g="PSIINV">Ψ⁻¹</button>
+      <button data-g="PSI6">Ψ⁶</button>
+      <button data-g="PSI9">Ψ⁹</button>
+      <button data-g="PR" class="odd">pr</button>
+      <button data-g="IOTA" class="odd">ι</button>
+      <button data-g="RESET" class="reset">reset</button>
+    </div>
+    <div class="gatenote">Ψ = the clock (order 18) · pr = the odd mirror
+    (1²·2²⁷) · ι = the antipode (28 frames). ⟨pr,Ψ⁶⟩ generates all of S₅₆ —
+    no parity ceiling on this floor.</div>
+  </div>
+
+  <div class="panel">
+    <div class="eyebrow">program meters</div>
+    <div class="meter">
+      <div class="mlabel"><span>μ<sub>branch</sub> — E₆ grammar</span><b id="mAv">0/56</b></div>
+      <div class="bar mA"><i id="mAbar" style="width:0%"></i></div>
+    </div>
+    <div class="meter">
+      <div class="mlabel"><span>μ<sub>frame</sub> — Scar grammar</span><b id="mFv">0/56</b></div>
+      <div class="bar mF"><i id="mFbar" style="width:0%"></i></div>
+    </div>
+    <div class="lamps">
+      <div class="lamp" id="parlamp"><b id="parv">EVEN</b>parity of program</div>
+      <div class="lamp"><b id="wlen">0</b>gates applied</div>
+    </div>
+    <div class="eyebrow">clock census |Fix(Ψᵈ)|, d = 0…17</div>
+    <div class="csp" id="csp"></div>
+    <div class="csplab">56, then 2 on every even tick — the [18,18,18,2] orbit
+    rigidity.</div>
+    <div class="tokinfo" id="tokinfo"></div>
+  </div>
+</div>
+
+<div class="panel theorem">
+  <h2>The Resurrection Theorem</h2>
+  <p>Delete the seventh colour from the E₇ crystal and the 56 falls apart as
+  <b style="color:var(--sheetA)">27</b> ⊕
+  <b style="color:var(--sheetB)">27̄</b> ⊕
+  <b style="color:var(--vac)">1 ⊕ 1</b>. The diagram gate pr — the odd involution
+  this floor adds — fixes <em>exactly</em> the two singlets and pairs the sheets
+  point-for-point with its 27 transpositions; the antipode ι does the same by a
+  second, different pairing (they agree on only 3 of 27 pairs); the clock Ψ runs
+  straight through the wall between them.</p>
+  <p>The original dual-spinor intuition — two counter-posed 27s exchanged by an
+  involution around a small pivot — was <em>refuted</em> as a description of the
+  E₆ crystal (the two-27s theorem). It is <em>true</em> one floor up: it describes
+  the E₆-branching of E₇'s 56. Refuted at E₆, resurrected at E₇ — the audit
+  giveth back.</p>
+  <p class="fine">Sealed by <code>verify_dq6_resurrection.py</code> (12/12 exact
+  checks); every table this page runs on is that script's output.</p>
+</div>
+
+<div class="grid2">
+  <div class="panel spec">
+    <h3>Machine facts (all sealed)</h3>
+    <table>
+      <tr><td>states</td><td>56 = E₇ minuscule crystal = 28 bitangent frames × 1 chirality bit</td></tr>
+      <tr><td>Ψ</td><td>rowmotion, order 18 = h(E₇); orbits [18,18,18,2]</td></tr>
+      <tr><td>pr</td><td>odd involution 1²·2²⁷ — fixes the vacua, mirrors the sheets</td></tr>
+      <tr><td>ι</td><td>antipode w↦−w: the 28 frames; 27 straddle the sheets, 1 is the vacuum frame</td></tr>
+      <tr><td>⟨pr,Ψ⁶⟩</td><td>S₅₆ — full universality, no parity ceiling (E₆-special)</td></tr>
+      <tr><td>⟨pr,Ψ⁹⟩</td><td>dihedral of order 156 — order-3 is load-bearing</td></tr>
+    </table>
+  </div>
+  <div class="panel spec">
+    <h3>The two grammars</h3>
+    <table>
+      <tr><td>μ<sub>branch</sub></td><td>Hamming distance from your program to the permutations preserving 27 / 27̄ / vacua (sheet swaps allowed) — the E₆-side typing</td></tr>
+      <tr><td>μ<sub>frame</sub></td><td>distance to the permutations preserving the 28 ι-frames (frames may permute, chirality may flip) — the Scar-side typing, exact via assignment</td></tr>
+      <tr><td>parity</td><td>the resource E₆ never had: only pr-odd programs reach odd permutations</td></tr>
+      <tr><td>depth ladder</td><td>magic-depth of the whole machine: <b>2</b> clock-ticks in either grammar (proved: 908 tables / 3718 witnesses); lift to the quantum field and the beam-splitter W costs <b>4</b> — scrambling is cheap, superposition dearer, sign flips dearest</td></tr>
+      <tr><td>the field</td><td>the clock's standing waves (Waves view): all 18th roots of unity, multiplicity 3, except ±1 with multiplicity 4 — and the census strip at right is their exact trace formula. Every wave is sheet-balanced; O2 carries the vacua; O3 is the clock's own ι-frame, its axis</td></tr>
+    </table>
+  </div>
+</div>
+
+<footer>
+  Sibling instruments: <em>The 27-State Machine</em> and <em>The 27-State
+  Testbed</em> (the E₆ floor). Built in the Scar_merkabit lane, 2026-08-30, on
+  the bitangent bridge: inside Sp₆(2) = W(E₇)/±, W(E₆) stabilises one bitangent,
+  PSL(2,7) permutes all 28, and they meet in the S₃ both programs found first.
+  House rules: compute, never assert; no physics claimed — “sheets”, “vacua”
+  and “frames” are architectural role names.
+</footer>
+</div>
+
+<script>
+const D = {"verts": [[-1, -1, 0, 1, 0, 0, 0], [-1, -1, 1, 0, 0, 0, 0], [-1, 0, 0, 0, 0, 0, 1], [-1, 0, 0, 0, 0, 1, -1], [-1, 0, 0, 0, 1, -1, 0], [-1, 0, 0, 1, -1, 0, 0], [-1, 0, 1, -1, 1, 0, 0], [-1, 0, 1, 0, -1, 1, 0], [-1, 0, 1, 0, 0, -1, 1], [-1, 0, 1, 0, 0, 0, -1], [-1, 1, 0, 0, 0, 0, 0], [-1, 1, 1, -1, 0, 0, 0], [0, -1, -1, 1, 0, 0, 0], [0, -1, 0, 0, 0, 1, 0], [0, -1, 0, 0, 1, -1, 1], [0, -1, 0, 0, 1, 0, -1], [0, -1, 0, 1, -1, 0, 1], [0, -1, 0, 1, -1, 1, -1], [0, -1, 0, 1, 0, -1, 0], [0, -1, 1, 0, 0, 0, 0], [0, 0, -1, 0, 1, 0, 0], [0, 0, -1, 1, -1, 1, 0], [0, 0, -1, 1, 0, -1, 1], [0, 0, -1, 1, 0, 0, -1], [0, 0, 0, -1, 1, 0, 0], [0, 0, 0, 0, -1, 1, 0], [0, 0, 0, 0, 0, -1, 1], [0, 0, 0, 0, 0, 0, -1], [0, 0, 0, 0, 0, 0, 1], [0, 0, 0, 0, 0, 1, -1], [0, 0, 0, 0, 1, -1, 0], [0, 0, 0, 1, -1, 0, 0], [0, 0, 1, -1, 0, 0, 1], [0, 0, 1, -1, 0, 1, -1], [0, 0, 1, -1, 1, -1, 0], [0, 0, 1, 0, -1, 0, 0], [0, 1, -1, 0, 0, 0, 0], [0, 1, 0, -1, 0, 1, 0], [0, 1, 0, -1, 1, -1, 1], [0, 1, 0, -1, 1, 0, -1], [0, 1, 0, 0, -1, 0, 1], [0, 1, 0, 0, -1, 1, -1], [0, 1, 0, 0, 0, -1, 0], [0, 1, 1, -1, 0, 0, 0], [1, -1, -1, 1, 0, 0, 0], [1, -1, 0, 0, 0, 0, 0], [1, 0, -1, 0, 0, 0, 1], [1, 0, -1, 0, 0, 1, -1], [1, 0, -1, 0, 1, -1, 0], [1, 0, -1, 1, -1, 0, 0], [1, 0, 0, -1, 1, 0, 0], [1, 0, 0, 0, -1, 1, 0], [1, 0, 0, 0, 0, -1, 1], [1, 0, 0, 0, 0, 0, -1], [1, 1, -1, 0, 0, 0, 0], [1, 1, 0, -1, 0, 0, 0]], "PSI": [54, 55, 45, 46, 47, 48, 44, 50, 51, 52, 53, 49, 11, 42, 37, 40, 39, 38, 41, 10, 9, 6, 7, 8, 12, 24, 25, 26, 27, 28, 29, 30, 18, 16, 17, 4, 1, 23, 21, 22, 15, 14, 3, 31, 43, 36, 35, 32, 33, 34, 0, 20, 13, 2, 19, 5], "PR": [18, 14, 26, 52, 8, 22, 34, 48, 4, 30, 42, 38, 16, 45, 1, 19, 12, 44, 0, 15, 35, 49, 5, 31, 32, 46, 2, 27, 28, 53, 9, 23, 24, 50, 6, 20, 40, 55, 11, 43, 36, 54, 10, 39, 17, 13, 25, 51, 7, 21, 33, 47, 3, 29, 41, 37], "IOTA": [55, 54, 53, 52, 51, 50, 49, 48, 47, 46, 45, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], "COMP": [0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 0, 1, 1, 1, 1, 2, 3, 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1, 1, 0, 0, 1, 0, 1, 1, 1, 0, 0, 0, 1, 0, 1], "FRAME": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17, 16, 15, 14, 13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], "SIGN": [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1], "FIX": [56, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0], "EDGES": [[28, 6, 29], [29, 5, 30], [30, 4, 31], [31, 3, 43], [43, 1, 19], [43, 2, 54], [54, 0, 10], [54, 1, 44], [44, 0, 0], [44, 3, 50], [50, 0, 6], [50, 4, 51], [51, 0, 7], [51, 5, 52], [52, 0, 8], [52, 6, 53], [53, 0, 9], [9, 2, 23], [23, 3, 39], [39, 1, 15], [39, 4, 41], [41, 1, 17], [41, 5, 42], [42, 1, 18], [18, 3, 34], [34, 2, 48], [34, 4, 35], [35, 2, 49], [49, 0, 5], [49, 3, 55], [55, 0, 11], [55, 1, 45], [45, 0, 1], [1, 2, 12], [12, 3, 24], [24, 4, 25], [25, 5, 26], [26, 6, 27], [11, 1, 1], [11, 2, 36], [36, 1, 12], [5, 3, 11], [48, 0, 4], [48, 4, 49], [4, 4, 5], [17, 3, 33], [17, 5, 18], [33, 2, 47], [33, 5, 34], [47, 0, 3], [47, 5, 48], [3, 5, 4], [15, 4, 17], [8, 2, 22], [8, 6, 9], [22, 3, 38], [22, 6, 23], [38, 1, 14], [38, 4, 40], [38, 6, 39], [40, 1, 16], [40, 6, 41], [16, 3, 32], [16, 6, 17], [32, 2, 46], [32, 6, 33], [46, 0, 2], [46, 6, 47], [2, 6, 3], [14, 4, 16], [14, 6, 15], [7, 2, 21], [7, 5, 8], [21, 3, 37], [21, 5, 22], [37, 1, 13], [37, 5, 38], [13, 5, 14], [6, 2, 20], [6, 4, 7], [20, 4, 21], [0, 3, 6], [10, 1, 0], [19, 2, 44]]};
+const N = 56;
+const compose = (a,b)=>a.map((_,k)=>a[b[k]]);         // a after b
+const PSI=D.PSI, PR=D.PR, IOTA=D.IOTA;
+const PSIINV = (()=>{const x=Array(N); PSI.forEach((v,k)=>x[v]=k); return x;})();
+const powPsi = p=>{let x=[...Array(N).keys()]; for(let i=0;i<p;i++) x=compose(PSI,x); return x;};
+const GATES = {PSI, PSIINV, PSI6:powPsi(6), PSI9:powPsi(9), PR, IOTA};
+
+let word = [...Array(N).keys()];   // program permutation (initial -> now)
+let tok = 0;                       // token = image of state 0
+let view = "branch";
+
+// ---- layout: sheet A cells in index order; B mirrored via PR
+const Averts=[], Bverts=[], vac=[];
+D.COMP.forEach((c,k)=>{ if(c===0)Averts.push(k); else if(c===1)Bverts.push(k); else vac.push(k); });
+const Bslot = Averts.map(k=>PR[k]);   // B arranged so pr is a literal mirror
+
+// ---- clock orbits (for the wave view)
+const ORBITS = (()=>{
+  const seen=Array(N).fill(false), out=[];
+  for(let s=0;s<N;s++){ if(seen[s])continue;
+    const o=[]; let x=s;
+    while(!seen[x]){seen[x]=true;o.push(x);x=PSI[x];}
+    out.push(o);}
+  out.sort((a,b)=>b.length-a.length);
+  return out;})();
+let wOrbit = 0, wHarm = 1, wPhase = 0, playing = false, rafId = null;
+function esc(s){return String(s);}
+function renderBoard(){
+  const bd = document.getElementById("board");
+  if(view==="waves"){
+    const o = ORBITS[wOrbit], L = o.length, j = wHarm % L;
+    const pos = {}; o.forEach((x,i)=>pos[x]=i);
+    const hue = x => ((j*pos[x]/L + wPhase) % 1) * 360;
+    const cellHTML = (k) => (pos[k]!==undefined)
+      ? `<div class="cell wave" style="background:hsl(${hue(k).toFixed(0)},62%,52%)" title="state ${k}, phase ${(j*pos[k]/L%1).toFixed(2)}·2π">${k}</div>`
+      : `<div class="cell dimmed">${k}</div>`;
+    let A='<div class="sheet A">', B='<div class="sheet B">';
+    for(let i=0;i<27;i++){ A+=cellHTML(Averts[i]); B+=cellHTML(Bslot[i]); }
+    A+='</div><div class="sheetlabel">27 — sheet</div>';
+    B='<div class="sheetlabel">27̄ — mirror sheet</div>'+B+'</div>';
+    let Vc='<div class="vaccol"><span class="vaclab">pr-axis</span>'+vac.map(k=>
+      cellHTML(k).replace('class="cell','class="cell vac')).join('')+
+      '<span class="vaclab">vacua</span></div>';
+    bd.innerHTML=`<div class="branch"><div>${A}</div>${Vc}<div>${B}</div></div>`;
+    const k18 = (j*(18/L))%18;
+    const cc=[0,0,0,0]; o.forEach(x=>cc[D.COMP[x]]++);
+    document.getElementById("winfo").textContent =
+      `orbit O${wOrbit} (length ${L}) · harmonic j=${j} · eigenvalue ζ₁₈^${k18}`+
+      ` · sector mass 27:${cc[0]}/${L} 27̄:${cc[1]}/${L} vac:${cc[2]+cc[3]}/${L}`+
+      (wOrbit===3?" · THE AXIS FRAME {15,40} — the clock's own ι-pair":"");
+    return;
+  }
+  if(view==="branch"){
+    let A='<div class="sheet A">', B='<div class="sheet B">';
+    for(let j=0;j<27;j++){
+      A+=`<div class="cell ${Averts[j]===tok?'tok':''}" title="state ${Averts[j]}">${Averts[j]}</div>`;
+      B+=`<div class="cell ${Bslot[j]===tok?'tok':''}" title="state ${Bslot[j]}">${Bslot[j]}</div>`;
+    }
+    A+='</div><div class="sheetlabel">27 — sheet</div>';
+    B='<div class="sheetlabel">27̄ — mirror sheet</div>'+B+'</div>';
+    let Vc='<div class="vaccol"><span class="vaclab">pr-axis</span>'+vac.map(k=>
+      `<div class="cell vac ${k===tok?'tok':''}" title="vacuum ${k}">${k}</div>`).join('')+
+      '<span class="vaclab">vacua</span></div>';
+    bd.innerHTML=`<div class="branch"><div>${A}</div>${Vc}<div>${B}</div></div>`;
+  } else {
+    const byFrame=Array.from({length:28},()=>({}));
+    for(let k=0;k<N;k++){ byFrame[D.FRAME[k]][D.SIGN[k]>0?'p':'m']=k; }
+    let h='<div class="framegrid">';
+    byFrame.forEach((fr,i)=>{
+      const isv = D.COMP[fr.p]>=2 || D.COMP[fr.m]>=2;
+      h+=`<div class="framecell ${isv?'vacf':''}">
+        <div class="fhalf plus ${fr.p===tok?'tok':''}">${fr.p}</div>
+        <div class="fhalf ${fr.m===tok?'tok':''}">${fr.m}</div>
+        <div class="flab">${isv?'vac':'f'+i}</div></div>`;
+    });
+    bd.innerHTML=h+'</div>';
+  }
+}
+
+// ---- mu_branch: distance to sheet-preserving perms (4 block symmetries)
+function muBranch(w){
+  const blocks = D.COMP;                    // 0=A 1=B 2=S1 3=S2
+  const cnt = Array.from({length:4},()=>[0,0,0,0]);
+  for(let x=0;x<N;x++) cnt[blocks[x]][blocks[w[x]]]++;
+  const maps=[[0,1,2,3],[1,0,2,3],[0,1,3,2],[1,0,3,2]];
+  let best=0;
+  for(const m of maps){
+    let a=0; for(let b=0;b<4;b++) a+=cnt[b][m[b]];
+    best=Math.max(best,a);
+  }
+  return N-best;
+}
+// ---- mu_frame: distance to frame-preserving perms — 28x28 assignment
+function muFrame(w){
+  const T=Array.from({length:28},()=>Array(28).fill(0));
+  for(let x=0;x<N;x++) T[D.FRAME[x]][D.FRAME[w[x]]]++;
+  // Hungarian (min-cost) on cost = 2 - T  → max agreement
+  const n=28, INF=1e9;
+  const u=Array(n+1).fill(0), v=Array(n+1).fill(0),
+        p=Array(n+1).fill(0), way=Array(n+1).fill(0);
+  for(let i=1;i<=n;i++){
+    p[0]=i; let j0=0;
+    const minv=Array(n+1).fill(INF), used=Array(n+1).fill(false);
+    do{
+      used[j0]=true; const i0=p[j0]; let d=INF, j1=0;
+      for(let j=1;j<=n;j++) if(!used[j]){
+        const cur=(2-T[i0-1][j-1])-u[i0]-v[j];
+        if(cur<minv[j]){minv[j]=cur; way[j]=j0;}
+        if(minv[j]<d){d=minv[j]; j1=j;}
+      }
+      for(let j=0;j<=n;j++){
+        if(used[j]){u[p[j]]+=d; v[j]-=d;} else minv[j]-=d;
+      }
+      j0=j1;
+    }while(p[j0]!==0);
+    do{const j1=way[j0]; p[j0]=p[j1]; j0=j1;}while(j0);
+  }
+  let agree=0;
+  for(let j=1;j<=n;j++) if(p[j]) agree+=T[p[j]-1][j-1];
+  return N-agree;
+}
+function parity(w){
+  const seen=Array(N).fill(false); let s=0;
+  for(let k=0;k<N;k++){ if(seen[k])continue; let L=0,x=k;
+    while(!seen[x]){seen[x]=true;L++;x=w[x];} s+=L-1; }
+  return s%2===0;
+}
+
+function refresh(flash){
+  renderBoard();
+  const mA=muBranch(word), mF=muFrame(word);
+  document.getElementById("mAv").textContent=mA+"/56";
+  document.getElementById("mFv").textContent=mF+"/56";
+  document.getElementById("mAbar").style.width=(100*mA/56)+"%";
+  document.getElementById("mFbar").style.width=(100*mF/56)+"%";
+  const even=parity(word);
+  const lamp=document.getElementById("parlamp");
+  document.getElementById("parv").textContent=even?"EVEN":"ODD";
+  lamp.classList.toggle("odd",!even);
+  const sheet=["27","27̄","vac","vac"][D.COMP[tok]];
+  document.getElementById("tokinfo").innerHTML=
+    `token: state <b>${tok}</b> · sheet <b>${sheet}</b> · frame <b>f${D.FRAME[tok]}</b> `+
+    `· chirality <b>${D.SIGN[tok]>0?"+":"−"}</b>`;
+  if(flash){
+    const bp=document.getElementById("boardpanel");
+    bp.classList.remove("swapflash"); void bp.offsetWidth;
+    bp.classList.add("swapflash");
+  }
+}
+let steps=0;
+document.querySelectorAll(".gates button").forEach(b=>{
+  b.addEventListener("click",()=>{
+    const g=b.dataset.g;
+    if(g==="RESET"){ word=[...Array(N).keys()]; tok=0; steps=0; }
+    else{ const P=GATES[g]; word=compose(P,word); tok=P[tok]; steps++; }
+    document.getElementById("wlen").textContent=steps;
+    refresh(g==="PR"||g==="IOTA");
+  });
+});
+document.getElementById("bv").addEventListener("click",()=>{
+  view="branch"; setToggle(); refresh(false);});
+document.getElementById("fv").addEventListener("click",()=>{
+  view="frames"; setToggle(); refresh(false);});
+document.getElementById("wv").addEventListener("click",()=>{
+  view="waves"; setToggle(); refresh(false);});
+function setToggle(){
+  document.getElementById("bv").classList.toggle("on",view==="branch");
+  document.getElementById("fv").classList.toggle("on",view==="frames");
+  document.getElementById("wv").classList.toggle("on",view==="waves");
+  document.getElementById("wavectl").style.display =
+    view==="waves" ? "flex" : "none";
+  document.getElementById("viewnote").textContent = view==="branch"
+    ? "branch view — the two sheets, mirrored by pr"
+    : view==="frames"
+    ? "frame view — 28 ι-frames × chirality (the Scar grammar's registers)"
+    : "wave view — the clock's standing waves, phase-painted (hue = phase)";
+  if(view!=="waves" && playing) togglePlay();
+}
+// wave controls
+const orbbtns = document.getElementById("orbbtns");
+["O0 · 18","O1 · 18","O2 · 18","O3 · axis"].forEach((lab,i)=>{
+  const b=document.createElement("button");
+  b.textContent=lab; if(i===0)b.classList.add("on");
+  b.addEventListener("click",()=>{
+    wOrbit=i;
+    document.querySelectorAll("#orbbtns button").forEach((x,k)=>
+      x.classList.toggle("on",k===i));
+    const L=ORBITS[i].length;
+    const h=document.getElementById("harm");
+    h.max=L-1; if(wHarm>=L){wHarm=1%L; h.value=wHarm;}
+    refresh(false);
+  });
+  orbbtns.appendChild(b);
+});
+document.getElementById("harm").addEventListener("input",e=>{
+  wHarm=+e.target.value; refresh(false);});
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+function togglePlay(){
+  playing=!playing && !reduced;
+  document.getElementById("play").setAttribute("aria-pressed",playing);
+  document.getElementById("play").textContent = playing? "⏸ hold":"▶ tick";
+  if(playing){
+    let last=performance.now();
+    const step=(t)=>{ if(!playing)return;
+      wPhase=(wPhase+(t-last)/6000)%1; last=t;
+      if(view==="waves")renderBoard();
+      rafId=requestAnimationFrame(step);};
+    rafId=requestAnimationFrame(step);
+  } else if(rafId){cancelAnimationFrame(rafId); rafId=null;}
+}
+document.getElementById("play").addEventListener("click",togglePlay);
+// CSP strip
+const csp=document.getElementById("csp");
+D.FIX.forEach(fx=>{
+  const bar=document.createElement("i");
+  bar.style.height=Math.max(4,(fx/56)*100)+"%";
+  if(fx===0) bar.classList.add("z");
+  bar.title="|Fix| = "+fx;
+  csp.appendChild(bar);
+});
+refresh(false);
+</script>
