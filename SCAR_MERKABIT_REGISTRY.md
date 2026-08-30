@@ -40,6 +40,8 @@ parties have seen it; sends and publication require both parties' word.**
 
 | SM-017 | **Stone T: first contact with the T gate** | Genuine Clifford+T on exhaustive 1-qubit ground truth (ALL 36,816 unitaries of T-count ≤ 9 mod phase, exact ℤ[ω]). **Skeleton survives**: layers exactly 72·2^{k−1} — the crystal's rate-2 free growth (CN-012) in the T world; Matsumoto–Amano words = BFS layers AS SETS ∀k (uniqueness + T-optimality verified on range). **Certificate currency does NOT survive**: locked denominator invariant REFUTED at the diagonal (S/T collide; 6 collisions); residue refinement ALSO fails (8; witness s=1→{1,2}); sde only BRACKETS T-count (k ∈ [2s−3, 2s], table recorded) — at n=1 the exact certificate is the NORMAL FORM: syntax, not entry arithmetic. **Table shape survives**: C·U·C double cosets = channel matrices mod the 24 PROPER signed permutations at canonical √2-scale — the Clifford+T contingency table, verified 528/528; each layer k ≤ 3 is ONE double coset. Two instructive implementation refutations kept (chirality of the table's symmetry group; canonical scale). **Skeleton theorem (n=3)**: preserving the 64 phase points ⟺ Clifford [P] ⇒ the bitangent geometry = EXACTLY the T-free stratum; one T exits at sup-distance 0.541. Boundary of open problem #3, final form: our certificates price motion within a finite skeleton; T-magic moves between skeletons. 11 checks; 3 fail-first logs. | [C]/[P]/[obs] | `STONE_T_TGATE.md`, `verify_stone_t_tgate.py`, `BRIEF_STONE_T_TGATE.md` (+lock), `AMENDMENT_STONE_T_2026-08-30.md` (+lock), three fail-first logs |
 
+| SM-018 | **Stone S: the rigidity threshold** (answers IB's ONE LAW / TWO PROJECTIONS v0.1, received 2026-08-30, filed sha adb17c49…) | His decision rule executed on the two computable projections (α=1: Sₙ classes; α=2: (S₂ₙ,Bₙ) coset types; both on partitions of n), exhaustive n = 4..7. **His ladder REFUTED as stated** (rigidity events at every depth; his part-reading measures 1, not 3 — the hardest target is the IDENTITY); our registered inversion and two working guesses ALSO refuted (all recorded, two fail-first logs). **New exact laws**: identity-return (1ⁿ ∈ supp ⟺ λ=τ — home only by exact retracing); symmetry; **swap = cut-or-join-or-TWIST** (the third move — segment reversal inside a cycle, type-preserving — the microscopic non-orientable move); parity a LAW upstairs (sign), refuted downstairs ((4)∘(4) ∋ (2,1,1)) — **orientability = parity memory**. **The verdict, his format**: not one threshold — one DIRECTION: even-sector rigidity events EQUAL at n = 4,5; diverge from n = 6 (6 witnesses, all-even types: (2,2,2)∘(2,2,2)→(4,2), (3,3)∘(3,3)→(4,2)…; 3 at n=7); **containment at every n** (missing_B ⊆ missing_S — the world that forgets its path is uniformly SOFTER, never harder); odd sector lives only downstairs (6/15/105/219). SM-010's 258 reproduced exactly. Returned: his braid-Bₙ vs our hyperoctahedral-Bₙ; the translation choice; the twist as inverted path-memory. 14 checks. | [C on range]/[P] | `STONE_S_RIGIDITY.md`, `verify_stone_s_rigidity.py`, `BRIEF_STONE_S_RIGIDITY.md` (+lock), two fail-first logs, `RECEIVED_2026-08-30_IB_ONE_LAW_TWO_PROJECTIONS/`, `to_Ilya_ONE_LAW_REPLY_2026-08-30/` |
+
 ## Open questions (the joint program)
 
 - ~~DQ-1~~ CLOSED by SM-013: orbits [28,28]; the ± doubling is equivariantly trivial.
@@ -86,6 +88,18 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Changelog
 
+- **v0.17 (2026-08-30)** — **FIRST INBOUND MATH FROM THE SHIP + same-day
+  answer**: IB's ONE LAW / TWO PROJECTIONS v0.1 received and filed
+  (`RECEIVED_2026-08-30_IB_ONE_LAW_TWO_PROJECTIONS/`, sha at filing);
+  Stone S run under locked brief (45031dd4…) and sealed as SM-018
+  (verifier 14/14, two fail-first logs, his guess and three of ours
+  refuted at equal prominence; the twist law found; containment verdict).
+  Reply package prepared: `to_Ilya_ONE_LAW_REPLY_2026-08-30/` (11 files
+  incl. .docx render, brief+lock, both fail-first logs, SHA256SUMS),
+  zipped as `package/One_Law_Reply_2026-08-30.zip` (32,321 B, sha256
+  a9ac3d573d534c75905577b0928baecb4c0be6796dbbe98364f7619c53a86968,
+  hash outside in `package/COVER_ONELAW_SHA256.txt`). PREPARED-NOT-SENT;
+  send = Selina's word.
 - **v0.16 (2026-08-30)** — **Clifford Trilogy package sealed** on
   Selina's word: fresh `to_Ilya_CLIFFORD_TRILOGY_2026-08-30/` (cover
   note for a reader who holds the COMPLETE package; the full

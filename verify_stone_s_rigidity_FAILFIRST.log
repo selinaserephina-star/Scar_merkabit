@@ -1,0 +1,43 @@
+﻿==============================================================================
+STONE S -- the rigidity threshold (Ilya's ONE LAW / TWO PROJECTIONS)
+==============================================================================
+
+--- SB1: exact tables n = 4..7 + Stone 1b anchors ---
+  n=4: 105 matchings, 5 types, 11 rigidity events
+[PASS] SB1 n=4 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=5: 945 matchings, 7 types, 23 rigidity events
+[PASS] SB1 n=5 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=6: 10395 matchings, 11 types, 82 rigidity events
+[PASS] SB1 n=6 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=7: 135135 matchings, 15 types, 142 rigidity events
+[PASS] SB1 n=7 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+[FAIL] SB1 mined d-law: Stone 1b's mined law re-verified: support = the FULL d-interval whenever d(lam) >= 2 AND d(tau) >= 2; every rigidity event has min(d) <= 1  -> 258 events across n=4..7
+
+--- SB2: is there a parity law? ---
+[PASS] SB2 parity: d(mu) = d(lam) + d(tau) mod 2 tested over EVERY support entry, n = 4..7 — measured, either outcome recorded  -> parity is a law: False; counterexample (4, (4,), (4,), (2, 1, 1)); ELIGIBLE stays the plain triangle interval
+
+--- SB3: Ilya's decision rule, two declared translations ---
+  min(d) values at rigidity events, per n: {4: [0, 1, 2], 5: [0, 1, 2, 3], 6: [0, 1, 2, 3, 4], 7: [0, 1, 2, 3, 4, 5]}
+[FAIL] SB3a d-translation: measured polarity: rigidity events occur ONLY at min(d) <= 1 (identity-adjacent and SWAP steps) and NEVER at min(d) >= 2 — on this projection the swap is the RIGID move and depth is soft: Ilya's ladder holds with the SIGN INVERTED ('support 2 soft, support 3 first rigid' is false here; the threshold sits at 2, and it is a rigidity CEILING, not a floor). Constant across n = 4..7 (his Q1: constant)
+  P(n) = min max-part over MISSING mu: {4: 1, 5: 1, 6: 1, 7: 1}
+  Q(n) = min over events of max part among (lam, tau): {4: 2, 5: 2, 6: 2, 7: 2}
+  n=4 sample events: [((3, 1), (1, 1, 1, 1), [(2, 2)]), ((2, 2), (1, 1, 1, 1), [(3, 1)]), ((1, 1, 1, 1), (3, 1), [(2, 2)])]
+  n=5 sample events: [((4, 1), (1, 1, 1, 1, 1), [(3, 2)]), ((3, 2), (1, 1, 1, 1, 1), [(4, 1)]), ((3, 1, 1), (1, 1, 1, 1, 1), [(2, 2, 1)])]
+  n=6 sample events: [((5, 1), (1, 1, 1, 1, 1, 1), [(3, 3), (4, 2)]), ((4, 2), (1, 1, 1, 1, 1, 1), [(3, 3), (5, 1)]), ((4, 1, 1), (1, 1, 1, 1, 1, 1), [(2, 2, 2), (3, 2, 1)])]
+  n=7 sample events: [((6, 1), (1, 1, 1, 1, 1, 1, 1), [(4, 3), (5, 2)]), ((5, 2), (1, 1, 1, 1, 1, 1, 1), [(4, 3), (6, 1)]), ((5, 1, 1), (1, 1, 1, 1, 1, 1, 1), [(3, 2, 2), (3, 3, 1), (4, 2, 1)])]
+[PASS] SB3b part-translation: his claim under the part reading: the first unreachable structure always carries a part of size exactly 3, constant in n (min_support = 3)  — MEASURED  -> P(n) = 3 for all n: False; P = {4: 1, 5: 1, 6: 1, 7: 1}, Q = {4: 2, 5: 2, 6: 2, 7: 2}
+
+--- SB4: verdict in his format + returned questions ---
+  HIS DECISION RULE, executed on the projection we have:
+   - d-translation: threshold exists, is CONSTANT (his Q1),
+     but the polarity is INVERTED: swaps rigid, depth soft.
+   - part-translation: P(n) = 3 for all n: False (P = {4: 1, 5: 1, 6: 1, 7: 1}).
+   - braid projection (his Q2): NO TABLES in this lane; his B_n
+     (braids) is not our B_n (hyperoctahedral) — returned.
+   - classical, cited not computed: trefoil crossing number 3;
+     B_3 the first braid group with a knotted closure.
+[PASS] SB4 recorded: verdicts rendered under both declared translations; the braid side and the choice of translation are RETURNED QUESTIONS (his call), per the geometric-order precedent
+
+==============================================================================
+RESULT: 7 checks passed, 2 failed
+==============================================================================

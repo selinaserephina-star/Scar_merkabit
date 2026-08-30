@@ -1,0 +1,61 @@
+﻿==============================================================================
+STONE S -- the rigidity threshold (Ilya's ONE LAW / TWO PROJECTIONS)
+==============================================================================
+
+--- SB1: exact tables n = 4..7 + Stone 1b anchors ---
+  n=4: 105 matchings, 5 types, 11 rigidity events
+[PASS] SB1 n=4 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=5: 945 matchings, 7 types, 23 rigidity events
+[PASS] SB1 n=5 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=6: 10395 matchings, 11 types, 82 rigidity events
+[PASS] SB1 n=6 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+  n=7: 135135 matchings, 15 types, 142 rigidity events
+[PASS] SB1 n=7 triangle: triangle inequalities NECESSARY (Stone 1b anchor)
+[PASS] SB1 anchor (corrected): the sealed 258 d-interval failures of SM-010 reproduce EXACTLY (the d-interval guess stays refuted; this brief's mis-derived 'min(d) <= 1' expectation is itself refuted and recorded)  -> 258 events across n=4..7; min(d) values reach 5
+
+--- SB2: is there a parity law? ---
+[PASS] SB2 parity: d(mu) = d(lam) + d(tau) mod 2 tested over EVERY support entry, n = 4..7 — measured, either outcome recorded  -> parity is a law: False; counterexample (4, (4,), (4,), (2, 1, 1)); ELIGIBLE stays the plain triangle interval
+
+--- SB3: his decision rule — registered translations resolved ---
+  min(d) values at rigidity events, per n: {4: [0, 1, 2], 5: [0, 1, 2, 3], 6: [0, 1, 2, 3, 4], 7: [0, 1, 2, 3, 4, 5]}
+[PASS] SB3a BOTH GUESSES REFUTED: rigidity events occur at EVERY depth min(d) = 0..n-2 — his 'support 2 soft / support 3 first rigid' floor AND this brief's registered inversion are both false on the raw event set; the structure is finer (see the mined laws below)
+[PASS] SB3b part-translation resolved: P(n) = 1 for all n (not his 3): the dominant missing target is the IDENTITY type — measured  -> P = {4: 1, 5: 1, 6: 1, 7: 1}
+
+--- POST-HOC (labelled): the three exact laws + the comparison ---
+[PASS] law: identity return: the identity type lies in supp(lam, tau) IFF lam = tau — you can only come home by exact retracing; this explains P(n) = 1 (the missing target is almost always 1^n)
+[PASS] law: symmetry: supp(lam, tau) = supp(tau, lam) for every pair, every n
+[PASS] law: swap = cut-or-join-or-TWIST: supp(lam, swap) = cut-or-join PLUS lam itself whenever lam has a part >= 2: the extra move is the TWIST (re-pairing inside a union cycle can reverse a segment and preserve the type) — the microscopic non-orientable move that the S_n projection lacks, verified all lam, n = 4..7
+[PASS] S_n parity law: on the alpha=1 side d(mu) = d(lam) + d(tau) mod 2 ALWAYS (the sign homomorphism) — the law the matching side does NOT have: orientability is exactly the parity memory
+  nontrivial missing triples (identity mechanisms excluded),
+  each side within its OWN soft laws (triangle [+ parity for S_n]):
+    n=4: matchings 9 (even part 3), S_n 3, equal: True; missing_B(even) subset missing_S: True; upstairs-only rigidity (reachable downstairs): 0; odd-sector extras (matchings only): 6
+    n=5: matchings 15 (even part 0), S_n 0, equal: True; missing_B(even) subset missing_S: True; upstairs-only rigidity (reachable downstairs): 0; odd-sector extras (matchings only): 15
+    n=6: matchings 162 (even part 57), S_n 63, equal: False; missing_B(even) subset missing_S: True; upstairs-only rigidity (reachable downstairs): 6; odd-sector extras (matchings only): 105
+    n=7: matchings 318 (even part 99), S_n 102, equal: False; missing_B(even) subset missing_S: True; upstairs-only rigidity (reachable downstairs): 3; odd-sector extras (matchings only): 219
+      n=6 upstairs-missing, downstairs-reachable: (2, 2, 2) o (2, 2, 2) -> (4, 2)
+      n=6 upstairs-missing, downstairs-reachable: (2, 2, 2) o (4, 2) -> (2, 2, 2)
+      n=6 upstairs-missing, downstairs-reachable: (3, 3) o (3, 3) -> (4, 2)
+      n=6 upstairs-missing, downstairs-reachable: (3, 3) o (4, 2) -> (3, 3)
+      n=7 upstairs-missing, downstairs-reachable: (2, 2, 2, 1) o (2, 2, 2, 1) -> (4, 2, 1)
+      n=7 upstairs-missing, downstairs-reachable: (2, 2, 2, 1) o (4, 2, 1) -> (2, 2, 2, 1)
+      n=7 upstairs-missing, downstairs-reachable: (4, 2, 1) o (2, 2, 2, 1) -> (2, 2, 2, 1)
+[PASS] ONE LAW / TWO PROJECTIONS — the measured verdict: his decision rule resolves to branch two, WITH STRUCTURE: (i) on the shared even sector the two projections' rigidity events agree EXACTLY at n = 4, 5 and diverge from n = 6 (6 witnesses) and n = 7 (3); (ii) CONTAINMENT holds at every n — everything the orientable projection reaches, the non-orientable one reaches (missing_B subset of missing_S on the even sector); (iii) the non-orientable side alone owns the whole odd sector.  One law at small n, one DIRECTION always: downstairs is uniformly softer
+
+--- SB4: verdict in his format + returned questions ---
+  HIS DECISION RULE, executed on the projections we have:
+   - his floor (swap soft, 3 rigid) and our registered inversion:
+     BOTH refuted; rigidity events at every depth; the swap is
+     a deterministic cut-or-join move (a LAW, not softness).
+   - identity return: only by exact retracing (lam = tau).
+   - the computable ONE-LAW form: exact agreement at n = 4, 5;
+     divergence from n = 6 with explicit witnesses; containment
+     at every n (downstairs uniformly softer); the matching side
+     alone carries the odd sector.
+   - braid projection: NO TABLES here; his B_n (braids) is not
+     our B_n (hyperoctahedral) — returned, with the trefoil-3 /
+     B_3 facts cited as classical, not computed.
+[PASS] SB4 recorded: verdicts rendered; the braid side, the choice of translation, and the odd-sector reading are RETURNED QUESTIONS (his call), per the geometric-order precedent
+
+==============================================================================
+RESULT: 14 checks passed, 0 failed
+==============================================================================
