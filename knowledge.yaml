@@ -67,13 +67,44 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.12 -- rows SM-001..SM-014"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.13 -- rows SM-001..SM-015"
     intent: >
-      The joint world's single source of truth: eight sealed units, the open
+      The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: 3093d01ab7b44be9364e0bfc1645a8fd9bc63f1e1cd2019e640e7f06079f2dc1
+    sha256: 8b23b7bb94a55a8c85a0560cc37d7f5b3989988350092ca1ae779823134d3e8e
+
+  - id: stoneq-brief
+    path: BRIEF_STONEQ_CLIFFORD.md
+    title: "Stone Q brief (sha-locked before code; lock file alongside)"
+    intent: >
+      Pre-registered bars QB1..QB5 and expectations for the Clifford
+      transport, incl. the disclosed descent risk that fired inverted.
+    scope: brief
+    sha256: bb7a68225b425403db69977396fe84e9ff76ef11a1310d3d2aaf0ff747ffb316
+
+  - id: stoneq-doc
+    path: STONEQ_CLIFFORD.md
+    title: "SM-015 -- Stone Q: the Clifford transport"
+    intent: >
+      Sp6(2) = 3-qubit Clifford mod phases/Paulis exhibited; bridge
+      dictionary transported (28 bitangents = odd Pauli sign-functions,
+      W(E6) = one-form stabilizer, PSL(2,7) transitive, Coxeter clock =
+      7-gate circuit); membership boundary (Psi nonlinear, pr odd, iota
+      erased); SHADOW COLLAPSE depth 1; descent-by-cancellation refutation.
+    scope: theorem
+    sha256: c205ceae4cb7fb15bdc81c26365dd1b873cb89dd7644c57395c5db74d419e054
+
+  - id: stoneq-verifier
+    path: verify_stoneq_clifford.py
+    title: "Stone Q verifier (35 checks)"
+    intent: >
+      Tableau Sp6(2), Arf split + phase points, phi via root lattice mod 2,
+      symplectic Gram-Schmidt transport, PSL(2,7) push, membership strips,
+      bidirectional circuit search, shadow-depth certificate.
+    scope: verifier
+    sha256: 221e2b9fe8f0d181199f3057345643378ff2a62b1aeb9d40471c63075c732bf0
 
   - id: readme
     path: README.md

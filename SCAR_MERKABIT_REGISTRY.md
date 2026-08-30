@@ -35,6 +35,7 @@ parties have seen it; sends and publication require both parties' word.**
 | SM-012 | **Stone F(a): the field machine** | The linear lift ℂ⁵⁶: standing-wave spectrum of Ψ exact (all 18th roots, mult 3; ±1 mult 4); **the CSP census = the spectral trace formula** — the founding standing-wave intuition proved in its computational reading. Sector masses exact (all waves sheet-balanced; O2 carries the vacua 1/18 each); **all 28 frames live inside single clock orbits** [obs]; **the clock's 2-cycle IS a cross-sheet ι-frame — its axis** [obs, auditor guess refuted]; **DQ-4 CLOSED** (ιΨι=Ψ⁻¹; the 4 shared pairs = one axis pair per orbit); **pr does not normalize the clock** — bilingual yet frequency-mixing: a third notion of "structured" [obs]; ι = +1 on E₊₁, −1 on E₋₁; **Scar field sectors: ι-even = χ₁⊕2χ₆⊕χ₇⊕χ₈, ι-odd = χ₃⊕χ̄₃⊕2χ₇⊕χ₈ — quarks are chirality-odd, vacuum chirality-even** [obs, character level]. 13 checks. | [C] | `STONEF_FIELD.md`, `verify_stonef_field.py` |
 | SM-013 | **Stone F(b): DQ-1 ANSWERED + the SM-012 erratum** | W(E₇) built on the 56 weights from simple reflections (order 2903040 verified; ι = −1 central); explicit **bridge-class PSL(2,7)** hunted down in the pair action (transitive on 28) and lifted canonically (perfect part of 2×L₂(7)). **DQ-1: orbits [28,28]** — two bitangent sheets interchanged by ι, weight-stabilizer S₃; the registered single-56-orbit prediction REFUTED. **Erratum to SM-012** (backport rule): ℂ⁵⁶ = 2(χ₁⊕2χ₆⊕χ₇⊕χ₈) — the untwisted lift is UNIQUE (PSL(2,7) perfect), the ι-odd half ≅ even half, **quark sectors χ₃/χ̄₃ do not occur in the Weyl action at all** (they belong to Lie-group embeddings only). Bonus [obs]: **second conjugacy class** of PSL(2,7) found — acts on the crystal as Fano geometry doubled (orbits [7,7,21,21]; 4χ₁⊕6χ₆⊕2χ₈). 11 checks. | [C] | `verify_stonef_b_dq1.py`, erratum in `STONEF_FIELD.md` |
 | SM-014 | **Stone F(c): the quantum lift — first unitary certificate** | The chirality-beam-splitter machine on ℂ⁵⁶ (cheap = frame permutation unitaries; magic = W = Hadamard on every ι-pair). Exact local algebra ⟨H,X⟩ = D₁₆ over ℤ[√2] (H-lengths [0²,1⁴,2⁴,3⁴,4²]; k(−I)=4; H-parity a homomorphism). **CERTIFICATE: W-depth = max local H-length, with a global H-parity superselection charge** — verified for EVERY element of the n=2 (256) and n=3 (6144) machines vs ground-truth BFS. 56-theorems: group = parity-locked (D₁₆)²⁸⋊S₂₈, order 2·8²⁸·28! ≈ 1.18e55; **W-depth = exactly 4**. Frontier located: Ψ moves the Hadamard blocks off the ι-pairs — the MIXED regime (clock + beam-splitter) is where open problem #3 lives, now precisely posed. Depth ladder of the day: Ψ-depth 2 (both grammars) < W-depth 4. 12 checks. | [C] | `STONEF_C_QUANTUM.md`, `verify_stonef_c_quantum.py` |
+| SM-015 | **Stone Q: the Clifford transport** | Sp₆(2) = W(E₇)/± **IS the 3-qubit Clifford group mod phases and Paulis** — identity exhibited computationally (both sides from scratch, same matrix group in shared coordinates). The bridge transported: 28 bitangents = the 28 **odd Pauli sign-functions**; W(E₆) = the Clifford stabilizer of one; PSL(2,7) = a Clifford subgroup transitive on all 28 (fingerprint [28]/[1,7,7,21]/S₃ lands intact); the Coxeter clock = the 7-gate circuit **H1·CX13·S1·H2·H3·CX23·CX12**. MEMBERSHIP BOUNDARY: **Ψ has NO Clifford shadow** (ιΨι=Ψ⁻¹ vs central ι — the true clock is nonlinear, it does not even act on the 28 pairs), pr ∉ W(E₇) (odd vs even image), ι ↦ 1 (chirality erased). **SHADOW COLLAPSE: shadow magic-depth = 1** (H-orbits [1,27], two double cosets, 51840+51840·27=1451520 exact) — the depth-2/W-depth-4 structure lives STRICTLY ABOVE the Clifford quotient ⇒ open problem #3 cannot be won in the quotient; certificates for Clifford+T must engage the unitary level. Auditor's registered expectation q(r)=ℓ_v(r)=0 **REFUTED**: both = 1, the pair forms descend by CANCELLATION (the 56 weights are exactly the shifts that repair the descent). [obs]: all 64 phase-point operators share one spectrum — the Arf split is orbit-theoretic, not spectral. 35 checks. | [C]/[P] | `STONEQ_CLIFFORD.md`, `verify_stoneq_clifford.py`, `BRIEF_STONEQ_CLIFFORD.md` (+lock), fail-first log |
 
 ## Open questions (the joint program)
 
@@ -44,6 +45,7 @@ parties have seen it; sends and publication require both parties' word.**
 - ~~DQ-4~~ CLOSED by SM-012 (ιΨι=Ψ⁻¹; 4 = one axis pair per clock orbit).
 - **DQ-5**: frame-fixing as a literal 56→27 descent operation.
 - **NEW (F-c)**: the mixed regime ⟨cheap, W, Ψ⟩ — magic depth when scrambling and superposition interleave (open problem #3, now concretely posed).
+- **SHARPENED by SM-015**: open problem #3 cannot be won inside the Clifford quotient (shadow depth = 1); a Clifford+T certificate must engage the unitary level, where SM-014's W-certificate is the existing foothold.
 - Inherited crystal opens: exact Cayley diameter (conj. 91–95), shortest pr/Ψ⁴ relation.
 
 ## Sends & publication status
@@ -69,6 +71,17 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Changelog
 
+- **v0.13 (2026-08-30)** — **Stone Q run on Selina's "Yes - go"**: SM-015
+  sealed (brief sha-locked bb7a6822… BEFORE code; verifier 35/35;
+  fail-first log kept). The bridge is now a 3-qubit Clifford statement;
+  the true gates {Ψ, pr} proven to live above the quotient; shadow depth
+  collapses to 1 ⇒ the depth program's boundary with genuine Clifford+T
+  located as a theorem. One registered expectation refuted and recorded
+  (descent by cancellation). ALSO staged this session: the tare-seals
+  audit brief for the Coherence_tare lane
+  (`../Merkabit_Scar/Coherence_tare/AUDIT_BRIEF_TARE_SEALS.md`, locked
+  a63657ff…) — the audit session over TR-001..TR-017 is now executable
+  by a fresh session on Selina's word.
 - **v0.12 (2026-08-30)** — **The lane is on GitHub**: pushed to
   Selina's own PRIVATE repo github.com/selinaserephina-star/Scar_merkabit
   (created by her; 42 files incl. the sent zips and their recorded
