@@ -67,13 +67,44 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.13 -- rows SM-001..SM-015"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.14 -- rows SM-001..SM-016"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: 8b23b7bb94a55a8c85a0560cc37d7f5b3989988350092ca1ae779823134d3e8e
+    sha256: 2e3faddc9f58a6cafc3f396916639f542587a54e6c2d14812d7f75ae76b23143
+
+  - id: stone-r-brief
+    path: BRIEF_STONE_R_ALTITUDE.md
+    title: "Stone R brief (sha-locked before code; lock file alongside)"
+    intent: >
+      Pre-registered bars RB1..RB4 for the altitude measurement, incl. the
+      Coxeter-class minimizer guess that the data refuted.
+    scope: brief
+    sha256: 57db98a7b0e4eeca122c31260dc1ae5e052d3591b859d6a574bdfb09bafcf7a5
+
+  - id: stone-r-doc
+    path: STONE_R_ALTITUDE.md
+    title: "SM-016 -- Stone R: the altitude"
+    intent: >
+      Exact linearity gaps nu(g) by full W(E7) enumeration: nu(pr)=2 with
+      pr o (vacuum swap) a Weyl element; clock family 36-46; two refuted
+      guesses; the clock's own antipode iota_Psi = Psi^9 (conjugator-
+      independent, 4/28 axis overlap); Pauli sign-gauge explanation of the
+      one-spectrum [obs]; the unitary sign-flip trace obstruction.
+    scope: theorem
+    sha256: 4beb0ad5eebff6904812e7f44530d74c73b06e79eedc77a045dfe7c4ac4792ee
+
+  - id: stone-r-verifier
+    path: verify_stone_r_altitude.py
+    title: "Stone R verifier (17 checks)"
+    intent: >
+      BSGS transversal chain + numpy full enumeration (56 x 51840), cycle
+      alignment conjugator, char-poly witness characterization, matching
+      overlap, Pauli conjugation and phase-point traces.
+    scope: verifier
+    sha256: 9a0559e9815274033693ab20e9c014fe489c975557ad01bc5e62c7612086822a
 
   - id: stoneq-brief
     path: BRIEF_STONEQ_CLIFFORD.md

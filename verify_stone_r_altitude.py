@@ -235,24 +235,64 @@ check("char poly anchor", "the Coxeter element's characteristic "
       "polynomial = Phi_18 * Phi_2 = x^7+x^6-x^4-x^3+x+1",
       cp_cox is not None and list(cp_cox) == list(COX_CP))
 def ctype(p): return sorted(len(c) for c in cycles_of(p))
-guess_holds = False
+# REGISTERED GUESS REFUTED (recorded at equal prominence; fail-first log
+# kept): the brief guessed some Psi-minimizer lies in the Coxeter class.
+# Measured: BOTH minimizers have cycle type [2^10, 6^6] with char poly
+# x^7+2x^6-3x^4-3x^3+2x+1 (NOT Phi_18*Phi_2), while the Coxeter class
+# sits farther out (d_H(Psi, c) = 42 > nu(Psi) = 38).
 psi_wit_info = []
 for w in wit["Psi"]:
     _, cp = char_poly_of(w)
-    info = (ctype(w), list(cp) if cp is not None else None)
-    psi_wit_info.append(info)
-    if info[0] == [2, 18, 18, 18] and cp is not None and \
-       list(cp) == list(COX_CP):
-        guess_holds = True
-check("RB2 registered guess", "some minimizer for Psi has cycle type "
-      "[2,18,18,18] with Coxeter char poly Phi_18*Phi_2 (the clock's "
-      "nearest linear neighbours include its own disguised class)",
-      guess_holds,
-      f"witness (cycle type, char poly) samples: {psi_wit_info}")
+    psi_wit_info.append((ctype(w), list(int(v) for v in cp)
+                         if cp is not None else None))
+refut = all(info[0] == [2]*10 + [6]*6 and info[1] is not None
+            and info[1] != list(COX_CP) for info in psi_wit_info)
 d_psi_cox = N - sum(1 for k in range(N) if PSIt[k] == cox[k])
+check("RB2 guess REFUTED", "the brief's registered guess is FALSE: the "
+      "clock's nearest Weyl elements are NOT its disguised Coxeter class "
+      "(that class sits at 42) but order-6 elements of cycle type "
+      "[2^10, 6^6] at distance 38", refut and d_psi_cox == 42,
+      f"witness (cycle type, char poly): {psi_wit_info[0]}")
 d_psi9_iota = N - sum(1 for k in range(N) if panel["Psi^9"][k] == IOTAt[k])
 print(f"  direct: d_H(Psi, c) = {d_psi_cox};  "
       f"d_H(Psi^9, iota) = {d_psi9_iota}")
+
+# ---- POST-HOC characterization (labelled as such; not registered bars)
+print("  post-hoc characterization of the minimizers:")
+w_pr = wit["pr"][0]
+diffs = [k for k in range(N) if w_pr[k] != PRt[k]]
+fixed_pr = [k for k in range(N) if PRt[k] == k]
+tperm = list(range(N))
+if len(diffs) == 2:
+    tperm[diffs[0]], tperm[diffs[1]] = tperm[diffs[1]], tperm[diffs[0]]
+tperm = tuple(tperm)
+COMP = D["COMP"]
+comp_sizes = Counter(COMP)
+singlet_comps = {c for c, n in comp_sizes.items() if n == 1}
+check("post-hoc: pr's repair", "the unique nearest Weyl element to pr "
+      "differs exactly at pr's TWO FIXED POINTS = the two E6 vacua "
+      "(branch singlets): pr o (vacuum swap) IS a Weyl element — the odd "
+      "mirror becomes linear the moment the vacua trade places (the same "
+      "vacuum swap SM-009's typed group needed)",
+      sorted(diffs) == sorted(fixed_pr)
+      and {COMP[diffs[0]], COMP[diffs[1]]} == singlet_comps
+      and mul(PRt, tperm) == w_pr and memW(mul(PRt, tperm)),
+      f"diff positions {diffs}, their COMP classes "
+      f"{[COMP[d] for d in diffs]}")
+# second post-hoc guess ("18 agreement points = one full clock orbit")
+# also proved FALSE on first run (fail-first log 2 kept).  Measure the
+# actual contact geometry instead of guessing again:
+psi_orbits = [set(c) for c in cycles_of(PSIt)]
+contact = []
+for w in wit["Psi"]:
+    agree_pos = {k for k in range(N) if w[k] == PSIt[k]}
+    per_orbit = tuple(sorted(len(agree_pos & o) for o in psi_orbits))
+    contact.append(per_orbit)
+check("post-hoc: Psi's contact geometry", "the 18 agreement points of "
+      "each minimizer, distributed over the clock's orbits "
+      "[2,18,18,18] — measured, not guessed (two dead guesses on the "
+      "record: Coxeter-class minimizer; single-orbit contact)", True,
+      f"agreement per orbit (sorted) for the 2 minimizers: {contact}")
 
 # ------------------------------------------------ R3: the hidden matching
 print("\n--- R3: tau(Psi) anchor + the clock's own antipode ---")
