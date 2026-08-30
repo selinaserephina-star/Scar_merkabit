@@ -1,0 +1,2 @@
+393be9b52343a28c44337dba0169cb3effb2f10e6ea27ed50cbb853a04b17337  Clifford_Trilogy_2026-08-30.zip  (106508 bytes)
+PREPARED-NOT-SENT 2026-08-30. Contents: SM-015..SM-017 (the Clifford trilogy): cover note (.md/.docx), 3 stone docs, 3 verifiers + data, 3 sha-locked briefs + amendment, 6 fail-first logs + 3 clean logs, registry v0.15 + KCP snapshots, SHA256SUMS, SEAL. The send is Selina's word; record it in the registry Sends section when made.
