@@ -69,6 +69,13 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Changelog
 
+- **v0.12 (2026-08-30)** — **The lane is on GitHub**: pushed to
+  Selina's own PRIVATE repo github.com/selinaserephina-star/Scar_merkabit
+  (created by her; 42 files incl. the sent zips and their recorded
+  hashes; staging dirs excluded). Private = a version-controlled home,
+  not a send — the two-party rule governs any future flip to public
+  (Ilya's word required). Local folder remains the working copy;
+  re-push after edits.
 - **v0.11 (2026-08-30)** — **THE SEND MADE.** Complete package delivered
   to Ilya on Selina's word. The joint world is now fully two-party:
   everything sealed here is in both authors' hands.
