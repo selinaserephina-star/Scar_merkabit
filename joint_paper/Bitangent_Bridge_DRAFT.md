@@ -172,7 +172,17 @@ published alongside this note.
 ## 8. What is new and what is not
 
 The skeleton of §5 — bitangents, theta characteristics, O₆± ≅ W(E₆)/S₈,
-Sp₆(2) ≅ W(E₇)/± — is classical. The contribution of this note is (a) the
+Sp₆(2) ≅ W(E₇)/± — is classical. A precursor **within the Stenberg corpus**
+deserves record: Paper 8 §4.2 (2026, pre-audit) already stated the 36+28
+theta-characteristic split on the Klein quartic, the transitivity of
+PSL(2,7) on the 28 odd characteristics with S₃ stabilizer, and that the
+even characteristics split into "multiple orbits" — the germ of §5,
+perceived before the audit era. What is new here relative to that
+precursor: the stabilizer-of-one-bitangent identified as W(E₆) (replacing
+the cardinality reading 28 = dim D₄), the exact even-orbit structure
+[1,7,7,21], the 2:1 map from class 3A, the S₃ identified with both
+programs' canonical S₃, and the whole assembled as the meeting of the two
+frameworks. The contribution of this note is (a) the
 identification: two independently built frameworks each singled out, for
 internal reasons, an object (the universal-stabilizer S₃; the strata S₃ and
 typed S₃) that turns out to be the *same* subgroup at the same place in
