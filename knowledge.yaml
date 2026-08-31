@@ -8,10 +8,10 @@ description: >
   the 168, representation-ring selection rules) meet. Contents: the T-SC
   audit of the Scar-Cat master registry (35+ rows re-verified, corrections
   R-SC-1..5); the bitangent-bridge theorem (both frameworks inside
-  Sp6(2)=W(E7)/Â±: W(E6)=stabilizer of one bitangent, PSL(2,7) transitive on
+  Sp6(2)=W(E7)/±: W(E6)=stabilizer of one bitangent, PSL(2,7) transitive on
   all 28, intersection = S3 = N(<z3>)); the chiral-Fano-pair result on the
   7-channel syndrome; THE RESURRECTION THEOREM (E6-branching of the E7 56 =
-  27+27bar+1+1 with pr the sheet-mirror â€” v1's dual-spinor picture, refuted
+  27+27bar+1+1 with pr the sheet-mirror — v1's dual-spinor picture, refuted
   at E6, true at E7) with the bilingual-gates corollary; the 56-State
   Machine instrument; the joint paper draft (Stenberg-Balashov). Registry
   SCAR_MERKABIT_REGISTRY.md, rows SM-001..SM-014 (v0.1, 2026-08-30). House
@@ -60,7 +60,7 @@ hints:
     Every [C] traces to a listed verifier (Python 3 + numpy, no GAP);
     rerun before citing. [obs] = possibly-new observation, flagged for
     expert readers, never called novel. The two parent lanes govern
-    themselves (CRYSTAL_NATIVE_v2 KCP; Ilya's registry) â€” this KCP wires
+    themselves (CRYSTAL_NATIVE_v2 KCP; Ilya's registry) — this KCP wires
     ACROSS them, not over them.
 
 units:
