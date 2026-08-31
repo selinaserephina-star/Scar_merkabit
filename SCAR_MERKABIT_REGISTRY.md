@@ -70,7 +70,7 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Sends & publication status
 
-- **PREPARED 2026-08-31 (on Selina's "seal and sha"): the CONTAINMENT REPLY package** — `to_Ilya_CONTAINMENT_2026-08-31/` (13 files: COVER_NOTE incl. the three standing asks, the four verifiers + logs of SM-023..SM-026, `blind_engine_OURS.md`, the two-engine diff, registry snapshot v0.28, SHA256SUMS.txt), zipped as `to_Ilya_CONTAINMENT_2026-08-31.zip` (**89,917 B, sha256 147c5a7ff5c4a003f46620f1aa576bf2a787a8ea3ef54c5692a0ea6ab8cfc40c**, hash outside in `COVER_CONTAINMENT_SHA256.txt`); mirrored to `zips/` (send shelf). **PREPARED-NOT-SENT** — handing it over is the send, Selina's to make; recorded here when made.
+- **SENT 2026-08-31 (Selina's word: "sent!")**: the **CONTAINMENT REPLY package** — `to_Ilya_CONTAINMENT_2026-08-31.zip` (**89,917 B, sha256 147c5a7ff5c4a003f46620f1aa576bf2a787a8ea3ef54c5692a0ea6ab8cfc40c**, hash outside in `COVER_CONTAINMENT_SHA256.txt`) to Ilya Balashov; mirrored to `zips/` (send shelf). 13 files: COVER_NOTE incl. the three standing asks, the four verifiers + logs of SM-023..SM-026, `blind_engine_OURS.md`, the two-engine diff, registry snapshot v0.28, SHA256SUMS.txt. Sealed v0.29 on "seal and sha"; now **FROZEN**. Carries: the both-shadows confirmation, the containment verdict (W(E₇) = split-cover shadow; our own G=W(E₇) candidate refuted; successor 2·Sp₆(2)), [N:H]=2 = PGL(2,7), the hinge findings, the engine diff. SM-023..SM-026 are now in both parties' hands → JOINT once his word lands per the joint-lane rule.
 
 - **SENT 2026-08-31 (Selina's word: "sent")**: the **overgroup reply** — `to_Ilya_OVERGROUP_2026-08-31.md` (single markdown; sha ff51da9ca97b3523589d6befeafa27a6a82d560e2edba993c7953a968f312fbf) to Ilya Balashov. Proposes **G = W(E₇)** as the exact overgroup (spine ⊂ Sp₆(2)=W(E₇)/±; covers via the ± centre; 'both shadows = the two towers') and asks him to confirm the reading before the containment run. FROZEN.
 
@@ -117,6 +117,8 @@ parties have seen it; sends and publication require both parties' word.**
   make; recorded here when made.
 
 ## Changelog
+
+- **v0.30 (2026-09-01)** — **CONTAINMENT REPLY SENT** on Selina's word ("sent!"): zip sha 147c5a7f… delivered to Ilya; envelope FROZEN. The two-shadow refinement, the W(E₇)-candidate refutation, the PGL(2,7) normalizer answer, the hinge findings and the engine diff are now two-party; awaiting his word on the three standing asks (refined shadow statement; the 2·Sp₆(2) build as next joint work-item; which S₄ cover C_hinge intends). Registry v0.30.
 
 - **v0.29 (2026-08-31)** — **Containment reply SEALED on Selina's "seal and sha".** Fresh `to_Ilya_CONTAINMENT_2026-08-31/` (cover note + the complete SM-023..SM-026 record + engine diff + registry snapshot + SHA256SUMS), zipped with the hash outside (147c5a7f…, 89,917 B), mirrored to the send shelf. PREPARED-NOT-SENT; the send is Selina's and will be recorded in Sends when made. Registry v0.29.
 

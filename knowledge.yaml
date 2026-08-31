@@ -1,4 +1,4 @@
-kcp_version: "0.12"
+﻿kcp_version: "0.12"
 project: scar-merkabit-joint
 version: "0.1"
 description: >
@@ -8,10 +8,10 @@ description: >
   the 168, representation-ring selection rules) meet. Contents: the T-SC
   audit of the Scar-Cat master registry (35+ rows re-verified, corrections
   R-SC-1..5); the bitangent-bridge theorem (both frameworks inside
-  Sp6(2)=W(E7)/±: W(E6)=stabilizer of one bitangent, PSL(2,7) transitive on
+  Sp6(2)=W(E7)/Â±: W(E6)=stabilizer of one bitangent, PSL(2,7) transitive on
   all 28, intersection = S3 = N(<z3>)); the chiral-Fano-pair result on the
   7-channel syndrome; THE RESURRECTION THEOREM (E6-branching of the E7 56 =
-  27+27bar+1+1 with pr the sheet-mirror — v1's dual-spinor picture, refuted
+  27+27bar+1+1 with pr the sheet-mirror â€” v1's dual-spinor picture, refuted
   at E6, true at E7) with the bilingual-gates corollary; the 56-State
   Machine instrument; the joint paper draft (Stenberg-Balashov). Registry
   SCAR_MERKABIT_REGISTRY.md, rows SM-001..SM-014 (v0.1, 2026-08-30). House
@@ -60,20 +60,20 @@ hints:
     Every [C] traces to a listed verifier (Python 3 + numpy, no GAP);
     rerun before citing. [obs] = possibly-new observation, flagged for
     expert readers, never called novel. The two parent lanes govern
-    themselves (CRYSTAL_NATIVE_v2 KCP; Ilya's registry) — this KCP wires
+    themselves (CRYSTAL_NATIVE_v2 KCP; Ilya's registry) â€” this KCP wires
     ACROSS them, not over them.
 
 units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.29 -- rows SM-001..SM-026"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.30 -- rows SM-001..SM-026"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: e6f2542e59eee84a1db2b50c19db6378b37e5d58e83cea7ab581586abc5c6098
+    sha256: ec8449afa700dce20e1f623323e046af087222e0c1f78354223b84f7bcb7b22e
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
