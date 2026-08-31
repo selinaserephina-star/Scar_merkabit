@@ -1,0 +1,41 @@
+==============================================================================
+ENVELOPE NORMALIZER -- [N_G(H):H] for H = PSL(2,7) < G = Sp6(2) on 28
+==============================================================================
+
+--- 1: G = Sp6(2) on the 28 odd forms (Stone Q construction) ---
+[PASS] 1a |G|: the 12 Clifford tableau images generate order 1,451,520 = |Sp6(2)| on F2^6 (Stone Q's QB1 reproduced)  -> order 1451520
+[PASS] 1b Arf split: 64 refinements of omega = 36 even + 28 odd (the 28 Arf-invariant-1 forms = the 28 bitangents)
+[PASS] 1c faithful on 28: G acts on the 28 odd forms FAITHFULLY and TRANSITIVELY: 28-point order 1,451,520 = |G|; 64-label order agrees; first transversal = full orbit of size 28  -> transversal chain sizes [28, 27, 16, 10, 6, 2]
+
+--- 2: the bridge-class H = PSL(2,7), transitive with stab S3 ---
+[PASS] 2a order-7 seed: an order-7 element of G found by uniform transversal sampling (seed 20260831)
+[PASS] 2b H found: a TRANSITIVE <x, c> of order 168 with the PSL(2,7) order census {1:1, 2:21, 3:56, 4:42, 7:48} found (after 148 involution candidates)
+[PASS] 2c |H| = 168: the closure of <x, c> enumerated: exactly 168 elements, PSL(2,7) census confirmed on the full list
+[PASS] 2d stab = S3: the H-stabilizer of a point has order 6, element orders {1,2,2,2,3,3}, NONABELIAN => S3 (the shared S3 of SM-003)
+[PASS] 2e fingerprint: H transitive on the 28 ([28]) with even-form orbits [1,7,7,21] — the bridge-class fingerprint of Stone F(b) / Stone Q lands intact  -> odd orbits [28], even orbits [1, 7, 7, 21]
+
+--- 3: PSL(2,7)/S3 as the restriction of the Sp6(2)/P action ---
+[PASS] 3a same set: H's two generators pass the BSGS membership strip for G's 28-point action: H <= G acting on the SAME 28 points (no relabeling, the literal same set)
+[PASS] 3b Stab_G(pt): the G-point stabilizer P has order 51,840 = |W(E6)| = |U4(2):2| — the parabolic of the global 28-point action [classical]
+[PASS] 3c H ^ P = S3: H ^ Stab_G(pt) computed two ways agrees: the elements of H inside P are EXACTLY the 6-element S3 of 2d — the H-stabilizer IS the intersection with the G-stabilizer
+[PASS] 3d H/S3 = X28: the coset map h*S3 -> h(pt) is onto all 28 points with every fiber of size exactly 6 = |S3|: H/S3 = X28 as H-sets, 168/6 = 28 — IB's reading VERIFIED: PSL(2,7)/S3 is the restriction of the global Sp6(2)/P action to the subgroup H
+
+--- 4+5: C_G(H) and N_G(H) by full enumeration (1,451,520) ---
+[PASS] 5a enumeration size: BSGS transversal products enumerate all 1,451,520 elements of G, each exactly once (Stone R's method, deg 28)  -> 28 chunks x 51840 rows
+[PASS] 5b full pass: all 1,451,520 elements processed; the test (conjugate BOTH generators into the stored 168-element set) is exact — hash prefilter on the order-7 generator, every survivor verified by literal tuple membership
+[PASS] 4 CENTRALIZER: C_G(H) = 1: the ONLY element of G commuting with both generators of H is the identity — as forced by transitivity + self-normalizing S3 stabilizer (centralizer already trivial in Sym(28)), now MEASURED over the full group  -> |C_G(H)| = 1
+[PASS] 5c NORMALIZER: N_G(H) computed exhaustively: |N_G(H)| = 336, contains all 168 elements of H, and [N_G(H):H] = 2 — the EXACT index  -> index 2
+[PASS] 5d N = PGL(2,7): the 336-element N_G(H) is closed under composition, and C_G(H) = 1 embeds N into Aut(PSL(2,7)) = PGL(2,7) with FULL order => N_G(H) = PGL(2,7); order census matches PGL(2,7) {1:1, 2:49, 3:56, 4:42, 6:56, 7:48, 8:84} — the outer automorphism of the Klein quartic group is AMBIENT in Sp6(2)  -> census {1: 1, 2: 49, 3: 56, 6: 56, 8: 84, 4: 42, 7: 48}
+
+--- 6: contrast — the SECOND class (Fano-doubled, orbits [7,21]) ---
+[PASS] 6a K2 found: a SECOND PSL(2,7) (order 168, PSL census), INTRANSITIVE on the 28 with orbits [7,21] — Stone F(b)'s Fano-doubled class  -> odd orbits [7, 21], even orbits [1, 7, 28] [obs]
+[PASS] 6b K2 normalizer: same exhaustive test on the same full pass: |C_G(K2)| = 1, |N_G(K2)| = 168, [N_G(K2):K2] = 1  -> index 1; N_K2 order census {1: 1, 2: 21, 4: 42, 3: 56, 7: 48}
+
+--- 7: verdict — the canonicality of the 7<->6 envelope ---
+  [N_G(H):H] = 2: N_G(H) = PGL(2,7).  The outer automorphism of the Klein-quartic group is AMBIENT in Sp6(2) — the envelope is canonical only up to that involution: the global geometry sees H together with its outer flip as one object, and any construction natural in G is PGL(2,7)-equivariant, not merely PSL(2,7)-equivariant.
+  (Centralizer measured: |C_G(H)| = 1; frame N/C <= Aut(PSL(2,7)) = PGL(2,7) therefore held with room to spare.)
+  Contrast class: [N_G(K2):K2] = 1 for the intransitive (Fano-doubled) copy — the two classes DIFFER in normalizer index: transitivity is not a spectator here.
+
+==============================================================================
+RESULT: 19 checks passed, 0 failed
+==============================================================================

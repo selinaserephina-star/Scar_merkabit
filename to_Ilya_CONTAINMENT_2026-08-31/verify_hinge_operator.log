@@ -1,0 +1,132 @@
+==========================================================================
+HINGE OPERATOR   C_hinge(G_L,G_R) = ( N_{G_R}([C3]) , pi^-1(N_{G_R}([C3])) )
+descent: PSL(2,7) -> C6xZ2 -> A5 -> S4 -> A4 -> Z2 -> 1   (IB, 2026-08-31)
+==========================================================================
+  [01][PASS] sanity: |PSL(2,7)|=168, |C6xZ2|=12, |A5|=60, |S4|=24, |A4|=12, |Z2|=2 [C]
+
+==========================================================================
+PART 1.  C_max: shared subgroup iso-types on the top two bridges
+==========================================================================
+  PSL(2,7) subgroup types: ['1', 'A4', 'C2', 'C3', 'C4', 'C7', 'D4', 'S3', 'S4', 'V4', 'F21(7:3)', 'PSL(2,7)']
+  C6xZ2    subgroup types: ['1', 'C2', 'C3', 'C6', 'V4', 'C6xC2']
+  A5       subgroup types: ['1', 'A4', 'A5', 'C2', 'C3', 'C5', 'D5', 'S3', 'V4']
+  [02][PASS] shared iso-types (PSL(2,7), C6xZ2) = {1, C2, C3, V4} [C]  --  ['1', 'C2', 'C3', 'V4']
+  [03][PASS] 7<->6: UNIQUE max-order shared class, and it is V4 (order 4) [C]  --  max-order classes: ['V4']
+  [04][PASS] shared iso-types (C6xZ2, A5) = {1, C2, C3, V4} [C]  --  ['1', 'C2', 'C3', 'V4']
+  [05][PASS] 6<->5: UNIQUE max-order shared class, and it is V4 [C]  --  max-order classes: ['V4']
+  [06][PASS] 7<->6: inclusion-MAXIMAL shared classes = {C3, V4}, two of them [C]  --  ['C3', 'V4']
+  [07][PASS] C3 and V4 are INCOMPARABLE (neither embeds in the other) -> C_max-by-inclusion is NOT unique (his 'uniqueness problem') [C]
+  [note] 6<->5 has the same two incomparable maximal classes: ['C3', 'V4']
+  [cross-check] SM-020 (verify_bridge_transfer.py) reported SURVIVES =
+  {1,C2,C3,V4} on both top bridges; recomputed independently here: agrees.
+
+==========================================================================
+PART 2.  C_max failure on 6<->5 (trivial, recorded): nonabelian mediators
+==========================================================================
+  [08][PASS] C6xZ2 is ABELIAN [C]
+  [09][PASS] D6-in-his-sense (= S3, order-6 dihedral) is NONABELIAN [C]
+  [10][PASS] a Dic3 (order-12 dicyclic) exists (inside SL(2,5)); it is NONABELIAN [C]
+  [11][PASS] neither S3 nor Dic3 is a subgroup iso-type of abelian C6xZ2 [C]  --  C6xZ2 types = ['1', 'C2', 'C3', 'C6', 'V4', 'C6xC2']
+  [note] trivial (nonabelian into abelian is impossible) -- recorded as asked.
+
+==========================================================================
+PART 3.  C_hinge on 6<->5, input (C6xZ2, A5): claim = (S3, Dic3)
+==========================================================================
+  [12][PASS] C6xZ2 has exactly ONE C3 subgroup (shared class [C3] exists on the left) [C]  --  1 subgroup(s)
+  [13][PASS] [C3] is UNIQUE up to conjugacy in A5 (10 C3-subgroups, ONE class) [C]  --  10 subgroups in 1 class(es)
+  [14][PASS] A5 = <s,t | s^5=t^3=(st)^2=1> realized on 5 points; same in PSL(2,5) [C]
+  [15][PASS] EXPLICIT iso phi: A5 -> PSL(2,5) built (bijective, homomorphism on all 3600 pairs) [C]
+  [16][PASS] N_{A5}(C3) has order 6 and iso-type S3 (nonabelian) [C]  --  profile {1: 1, 2: 3, 3: 2}
+  [17][PASS] phi carries N to N: phi(N_{A5}(C3)) = N_{PSL(2,5)}(phi(C3)) [C]
+  [18][PASS] SL(2,5): order 120, center {+-I} of order 2, pi = mod-+- onto PSL(2,5) (order 60) [C]
+  [19][PASS] pi^-1(N) in SL(2,5) has order 12 [C]
+  [20][PASS] pi^-1(N): UNIQUE involution (only -I) and HAS an order-4 element [C]  --  profile {1: 1, 2: 1, 3: 2, 4: 6, 6: 2}
+  [21][PASS] pi^-1(N) satisfies <a,b | a^6=1, b^2=a^3, b a b^-1=a^-1> with <a,b> = the whole preimage => ISO TYPE Dic3 [C]  --  witness a=(2, 3, 4, 4), b=(1, 4, 2, 4)
+  [22][PASS] profile check agrees: pi^-1(N) fingerprint names as Dic3 [C]  --  Dic3
+  => C_hinge(C6xZ2, A5) = (S3, Dic3)   -- IB's 6<->5 double hinge REPRODUCED.
+     The Dic3 slot coincides with the mediator-descent run's spinorial hinge
+     (verify_mediator_descent.py: Dic3 < 2I); the S3 slot is the normalizer,
+     related to that run's D6 = S3 x Z2 (order 12) by dropping the central Z2.
+
+==========================================================================
+PART 4a.  EXTEND 5<->4, input (A5, S4): TWO covers of S4 -> TWO answers
+==========================================================================
+  [23][PASS] [C3] shared and UNIQUE up to conjugacy in S4 (4 subgroups, one class) [C]
+  [24][PASS] N_{S4}(C3) has order 6 and iso-type S3 [C]  --  profile {1: 1, 2: 3, 3: 2}
+  [cited: sealed verify_tower_b.py] S4 has TWO non-isomorphic double covers,
+  GL(2,3) = 2.S4- (transpositions lift to involutions) and the binary
+  octahedral 2O = 2.S4+ (transpositions lift to order 4). 'THE canonical
+  double cover' is therefore ALREADY ambiguous at this bridge. Both computed:
+  [25][PASS] GL(2,3): order 48, center = scalars {I,2I}, pi image = S4 on P^1(F3) [C]  --  image profile {1: 1, 2: 9, 3: 8, 4: 6}
+  [26][PASS] in this S4 copy too: 4 C3-subgroups, one conjugacy class [C]
+  [27][PASS] GL(2,3): pi^-1(N_{S4}(C3)) has order 12 [C]
+  [28][PASS] GL(2,3) preimage ISO TYPE identified: D6(12) = C2xS3 (7 involutions, no order-4 element) [C]  --  profile {1: 1, 2: 7, 3: 2, 6: 2} -> D6(12)=C2xS3
+  [29][PASS] 2O built exactly (unit quaternions over (Z+Z*sqrt2)/2): order 48, UNIQUE involution -1 [C]  --  profile {1: 1, 2: 1, 3: 8, 4: 18, 6: 8, 8: 12}
+  [30][PASS] 2O is NOT isomorphic to GL(2,3) (1 involution vs 13) => genuinely two covers [C]
+  [31][PASS] pi: 2O -> S4 (cube-diagonal action) is a homomorphism, image = S4, kernel = {+-1} [C]
+  [32][PASS] this S4 copy: N(C3) again S3, C3 class unique [C]
+  [33][PASS] 2O: pi^-1(N_{S4}(C3)) has order 12 and ISO TYPE Dic3 (profile + presentation witness) [C]  --  profile {1: 1, 2: 1, 3: 2, 4: 6, 6: 2} -> Dic3
+  [34][PASS] the two 5<->4 preimages are NON-ISOMORPHIC (C2xS3 vs Dic3) => C_hinge's second slot is COVER-DEPENDENT at 5<->4 [C]  --  D6(12)=C2xS3 vs Dic3
+  => C_hinge(A5, S4) = (S3, D6(12)=C2xS3) under GL(2,3),
+     but        = (S3, Dic3)          under 2O.  Output NOT well-defined
+     unless a cover convention is fixed. (Dic3 side matches the 6<->5 hinge.)
+
+==========================================================================
+PART 4b.  EXTEND 4<->3, input (S4, A4)
+==========================================================================
+  [35][PASS] [C3] shared; in A4: 4 C3-subgroups, ONE conjugacy class [C]
+  [36][PASS] N_{A4}(C3) = C3 ITSELF (order 3; the C3 is self-normalizing in A4) [C]  --  |N| = 3
+  [37][PASS] SL(2,3): order 24, image PSL(2,3) = A4 (order 12) [C]
+  [38][PASS] in the PSL(2,3) copy too: N(C3) = C3 itself [C]
+  [39][PASS] pi^-1(C3) in SL(2,3): order 6 and CYCLIC C6 (has an order-6 element) [C]  --  profile {1: 1, 2: 1, 3: 2, 6: 2}
+  => C_hinge(S4, A4) = (C3, C6).
+
+==========================================================================
+PART 4c.  EXTEND 3<->2, input (A4, Z2)
+==========================================================================
+  [40][PASS] Z2 has NO order-3 element -> no shared [C3] -> C_hinge UNDEFINED at 3<->2 [C]  --  Z2 profile {1: 1, 2: 1}
+  (2<->1 is likewise trivially undefined: the trivial group has no C3.)
+
+==========================================================================
+PART 4d.  EXTEND 7<->6, input (PSL(2,7), C6xZ2): the cover obstruction
+==========================================================================
+  [41][PASS] shared [C3] exists (PSL(2,7) has order-3 elements; C6xZ2 has its unique C3) [C]
+  [42][PASS] N_{C6xZ2}(C3) = the WHOLE group C6xZ2 (abelian, order 12) [C]  --  |N| = 12
+  [43][PASS] [P] Schur multiplier M(C6 x C2) = C_gcd(6,2) = C2 (formula M(Cm x Cn) = C_gcd(m,n), classical) -- a nontrivial double cover EXISTS; gcd checked [C]
+  [44][PASS] Q8 (left-regular, 8 points): order 8, profile {1:1,2:1,4:6} [C]  --  {1: 1, 2: 1, 4: 6}
+  [45][PASS] E1 = C3 x D4: |E|=24; Z:=[E,E] has order 2, CENTRAL (so Z ~ C2 <= [E,E]); E/Z has order 12 with the C6xC2 profile => STEM cover of C6xC2 [C]  --  |D|=2, central=True, E/Z: order 12, profile {1: 1, 2: 3, 3: 2, 6: 6}
+  [46][PASS] E2 = C3 x Q8: |E|=24; Z:=[E,E] has order 2, CENTRAL (so Z ~ C2 <= [E,E]); E/Z has order 12 with the C6xC2 profile => STEM cover of C6xC2 [C]  --  |D|=2, central=True, E/Z: order 12, profile {1: 1, 2: 3, 3: 2, 6: 6}
+  [47][PASS] E1 and E2 are NON-ISOMORPHIC (5 involutions vs 1) [C]  --  E1 {1: 1, 2: 5, 3: 2, 4: 2, 6: 10, 12: 4}  vs  E2 {1: 1, 2: 1, 3: 2, 4: 6, 6: 2, 12: 12}
+  [48][PASS] CONCLUSION 7<->6: double covers EXIST (multiplier C2) but >=2 non-isomorphic stem covers of C6xC2 -> NO canonical 2.G_R -> C_hinge UNDEFINED; IB's claim CONFIRMED with the sharpened reason (uniqueness fails, not existence) [C]
+  [note] IB said 'no canonical double cover on the abelian side'. Sharpened:
+  covers exist (M(C6xC2)=C2 [P]); what fails is CANONICALITY -- C3xD4 and
+  C3xQ8 are both stem C2-covers of C6xC2 and are not isomorphic.
+
+==========================================================================
+C_hinge OUTPUT TABLE (all six bridges of the descent)
+==========================================================================
+| bridge | (G_L, G_R)          | N_{G_R}([C3]) | pi^-1(N) in 2.G_R           | C_hinge |
+|--------|---------------------|---------------|------------------------------|---------|
+| 7<->6  | (PSL(2,7), C6xZ2)   | C6xZ2 (whole) | no canonical cover           | UNDEFINED (>=2 stem covers: C3xD4, C3xQ8) |
+| 6<->5  | (C6xZ2, A5)         | S3            | Dic3  (in SL(2,5))           | (S3, Dic3) |
+| 5<->4  | (A5, S4)            | S3            | GL(2,3): C2xS3 / 2O: Dic3    | COVER-DEPENDENT |
+| 4<->3  | (S4, A4)            | C3 (self-nrm) | C6    (in SL(2,3))           | (C3, C6) |
+| 3<->2  | (A4, Z2)            | -             | -                            | UNDEFINED (Z2 has no C3) |
+| 2<->1  | (Z2, 1)             | -             | -                            | UNDEFINED (trivial group has no C3) |
+
+==========================================================================
+HINGE OPERATOR: 48 computed checks PASS, 0 FAIL
+==========================================================================
+VERDICT.
+(i)  C_hinge REPRODUCES IB's 6<->5 double hinge: C_hinge(C6xZ2,A5) = (S3,Dic3),
+     computed via an explicit iso A5 -> PSL(2,5) and the preimage in SL(2,5).
+(ii) On 5<->4 it yields (S3, C2xS3) under GL(2,3) but (S3, Dic3) under 2O --
+     the operator's 'canonical double cover' is ambiguous exactly where S4 has
+     two covers; and NEITHER slot equals the OBSERVED 5<->4 bridge object,
+     which per the sealed SM-020/mediator-descent is the mediator A4 = A5 ^ S4.
+     The 4<->3 output (C3, C6) likewise does not name the observed 4<->3 hinge
+     V4 (SM-020). MISMATCH RECORDED AS A FINDING, not a failure of the run.
+(iii) C_hinge is UNDEFINED at 3<->2 and 2<->1 (no C3 below A4) and at 7<->6 --
+     there because canonicality of the cover fails on the abelian side:
+     M(C6xC2) = C2 gives existence, but C3xD4 and C3xQ8 are two non-isomorphic
+     stem covers, so 'THE' double cover does not exist. Not RH/GRH.

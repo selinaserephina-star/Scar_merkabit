@@ -1,0 +1,296 @@
+==============================================================================
+BLIND ENGINE -- independent derivation from raw group data only
+date 2026-08-31   (second engine; no registry, no prior documents read)
+==============================================================================
+
+[stage 1] constructing the seven groups from raw generators
+CHECK 001 [PASS] order of Moebius group <z->z+1, z->-1/z> on P1(F7) equals 168 -- computed order 168
+CHECK 002 [PASS] order of C6xC2 construction equals 12
+CHECK 003 [PASS] order of A5 construction equals 60
+CHECK 004 [PASS] order of S4 construction equals 24
+CHECK 005 [PASS] order of A4 construction equals 12
+CHECK 006 [PASS] order of C2 construction equals 2
+CHECK 007 [PASS] order of trivial group equals 1
+CHECK 008 [PASS] abelian pipeline names the order-12 abelian input 'C6xC2' and an explicit isomorphism to the model C6 x C2 was found
+CHECK 009 [PASS] Moebius group is non-abelian
+CHECK 010 [PASS] A5 construction is non-abelian of order 60
+
+[stage 2] full subgroup enumeration + iso-typing per group
+
+  PSL(2,7)  |G|=168  subgroups=179  conj.classes=15  (0.26s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x21 
+      order 3    C3       x28 
+      order 4    C2xC2    x7  
+      order 4    C2xC2    x7  
+      order 4    C4       x21 
+      order 6    S3       x28 
+      order 7    C7       x8  
+      order 8    D4       x21 
+      order 12   A4       x7  
+      order 12   A4       x7  
+      order 21   F21      x8  
+      order 24   S4       x7  
+      order 24   S4       x7  
+      order 168  PSL(2,7) x1  NORMAL
+    subgroup iso-types: {1, C2, C3, C2xC2, C4, S3, C7, D4, A4, F21, S4, PSL(2,7)}
+    normal subgroups:   {1(order 1), PSL(2,7)(order 168)}
+    quotient types:     {PSL(2,7) = G/1, 1 = G/PSL(2,7)}
+CHECK 011 [PASS] PSL(2,7): every enumerated subgroup order divides |G| (Lagrange)
+CHECK 012 [PASS] PSL(2,7): all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 013 [PASS] PSL(2,7): #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 014 [PASS] PSL(2,7): Sylow counts are congruent to 1 mod p for every prime
+CHECK 015 [PASS] PSL(2,7): every quotient order equals |G|/|N|
+
+  C6xC2     |G|=12   subgroups=10   conj.classes=10  (0.00s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x1  NORMAL
+      order 2    C2       x1  NORMAL
+      order 2    C2       x1  NORMAL
+      order 3    C3       x1  NORMAL
+      order 4    C2xC2    x1  NORMAL
+      order 6    C6       x1  NORMAL
+      order 6    C6       x1  NORMAL
+      order 6    C6       x1  NORMAL
+      order 12   C6xC2    x1  NORMAL
+    subgroup iso-types: {1, C2, C3, C2xC2, C6, C6xC2}
+    normal subgroups:   {1(order 1), C2(order 2), C2(order 2), C2(order 2), C3(order 3), C2xC2(order 4), C6(order 6), C6(order 6), C6(order 6), C6xC2(order 12)}
+    quotient types:     {C6xC2 = G/1, C6 = G/C2, C6 = G/C2, C6 = G/C2, C2xC2 = G/C3, C3 = G/C2xC2, C2 = G/C6, C2 = G/C6, C2 = G/C6, 1 = G/C6xC2}
+CHECK 016 [PASS] C6xC2: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 017 [PASS] C6xC2: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 018 [PASS] C6xC2: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 019 [PASS] C6xC2: Sylow counts are congruent to 1 mod p for every prime
+CHECK 020 [PASS] C6xC2: every quotient order equals |G|/|N|
+
+  A5        |G|=60   subgroups=59   conj.classes=9   (0.01s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x15 
+      order 3    C3       x10 
+      order 4    C2xC2    x5  
+      order 5    C5       x6  
+      order 6    S3       x10 
+      order 10   D5       x6  
+      order 12   A4       x5  
+      order 60   A5       x1  NORMAL
+    subgroup iso-types: {1, C2, C3, C2xC2, C5, S3, D5, A4, A5}
+    normal subgroups:   {1(order 1), A5(order 60)}
+    quotient types:     {A5 = G/1, 1 = G/A5}
+CHECK 021 [PASS] A5: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 022 [PASS] A5: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 023 [PASS] A5: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 024 [PASS] A5: Sylow counts are congruent to 1 mod p for every prime
+CHECK 025 [PASS] A5: every quotient order equals |G|/|N|
+
+  S4        |G|=24   subgroups=30   conj.classes=11  (0.00s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x6  
+      order 2    C2       x3  
+      order 3    C3       x4  
+      order 4    C2xC2    x3  
+      order 4    C2xC2    x1  NORMAL
+      order 4    C4       x3  
+      order 6    S3       x4  
+      order 8    D4       x3  
+      order 12   A4       x1  NORMAL
+      order 24   S4       x1  NORMAL
+    subgroup iso-types: {1, C2, C3, C2xC2, C4, S3, D4, A4, S4}
+    normal subgroups:   {1(order 1), C2xC2(order 4), A4(order 12), S4(order 24)}
+    quotient types:     {S4 = G/1, S3 = G/C2xC2, C2 = G/A4, 1 = G/S4}
+CHECK 026 [PASS] S4: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 027 [PASS] S4: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 028 [PASS] S4: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 029 [PASS] S4: Sylow counts are congruent to 1 mod p for every prime
+CHECK 030 [PASS] S4: every quotient order equals |G|/|N|
+
+  A4        |G|=12   subgroups=10   conj.classes=5   (0.00s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x3  
+      order 3    C3       x4  
+      order 4    C2xC2    x1  NORMAL
+      order 12   A4       x1  NORMAL
+    subgroup iso-types: {1, C2, C3, C2xC2, A4}
+    normal subgroups:   {1(order 1), C2xC2(order 4), A4(order 12)}
+    quotient types:     {A4 = G/1, C3 = G/C2xC2, 1 = G/A4}
+CHECK 031 [PASS] A4: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 032 [PASS] A4: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 033 [PASS] A4: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 034 [PASS] A4: Sylow counts are congruent to 1 mod p for every prime
+CHECK 035 [PASS] A4: every quotient order equals |G|/|N|
+
+  C2        |G|=2    subgroups=2    conj.classes=2   (0.00s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+      order 2    C2       x1  NORMAL
+    subgroup iso-types: {1, C2}
+    normal subgroups:   {1(order 1), C2(order 2)}
+    quotient types:     {C2 = G/1, 1 = G/C2}
+CHECK 036 [PASS] C2: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 037 [PASS] C2: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 038 [PASS] C2: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 039 [PASS] C2: Sylow counts are congruent to 1 mod p for every prime
+CHECK 040 [PASS] C2: every quotient order equals |G|/|N|
+
+  1         |G|=1    subgroups=1    conj.classes=1   (0.00s)
+    subgroup classes (order, type, #conjugates, normal?):
+      order 1    1        x1  NORMAL
+    subgroup iso-types: {1}
+    normal subgroups:   {1(order 1)}
+    quotient types:     {1 = G/1}
+CHECK 041 [PASS] 1: every enumerated subgroup order divides |G| (Lagrange)
+CHECK 042 [PASS] 1: all subgroup-class representatives identified with an explicit isomorphism (or verified abelian model)
+CHECK 043 [PASS] 1: #(order-p subgroups) matches #(order-p elements)/(p-1) for all primes p | |G|
+CHECK 044 [PASS] 1: Sylow counts are congruent to 1 mod p for every prime
+CHECK 045 [PASS] 1: every quotient order equals |G|/|N|
+CHECK 046 [PASS] PSL(2,7) construction is simple (exactly 2 normal subgroups)
+CHECK 047 [PASS] A5 construction is simple (exactly 2 normal subgroups)
+
+[stage 3] pair-by-pair analysis
+
+------------------------------------------------------------------------------
+P1  (PSL(2,7) , C6xC2)   orders (168 , 12)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   C6xC2 does NOT embed in PSL(2,7) (no subgroup of order 12 is isomorphic to C6xC2 (14 candidate subgroup(s) exhaustively tested))
+CHECK 048 [PASS] P1: non-embedding C6xC2 -/-> PSL(2,7) verified exhaustively over all order-12 subgroups
+   PSL(2,7) does NOT embed in C6xC2 (order 168 does not divide 12)
+2. SHARED SUBGROUP TYPES: {1, C2, C3, C2xC2}
+3. NORMAL SUBGROUPS
+   PSL(2,7): {1, PSL(2,7)}
+   C6xC2: {1, C2, C2, C2, C3, C2xC2, C6, C6, C6, C6xC2}
+4. QUOTIENTS
+   PSL(2,7) quotients: {1, PSL(2,7)}
+   C6xC2 quotients: {1, C2, C2xC2, C3, C6, C6xC2}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C4, S3, C7, D4, A4, F21, S4, PSL(2,7)}
+   APPEARED subgroup types: {C6, C6xC2}
+6. DIRECTION: NONE (no non-trivial map either way)
+7. REVERSIBILITY: IRREVERSIBLE (no retract exists: no embedded copy has a normal complement)
+
+------------------------------------------------------------------------------
+P2  (C6xC2 , A5)   orders (12 , 60)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   A5 does NOT embed in C6xC2 (order 60 does not divide 12)
+   C6xC2 does NOT embed in A5 (no subgroup of order 12 is isomorphic to C6xC2 (5 candidate subgroup(s) exhaustively tested))
+2. SHARED SUBGROUP TYPES: {1, C2, C3, C2xC2}
+3. NORMAL SUBGROUPS
+   C6xC2: {1, C2, C2, C2, C3, C2xC2, C6, C6, C6, C6xC2}
+   A5: {1, A5}
+4. QUOTIENTS
+   C6xC2 quotients: {1, C2, C2xC2, C3, C6, C6xC2}
+   A5 quotients: {1, A5}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C6, C6xC2}
+   APPEARED subgroup types: {C5, S3, D5, A4, A5}
+6. DIRECTION: NONE (no non-trivial map either way)
+7. REVERSIBILITY: IRREVERSIBLE (no retract exists: no embedded copy has a normal complement)
+
+------------------------------------------------------------------------------
+P3  (A5 , S4)   orders (60 , 24)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   S4 does NOT embed in A5 (order 24 does not divide 60)
+   A5 does NOT embed in S4 (order 60 does not divide 24)
+2. SHARED SUBGROUP TYPES: {1, C2, C3, C2xC2, S3, A4}
+3. NORMAL SUBGROUPS
+   A5: {1, A5}
+   S4: {1, C2xC2, A4, S4}
+4. QUOTIENTS
+   A5 quotients: {1, A5}
+   S4 quotients: {1, C2, S3, S4}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C5, D5, A5}
+   APPEARED subgroup types: {C4, D4, S4}
+6. DIRECTION: NONE (no non-trivial map either way)
+7. REVERSIBILITY: IRREVERSIBLE (no retract exists: no embedded copy has a normal complement)
+
+------------------------------------------------------------------------------
+P4  (S4 , A4)   orders (24 , 12)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   A4 embeds in S4: 1 copy (1 normal), index 2, split (complement C2)
+CHECK 049 [PASS] P4: explicit isomorphism between a subgroup of S4 and A4 found
+CHECK 050 [PASS] P4: normality of the embedded copy verified by full conjugation
+CHECK 051 [PASS] P4: splitting verified (complement K with |K||N|=|G|, K cap N = 1)
+   S4 does NOT embed in A4 (order 24 does not divide 12)
+2. SHARED SUBGROUP TYPES: {1, C2, C3, C2xC2, A4}
+3. NORMAL SUBGROUPS
+   S4: {1, C2xC2, A4, S4}
+   A4: {1, C2xC2, A4}
+4. QUOTIENTS
+   S4 quotients: {1, C2, S3, S4}
+   A4 quotients: {1, A4, C3}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C4, S3, D4, S4}
+   APPEARED subgroup types: {}
+6. DIRECTION: A4 >--> S4 (inclusion)
+7. REVERSIBILITY: IRREVERSIBLE (no retract exists: no embedded copy has a normal complement)
+
+------------------------------------------------------------------------------
+P5  (A4 , C2)   orders (12 , 2)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   C2 embeds in A4: 3 copies (0 normal), index 6
+CHECK 052 [PASS] P5: explicit isomorphism between a subgroup of A4 and C2 found
+   A4 does NOT embed in C2 (order 12 does not divide 2)
+2. SHARED SUBGROUP TYPES: {1, C2}
+3. NORMAL SUBGROUPS
+   A4: {1, C2xC2, A4}
+   C2: {1, C2}
+4. QUOTIENTS
+   A4 quotients: {1, A4, C3}
+   C2 quotients: {1, C2}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C3, C2xC2, A4}
+   APPEARED subgroup types: {}
+6. DIRECTION: C2 >--> A4 (inclusion)
+7. REVERSIBILITY: IRREVERSIBLE (no retract exists: no embedded copy has a normal complement)
+
+------------------------------------------------------------------------------
+P6  (C2 , 1)   orders (2 , 1)
+------------------------------------------------------------------------------
+1. EMBEDDINGS
+   1 embeds in C2: 1 copy (1 normal), index 2, split (complement C2)
+CHECK 053 [PASS] P6: explicit isomorphism between a subgroup of C2 and 1 found
+CHECK 054 [PASS] P6: normality of the embedded copy verified by full conjugation
+CHECK 055 [PASS] P6: splitting verified (complement K with |K||N|=|G|, K cap N = 1)
+   C2 does NOT embed in 1 (order 2 does not divide 1)
+2. SHARED SUBGROUP TYPES: {1}
+3. NORMAL SUBGROUPS
+   C2: {1, C2}
+   1: {1}
+4. QUOTIENTS
+   C2 quotients: {1, C2}
+   1 quotients: {1}
+   common non-trivial quotients: NONE
+5. LOST subgroup types:     {C2}
+   APPEARED subgroup types: {}
+6. DIRECTION: 1 >--> C2 (inclusion); C2 -->> 1 (projection)
+7. REVERSIBILITY: REVERSIBLE (retract: G = N x| H with N normal; inclusion has a left inverse)
+
+[stage 4] class assignment from computed predicates
+  P1 (PSL(2,7), C6xC2) -> CLASS SEVERED
+  P2 (C6xC2, A5) -> CLASS SEVERED
+  P3 (A5, S4) -> CLASS SEVERED
+  P4 (S4, A4) -> CLASS ONE-WAY SPLIT DESCENT
+  P5 (A4, C2) -> CLASS LOOSE FRAGMENT
+  P6 (C2, 1) -> CLASS RETRACT COLLAPSE
+
+[stage 5] patterns that fall out of the data
+  * FORWARD MAPS: a forward projection G -->> H exists only in P6; a forward inclusion G >--> H exists in no pair. Backward inclusions H >--> G exist in P4, P5, P6. The chain as listed cannot be walked forward by any homomorphism until the final step.
+  * NO SHARED VOICE: no pair in the chain has any common non-trivial quotient. Adjacent members never project onto the same thing.
+  * FOREIGN BODIES: iso-types occurring in exactly ONE group of the chain: A5 only in A5; C5 only in A5; C6 only in C6xC2; C6xC2 only in C6xC2; C7 only in PSL(2,7); D5 only in A5; F21 only in PSL(2,7); PSL(2,7) only in PSL(2,7). In particular every type distinctive of the order-12 abelian member appears from nowhere in P1 and is gone by P2.
+  * PERSISTENT CORE: iso-types present in every group except the trivial terminus: {1, C2}. C2 survives the whole chain and is annihilated only at the last step.
+  * EROSION TAIL: pairs with pure loss (no appeared types): P4, P5, P6. From P4 on, the subgroup-type set only shrinks; P1-P3 each both lose and gain.
+  * THE CHAIN BECOMES CONCRETE AT S4: only in P4, P5, P6 is the second member actually a subgroup of the first; the first three links hold no subgroup relation in either direction despite divisible orders in P1 and gcd 12 in P2.
+  * ORDER-12 TWINS: the chain contains two groups of order 12 (C6xC2 and A4) which share only the types {1, C2, C3, C2xC2} and are not isomorphic (fingerprints differ: abelian vs non-abelian).
+
+==============================================================================
+CHECKS: 55 total, 55 PASS, 0 FAIL
+runtime 0.3 s
+==============================================================================
