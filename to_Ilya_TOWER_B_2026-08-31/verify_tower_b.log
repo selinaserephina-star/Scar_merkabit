@@ -1,0 +1,66 @@
+==========================================================================
+ODD LEVELS: PSL(2,p) spine  <-  SL(2,p) Schur cover  (p = 7,5,3)
+==========================================================================
+
+SL(2,7)  ->  PSL(2,7) [L7]   (|cover|=336)
+  [PASS] SL(2,7): center = {+-I} order 2  --  2 central
+  [PASS] SL(2,7)/center is Mobius group of order 168  --  |PSL/PGL image|=168
+  [PASS] SL(2,7)/center matches PSL(2,7) [L7] (order+element-profile)  --  {1: 1, 2: 21, 3: 56, 4: 42, 7: 48}
+  [PASS] SL(2,7): NON-SPLIT Schur cover (unique involution -I)  --  1 involutions
+  [PASS] L7 PSL(2,7): order 168 (simple, = the level itself)
+
+2I=SL(2,5)  ->  A5 = PSL(2,5) [L5]   (|cover|=120)
+  [PASS] 2I=SL(2,5): center = {+-I} order 2  --  2 central
+  [PASS] 2I=SL(2,5)/center is Mobius group of order 60  --  |PSL/PGL image|=60
+  [PASS] 2I=SL(2,5)/center matches A5 = PSL(2,5) [L5] (order+element-profile)  --  {1: 1, 2: 15, 3: 20, 5: 24}
+  [PASS] 2I=SL(2,5): NON-SPLIT Schur cover (unique involution -I)  --  1 involutions
+
+2T=SL(2,3)  ->  A4 = PSL(2,3) [L3]   (|cover|=24)
+  [PASS] 2T=SL(2,3): center = {+-I} order 2  --  2 central
+  [PASS] 2T=SL(2,3)/center is Mobius group of order 12  --  |PSL/PGL image|=12
+  [PASS] 2T=SL(2,3)/center matches A4 = PSL(2,3) [L3] (order+element-profile)  --  {1: 1, 2: 3, 3: 8}
+  [PASS] 2T=SL(2,3): NON-SPLIT Schur cover (unique involution -I)  --  1 involutions
+
+==========================================================================
+SPLIT covers (direct products; NOT the Schur cover)
+==========================================================================
+  [PASS] Ih = A5 x Z2 (split): order 120, many involutions  --  |Ih|=120, involutions=31
+  [PASS] Th = A4 x Z2 (split; the SPINE-MAP 'Th'): order 24, many involutions  --  |Th|=24, involutions=7
+  [note] Ih/Th are the SPLIT Z2-extensions of A5/A4; the Schur covers 2I/2T are
+  the NON-SPLIT ones above. Same order, different group (unique vs many involutions).
+
+==========================================================================
+EVEN level L4 = S4: double cover GL(2,3)=2.S4  (2O is the sibling cover)
+==========================================================================
+  [PASS] GL(2,3): order 48, center {+-I}
+  [PASS] GL(2,3)/center = PGL(2,3) matches S4 (order+profile)  --  {1: 1, 2: 9, 3: 8, 4: 6}
+  [PASS] GL(2,3): an S4-transposition lifts to order 2 (=> the 2.S4 with reflections as involutions)  --  order(diag(1,2))=2
+  [cited] 2O (binary octahedral) is the OTHER double cover of S4 (also order 48,
+  non-isomorphic; there a transposition lifts to ORDER 4). Not SL(2,q); not rebuilt here.
+
+==========================================================================
+Over-group (NOT a central cover): PGL(2,7) > PSL(2,7) index 2
+==========================================================================
+  [PASS] PGL(2,7): order 336; PSL(2,7) < PGL(2,7) index 2
+  [PASS] PSL(2,7) is NORMAL in PGL(2,7) (the quotient is OUTER/diagonal, not central)
+  [distinction] SL(2,7) is a CENTRAL (Schur) cover of PSL(2,7); PGL(2,7) is an
+  index-2 OVER-group (outer-diagonal). Same order 336, opposite roles. Both were
+  listed as L7 'COVERS' in SPINE MAP -> refined here at equal prominence.
+
+==========================================================================
+TOP BRIDGE: W(E6) < Sp6(2) = W(E7)/+-   (cited SM-003/SM-015; arithmetic checked)
+==========================================================================
+  [PASS] |Sp6(2)| = |W(E7)|/2 = 1451520  --  1451520
+  [PASS] [Sp6(2) : W(E6)] = 28  (the 28 Klein-quartic bitangents; 51840 x 28 = 1451520)  --  index=28.0
+  [cited] the embedding W(E6)=stab(one bitangent) < Sp6(2), PSL(2,7) transitive on
+  28, intersection S3=N(<z3>) is SEALED in SM-003 (verify_tbr_bridge.py) and SM-015
+  (verify_stoneq_clifford.py); the 2.9M-element W(E7) build is not repeated here.
+
+==========================================================================
+TOWER B: 22 computed checks PASS, 0 FAIL
+VERDICT: Tower B verified. Backbone = the SL(2,p) Schur-cover chain over the ODD
+spine levels (L7,L5,L3 = PSL(2,7),PSL(2,5),PSL(2,3) <- SL(2,7),SL(2,5),SL(2,3)),
+with split covers Ih/Th, S4's cover GL(2,3)=2.S4 (2O sibling cited), the over-group
+PGL(2,7) distinguished from the central cover, and the top bridge W(E6)<Sp6(2)=W(E7)/+-
+closed by index 28 against sealed SM-003/SM-015. Two towers now stand side by side.
+Not RH/GRH.

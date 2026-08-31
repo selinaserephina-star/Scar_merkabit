@@ -1,0 +1,74 @@
+Enumerating subgroup iso-types per spine level...
+  L7 PSL(2,7)  |G|=168  types: ['1', 'A4', 'C2', 'C3', 'C4', 'C7', 'D4', 'S3', 'S4', 'V4', 'F21(7:3)', 'PSL(2,7)']
+  L6 C6xZ2     |G|= 12  types: ['1', 'C2', 'C3', 'C6', 'V4', 'C6xC2']
+  L5 A5        |G|= 60  types: ['1', 'A4', 'A5', 'C2', 'C3', 'C5', 'D5', 'S3', 'V4']
+  L4 S4        |G|= 24  types: ['1', 'A4', 'C2', 'C3', 'C4', 'D4', 'S3', 'S4', 'V4']
+  L3 A4        |G|= 12  types: ['1', 'A4', 'C2', 'C3', 'V4']
+  L2 Z2        |G|=  2  types: ['1', 'C2']
+  L1 1         |G|=  1  types: ['1']
+
+==============================================================================
+BRIDGE TRANSFER TABLE (subgroup iso-types; descent upper -> lower)
+==============================================================================
+
+7<->6   PSL(2,7)  ->  C6xZ2
+   SURVIVES (4): 1, C2, C3, V4
+   LOST     (8): A4, C4, C7, D4, S3, S4, F21(7:3), PSL(2,7)
+   APPEARS  (2): C6, C6xC2
+   structure: neither embeds in the other (crossing)
+
+6<->5   C6xZ2  ->  A5
+   SURVIVES (4): 1, C2, C3, V4
+   LOST     (2): C6, C6xC2
+   APPEARS  (5): A4, A5, C5, D5, S3
+   structure: neither embeds in the other (crossing)
+
+5<->4   A5  ->  S4
+   SURVIVES (6): 1, A4, C2, C3, S3, V4
+   LOST     (3): A5, C5, D5
+   APPEARS  (3): C4, D4, S4
+   structure: neither embeds in the other (crossing)
+
+4<->3   S4  ->  A4
+   SURVIVES (5): 1, A4, C2, C3, V4
+   LOST     (4): C4, D4, S3, S4
+   APPEARS  (0): -
+   structure: inclusion: lower<=upper  [appears=empty => pure descent by loss]
+
+3<->2   A4  ->  Z2
+   SURVIVES (2): 1, C2
+   LOST     (3): A4, C3, V4
+   APPEARS  (0): -
+   structure: inclusion: lower<=upper  [appears=empty => pure descent by loss]
+
+2<->1   Z2  ->  1
+   SURVIVES (1): 1
+   LOST     (1): C2
+   APPEARS  (0): -
+   structure: inclusion: lower<=upper  [appears=empty => pure descent by loss]
+
+==============================================================================
+Markdown table
+==============================================================================
+| bridge | upper | lower | survives | lost | appears | structure |
+|---|---|---|---|---|---|---|
+| 7↔6 | PSL(2,7) | C6xZ2 | 1, C2, C3, V4 | A4, C4, C7, D4, S3, S4, F21(7:3), PSL(2,7) | C6, C6xC2 | crossing |
+| 6↔5 | C6xZ2 | A5 | 1, C2, C3, V4 | C6, C6xC2 | A4, A5, C5, D5, S3 | crossing |
+| 5↔4 | A5 | S4 | 1, A4, C2, C3, S3, V4 | A5, C5, D5 | C4, D4, S4 | crossing |
+| 4↔3 | S4 | A4 | 1, A4, C2, C3, V4 | C4, D4, S3, S4 | — | lower⊆upper |
+| 3↔2 | A4 | Z2 | 1, C2 | A4, C3, V4 | — | lower⊆upper |
+| 2↔1 | Z2 | 1 | 1 | C2 | — | lower⊆upper |
+
+==============================================================================
+Two structural observations (group theory only):
+- The SHARED FLOOR of every bridge is {1, C2, C3, V4} at the top two
+  bridges and grows downward; 7<->6 and 6<->5 share EXACTLY {1,C2,C3,V4}
+  -> the '7<->6 quantum gap' is not 'no common subgroup' (they share the
+  small abelian floor + V4); it is: neither embeds in the other AND no
+  order-6 / mediator type bridges them (PSL(2,7) has no C6).
+- With the SPINE-MAP choice L6 = C6xZ2 (abelian), S3 is LOST at 7<->6.
+  But the 7<->6 BRIDGE file uses L6 = W(E6) and reports the intersection
+  = S3 = N(<z3>). Same 'level 6', two different groups -> the S3 either
+  survives (W(E6) reading) or is lost (C6xZ2 reading). This is the level-
+  label inconsistency, made concrete. Reconcile L6 before sealing.
+Not RH/GRH.

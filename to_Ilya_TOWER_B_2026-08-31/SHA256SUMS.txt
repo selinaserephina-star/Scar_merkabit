@@ -1,0 +1,4 @@
+21c00b6d86f2fd2f59e906dc27828b4d6249901c33cf72cff089c0d6b8833ba5  COVER_NOTE.md
+5f582071be7df05c2a6a327d844a88f6e23fdd59d71cc79ea07bb1a7ec152d13  verify_tower_b.py
+114fa3392cbe52cef491e98dbd19560fd94d62babcf42587d25fb902c293b168  verify_tower_b.log
+PREPARED 2026-08-31, NOT SENT (send = Selina's word). Tower B (covers & bridges), SM-021; completes the two-tower model.

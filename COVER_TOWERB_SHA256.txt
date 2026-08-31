@@ -1,0 +1,9 @@
+SCAR-MERKABIT -- ENVELOPE COVER (keep outside the zip)
+File   : to_Ilya_TOWER_B_2026-08-31.zip
+Size   : 7501 bytes
+SHA256 : 068f1f4fd47b609132b431d82a48dcb3634b6c877181b0e3a6cd90b164f64fcd
+To     : Ilya Balashov   From : Selina Stenberg (with Claude)
+Re     : Tower B (covers & bridges) verified, 22/22 -- SM-021; completes the two-tower model.
+         Backbone: odd spine levels = PSL(2,p), Schur covers SL(2,p) (p=7,5,3).
+Contents: COVER_NOTE.md, verify_tower_b.py, verify_tower_b.log, SHA256SUMS.txt
+Not RH/GRH. Send status is Selina's word; once recorded the envelope is FROZEN.

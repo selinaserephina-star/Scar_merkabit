@@ -1,0 +1,16 @@
+COHERENCE / SCAR-MERKABIT -- ENVELOPE COVER (keep outside the zip)
+==================================================================
+File   : to_Ilya_MEDIATOR_REPLY_2026-08-31.zip
+Size   : 11261 bytes
+SHA256 : b361e638727512917a9332ca69c29ed6c7a56cc73022a73c5d59cf7402928a92
+
+To     : Ilya Balashov
+From   : Selina Stenberg (with Claude)
+Re     : REPLY to your mediator-descent chain (8 files, 7<->6 .. 2<->1)
+Result : independent rebuild reproduces 44/44 concrete checks
+         (verify_mediator_descent.py enclosed). Two flags returned at
+         equal prominence: (A) "level 6" names three different groups
+         across the files; (B) "no common subgroup" overstates -> only
+         "no C6 mediator" holds. The 7<->6 rung = our sealed SM-003/SM-015.
+Contents: COVER_NOTE.md, verify_mediator_descent.py, .log, SHA256SUMS.txt
+Not RH/GRH. Send status is Selina's word; once recorded the envelope is FROZEN.

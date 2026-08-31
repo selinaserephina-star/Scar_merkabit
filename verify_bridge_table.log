@@ -1,0 +1,115 @@
+==============================================================================
+TOWER A -- the SPINE bridges (full 10-field rows; type DERIVED)
+==============================================================================
+
+7<->6   PSL(2,7) -> C6xZ2
+   1 left            : PSL(2,7) (order 168)
+   2 right           : C6xZ2 (order 12)
+   3 type (DERIVED)  : T6 (quantum gap)    [Ilya: T6]
+   4 common object   : 28 bitangents of the Klein quartic (cited SM-003/SM-015) [I]
+   5 shared subgroups: 1, C2, C3, V4
+   6 direction       : cross (neither embeds)
+   7 reversibility   : symmetric exchange (both lose & gain)
+   8 mediator/surv.  : V4  (surviving components = shared set above)
+   9 lost            : A4, C4, C7, D4, S3, S4, F21, PSL(2,7)
+  10 appears         : C6, C6xC2
+  [PASS] 7<->6 derived type matches Ilya's label
+
+6<->5   C6xZ2 -> A5
+   1 left            : C6xZ2 (order 12)
+   2 right           : A5 (order 60)
+   3 type (DERIVED)  : T3 (double hinge) [uses Tower B: two covers Ih/2I]    [Ilya: T3]
+   4 common object   : icosahedral A5 and its two Z2-covers Ih/2I [I]
+   5 shared subgroups: 1, C2, C3, V4
+   6 direction       : cross (neither embeds)
+   7 reversibility   : symmetric exchange (both lose & gain)
+   8 mediator/surv.  : V4  (surviving components = shared set above)
+   9 lost            : C6, C6xC2
+  10 appears         : A4, A5, C5, D5, S3
+  [PASS] 6<->5 derived type matches Ilya's label
+
+5<->4   A5 -> S4
+   1 left            : A5 (order 60)
+   2 right           : S4 (order 24)
+   3 type (DERIVED)  : T2 (single mediator: A4)    [Ilya: T2]
+   4 common object   : tetrahedron inscribed in cube & dodecahedron (A4) [I]
+   5 shared subgroups: 1, A4, C2, C3, S3, V4
+   6 direction       : cross (neither embeds)
+   7 reversibility   : symmetric exchange (both lose & gain)
+   8 mediator/surv.  : A4  (surviving components = shared set above)
+   9 lost            : A5, C5, D5
+  10 appears         : C4, D4, S4
+  [PASS] 5<->4 derived type matches Ilya's label
+
+4<->3   S4 -> A4
+   1 left            : S4 (order 24)
+   2 right           : A4 (order 12)
+   3 type (DERIVED)  : T1+T4 (inclusion + internal joint)    [Ilya: T1+T4]
+   4 common object   : the cube's three 2-fold axes (V4) [I]
+   5 shared subgroups: 1, A4, C2, C3, V4
+   6 direction       : down: A4 ⊴ S4, quotient S4/A4
+   7 reversibility   : one-way (normal-subgroup descent)
+   8 mediator/surv.  : A4  (surviving components = shared set above)
+   9 lost            : C4, D4, S3, S4
+  10 appears         : -
+  [PASS] 4<->3 derived type matches Ilya's label
+
+3<->2   A4 -> Z2
+   1 left            : A4 (order 12)
+   2 right           : Z2 (order 2)
+   3 type (DERIVED)  : T5 (one-way door: subgroup, not a quotient)    [Ilya: T5]
+   4 common object   : V4 as container (not quotient); the sign/alternating floor [I]
+   5 shared subgroups: 1, C2
+   6 direction       : down: Z2 ↪ A4 (subgroup)
+   7 reversibility   : one-way (no quotient back)
+   8 mediator/surv.  : C2  (surviving components = shared set above)
+   9 lost            : A4, C3, V4
+  10 appears         : -
+  [PASS] 3<->2 derived type matches Ilya's label
+
+2<->1   Z2 -> 1
+   1 left            : Z2 (order 2)
+   2 right           : 1 (order 1)
+   3 type (DERIVED)  : T1 (inclusion; lower normal)    [Ilya: T1]
+   4 common object   : the point (closure) [I]
+   5 shared subgroups: 1
+   6 direction       : down: 1 ⊴ Z2, quotient Z2/1
+   7 reversibility   : one-way (normal-subgroup descent)
+   8 mediator/surv.  : 1  (surviving components = shared set above)
+   9 lost            : C2
+  10 appears         : -
+  [PASS] 2<->1 derived type matches Ilya's label
+
+==============================================================================
+TOWER B -- the COVERS & BRIDGES (cover-type rows)
+==============================================================================
+  SL(2,7)                  -> PSL(2,7)     | central Schur cover (non-split; ker {±I}) | binary/SL(2,7) [I]
+  PGL(2,7)                 -> PSL(2,7)     | index-2 OVER-group (outer-diagonal; NOT a cover) | PGL vs SL distinction [I]
+  2I=SL(2,5)               -> A5           | central Schur cover (non-split) | binary icosahedron [I]
+  Ih=A5xZ2                 -> A5           | split Z2-cover (direct product) | icosahedron x reflection [I]
+  GL(2,3)=2.S4             -> S4           | double cover (transpositions -> involutions) | 2.S4 (2O = sibling) [I]
+  2T=SL(2,3)               -> A4           | central Schur cover (non-split) | binary tetrahedron [I]
+  Th=A4xZ2                 -> A4           | split Z2-cover | pyritohedral T_h [I]
+  W(E6) < Sp6(2)=W(E7)/±   -> (top bridge) | index-28 embedding (28 bitangents) | 28 bitangents; cited SM-003/SM-015 [I]
+  [note] the ODD-level backbone is the SL(2,p) Schur-cover chain (p=7,5,3); split
+  covers Ih/Th sit beside the non-split 2I/2T at equal order (distinct groups).
+
+==============================================================================
+MARKDOWN -- Tower A
+==============================================================================
+| bridge | left | right | type (derived) | common object [I] | shared | direction | reversibility | lost | appears |
+|---|---|---|---|---|---|---|---|---|---|
+| 7↔6 | PSL(2,7) | C6xZ2 | T6 (quantum gap) | 28 bitangents of the Klein quartic (cited SM-003/SM-015) | 1, C2, C3, V4 | cross (neither embeds) | symmetric exchange (both lose & gain) | A4, C4, C7, D4, S3, S4, F21, PSL(2,7) | C6, C6xC2 |
+| 6↔5 | C6xZ2 | A5 | T3 (double hinge) [uses Tower B: two covers Ih/2I] | icosahedral A5 and its two Z2-covers Ih/2I | 1, C2, C3, V4 | cross (neither embeds) | symmetric exchange (both lose & gain) | C6, C6xC2 | A4, A5, C5, D5, S3 |
+| 5↔4 | A5 | S4 | T2 (single mediator: A4) | tetrahedron inscribed in cube & dodecahedron (A4) | 1, A4, C2, C3, S3, V4 | cross (neither embeds) | symmetric exchange (both lose & gain) | A5, C5, D5 | C4, D4, S4 |
+| 4↔3 | S4 | A4 | T1+T4 (inclusion + internal joint) | the cube's three 2-fold axes (V4) | 1, A4, C2, C3, V4 | down: A4 ⊴ S4, quotient S4/A4 | one-way (normal-subgroup descent) | C4, D4, S3, S4 | — |
+| 3↔2 | A4 | Z2 | T5 (one-way door: subgroup, not a quotient) | V4 as container (not quotient); the sign/alternating floor | 1, C2 | down: Z2 ↪ A4 (subgroup) | one-way (no quotient back) | A4, C3, V4 | — |
+| 2↔1 | Z2 | 1 | T1 (inclusion; lower normal) | the point (closure) | 1 | down: 1 ⊴ Z2, quotient Z2/1 | one-way (normal-subgroup descent) | C2 | — |
+
+==============================================================================
+BRIDGE TABLE: 6 type-derivations agree with Ilya's labels, 0 disagree
+Every graded cell is computed; every [I] cell is named/cited and ungraded (Rule 3).
+The derived type reproduces Ilya's T1-T6 assignments AS A THEOREM OF EACH ROW, and
+carries the honest refinement: 5↔4/6↔5 are crossings (two-sided) that merely SHARE a
+mediator, not clean joints. Ready to compare against Ilya's independent table.
+Not RH/GRH.

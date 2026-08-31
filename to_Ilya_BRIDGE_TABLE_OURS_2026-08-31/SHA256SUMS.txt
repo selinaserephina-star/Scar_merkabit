@@ -1,0 +1,4 @@
+418d4ab878d008040958d7252e6c719323209210df716b9b8b2dbdafd13d08c1  COVER_NOTE.md
+b18aee0c7c093365ce43478285d6aa4f97fc709f170f0a2a06aa2d1bb11eb145  verify_bridge_table.py
+bee9ee0f93b1efad35c69660327ba45bf0d19d8261050c550b829e8accf6d98a  verify_bridge_table.log
+PREPARED 2026-08-31, NOT SENT (send = Selina's word). Our independent BRIDGE SPECIFICATION table, SM-022; type derived 6/6.

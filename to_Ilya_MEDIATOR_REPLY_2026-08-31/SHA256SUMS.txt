@@ -1,0 +1,4 @@
+928e19efad15da8cc0e86b1ac17aabceb231f046d45d27026a231c6a0ba83512  COVER_NOTE.md
+eda4d7623e1c4d61203741b82e43dd845c5b5668a039e6504a4a5e018b3be46c  verify_mediator_descent.log
+24bfcc590099aa9d597f167235519427bb0be38a1f067358ca5d159fe64cc9c1  verify_mediator_descent.py
+PREPARED 2026-08-31, NOT SENT (send = Selina's word). Reply to IB's mediator descent; draft SM-019.

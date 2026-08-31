@@ -1,0 +1,9 @@
+SCAR-MERKABIT -- ENVELOPE COVER (keep outside the zip)
+File   : to_Ilya_BRIDGE_TABLE_OURS_2026-08-31.zip
+Size   : 9364 bytes
+SHA256 : 10ae7d2bee1f4bfc148e3fbd51677ee6f3fa45be6226fd82193aafa49a62eb1e
+To     : Ilya Balashov   From : Selina Stenberg (with Claude)
+Re     : Our independent BRIDGE SPECIFICATION table (SM-022) -- all 10 fields, both towers.
+         type DERIVED (6/6 matches your T1-T6); common object [I] (Rule 3). Ready to diff yours.
+Contents: COVER_NOTE.md, verify_bridge_table.py, verify_bridge_table.log, SHA256SUMS.txt
+Not RH/GRH. Send status is Selina's word; once recorded the envelope is FROZEN.
