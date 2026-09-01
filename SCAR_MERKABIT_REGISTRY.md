@@ -79,7 +79,7 @@ parties have seen it; sends and publication require both parties' word.**
 
 ## Sends & publication status
 
-- **PREPARED 2026-09-01 (on Selina's "Seal, sha, summary, zip"): the ROOF REPLY package** — `to_Ilya_ROOF_2026-09-01/` (10 files: COVER_NOTE covering SM-029 (the pinning inversion + the two-twos dichotomy) and SM-030 (the roof theorem R = W⁺(E₈), minimal-found) with four standing asks; both verifiers + logs (32/32, 44/44); Stone V brief + pre-code lock; `STONE_V_WE8_ROOF.md`; registry snapshot v0.35; SHA256SUMS.txt), zipped as `to_Ilya_ROOF_2026-09-01.zip` (**82,856 B, sha256 b2c961419d1b316add9da4d211607939d456f1a52c310798264bca2fcf01fca7**, hash outside in `COVER_ROOF_SHA256.txt`); mirrored to `zips/`. **PREPARED-NOT-SENT** — handing it over is the send, Selina's to make; recorded here when made.
+- **SENT 2026-09-01 (Selina's word: "sent")**: the **ROOF REPLY package** — `to_Ilya_ROOF_2026-09-01.zip` (**82,856 B, sha256 b2c961419d1b316add9da4d211607939d456f1a52c310798264bca2fcf01fca7**, hash outside in `COVER_ROOF_SHA256.txt`) to Ilya Balashov; mirrored to `zips/`. 10 files: COVER_NOTE covering SM-029 (the pinning inversion + the two-twos dichotomy) and SM-030 (the roof theorem R = W⁺(E₈), minimal-found) with four standing asks (his word on each; triality as next work-item; the honest opens); both verifiers + logs (32/32, 44/44); Stone V brief + pre-code lock; `STONE_V_WE8_ROOF.md`; registry snapshot v0.35; SHA256SUMS.txt. Folder **FROZEN**. SM-029 and SM-030 are now in both parties' hands → JOINT on his word per the joint-lane rule.
 
 - **SENT 2026-09-01**: the **STONE U REPLY package** — `to_Ilya_STONE_U_2026-09-01.zip` (**87,890 B, sha256 c15665e2e0cc0aa246af9bf8dd896908b4fb076e022389e845d7baaa8b314420**, hash outside in `COVER_STONEU_SHA256.txt`) to Ilya Balashov; mirrored to `zips/`. 11 files: COVER_NOTE (build + lift census + choice theorem + three asks), Stone U brief + pre-code lock, both verifiers + logs (SM-027 59/59, SM-028 19/19), findings doc, fail-first log, registry snapshot v0.31, SHA256SUMS.txt. Send recorded on **IB's same-day reply in hand** (forwarded by Selina; filed `RECEIVED_2026-09-01_IB_WE_GO_UP/`), which answers all three asks. Folder **FROZEN**. His reply: choice theorem — his word given → **JOINT**; W(E₈) containment adopted; Schur-class pinning adopted. "We go up."
 
@@ -130,6 +130,8 @@ parties have seen it; sends and publication require both parties' word.**
   make; recorded here when made.
 
 ## Changelog
+
+- **v0.37 (2026-09-01)** — **ROOF REPLY SENT** on Selina's word ("sent"): zip sha b2c96141… delivered to Ilya; envelope FROZEN. SM-029 (the Fano-spinor inversion) and SM-030 (the roof R = W⁺(E₈)) are now two-party; awaiting his word on the four asks (both seals → JOINT; triality as next work-item; the honest opens — true minimality, (C,H) canonicality). Registry v0.37.
 
 - **v0.36 (2026-09-01)** — **Roof reply SEALED on Selina's "Seal, sha, summary, zip".** Fresh `to_Ilya_ROOF_2026-09-01/` (cover for SM-029 + SM-030 with four asks; both verifiers + logs; Stone V brief & lock; findings doc; registry snapshot v0.35; SHA256SUMS), zipped with the hash outside (b2c96141…, 82,856 B), mirrored to the send shelf. PREPARED-NOT-SENT; recorded in Sends when made. Registry v0.36.
 
