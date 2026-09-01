@@ -1,0 +1,135 @@
+==============================================================================
+SCHUR CLASS PINNING -- which PSL(2,7) class of Sp6(2) lifts to SL(2,7) in 2.Sp6(2)?
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+SECTION 1 -- 28-model: G = Sp6(2), full enumeration, involution classes
+------------------------------------------------------------------------------
+[PASS] 1a: |G| = 1,451,520 = |Sp6(2)|: the 12 Clifford tableau matrices generate the full symplectic group on F2^6 (BSGS on the 64 vectors); all 12 preserve Omega  -> order 1451520
+[PASS] 1b: Arf split 36 even + 28 odd; G acts on the 28 odd forms FAITHFULLY and TRANSITIVELY (28-point BSGS order 1,451,520, first orbit 28); 64-label order agrees
+[PASS] 1c: BSGS transversal products enumerate 1,451,520 DISTINCT elements of G on 28 points (uniqueness verified row-wise at first build, cached flag on resume)
+[PASS] 1d: exhaustive element-order census of G = the Sp6(2) census (matches the sealed Stone U K-bar census line for line)  -> {1: 1, 2: 5103, 3: 16352, 4: 75600, 5: 48384, 6: 272160, 7: 207360, 8: 181440, 9: 161280, 10: 145152, 12: 241920, 15: 96768}
+[PASS] 1e: the 5103 involutions of G partition into EXACTLY 4 conjugacy classes (conjugation-orbit closure under the 12 generators, exhaustive over all involutions) with sizes {63, 315, 945, 3780}  -> sizes in discovery order [63, 945, 3780, 315]
+[t=   6.9s] section 1 done
+
+------------------------------------------------------------------------------
+SECTION 2 -- 28-model: bridge copy (IB Lagrangian) and Fano copy (SM-024 hunt); intrinsic fingerprints
+------------------------------------------------------------------------------
+[PASS] 2a: H_b = {diag(M,(M^-1)^T)} rebuilt: 168 distinct symplectic matrices, PSL(2,7) order census, faithful on the 28
+[PASS] 2b: H_b has the BRIDGE-class fingerprint: transitive on the 28 odd forms, even-form orbits [1,7,7,21] (sealed SM-003/SM-024 / verify_ib_normalizer_mechanism fingerprint)  -> odd [28] even [1, 7, 7, 21]
+[PASS] 2c: H_b's 21 involutions all lie in ONE G-class; its size is the intrinsic label S_b  -> S_b = 315   [obs: rank(g-I) = 2, <v,gv>=0 for all v: True]
+[PASS] 2d: H_b order-3 / order-4 fingerprints: all 56 order-3 elements in one G-class, all 42 order-4 elements in one G-class  -> sizes (|3-class|, |4-class|) = (13440, 11340)
+  hunt: 148 tries (seed 20260831, SM-024's loop verbatim)
+[PASS] 2e: the FANO-DOUBLED copy H_f found in the same G (order 168, PSL census) with odd orbits [7,21] and even orbits [1,7,28] (SM-024's contrast-class fingerprint)  -> odd [7, 21] even [1, 7, 28]
+[PASS] 2f: H_f's 21 involutions all in ONE G-class (size S_f); order-3 and order-4 elements each in one G-class  -> S_f = 945, (|3-class|, |4-class|) = (13440, 45360)
+[PASS] 2g: SEPARATION in the 28-model: the bridge and Fano classes have DIFFERENT intrinsic involution-class sizes (and full fingerprints)  -> bridge (inv,3,4)-class sizes (315, 13440, 11340) vs Fano (945, 13440, 45360)
+[PASS] 2h: corroboration: the hunt's OWN transitive copy (found alongside H_f) has involutions in the SAME G-class as IB's Lagrangian H_b
+[t=  10.9s] section 2 done
+
+------------------------------------------------------------------------------
+SECTION 3 -- Stone U model: the 4 cached L2(7) copies in K-bar; fingerprints + lift types RE-COMPUTED
+------------------------------------------------------------------------------
+[PASS] 3a: sealed Stone U caches loaded: |K-bar| = 1,451,520 (chain product), level-0 generators regenerate it; element-order census IDENTICAL to the 28-model census (1d) -- the two models share the intrinsic Sp6(2) fingerprint  -> lvl-0 gens: 2
+[PASS] 3b: K-bar involution classes RE-VERIFIED from scratch: each cached class is a single conjugation orbit under the K-bar generators, sizes {315, 3780, 945, 63}, square-signs constant per class (+, +, -, -)  -> (size, sign) by class id: [(315, [1]), (3780, [1]), (945, [-1]), (63, [-1])]
+[PASS] 3c: the 4 cached L2(7) witnesses re-closed (each 168, PSL census, pairwise distinct); each copy's 21 involutions lie in ONE K-bar class  -> involution class sizes per copy: [315, 315, 945, 315]
+[PASS] 3d: W(E8) frame rebuilt (240 roots, antipode -1 fixed-point-free); the cached H shadow chain loads with order 1,451,520 and sifts K-bar elements to lifts in H
+  copy 1: involution class size 315 (sign [1]) -> preimage order 336, 43 involution(s), 14 present: True => 2 x L2(7)
+  copy 2: involution class size 315 (sign [1]) -> preimage order 336, 43 involution(s), 14 present: True => 2 x L2(7)
+  copy 3: involution class size 945 (sign [-1]) -> preimage order 336, 1 involution(s), 14 present: True => SL(2,7)
+  copy 4: involution class size 315 (sign [1]) -> preimage order 336, 43 involution(s), 14 present: True => 2 x L2(7)
+[PASS] 3e: lift types RE-COMPUTED through the shadow chain (closure with -1, census against explicit SL(2,7) / 2xL2(7) models): 3 copies split, 1 copy SL(2,7) -- matching the sealed Stone U UB5a table
+[PASS] 3f: in K-bar the lift type is PINNED to the involution class: ALL split copies have involutions in the SAME class (one size), the SL(2,7) copy in a DIFFERENT class  -> split copies -> class size 315; SL(2,7) copy -> class size 945
+[PASS] 3g: K-bar (inv, order-3, order-4) class-size fingerprints computed for one copy of each lift type (each order's elements single-class per copy); the 4 copies form EXACTLY 2 fingerprint groups  -> split-type (315, 13440, 11340), SL(2,7)-type (945, 13440, 45360)
+[t=  13.4s] section 3 done
+
+------------------------------------------------------------------------------
+SECTION 4 -- the fingerprint MATCH (with its caveat)
+------------------------------------------------------------------------------
+[PASS] 4a: the two 28-model fingerprints and the two K-bar fingerprints MATCH UP one-to-one (class sizes are isomorphism-invariant)  -> bridge (315, 13440, 11340) / Fano (945, 13440, 45360)  vs  K-bar split-type (315, 13440, 11340) / SL(2,7)-type (945, 13440, 45360)
+  fingerprint route says: BRIDGE class <-> SPLIT-lifting class; the FANO class is the SL(2,7) one.
+  CAVEAT (handled next): fingerprints alone force the matching only if same-fingerprint
+  copies are conjugate.  The DIRECT ROUTE below removes the caveat by explicit transport.
+[t=  13.4s] section 4 done
+
+------------------------------------------------------------------------------
+SECTION 5 -- DIRECT ROUTE: explicit isomorphism psi: K-bar -> G via the 63-class; transport the copies
+------------------------------------------------------------------------------
+[PASS] 5a: the size-63 involution class C63 of K-bar behaves as the TRANSVECTION class: for every distinct pair, the product has order 2 iff they commute and order 3 iff not (all 63x63 pairs)
+[PASS] 5b: a hyperbolic (symplectic) basis found INSIDE C63 by commutation: pairs (c_i, d_i) with c_i,d_j commuting except exactly the i=j partners (|perp12| = 15, |perp34| = 3)
+[PASS] 5c: labels u: C63 -> F2^6\{0} via commutation with the basis: BIJECTIVE onto the 63 nonzero vectors; Omega-pairing(u(x),u(y)) = commutation(x,y) for ALL pairs; transvection addition law u(xyx) = u(x)+u(y) on ALL non-commuting pairs
+[PASS] 5d: psi on the two K-bar generators: conjugation on C63 is LINEAR in the labels (verified on all 63 points each), symplectic, and a member of G (BSGS strip); <psi(gens)> has order 1,451,520 = |K-bar| = |G|  =>  psi: K-bar -> G is an ISOMORPHISM ONTO G (kernel trivial by order; multiplicativity by uniqueness of linear extension, argued in the docstring)  -> order 1451520
+[PASS] 5e: the SL(2,7)-LIFTING copy transported through psi: 168 distinct symplectic images, multiplicative on the sampled grid, all members of G; its 28-model involution class size EQUALS the K-bar-side size (coherence)  -> involution class size 945 (K-bar side 945)
+[PASS] 5f: THE DIRECT READ-OFF: psi(SL(2,7)-lifting copy) has odd-form orbits [7, 21] and even-form orbits [1, 7, 28]  =>  it is the FANO class  -> bridge = [28]/[1,7,7,21]; Fano = [7,21]/[1,7,28]
+[PASS] 5g: contrast: psi(a SPLIT-lifting copy) has odd orbits [28] / even orbits [1, 7, 7, 21] => the BRIDGE class; involution class size 315 agrees with the K-bar side (315); the two transported copies land in the TWO DIFFERENT classes
+[PASS] 5h: the direct route and the fingerprint route AGREE  -> direct: SL(2,7)-lifting class = FANO
+  CANONICALITY NOTE: any two isomorphisms K-bar -> G differ by an automorphism of G;
+  Out(Sp6(2)) = 1 [P cited, ATLAS], so the class correspondence does not depend on the
+  choice of psi.  Belt-and-braces: the automorphism-invariant fingerprints (sections 2-4)
+  give the same matching, computed.
+[t=  14.9s] section 5 done
+
+------------------------------------------------------------------------------
+SECTION 6 -- normalizer cross-check (exhaustive scans in K-bar)
+------------------------------------------------------------------------------
+[PASS] 6a: EXHAUSTIVE normalizer scan over all 1,451,520 elements of K-bar (conjugate BOTH generators into the stored 168-set, hash prefilter + exact verification): the SL(2,7)-lifting copy has |N| = 168, the split-lifting copy has |N| = 336  -> [N:H] = 1 vs 2
+[PASS] 6b: normalizer indices MATCH the sealed SM-024 pattern for the classes the direct route assigned (bridge: N = PGL(2,7) index 2; Fano: self-normalizing index 1) -- and the cached Stone U PGL27_scan (|N| = 336 over split copy 1) agrees  -> a THIRD independent intrinsic invariant confirms the matching
+[t=  36.2s] section 6 done
+
+------------------------------------------------------------------------------
+SECTION 7 -- bonus (nearly free via psi): A5 / S4 / A4 witnesses transported; fingerprints paired with lift types
+------------------------------------------------------------------------------
+  -- A5 (witnesses cached by the sealed Stone U hunt) --
+     copy 1: K-bar involution class size(s) [945]; 28-odd orbits [1, 1, 1, 5, 5, 5, 10]; preimage -> 2I = SL(2,5)
+     copy 2: K-bar involution class size(s) [3780]; 28-odd orbits [6, 10, 12]; preimage -> A5 x Z2 (split)
+     copy 3: K-bar involution class size(s) [945]; 28-odd orbits [1, 6, 6, 15]; preimage -> 2I = SL(2,5)
+     copy 4: K-bar involution class size(s) [3780]; 28-odd orbits [6, 10, 12]; preimage -> A5 x Z2 (split)
+     copy 5: K-bar involution class size(s) [3780]; 28-odd orbits [6, 10, 12]; preimage -> A5 x Z2 (split)
+     copy 6: K-bar involution class size(s) [945]; 28-odd orbits [1, 1, 1, 5, 5, 5, 10]; preimage -> 2I = SL(2,5)
+  -- S4 (witnesses cached by the sealed Stone U hunt) --
+     copy 1: K-bar involution class size(s) [315, 945]; 28-odd orbits [4, 6, 6, 6, 6]; preimage -> GL(2,3) = 2.S4
+     copy 2: K-bar involution class size(s) [945]; 28-odd orbits [3, 3, 4, 6, 12]; preimage -> 2O (order 48, unique involution) [obs census {1: 1, 2: 1, 3: 8, 4: 18, 6: 8, 8: 12}]
+     copy 3: K-bar involution class size(s) [945, 3780]; 28-odd orbits [4, 6, 6, 12]; preimage -> GL(2,3) = 2.S4
+     copy 4: K-bar involution class size(s) [945, 3780]; 28-odd orbits [2, 2, 2, 4, 4, 6, 8]; preimage -> GL(2,3) = 2.S4
+     copy 5: K-bar involution class size(s) [945, 3780]; 28-odd orbits [4, 6, 6, 12]; preimage -> GL(2,3) = 2.S4
+     copy 6: K-bar involution class size(s) [945, 3780]; 28-odd orbits [4, 6, 6, 12]; preimage -> GL(2,3) = 2.S4
+  -- A4 (witnesses cached by the sealed Stone U hunt) --
+     copy 1: K-bar involution class size(s) [3780]; 28-odd orbits [4, 6, 6, 12]; preimage -> A4 x Z2 (split)
+     copy 2: K-bar involution class size(s) [945]; 28-odd orbits [1, 3, 6, 6, 12]; preimage -> 2T = SL(2,3)
+     copy 3: K-bar involution class size(s) [945]; 28-odd orbits [1, 3, 6, 6, 12]; preimage -> 2T = SL(2,3)
+[PASS] 7a: every cached A5/S4/A4 witness re-closed with the right order and census, its lift type recomputed, and its 28-model orbit fingerprint computed via psi (table above; scoped to the copies the sealed Stone U hunts found)
+[t=  36.5s] section 7 done
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+
+  THE ANSWER (computed three independent ways -- direct transport,
+  intrinsic fingerprints, normalizer indices):
+
+  *  The bitangent-transitive BRIDGE class of PSL(2,7) (IB's Lagrangian
+     diag(M,(M^-1)^T); transitive on the 28, stab S3, even orbits
+     [1,7,7,21]; N = PGL(2,7)) has involutions in the Sp6(2) class of
+     size 315 (square-sign +): it lifts SPLIT, to 2 x L2(7).
+     The bridge embedding is NOT the spinorial one.
+
+  *  The FANO-DOUBLED class (odd orbits [7,21], even orbits [1,7,28],
+     self-normalizing) has involutions in the class of size 945
+     (square-sign -): IT is the class that lifts to SL(2,7) inside
+     H = 2.Sp6(2).  The spinorial embedding is the Fano-doubled one.
+
+  SCOPE.  Class sizes / fingerprints: exhaustive over all involutions
+  (both models), all elements of the two subgroups per class, and the
+  cited orders.  Lift types: decisive per copy (explicit preimage
+  closures).  The isomorphism psi is explicit and verified onto G; the
+  class correspondence is choice-independent because Out(Sp6(2)) = 1
+  [P cited, ATLAS] AND because the automorphism-invariant fingerprints
+  agree (computed).  Normalizer scans: exhaustive over all 1,451,520
+  elements of K-bar, both copies.  No claim about L2(7) copies of
+  K-bar beyond those the sealed hunts found, EXCEPT: the two 28-model
+  classes are genuinely the two fingerprint types, and each found K-bar
+  copy belongs to one of them by the transported class correspondence.
+  Not RH/GRH; no physical identification (Rule 3).
+==============================================================================
+RESULT: 32 checks passed, 0 failed
+total time 36.5s
