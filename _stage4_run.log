@@ -1,0 +1,73 @@
+==============================================================================
+STONE U -- THE OTHER DOUBLE COVER: H = pi^-1(spin Sp6(2)) inside W(E8)
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+STAGE 1 -- UB1(build): W(E8) on the 240 roots; -1 central
+------------------------------------------------------------------------------
+[PASS] 1a: 240 E8 roots constructed (112 integer + 128 half-integer), all of norm^2 = 2
+[PASS] 1b: simple-root Gram matrix: diagonal 2, off-diagonal in {0,-1}, 7 bonds (a tree), det 1 (E8 unimodular -- the simple roots are a Z-basis of L)  -> det 1, bonds 7
+[PASS] 1c: the bond graph IS the E8 Dynkin diagram (unique branch node, arm lengths 1,2,4)  -> arms [1, 2, 4]
+[PASS] 1d: the 8 simple reflections s_a(x) = x - (x.a)a are involutions permuting the 240 roots
+  [cache] BSGS 'we8_240' loaded (order 696729600, chain depth 7)
+[PASS] 1e: |<s1..s8>| = 696729600 = |W(E8)| (BSGS on the 240 roots)  -> order 696729600
+[PASS] 1f: -1 (the antipode) is a fixed-point-free involution, commutes with every generator (central), and LIES IN W(E8) (membership strip)
+[t=   0.1s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- UB1(mod 2): L/2L with q = x.x/2, plus-type; ker pi = {+-1}
+------------------------------------------------------------------------------
+[PASS] 2a: the Gram matrix inverts over Z (G Ginv = I): coordinates in the simple-root basis are exact integers
+[PASS] 2b: every root reconstructs exactly from its integer simple-root coordinates (all 240 verified); reduce mod 2 -> L/2L = F2^8
+[PASS] 2c: q(x) = x.x/2 mod 2 is well-defined on L/2L (even lattice) with 135 singular nonzero + 120 nonsingular vectors (the plus-type counts on F2^8; Witt-index-4 witness computed in stage 5)  -> singular 135, nonsingular 120
+[PASS] 2d: the polar form B(x,y) = q(x+y)+q(x)+q(y) is NONDEGENERATE (trivial radical)
+[PASS] 2e: the 240 root images mod 2 are exactly the 120 NONSINGULAR vectors, each hit by exactly one antipodal pair (pairs = mod-2 fibres)
+[PASS] 2f: each simple reflection's mod-2 matrix reproduces the root action mod 2 and PRESERVES q: pi maps W(E8) into O(F2^8, q); mod 2 a reflection becomes the orthogonal transvection t_{a-bar}
+  [built] BSGS 'pair_120': order 348364800, chain depth 7, 0.1s
+[PASS] 2g: the pair action (120 antipodal pairs) has order 348364800 = |W(E8)|/2, and -1 acts trivially: the pair-kernel is EXACTLY {+-1}  -> order 348364800
+[PASS] 2h: KERNEL OF pi: trivial mod 2 <=> fixes every root mask <=> fixes every pair (2e: pairs are the mod-2 fibres) <=> in the pair-kernel = {+-1} (2g); conversely +-1 = 1 mod 2.  ker pi = {+-1}
+
+  UB1: PASS -- W(E8) built (696729600), -1 central and inside, q plus-type nondegenerate on L/2L, ker(pi) = {+-1}.
+  [built] shadow chain 'shadow_full': order 348364800, 0.3s
+[PASS] 2i: shadow chain (pair action with W(E8) carries): order 348364800; the 8 generator images round-trip (sift -> lift -> same pair action, lift in W(E8))
+[t=   0.4s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- UB2 (control): the vector-type preimage is SPLIT
+------------------------------------------------------------------------------
+  [built] BSGS 'we8_stab_a': order 696729600, chain depth 7, 0.3s
+[PASS] 3a: forced-base BSGS at alpha: W(E8) is transitive on the 240 roots (first orbit 240) and Stab(alpha) has order 2903040 = |W(E7)|; the verified chain's level-1 strong generators generate it and all fix alpha  -> |Stab| = 2903040, 7 strong generators
+[PASS] 3b: -1 is NOT in Stab(alpha): it moves alpha to -alpha; so Stab(alpha) meets {+-1} trivially and pi is INJECTIVE on it
+  [built] derived chain 'stab_derived': order history [1451520, 1451520, 1451520] (converged)
+[PASS] 3c: random-commutator closure inside Stab(alpha) converges to order 1451520 = |Sp6(2)|, index 2 in Stab; EXACT: Stab/C = Z2 is abelian so [Stab,Stab] <= C, and C <= [Stab,Stab] by construction => C = [Stab,Stab]  -> order 1451520
+[PASS] 3d: C fixes alpha and misses -1: pi(C) is a VECTOR-TYPE Sp6(2) in O(L/2L,q) fixing the NONSINGULAR vector alpha-bar (the spin/vector distinguisher baseline)
+  [built] BSGS 'stab_derived_plus': order 2903040, chain depth 6, 0.3s
+[PASS] 3e: <C, -1> has order 2903040 with -1 central and C meeting <-1> trivially: pi^-1(vector-type Sp6(2)) = <-1> x C, a SPLIT direct product 2 x Sp6(2)  -> order 2903040
+
+  UB2: PASS -- registered expectation CONFIRMED: the vector-type preimage
+  is SPLIT, pi^-1(vector Sp6(2)) = <-1> x Sp6(2).
+[t=   1.6s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- UB3: spin-type Sp6(2) from the even Clifford algebra
+------------------------------------------------------------------------------
+[PASS] 4a: the 6 gamma operators on Lambda(F2^3) satisfy the Clifford relations of (V6, q6=x0x1+x2x3+x4x5): gamma_i^2 = q(e_i).I = 0, gamma_i gamma_j + gamma_j gamma_i = B(e_i,e_j).I
+[PASS] 4b: X(v) = c.I + sum v_i gamma_i (the image of v.e7 in Cl0) satisfies X(v)^2 = q7(v).I for ALL 128 v -- e7 is central over F2 (B(e7,.) = 0), so this is the whole Clifford calculus needed
+[PASS] 4c: each of the 63 q=1 vectors v (e7 itself excluded: t_e7 = id) gives an INVOLUTION M_v = X(v) implementing the orthogonal transvection t_v: M_v X(x) M_v = X(t_v x) on a basis of V7 -- the spin lift of the generator
+  [built] BSGS 'o7_transvections': order 1451520, chain depth 6, 0.3s
+[PASS] 4d: the 63 transvections generate a group of order 1451520 = |Sp6(2)| = |O(V7,q7)| [order formula P: standard] acting on V7 -- the full O7(2)  -> order 1451520
+  [built] BSGS 'k0_256': order 1451520, chain depth 7, 0.8s
+[PASS] 4e: K0 = <M_v> <= GL8(F2) (as permutations of the 256 vectors) has order 1451520: the spin lift is FAITHFUL with NO doubling -- over F2 the only central unit of M8(F2) is 1, so relations among the t_v map to relations among the M_v  -> order 1451520
+  [built] BSGS 'k0_pair_256': order 1451520, chain depth 6, 0.1s
+[PASS] 4f: an economical generating PAIR of K0 found among random products of transvection lifts (order re-verified 1451520 by BSGS)  -> attempts used: 1
+[PASS] 4g: the space of K0-invariant quadratic forms on F2^8 is EXACTLY 1-dimensional (linear system over both generators, all 256 points)  -> nullspace dim 1
+[PASS] 4h: the invariant form Q8 is nondegenerate with the PLUS-type counts (135 singular nonzero / 120 nonsingular) and is preserved by ALL 63 transvection lifts  -> nonsingular 120
+[PASS] 4i: K0 fixes NO nonzero vector (in particular no nonsingular one): SPIN type, already distinct from the vector type of UB2 (which fixes alpha-bar)
+[PASS] 4j: K0 is IRREDUCIBLE on F2^8: for every one of the 255 nonzero vectors, its K0-orbit spans the full space
+  [built] derived chain 'k0_derived': order history [1451520, 1451520, 1451520] (converged)
+[PASS] 4k: K0 is PERFECT (random-commutator closure reaches the full order -- exact, the closure is a subgroup of [K0,K0]); hence no index-2 subgroup.  With order 1451520 + the element-order set (stage 6: K-bar census) this is the brief's Sp6(2) fingerprint  -> derived order 1451520
+[t=   5.0s] stage 4 done
+
+[staged checkpoint exit after stage 4; caches written; NOT a verdict -- rerun with a higher stage]
+[so far: 31 PASS, 0 FAIL]

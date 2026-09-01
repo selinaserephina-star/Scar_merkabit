@@ -1,0 +1,19 @@
+==============================================================================
+STONE U -- THE OTHER DOUBLE COVER: H = pi^-1(spin Sp6(2)) inside W(E8)
+==============================================================================
+[t=   0.1s] start
+
+------------------------------------------------------------------------------
+STAGE 1 -- UB1(build): W(E8) on the 240 roots; -1 central
+------------------------------------------------------------------------------
+[PASS] 1a: 240 E8 roots constructed (112 integer + 128 half-integer), all of norm^2 = 2
+[PASS] 1b: simple-root Gram matrix: diagonal 2, off-diagonal in {0,-1}, 7 bonds (a tree), det 1 (E8 unimodular -- the simple roots are a Z-basis of L)  -> det 1, bonds 7
+[PASS] 1c: the bond graph IS the E8 Dynkin diagram (unique branch node, arm lengths 1,2,4)  -> arms [1, 2, 4]
+[PASS] 1d: the 8 simple reflections s_a(x) = x - (x.a)a are involutions permuting the 240 roots
+  [built] BSGS 'we8_240': order 696729600, chain depth 7, 0.3s
+[PASS] 1e: |<s1..s8>| = 696729600 = |W(E8)| (BSGS on the 240 roots)  -> order 696729600
+[PASS] 1f: -1 (the antipode) is a fixed-point-free involution, commutes with every generator (central), and LIES IN W(E8) (membership strip)
+[t=   0.3s] stage 1 done
+
+[staged checkpoint exit after stage 1; caches written; NOT a verdict -- rerun with a higher stage]
+[so far: 6 PASS, 0 FAIL]
