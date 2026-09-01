@@ -1,0 +1,190 @@
+==============================================================================
+STONE V -- THE ROOF: minimal overgroup of both towers inside W(E8)
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+STAGE 1 -- V0/V1: brief lock; sealed machinery reloaded and re-verified
+------------------------------------------------------------------------------
+[PASS] V0: the brief is sha-locked: sha256(BRIEF_STONE_V_WE8_ROOF.md) equals the value in BRIEF_STONE_V_LOCK.sha256  -> da1d02c23db833eb...
+[PASS] V1a: 240 E8 roots + 8 simple reflections + antipode replayed deterministically (involutions, -1 commutes with all generators)
+  [sealed cache] BSGS 'we8_240' loaded (order 696729600, depth 7)
+[PASS] V1b: sealed W(E8) chain: order 696729600; all 8 replayed generators and -1 pass its membership strip
+[PASS] V1c: mod-2 replay: 120 antipodal pairs = mod-2 fibres; -1 acts trivially on pairs (ker pi = {+-1}, sealed 2h)
+  [sealed cache] BSGS 'stab_derived' loaded (order 1451520, depth 6)
+[PASS] V1d: sealed C = [Stab(alpha),Stab(alpha)]: order 1451520 = |Sp6(2)|; its cached generators all fix alpha, pass its chain, and -1 is NOT in C  -> 24 generators
+  [sealed cache] shadow chain 'shadow_full' loaded (order 348364800)
+[PASS] V1e: K_spin generators replayed (Clifford lifts -> invariant plus-type form -> isometry transport) and lifted through the sealed shadow chain: pi(w_i) = A_i exactly, both in W(E8)
+  [sealed cache] BSGS 'H_240' loaded (order 2903040, depth 4)
+  [sealed cache] BSGS 'H_lifts_240' loaded (order 2903040, depth 4)
+[PASS] V1f: sealed H chain: order 2903040 = 2 x |Sp6(2)|; w1, w2, -1 all pass its membership strip; <w1,w2> alone already has order 2903040 (sealed chain), so H = <w1,w2>
+  [sealed cache] shadow chain 'shadow_H' loaded (order 1451520)
+[PASS] V1g: sealed H shadow chain (order 1451520) loaded; generator round-trip: lift_H(pi(w_i)) has the same pair action and lies in H
+  [cache] derived chain 'C_derived_v' loaded (order 1451520)
+[PASS] V1h: C is PERFECT, recomputed fresh: random-commutator closure inside C reaches the full order 1451520 -- EXACT (the closure is a subgroup of [C,C] <= C, and it equals C, so [C,C] = C)  -> order 1451520
+  [cache] derived chain 'H_derived_v' loaded (order 2903040)
+[PASS] V1i: H is PERFECT, recomputed fresh: random-commutator closure of H reaches the full order 2903040 -- EXACT (same argument); with -1 in H central this re-verifies H = 2.Sp6(2) non-split (sealed 6b) and gives H = [H,H]  -> order 2903040
+[t=   0.1s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- VB1(spine): the full spine as explicit subgroups of C
+------------------------------------------------------------------------------
+[PASS] V2a: model profiles rebuilt (SL(2,7)/PSL(2,7)/PGL(2,7)/SL(2,5)/SL(2,3)/GL(2,3)/2O/A5/S4/A4/D4/C6xC2); every Schur-type model has a UNIQUE involution
+  [cache] C element pool loaded (2089 inv, 3779 ord-3, 4144 ord-6)
+[PASS] V2b: pool sanity: sampled pool elements all lie in C (membership strip) and fix alpha; orders as labelled
+  [cache] spine_L27 witness reloaded and re-verified
+[PASS] V2c: PSL(2,7) < C: presentation witness a^2 = b^3 = (ab)^7 = 1 verified, |<a,b>| = 168, element-order profile = the Mobius PSL(2,7) profile {1: 1, 2: 21, 3: 56, 4: 42, 7: 48}; generators in C  -> order 168
+  [cache] spine_A5 witness reloaded and re-verified
+[PASS] V2d: A5 < C: (2,3,5) witness, |<a,b>| = 60, profile {1: 1, 2: 15, 3: 20, 5: 24}  -> order 60
+  [cache] spine_S4 witness reloaded and re-verified
+[PASS] V2e: S4 < C: (2,3,4) witness, |<a,b>| = 24, profile {1: 1, 2: 9, 3: 8, 4: 6}  -> order 24
+[PASS] V2f: A4 < C: derived subgroup of the S4 witness has order 12 and the A4 profile {1: 1, 2: 3, 3: 8} (2-generated, generators in C)  -> order 12
+  [cache] spine_C6Z2 witness reloaded and re-verified
+[PASS] V2g: C6 x Z2 < C: commuting pair (ord 6, ord 2, b outside <a>), |<a,b>| = 12 abelian, profile {1: 1, 2: 3, 3: 2, 6: 6}  -> order 12
+[PASS] V2h: Z2 < C: an involution of C (fixes alpha, so distinct from -1); order 2 verified
+[PASS] V2i: VB1(spine): all 6 spine members exhibited as explicit subgroups of C = the vector-type Sp6(2) complement inside W(E8)  -> 6/6 witnessed
+[t=   0.3s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- VB1(Schur): the Schur tower re-verified inside H from the sealed witnesses
+------------------------------------------------------------------------------
+  sealed L2(7) copy 1 -> preimage order 336, type 2 x L2(7)
+  sealed L2(7) copy 2 -> preimage order 336, type 2 x L2(7)
+  sealed L2(7) copy 3 -> preimage order 336, type SL(2,7)
+  sealed L2(7) copy 4 -> preimage order 336, type 2 x L2(7)
+[PASS] V3a: SL(2,7) inside H: order 336, UNIQUE involution (= -1), order-14 elements present -- the Schur cover of PSL(2,7)  -> profile {1: 1, 2: 1, 3: 56, 4: 42, 6: 56, 7: 48, 8: 84, 14: 48}
+  sealed A5 copy 1 -> preimage order 120, type SL(2,5) = 2I
+  sealed A5 copy 2 -> preimage order 120, type A5 x Z2
+  sealed A5 copy 3 -> preimage order 120, type SL(2,5) = 2I
+  sealed A5 copy 4 -> preimage order 120, type A5 x Z2
+  sealed A5 copy 5 -> preimage order 120, type A5 x Z2
+  sealed A5 copy 6 -> preimage order 120, type SL(2,5) = 2I
+[PASS] V3b: 2I = SL(2,5) inside H: order 120, UNIQUE involution (= -1) -- the binary icosahedral Schur cover of A5  -> profile {1: 1, 2: 1, 3: 20, 4: 30, 5: 24, 6: 20, 10: 24}
+  sealed S4 copy 1 -> preimage order 48, type GL(2,3) = 2.S4
+  sealed S4 copy 2 -> preimage order 48, type 2O
+  sealed S4 copy 3 -> preimage order 48, type GL(2,3) = 2.S4
+  sealed S4 copy 4 -> preimage order 48, type GL(2,3) = 2.S4
+  sealed S4 copy 5 -> preimage order 48, type GL(2,3) = 2.S4
+  sealed S4 copy 6 -> preimage order 48, type GL(2,3) = 2.S4
+[PASS] V3c: GL(2,3) = 2.S4 inside H: order 48, transpositions lift to involutions (13 involutions), -1 central  -> profile {1: 1, 2: 13, 3: 8, 4: 6, 6: 8, 8: 12}
+[PASS] V3d: 2O (binary octahedral) inside H: order 48, UNIQUE involution (= -1) -- transpositions lift to order 4  -> profile {1: 1, 2: 1, 3: 8, 4: 18, 6: 8, 8: 12}
+  derived of sealed S4 copy 1 -> preimage order 24, type SL(2,3) = 2T
+  derived of sealed S4 copy 2 -> preimage order 24, type SL(2,3) = 2T
+  derived of sealed S4 copy 3 -> preimage order 24, type SL(2,3) = 2T
+  derived of sealed S4 copy 4 -> preimage order 24, type SL(2,3) = 2T
+  derived of sealed S4 copy 5 -> preimage order 24, type SL(2,3) = 2T
+  derived of sealed S4 copy 6 -> preimage order 24, type SL(2,3) = 2T
+  sealed direct A4 copy 1 -> preimage order 24, type A4 x Z2
+  sealed direct A4 copy 2 -> preimage order 24, type SL(2,3) = 2T
+  sealed direct A4 copy 3 -> preimage order 24, type SL(2,3) = 2T
+[PASS] V3e: 2T = SL(2,3) inside H: order 24, UNIQUE involution (= -1) -- the binary tetrahedral Schur cover of A4  -> profile {1: 1, 2: 1, 3: 8, 4: 6, 6: 8}
+[PASS] V3f: C3 x D4 inside H (preimage of the sealed C6 x Z2): order 24, non-abelian, stem over the D4 part -- profile {1: 1, 2: 5, 3: 2, 4: 2, 6: 10, 12: 4}  -> profile {1: 1, 2: 5, 3: 2, 4: 2, 6: 10, 12: 4}
+  [sealed cache] BSGS 'we6_copy_120' loaded (order 51840, depth 3)
+  [sealed cache] BSGS 'we6_pre_240' loaded (order 103680, depth 3)
+  [sealed cache] BSGS 'we6_pre_derived' loaded (order 51840, depth 3)
+[PASS] V3g: 2.W(E6) inside H, re-verified from the sealed chains: the W(E6)-copy (order 51840) lifts to a preimage of order 103680 containing -1, and -1 lies in its DERIVED subgroup (order 51840) => non-split over <-1> (sealed 7k verdict reconfirmed by membership strips)
+[PASS] V3h: 2 x PGL(2,7) inside H: the sealed normalizer witness gives PGL(2,7) (order 336) in K-bar with SPLIT preimage of order 672 (profile = the split-double of PGL(2,7))  -> profile {1: 1, 2: 99, 3: 56, 4: 84, 6: 168, 7: 48, 8: 168, 14: 48}
+[PASS] V3i: Ih = <-1> x A5 inside <-1> x C <= W(E8) (split cover, free): order 120, profile = split-double of A5  -> profile {1: 1, 2: 31, 3: 20, 5: 24, 6: 20, 10: 24}
+[PASS] V3j: Th = <-1> x A4 inside <-1> x C <= W(E8) (split cover, free): order 24, profile = split-double of A4  -> profile {1: 1, 2: 7, 3: 8, 6: 8}
+[PASS] V3k: VB1(Schur): the full Schur tower core (SL(2,7), 2I, GL(2,3), 2O, 2T) + C3xD4 + 2.W(E6) + split covers + 2xPGL(2,7) all witnessed inside H (resp. <-1> x C for the split covers)  -> 10 Schur-side witnesses
+
+  VB1 member table (H side):
+  member              order   #inv  identified as          status
+  SL(2,7)               336      1  SL(2,7)                PASS
+  2I = SL(2,5)          120      1  SL(2,5) = 2I           PASS
+  GL(2,3) = 2.S4         48     13  GL(2,3)                PASS
+  2O                     48      1  2O                     PASS
+  2T = SL(2,3)           24      1  SL(2,3)                PASS
+  C3xD4                  24      5  C3xD4                  PASS
+  2.W(E6)            103680      -  2.W(E6) non-split      PASS
+  2xPGL(2,7)            672     99  2xPGL(2,7) split       PASS
+  Ih = 2 x A5           120     31  split cover            PASS
+  Th = 2 x A4            24      7  split cover            PASS
+[t=   0.6s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- VB2: K = <C,H>, the registered expectation, and the minimization
+------------------------------------------------------------------------------
+[PASS] V4a: evenness instrument: each simple reflection's exact integer matrix reproduces its root action, has det = -1, and det AGREES with the 240-point permutation parity on all 8 simple reflections (the brief's precondition for using parity)
+[PASS] V4b: -1_{E8} has matrix -I with det +1 (dim 8 EVEN): -1 lies in the rotation subgroup W+(E8), so W+ contains the centre
+[PASS] V4c: EVERY generator of K = <C, H> (the 24 cached C-generators + w1 + w2) has exact det +1 AND permutation parity +1 (the two instruments agree generator by generator; matrices reproduce the root action)  -> dets [1]
+  det: W(E8) -> {+-1} is a homomorphism (matrices multiply because they are the root-basis action); it is ONTO by V4a (reflections hit -1), so its kernel W+(E8) has index 2, order 348364800.
+  [cache] BSGS 'K_240' loaded (order 348364800, depth 7)
+[PASS] V4d: REGISTERED EXPECTATION RESOLVED -- PASS: |K| = 348364800 = |W(E8)|/2 with every generator even (V4c), so K <= ker(det) = W+(E8) and by equal order K = W+(E8) EXACTLY: the joint closure is the rotation subgroup, PROPER in W(E8) (index 2)  -> |K| = 348364800
+[PASS] V4e: K contains both sealed towersides: every C-generator, w1, w2 and -1 pass K's membership strip
+  [K,K] EXACT: C = [C,C] (V1h fresh) and H = [H,H] (V1i fresh), so
+  K = <C,H> = <[C,C],[H,H]> <= [K,K] <= K, forcing [K,K] = K -- K is
+  PERFECT.  Both towers lie in [K,K] because [K,K] = K (V4e).
+[PASS] V4f: (a) [K,K] = K, order 348364800 -- exact by the perfectness route (C, H perfect => <C,H> <= [K,K]); numeric spot-check: 24 random commutators of K-generators already generate order 348364800 = |K|; H <= [K,K] and C <= [K,K] hold since [K,K] = K
+  [cache] BSGS 'K2_240' loaded (order 348364800, depth 7)
+[PASS] V4g: (b) K2 = <spine witness generators in C, Schur witness generators in H> (21 generators) computed by BSGS: |K2| = 348364800, index 1 in K; K2 contains BOTH towers BY CONSTRUCTION (membership re-verified for every witness generator)  -> |K2| = 348364800
+[PASS] V4h: K2 <= W+(E8) as well: every K2 generator has exact det +1
+  (c) minimal-found roof: R = W+(E8), the rotation subgroup, order 348364800, index 2 in W(E8).
+      scope: MINIMAL-FOUND over the overgroups tested here (K, [K,K] = K, K2);
+      true minimality over ALL subgroups of W(E8) is NOT proven.
+[PASS] V4i: (c) the minimal-found overgroup containing both towers is R = W+(E8), the rotation subgroup (order 348364800); the two tested reductions did not go below it ([K,K] = K exactly; |K2| = 348364800)
+  [cache] BSGS 'K_pair_120' loaded (order 174182400, depth 7)
+[PASS] V4j: |K / <-1>| = 174182400 computed directly on the 120 pairs; equals |K|/2 (174182400) since -1 in K; 174182400 is the order of O8+(2) [P cited: ATLAS] -- identification by order + index only, not a verified isomorphism  -> order 174182400
+[t=   1.3s] stage 4 done
+
+------------------------------------------------------------------------------
+STAGE 5 -- VB3: the two centres; VB4: the roof, final form
+------------------------------------------------------------------------------
+[PASS] V5a: VB3: H's stem centre z_H = -1_{E8}, verified explicitly: -1 in H and commutes with both generators; the centre of K-bar = H/{+-1} is TRIVIAL by exhaustive scan of all 1451520 elements (exactly 1 commutes with both generators), so Z(H) <= ker(pi|_H) = {+-1} and Z(H) = <-1> EXACTLY  -> 1 central element(s) in K-bar
+[PASS] V5b: VB3: -1 relative to the roofs: -1 is a MEMBER of K, of [K,K] = K, and of K2, and it is CENTRAL in W(E8) (sealed 1f), hence central in every subgroup containing it
+
+  VB3 -- which Z2 each Schur witness sits over (one line each):
+    SL(2,7)      : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted PSL(2,7) copy (168 elements, set equality)
+    2I           : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted A5 copy (60 elements, set equality)
+    GL(2,3)      : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted S4 copy (24 elements, set equality)
+    2O           : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted S4 copy (24 elements, set equality)
+    2T           : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted A4 copy (12 elements, set equality)
+    C3xD4        : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted C6xZ2 copy (12 elements, set equality)
+    2.W(E6)      : sits over <-1> (-1 in the sealed preimage chain AND its derived subgroup); quotient = the sealed W(E6) copy (order 51840)
+    2xPGL(2,7)   : sits over <-1> (witness meets <+-1> in <-1>); quotient = the fingerprinted PGL(2,7) copy (336 elements, set equality)
+    Ih           : sits over <-1> (witness meets <+-1> in <-1>); quotient order 60 = A5 (in C)
+    Th           : sits over <-1> (witness meets <+-1> in <-1>); quotient order 12 = A4 (in C)
+    (spine)      : the SPINE witnesses sit in C, which MEETS <-1> TRIVIALLY
+      (V1d): the hinge structure -- spine beside the centre, Schur tower over it --
+      survives into the roof unchanged.
+[PASS] V5c: VB3: every Schur witness sits over <-1> = z_H (witness meets <+-1> exactly in <-1>; quotient re-verified as the fingerprinted spine-level copy); the spine witnesses meet <-1> trivially (C misses -1, V1d)
+
+------------------------------------------------------------------------------
+VB4 -- THE ROOF, THEOREM FORM (computed content; prose in STONE_V_WE8_ROOF.md)
+------------------------------------------------------------------------------
+
+  ROOF THEOREM (minimal-found).  Inside W(E8) (order 696729600), the
+  rotation subgroup R = W+(E8) = ker(det) of order 348364800 (index 2) is a
+  VERIFIED ROOF for both towers:
+    * R = K = <C, H> exactly (V4d), where C is the sealed vector-type
+      complement (= Sp6(2), V1d) and H the sealed spin preimage
+      (= 2.Sp6(2), V1f/V1i);
+    * the SPINE lives in C <= R: PSL(2,7), C6xZ2, A5, S4, A4, Z2 --
+      explicit witnesses V2c-V2h;
+    * the SCHUR TOWER lives in H <= R over -1: SL(2,7), 2I, GL(2,3), 2O,
+      2T (+ C3xD4, 2.W(E6), 2xPGL(2,7), and the free split covers Ih,
+      Th) -- explicit witnesses V3a-V3j;
+    * hinge structure: z_H = -1_{E8} = Z(W(E8)) is the ONE central Z2
+      (V5a); every Schur witness sits over it, the spine sits beside it
+      (V5c); R is PERFECT with [R,R] = R (V4f), and R/<-1> has order
+      174182400 = |O8+(2)| [P cited, identification by order only] (V4j).
+  MINIMALITY SCOPE: R is minimal-FOUND -- the two tested reductions do
+  not descend ([K,K] = K; K2 = <witness generators only> already has
+  order 348364800).  TRUE minimality over all subgroups of W(E8) is NOT proven;
+  canonicality of R up to W(E8)-conjugacy is NOT proven (W+ itself is
+  canonical as ker(det), but the PAIR (C,H) inside it was not shown
+  unique up to conjugacy).
+  SUCCESSOR QUESTIONS (named, not computed): (i) is there a PROPER
+  subgroup of W+(E8) containing a full spine copy AND a full Schur
+  tower copy (lattice search below index 2)?  (ii) is the pair (C, H)
+  canonical up to W+(E8)-conjugacy (transporter computation)?  (iii)
+  does R/<-1> = O8+(2) hold as a verified isomorphism (beyond order),
+  making the roof statement a statement about O8+(2) triality?
+
+[PASS] V6: VB4: the roof paragraph above is fully computed-backed (every claim carries a check number); minimal-found scope stated; successor questions named, not computed
+==============================================================================
+RESULT: 44 checks passed, 0 failed
+registered expectation VB2 (K at most W+(E8)): PASS (K = W+(E8), index 2 in W(E8))
+bars: VB1 PASS | VB2 PASS | VB3 PASS | VB4 PASS (theorem stated)
+total time 4.9s
+==============================================================================
