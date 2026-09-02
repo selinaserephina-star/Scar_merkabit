@@ -1,0 +1,136 @@
+﻿==============================================================================
+STONE X -- THE TURNER: an explicit triality automorphism of Omega(q) ~= O8+(2)
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+STAGE 0 -- X0: brief lock; sealed machinery replayed VERBATIM (Stone U/W); the roof's Omega-generators as matrices
+------------------------------------------------------------------------------
+[PASS] X0: the brief is sha-locked: sha256(BRIEF_STONE_X_TURNER.md) equals the value in BRIEF_STONE_X_LOCK.sha256  -> 7857bc5392dc3800...
+[PASS] X0b: mod-2 replay: q plus-type on L/2L (135 singular nonzero + 120 nonsingular); simple-root masks = the standard basis
+  [sealed cache _stone_v_cache] BSGS 'K_240' loaded (order 348364800)
+  [sealed cache _stone_u_cache] BSGS 'we8_240' loaded (order 696729600)
+[PASS] X0c: sealed roof chain K_240: order 348364800 = |W+(E8)|; all 24 Cgens pass its membership strip and fix alpha; sealed we8_240 order 696729600
+[PASS] X0d: the 26 Omega-generator matrices (24 C-bar images + A1 + A2, replayed verbatim) are q-isometries with Dickson 0: they generate the roof's image Omega(q), order 174182400 [sealed: Stone W W1j/W1m via K_pair_120]
+  [sealed cache _stone_v_cache] BSGS 'K_pair_120' loaded (order 174182400)
+[PASS] X0e: sealed K_pair_120 order = 174182400 = |Omega8+(2)| (the roof's matrix image; ker = <-1>, Stone W W1j)
+[t=   0.1s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- XB1(module): hyperbolic frame; Lambda(E); Clifford action verified on the module
+------------------------------------------------------------------------------
+[PASS] X1a: hyperbolic frame e1..e4,f1..f4 in (V,q) (sealed deterministic Gram-Schmidt): q(e_i)=q(f_i)=0, B(e_i,f_j)=delta_ij, B(e_i,e_j)=B(f_i,f_j)=0; the 8 vectors are a basis (U invertible)  -> e=[3, 18, 80, 141] f=[7, 50, 93, 223]
+[PASS] X1b: Clifford relations on the module (char 2: anticommute = commute, + = XOR of operators): e_i e_j + e_j e_i = 0 (incl. e_i^2 = 0), f_i f_j + f_j f_i = 0, e_i f_j + f_j e_i = delta_ij . id -- all 48 relations exact
+[PASS] X1c: op(v)^2 = q(v).id on the module for ALL 256 v in V (exhaustive -- the key consistency gate; q in frame coordinates is sum a_i b_i, matching the sealed q)
+[PASS] X1d: for every one of the 120 nonsingular v: op(v) op(x) op(v) = op(t_v x) on the whole frame basis (op(v)^2 = id, so this IS Clifford conjugation implementing the transvection t_v)
+[t=   0.1s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- XB1(decomposition): every Omega-generator as an EVEN product of orthogonal transvections, exactly
+------------------------------------------------------------------------------
+[PASS] X2a: all 26 Omega-generators decompose into orthogonal transvections t_v (q(v)=1): product reproduces the matrix EXACTLY, every length EVEN (consistent with Dickson 0 [P cited: Dickson invariant = transvection-length parity, a homomorphism O(q) -> F2])  -> lengths [(2, 2), (4, 5), (6, 9), (8, 10)]
+[t=   0.1s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- XB1(rho+): the half-spin representation; WELL-DEFINEDNESS verified honestly
+------------------------------------------------------------------------------
+[PASS] X3a: for every generator: rho(g) op(x) rho(g)^-1 = op(g x) on the whole frame basis (the spin word implements EXACTLY the orthogonal action it was built from); rho(g) parity-even, restriction to S+ well-posed
+[PASS] X3b: WELL-DEFINEDNESS (empirical): 54 alternative transvection words for 9 sampled generators (append/prepend t_w tricks, genuinely different words) ALL give the identical 16x16 spin matrix -- over F2 the +-1 spin ambiguity collapses (theory line [P]: the central units of the even Clifford algebra of plus type over F2 are trivial, so equal vector actions force equal spin elements); no amendment needed
+[PASS] X3c: HOMOMORPHISM: rho+(g1) rho+(g2) = rho+(g1 g2) on 100 random word pairs in the Omega-generators, each factor AND the product decomposed independently -- exact every time
+[PASS] X3d: FAITHFULNESS: rho+ nontrivial on every generator and on 50 random nonidentity elements (no kernel witness); theory line: Omega ~= O8+(2) is SIMPLE [P cited: ATLAS], so the nontrivial homomorphism rho+ is faithful -- [C] computed nontriviality + [P]
+[t=   0.2s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- Q+ and T+: the invariant quadratic form on S+ and the isometry transport back to (V,q)
+------------------------------------------------------------------------------
+[PASS] X4a: the space of rho+(Omega)-invariant quadratic forms on S+ is EXACTLY 1-dimensional (exact nullspace over all 26 generators, all 256 points -- the dimension itself is the check)  -> nullspace dim 1
+[PASS] X4b: Q+ is nondegenerate, PLUS-TYPE (135 singular nonzero / 120 nonsingular -- the plus-type count), invariant under all 26 generators' rho+ (verified pointwise)  -> singular nonzero 135
+[PASS] X4c: T+: (S+,Q+) -> (V,q) built by the sealed Gram-Schmidt transport (Witt-index-4 witnesses on both sides); q(T+ x) = Q+(x) for ALL 256 x -- an explicit isometry
+[t=   0.3s] stage 4 done
+
+------------------------------------------------------------------------------
+STAGE 5 -- XB2: tau lands in the roof's world and is an automorphism of Omega
+------------------------------------------------------------------------------
+[PASS] X5a: every tau(generator) is a q-isometry (all 256 points) with Dickson invariant 0: tau maps the generators into Omega(q) [P cited: Omega = ker(Dickson) inside O(q)]; hence tau(<gens>) <= Omega
+[PASS] X5b: tau(g1) tau(g2) = tau(g1 g2) on 20 random pairs (each side decomposed independently): the homomorphism property inherits from rho+ (tau is conjugation-by-T+ of rho+)
+  image-order argument (stated cleanly): tau = conj_T+ o rho+ with
+  rho+ faithful (X3d: nontrivial + Omega simple [P]).  A faithful
+  homomorphism Omega -> Omega between FINITE groups of equal order
+  174182400 is bijective, so tau is an AUTOMORPHISM of Omega and
+  |<tau(gens)>| = |tau(Omega)| = |Omega| = 174182400 -- no BSGS
+  needed; the containment tau(Omega) <= Omega is X5a + closure.
+[PASS] X5c: tau is an automorphism of Omega: faithful (X3d) + into Omega (X5a) + |Omega| finite => bijective  [C modulo the two cited [P] facts]
+[t=   0.3s] stage 5 done
+
+------------------------------------------------------------------------------
+STAGE 6 -- XB3: THE TURN -- orbit-signature triples of tau^k(C-bar) (REGISTERED EXPECTATION resolved here)
+------------------------------------------------------------------------------
+[PASS] X6a: sealed TS enumeration reloaded: 270 maximal totally singular 4-subspaces; families recomputed by the RECORDED convention (dim(U cap V) even = same family, class of SUBS[0] = A): sizes [135,135]; every Omega-generator PRESERVES each family, the reflection s1-bar SWAPS them (instrument re-calibrated)
+[PASS] X6b: instrument calibration: the signatures of C-bar, K_spin, K3 reproduce the SEALED Stone W triples verbatim (vector [63,72]|[135]|[135]; K_spin [135]|[135]|[63,72]; K3 [135]|[63,72]|[135])  -> C ((63, 72), (135,), (135,)) / S ((135,), (135,), (63, 72)) / K3 ((135,), (63, 72), (135,))
+
+  THE CYCLE MAP UNDER tau (positioned orbit-signature triples,
+  points | family A | family B -- the sealed SM-031 instrument):
+    C-bar           : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    tau(C-bar)      : points [135] | A [135] | B [63, 72]   = K_spin   [135]|[135]|[63,72]
+    tau^2(C-bar)    : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    tau^3(C-bar)    : points [135] | A [135] | B [63, 72]   = K_spin   [135]|[135]|[63,72]
+    K_spin          : points [135] | A [135] | B [63, 72]   = K_spin   [135]|[135]|[63,72]
+    tau(K_spin)     : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    K3              : points [135] | A [63, 72] | B [135]   = K3       [135]|[63,72]|[135]
+    tau(K3)         : points [135] | A [63, 72] | B [135]   = K3       [135]|[63,72]|[135]
+[FAIL] X6c: REGISTERED EXPECTATION RESOLVED -- INVERTED (full prominence): tau does NOT cycle; the computed class action is tau(C)=K_spin, tau^2(C)=VECTOR, tau^3(C)=K_spin -- tau SWAPS vector <-> K_spin and FIXES K3 (an outer INVOLUTION on classes, not the 3-cycle); the diagnosis and the corrected turner follow (X6d/X6e), the finding is recorded at full prominence
+  diagnosis: the class actions on {VECTOR, K_spin, K3} found so far:
+    inner (Omega):        identity            [Stone W W3e]
+    reflection conj_s1:   fixes VECTOR, swaps K_spin <-> K3  [verified: conj_s1(C-bar) sig = VECTOR; K3 = conj_s1(K_spin), W3b]
+    tau (this stone):     fixes K3, swaps VECTOR <-> K_spin  [X6c]
+  tau's class action differs from the identity AND from the reflection's, so tau is
+  neither inner nor in the reflection coset: it is a THIRD outer involution.  The three
+  involutions and their products exhaust S3: composing tau with the reflection MUST give
+  the 3-cycle.  WHY tau inverted: the declared Gram-Schmidt transport T+ is one of the
+  two isometry cosets (S+,Q+) -> (V,q); the sealed one lands in the coset whose tau
+  swaps -- correcting T+ by the Dickson-odd reflection s1-bar (T+' = s1-bar . T+, still
+  an isometry) flips the coset.  The construction route is unchanged; only the open
+  choice of T+ is resolved to the OTHER coset.
+[PASS] X6d: tau is outer and NOT in the reflection coset: its class action (swap vector/K_spin, fix K3) differs from the identity and from the reflection's (fix vector, swap K_spin/K3) -- with the reflection, the FULL S3 on the three classes is realized by explicit machines  [C via positioned-signature conjugacy invariance, sealed Stone W W3e]
+
+  THE CYCLE MAP UNDER tau' = conj_s1 o tau (the corrected turner):
+    C-bar           : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    tau'(C-bar)     : points [135] | A [63, 72] | B [135]   = K3       [135]|[63,72]|[135]
+    tau'^2(C-bar)   : points [135] | A [135] | B [63, 72]   = K_spin   [135]|[135]|[63,72]
+    tau'^3(C-bar)   : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    tau'(K_spin)    : points [63, 72] | A [135] | B [135]   = VECTOR   [63,72]|[135]|[135]
+    tau'(K3)        : points [135] | A [135] | B [63, 72]   = K_spin   [135]|[135]|[63,72]
+[PASS] X6e: THE TURN, CONSTRUCTED: tau'(C-bar) has a SPIN signature, tau'^2(C-bar) the OTHER spin signature, tau'^3(C-bar) the VECTOR signature; the full class map is the 3-cycle vector -> K3 -> K_spin -> vector.  tau' moves the points column, which the identity and the reflection's class action both preserve, so tau' is NOT inner and NOT in the reflection coset: tau' REALIZES THE OUTER 3-CYCLE (the brief's performer, reached through the recorded T+-coset correction)
+[t=   1.3s] stage 6 done
+
+------------------------------------------------------------------------------
+STAGE 7 -- XB4: the intertwiner solves (tau^3 as registered; tau^2 and tau'^3 as the diagnosis requires)
+------------------------------------------------------------------------------
+[PASS] X7a: AS REGISTERED, RESOLVED INVERTED (full prominence): the intertwiner system {h g = tau^3(g) h} has solution space dim 0 -- tau^3 is NOT inner (consistent with X6c: tau has order 2 mod Inn, so tau^3 = tau mod Inn, and tau is outer); the brief's expected dim 1 belongs to tau'^3, solved below (X7d)  -> nullspace dim 0
+[PASS] X7b: tau^2 IS inner, explicitly: intertwiner space dim 1 (V is Omega-irreducible => uniqueness); h2 invertible, a q-isometry, Dickson 0, and tau^2(g) = h2 g h2^-1 for ALL 26 generators (exact): <tau> ~= Z2 modulo Inn -- the constructed tau is the THIRD outer involution, on the nose  -> dim 1, h2 columns ((187, 54, 82, 201, 107, 13, 89, 35),)
+[PASS] X7d: tau'^3 IS inner, explicitly (the brief's XB4 content, on the corrected turner): intertwiner space dim EXACTLY 1; h' invertible, a q-isometry, Dickson 0, and tau'^3(g) = h' g h'^-1 for ALL 26 generators (exact)  -> dim 1, h' columns ((5, 96, 1, 126, 89, 91, 107, 162),)
+[PASS] X7e: hence tau'^3 is inner while tau' is not (X6e): the class of tau' in Out(Omega) has order EXACTLY 3 -- <tau'> ~= Z3 modulo inner: the turn constructed, order three on the nose
+[t=   1.4s] stage 7 done
+
+------------------------------------------------------------------------------
+STAGE 8 -- XB5: the roof-clock question posed; the cheap pure-spinor datum
+------------------------------------------------------------------------------
+
+  THE ROOF-CLOCK QUESTION (final form, with the turner in hand):
+  SOUGHT: an operator Phi -- promotion/rowmotion-like, acting on a state
+  space that the roof R = W+(E8) acts on (candidates: the 135+270-element
+  triality geometry of (L/2L, q); a lattice-level object above it) --
+  whose INDUCED action on subgroup classes of Omega = R/<-1> is tau: the
+  footprint of Phi cycles vector -> spin -> spin -> vector, the way Psi's
+  footprint at E7 is iota.  tau is now an explicit matrix machine (T+,
+  rho+, decompose -- this stone), so the hunt is a SEARCH FOR Phi WITH
+  FOOTPRINT tau, not for the turn itself.  The full hunt is the successor
+  -- named, not computed.
+[PASS] X8a: CHEAP DATUM (pure-spinor correspondence): every one of the 135 Q+-singular spinors in S+ has annihilator {v : op(v).x = 0} a maximal totally singular 4-subspace of (V,q) (a PURE spinor); the 135 annihilators are pairwise DISTINCT and all lie in ONE family -- composing with T+^-1 gives an explicit BIJECTION {135 singular points of (V,q)} <-> {135 solids of family B}: the turner's geometry transports points to one solid family  -> dims [(4, 135)], distinct 135, families [1]
+  witnesses written to _stone_x_cache/witnesses_x.json
+
+==============================================================================
+VERDICT: 29 PASS, 1 FAIL  FAILED: ['X6c']
+registered expectation (XB3): INVERTED: tau = the (vector K_spin) swap fixing K3 -- a THIRD outer involution, not the 3-cycle; the 3-cycle is tau' = conj_ref o tau (X6e/X7d)
+[t=   1.4s] total
+==============================================================================
