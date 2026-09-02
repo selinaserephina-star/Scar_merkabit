@@ -1,0 +1,8 @@
+abb9b7c10d4f083d7a818ae7bb2e93b56a2ac995ba2a6a4ff8be4caa7e36b401 *ADDENDUM TO STONE X — Model Frame and Stored Invariant.md
+c5861445f6bd156c387b3fa0c1422f1a11b865e65d360b73e7a373afd000994a *AUDIT_SM-029_030_032_033_034_2026-09-02.md
+3465203c5a2ea9b318b24de82e17dabf7b3af1e8bb8afda1e50eb69298bec6fc *PROMPT ADDENDUM_ Forced Narrowing as the Compression Mechanism.md
+83405db79db37d61107487edf16e54872eb8523dca6201b1fa939370ebb06ee6 *PROMPT_ Subgroup Diversity Along the Descent.md
+827c8f6ceacab11f0741eca5aebbc2a147d67e6a3258efb92e0cc9da973a9f26 *PROMPT_ The β-Chain from {e} to PSL(2,7).md
+90022afe3bb8b0c6e018683e0258e0133779c044cf2e1400ebb8caef30140a94 *PROMPT_ Total Work of the Roof Dynamics.md
+2b4f889cd7b64a181cdd3816ebcbd6af3344c74b7e9890873c2d0f762d3fa8d6 *PROPOSAL_ Memory as the β-Pattern on the Level Boundary.md
+c31a2247f4e906c84e9974adc5f85df457d14d58b3dd0ee3c2289807453e20c2 *RESPONSE TO SELINA — Model Frame, Invariant, Stone X.md
