@@ -67,13 +67,13 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.44 -- rows SM-001..SM-033"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.45 -- rows SM-001..SM-034"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: 8855bc510187b3fe12be81ab2bbeb07df5e4e26268aaf4f779fe0e434e28d79d
+    sha256: 628d164c2e2f6d7dc011f0eb017b4452535f7ee479a4b39dd8d7c1ed194a2303
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
