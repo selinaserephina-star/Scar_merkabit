@@ -73,7 +73,7 @@ units:
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: 1c2ee98f0069478b7d78db72de553b0461e782128b968c2fcca3ad92f2f639e4
+    sha256: ce4e35fb47e956afa98cd04755b5e86d3ee57ae54b3d3773c7076be081beac44
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
