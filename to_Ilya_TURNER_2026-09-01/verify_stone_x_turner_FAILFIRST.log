@@ -1,0 +1,30 @@
+﻿==============================================================================
+STONE X -- THE TURNER: an explicit triality automorphism of Omega(q) ~= O8+(2)
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+STAGE 0 -- X0: brief lock; sealed machinery replayed VERBATIM (Stone U/W); the roof's Omega-generators as matrices
+------------------------------------------------------------------------------
+[PASS] X0: the brief is sha-locked: sha256(BRIEF_STONE_X_TURNER.md) equals the value in BRIEF_STONE_X_LOCK.sha256  -> 7857bc5392dc3800...
+[PASS] X0b: mod-2 replay: q plus-type on L/2L (135 singular nonzero + 120 nonsingular); simple-root masks = the standard basis
+  [sealed cache _stone_v_cache] BSGS 'K_240' loaded (order 348364800)
+  [sealed cache _stone_u_cache] BSGS 'we8_240' loaded (order 696729600)
+[PASS] X0c: sealed roof chain K_240: order 348364800 = |W+(E8)|; all 24 Cgens pass its membership strip and fix alpha; sealed we8_240 order 696729600
+[PASS] X0d: the 26 Omega-generator matrices (24 C-bar images + A1 + A2, replayed verbatim) are q-isometries with Dickson 0: they generate the roof's image Omega(q), order 174182400 [sealed: Stone W W1j/W1m via K_pair_120]
+  [sealed cache _stone_v_cache] BSGS 'K_pair_120' loaded (order 174182400)
+[PASS] X0e: sealed K_pair_120 order = 174182400 = |Omega8+(2)| (the roof's matrix image; ker = <-1>, Stone W W1j)
+[t=   0.1s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- XB1(module): hyperbolic frame; Lambda(E); Clifford action verified on the module
+------------------------------------------------------------------------------
+[PASS] X1a: hyperbolic frame e1..e4,f1..f4 in (V,q) (sealed deterministic Gram-Schmidt): q(e_i)=q(f_i)=0, B(e_i,f_j)=delta_ij, B(e_i,e_j)=B(f_i,f_j)=0; the 8 vectors are a basis (U invertible)  -> e=[3, 18, 80, 141] f=[7, 50, 93, 223]
+[PASS] X1b: Clifford relations on the module (char 2: anticommute = commute, + = XOR of operators): e_i e_j + e_j e_i = 0 (incl. e_i^2 = 0), f_i f_j + f_j f_i = 0, e_i f_j + f_j e_i = delta_ij . id -- all 48 relations exact
+[PASS] X1c: op(v)^2 = q(v).id on the module for ALL 256 v in V (exhaustive -- the key consistency gate; q in frame coordinates is sum a_i b_i, matching the sealed q)
+[PASS] X1d: for every one of the 120 nonsingular v: op(v) op(x) op(v) = op(t_v x) on the whole frame basis (op(v)^2 = id, so this IS Clifford conjugation implementing the transvection t_v)
+[t=   0.1s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- XB1(decomposition): every Omega-generator as an EVEN product of orthogonal transvections, exactly
+------------------------------------------------------------------------------
