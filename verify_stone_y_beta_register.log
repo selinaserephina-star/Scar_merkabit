@@ -1,0 +1,169 @@
+==============================================================================
+STONE Y -- THE beta-REGISTER: IB's 'memory as the beta-pattern' made
+well-defined and computed on S3, D8, PSL(2,7), C4xC2 in K-bar = Sp6(2)
+with lifts in H = 2.Sp6(2) <= W(E8)   [sealed caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- sealed data loaded (read-only); W(E8) frame; lift_H
+------------------------------------------------------------------------------
+[PASS] 0a: sealed K-bar loaded: 1,451,520 elements (Sp6(2) on 120 pairs), chain order matches
+[PASS] 0b: sealed involution tables: 5103 involutions in 4 classes {315+, 3780+, 945-, 63-}
+[PASS] 0c: W(E8) frame rebuilt; sealed shadow chain for H loaded (order 1451520); K-bar generators lift and ROUND-TRIP
+[t=   0.3s] stage 0 done
+
+------------------------------------------------------------------------------
+CHECK 1 -- YE1: beta as a SIGN exists only on commuting pairs
+------------------------------------------------------------------------------
+  beta(g,h) := [g-hat, h-hat].  Flipping g-hat -> -g-hat leaves the
+  commutator unchanged (signs are central), so it is a lift-INDEPENDENT
+  element of H lifting [g,h].  It is +-1 iff [g,h] = 1.  IB's generator
+  pairs for S3 and PSL(2,7) do not commute; the machine shows the
+  commutator of their lifts is a NON-central element.
+  L27#1: [s1-hat,s2-hat] non-central, order 3, projects to [s1,s2] of order 3
+  L27#2: [s1-hat,s2-hat] non-central, order 3, projects to [s1,s2] of order 3
+  L27#3: [s1-hat,s2-hat] non-central, order 3, projects to [s1,s2] of order 3
+  L27#4: [s1-hat,s2-hat] non-central, order 3, projects to [s1,s2] of order 3
+[PASS] 1a: YE1 (S3): for the S3 = N(<z3>) inside EACH of the 4 sealed L2(7) witnesses, the commutator of the generator lifts is a NON-central element of H (it lifts [s1,s2] = (s1 s2)^2, order 3) -- 'beta(s1,s2)' has no sign value
+  L27#1: (a,b) with a^2=b^3=(ab)^7=1, [a,b] of order 4; [a-hat,b-hat] non-central, order 4
+  L27#2: (a,b) with a^2=b^3=(ab)^7=1, [a,b] of order 4; [a-hat,b-hat] non-central, order 4
+  L27#3: (a,b) with a^2=b^3=(ab)^7=1, [a,b] of order 4; [a-hat,b-hat] non-central, order 8
+  L27#4: (a,b) with a^2=b^3=(ab)^7=1, [a,b] of order 4; [a-hat,b-hat] non-central, order 4
+[PASS] 1b: YE1 (PSL(2,7)): for a (2,3,7)-generating pair in each witness, [a-hat,b-hat] is NON-central -- 'beta(a,b)' has no sign value either
+  NOTE [P, cited]: IB's presentation <a,b | a^2, b^3, (ab)^7> is the
+  (2,3,7) triangle group, which is INFINITE; PSL(2,7) needs one more
+  relator, [a,b]^4 = 1 (standard).  The register below uses the full
+  presentation a^2, b^3, (ab)^7, [a,b]^4 -- and every pair found above
+  satisfies [a,b]^4 = 1 in K-bar (checked in find_237_in).
+[t=   0.3s] check 1 done
+
+------------------------------------------------------------------------------
+CHECK 3 -- YE3: M_{S3} per embedded class; the sweep by involution class
+------------------------------------------------------------------------------
+  presentation S3 = <s1, s2 | s1^2, s2^2, (s1 s2)^3>
+  relator      parity(s1,s2)  gauge-invariant?
+  s1^2         [0, 0]         True
+  s2^2         [0, 0]         True
+  s1s2s1s2s1s2 [1, 1]         False
+  L27#1  S3: signs (s1^2,s2^2,(s1s2)^3) = (+,+,+); involution class 315+; eps-profile {(1, '+'): 1, (2, '+'): 3, (3, '+'): 2}; M trivial=True; split_test=True; preimage = S3xC2 {1: 1, 2: 7, 3: 2, 6: 2}
+  L27#2  S3: signs (s1^2,s2^2,(s1s2)^3) = (+,+,-); involution class 315+; eps-profile {(1, '+'): 1, (2, '+'): 3, (3, '+'): 2}; M trivial=True; split_test=True; preimage = S3xC2 {1: 1, 2: 7, 3: 2, 6: 2}
+  L27#3  S3: signs (s1^2,s2^2,(s1s2)^3) = (-,-,-); involution class 945-; eps-profile {(1, '+'): 1, (2, '-'): 3, (3, '+'): 2}; M trivial=False; split_test=False; preimage = Dic3 {1: 1, 2: 1, 3: 2, 4: 6, 6: 2}
+  L27#4  S3: signs (s1^2,s2^2,(s1s2)^3) = (+,+,+); involution class 315+; eps-profile {(1, '+'): 1, (2, '+'): 3, (3, '+'): 2}; M trivial=True; split_test=True; preimage = S3xC2 {1: 1, 2: 7, 3: 2, 6: 2}
+[PASS] 3a: YE3: the S3 inside the three SPLIT-lifting (bridge-class) L2(7) witnesses is SPLIT with preimage S3xC2; the S3 inside the SL(2,7)-lifting (Fano-class) witness is NON-SPLIT with preimage Dic3 -- SM-029's two-twos dichotomy restricted to the shared S3
+[PASS] 3b: YE3: M_{S3} = eps(s1) EXACTLY -- the two involution relators carry eps(s1)=eps(s2), the (s1s2)^3 relator is gauge-flippable (parity (1,1)), the gauge rule verified on all 4 sign choices; M trivial <=> eps(involution) = + on every instance
+
+  SWEEP: random pairs of involutions (t, s) with ts of order 3, grouped by the K-bar class of t (all three involutions of an S3 are S3-conjugate, hence in one K-bar class):
+  class 63-   : {('M nontrivial', 'non-split', 'Dic3'): 6}
+  class 315+  : {('M trivial', 'split', 'S3xC2'): 6}
+  class 945-  : {('M nontrivial', 'non-split', 'Dic3'): 6}
+  class 3780+ : {('M trivial', 'split', 'S3xC2'): 6}
+[PASS] 3c: YE3 sweep: 24 S3 subgroups of K-bar generated by involution pairs across the involution classes found (['315+', '3780+', '63-', '945-']): in EVERY case M trivial <=> split <=> eps(involution) = + -- plus classes give S3xC2, minus classes give Dic3; M_{S3} is the eps-restriction, nothing more
+[t=   0.4s] check 3 done
+
+------------------------------------------------------------------------------
+CHECK 4 -- YE4: M_{D8} (IB's D4 = dihedral of order 8) per class + sweep
+------------------------------------------------------------------------------
+  presentation D8 = <r, s | r^4, s^2, (rs)^2>   (IB's D4)
+  r^4      parity [0, 0]   gauge-invariant=True
+  s^2      parity [0, 0]   gauge-invariant=True
+  rsrs     parity [0, 0]   gauge-invariant=True
+  S4#1  D8: (r^4, s^2, (rs)^2) = ('-', '+', '-') ; (eps r, eps s, eps rs) = ('-', '+', '-') ; eps-profile {(1, '+'): 1, (2, '+'): 2, (2, '-'): 3, (4, '-'): 2} ; M trivial=False ; split=False ; preimage SD16 {1: 1, 2: 5, 4: 6, 8: 4}
+  S4#2  D8: (r^4, s^2, (rs)^2) = ('-', '-', '-') ; (eps r, eps s, eps rs) = ('-', '-', '-') ; eps-profile {(1, '+'): 1, (2, '-'): 5, (4, '-'): 2} ; M trivial=False ; split=False ; preimage Q16 {1: 1, 2: 1, 4: 10, 8: 4}
+  S4#3  D8: (r^4, s^2, (rs)^2) = ('-', '-', '+') ; (eps r, eps s, eps rs) = ('-', '-', '+') ; eps-profile {(1, '+'): 1, (2, '+'): 2, (2, '-'): 3, (4, '-'): 2} ; M trivial=False ; split=False ; preimage SD16 {1: 1, 2: 5, 4: 6, 8: 4}
+  S4#4  D8: (r^4, s^2, (rs)^2) = ('-', '+', '-') ; (eps r, eps s, eps rs) = ('-', '+', '-') ; eps-profile {(1, '+'): 1, (2, '+'): 2, (2, '-'): 3, (4, '-'): 2} ; M trivial=False ; split=False ; preimage SD16 {1: 1, 2: 5, 4: 6, 8: 4}
+  S4#5  D8: (r^4, s^2, (rs)^2) = ('-', '-', '+') ; (eps r, eps s, eps rs) = ('-', '-', '+') ; eps-profile {(1, '+'): 1, (2, '+'): 2, (2, '-'): 3, (4, '-'): 2} ; M trivial=False ; split=False ; preimage SD16 {1: 1, 2: 5, 4: 6, 8: 4}
+  S4#6  D8: (r^4, s^2, (rs)^2) = ('-', '-', '+') ; (eps r, eps s, eps rs) = ('-', '-', '+') ; eps-profile {(1, '+'): 1, (2, '+'): 2, (2, '-'): 3, (4, '-'): 2} ; M trivial=False ; split=False ; preimage SD16 {1: 1, 2: 5, 4: 6, 8: 4}
+[PASS] 4a: YE4: the Sylow-2 D8 of every GL(2,3)-lifting S4 witness (5 of them) has preimage SD16; that of the 2O-lifting witness (1) has preimage Q16; all non-split
+[PASS] 4b: YE4: all three D8 relators are gauge-INVARIANT (parities (0,0)), so M_{D8} = (eps(r), eps(s), eps(rs)) literally; gauge rule verified; M trivial <=> split <=> all three + (on the witness Sylows)
+
+  SWEEP: D8 = <r, s> for random order-4 r and involutions s with s r s = r^-1, s not in <r> -- which sign triples occur in K-bar:
+  triple (eps r, eps s, eps rs) : count : preimage type(s)
+    ('+', '+', '+') :   8 : ['D8xC2']
+    ('+', '+', '-') :   4 : ['(C4xC2):C2 [=C2^2:C4]']
+    ('-', '+', '+') :  23 : ['D16']
+    ('-', '+', '-') :  19 : ['SD16']
+    ('-', '-', '+') :   3 : ['SD16']
+    ('-', '-', '-') :   3 : ['Q16']
+  (6 of the 8 possible triples realized in 60 D8's sampled)
+[PASS] 4c: YE4 sweep: 60 D8 subgroups of K-bar sampled; 6 distinct sign triples realized; in EVERY case the relator triple EQUALS the eps triple and split <=> all-plus -- M_{D8} is the eps-restriction, nothing more
+[PASS] 4d: YE4 sweep: the split triple (+,+,+) is realized in K-bar (preimage D8xC2) alongside non-split ones -- so 'relabeling at D8' is a statement about ALL classes met, not a small sample
+[t=   0.7s] check 4 done
+
+------------------------------------------------------------------------------
+CHECK 5 -- YE5: M_{PSL(2,7)} on both sealed classes
+------------------------------------------------------------------------------
+  presentation PSL(2,7) = <a, b | a^2, b^3, (ab)^7, [a,b]^4>
+  a^2                      parity [0, 0]   gauge-invariant=True
+  b^3                      parity [0, 1]   gauge-invariant=False
+  ababababababab           parity [1, 1]   gauge-invariant=False
+  aba^-1b^-1aba^-1b^-1aba^ parity [0, 0]   gauge-invariant=True
+  L27#1: signs (a^2, b^3, (ab)^7, [a,b]^4) = (+,-,-,+); involution class 315+; M trivial=True; split=True
+  L27#2: signs (a^2, b^3, (ab)^7, [a,b]^4) = (+,-,-,+); involution class 315+; M trivial=True; split=True
+  L27#3: signs (a^2, b^3, (ab)^7, [a,b]^4) = (-,+,-,-); involution class 945-; M trivial=False; split=False
+  L27#4: signs (a^2, b^3, (ab)^7, [a,b]^4) = (+,+,-,+); involution class 315+; M trivial=True; split=True
+[PASS] 5a: YE5: M_{PSL(2,7)} has two gauge-invariant components (a^2 and [a,b]^4; b^3 and (ab)^7 are flippable) and they COINCIDE on every instance (= eps(a)); bridge class (315+) trivial/split, Fano class (945-) nontrivial/non-split -- SM-029 recovered as a corollary of the definition
+[t=   0.7s] check 5 done
+
+------------------------------------------------------------------------------
+CHECK 6 -- YE6: IB's required output 4 -- the discriminating pair
+------------------------------------------------------------------------------
+  presentation C4xC2 = <a, t | a^4, t^2, [a,t]>  (all three relators gauge-invariant; the third IS beta(a,t))
+  NON-SPLIT C4xC2 = <a = K-bar element #256464 (order 4), t = involution #82>: signs (a^4, t^2, [a,t]) = (+,+,-); eps-profile {(1, '+'): 1, (2, '+'): 3, (4, '+'): 4}; M trivial=False; split_test=False; preimage profile {1: 1, 2: 7, 4: 8}
+  SPLIT C4xC2 = <a = K-bar element #256464 (order 4), t = involution #256350>: signs (a^4, t^2, [a,t]) = (+,+,+); eps-profile {(1, '+'): 1, (2, '+'): 3, (4, '+'): 4}; M trivial=True; split_test=True; preimage profile {1: 1, 2: 7, 4: 8}
+[PASS] 6a: YE6: an all-plus C4xC2 with beta(a,t) = - (NON-SPLIT) and an all-plus C4xC2 with beta(a,t) = + (SPLIT) both exhibited, with IDENTICAL eps-profiles on all 8 elements -- identical all-plus, different M: the register discriminates where the eps-table cannot (7 all-plus probes)
+[t=   0.8s] check 6 done
+
+------------------------------------------------------------------------------
+CHECK 7 -- YE7: where the new discrimination lives; YE2 the theorem
+------------------------------------------------------------------------------
+  PSL(2,7) L27#1   |G|= 168  contains C4xC2: False
+  PSL(2,7) L27#2   |G|= 168  contains C4xC2: False
+  PSL(2,7) L27#3   |G|= 168  contains C4xC2: False
+  PSL(2,7) L27#4   |G|= 168  contains C4xC2: False
+  C6xZ2            |G|=  12  contains C4xC2: False
+  A5 #1            |G|=  60  contains C4xC2: False
+  A5 #2            |G|=  60  contains C4xC2: False
+  A5 #3            |G|=  60  contains C4xC2: False
+  A5 #4            |G|=  60  contains C4xC2: False
+  A5 #5            |G|=  60  contains C4xC2: False
+  A5 #6            |G|=  60  contains C4xC2: False
+  S4 #1            |G|=  24  contains C4xC2: False
+  S4 #2            |G|=  24  contains C4xC2: False
+  S4 #3            |G|=  24  contains C4xC2: False
+  S4 #4            |G|=  24  contains C4xC2: False
+  S4 #5            |G|=  24  contains C4xC2: False
+  S4 #6            |G|=  24  contains C4xC2: False
+  A4 #1            |G|=  12  contains C4xC2: False
+  A4 #2            |G|=  12  contains C4xC2: False
+  A4 #3            |G|=  12  contains C4xC2: False
+  Z2, {e}: trivially no C4xC2.
+[PASS] 7a: YE7: NO spine group (PSL(2,7) x4 classes, C6xZ2, A5 x6, S4 x6, A4 x3 sealed witnesses; Z2; {e}) contains a C4xC2 -- and every spine level's standard presentation has only power relators (S3, D8, PSL(2,7) shown above) -> on the spine M_Gamma = eps-restriction; beta's extra content is OFF-SPINE (registered expectation CONFIRMED)
+[PASS] 7b: YE2 THE THEOREM (machine-checked): 'M_S trivial' (some gauge makes every relator hold) and 'pi^-1(S) splits' (SM-033's 2^k closure test) AGREE on all 105 subgroup instances of this run (S3 x28, D8 x66, PSL(2,7) x4, C4xC2 x7)
+[t=   0.9s] check 7 done
+
+------------------------------------------------------------------------------
+CHECK 8 -- YE8: the beta-chain's first step, on order alone
+------------------------------------------------------------------------------
+[PASS] 8a: YE8: D8 has no element of order 3 (profile {1: 1, 2: 5, 4: 2}) -- no generator map S3 -> D8 preserving the relators exists, so IB's chain step S3 -> D4(dihedral) fails on ORDER before beta is consulted; the D4 and G2 levels of the chain await his instantiation
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  IB's decision rule, item by item:
+   - M_Gamma well-defined on each level:  YES -- after the repair.  As a
+     SIGN on generator pairs it is undefined (YE1); as the relator-sign
+     class (= restricted extension class) it is well-defined per EMBEDDED
+     class, and split <=> trivial is a machine-checked theorem (YE2).
+   - M_Gamma reproduces the eps-table:  YES -- power relators g^n carry
+     exactly eps(g); on S3, D8 and PSL(2,7) the register IS the eps
+     restriction (YE3/YE4/YE5), and SM-029's bridge/Fano dichotomy falls
+     out of it (YE5), as does SM-033's Dic3/S3xC2 split at the shared S3.
+   - Detects a non-split case all-plus misses:  YES -- but ONLY through a
+     commutator relator: the C4xC2 pair (YE6).  No spine group contains
+     one (YE7).
+   - Verdict in his words: at S3 and D4 the proposal IS a relabeling of
+     the eps-table; the new object exists, and lives off the spine, in
+     the commutator relators.  'Memory' remains his [I] label.
+
+RESULT: 17 checks passed, 0 failed
+[t=   0.9s] done
