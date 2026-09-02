@@ -1,0 +1,129 @@
+==============================================================================
+THE LIFT LAW -- the spinor character eps on K-bar = Sp6(2) and the split law
+for preimages in H = 2.Sp6(2) <= W(E8)   [sealed Stone U caches READ-ONLY]
+==============================================================================
+
+REGISTERED EXPECTATIONS (resolved below at equal prominence either way):
+  RE-A [P, ATLAS via brief]: Sp6(2) has EXACTLY 30 conjugacy classes.
+  RE-B [auditor, decisive]: the involution-law converse FAILS at cyclic
+       level -- an order-4 class with eps=- whose square is a PLUS
+       involution class exists (C4 with all-plus involutions, non-split
+       preimage C8).
+  RE-C [house]: split => eps == + on S (all split witnesses all-plus).
+
+
+------------------------------------------------------------------------------
+STAGE 0 -- sealed data loaded (read-only); the W(E8) frame rebuilt
+------------------------------------------------------------------------------
+[PASS] 0a: sealed K-bar loaded: 1,451,520 elements (all of Sp6(2), pair action on 120 points), element orders {1,2,3,4,5,6,7,8,9,10,12,15}, chain order matches  -> census {1: 1, 2: 5103, 3: 16352, 4: 75600, 5: 48384, 6: 272160, 7: 207360, 8: 181440, 9: 161280, 10: 145152, 12: 241920, 15: 96768}
+[PASS] 0b: sealed involution tables: 5103 involutions in 4 classes, sizes {315, 3780, 945, 63}, square-sign constant per class with signs (+,+,-,-) on sizes (315,3780,945,63)  -> (size,sign): [(63, -1), (315, 1), (945, -1), (3780, 1)]
+[PASS] 0c: W(E8) frame rebuilt (240 roots, antipode -1 = fixed-point-free central involution); sealed shadow chain loaded (order 1451520); the K-bar generators lift and ROUND-TRIP (project back to themselves through the rebuilt mod-2 pair map)
+[PASS] 0d: involution row-hashes collision-free (safe class/sign lookup)
+[t=   0.2s] stage 0 done
+
+------------------------------------------------------------------------------
+CHECK 1 -- THE COMPLETE eps-TABLE (all 30 conjugacy classes, exhaustive)
+------------------------------------------------------------------------------
+  [built] fixed-point profiles of powers k=1..15 for all 1451520 elements (9.9s)
+[PASS] 1a: invariant buckets (order + fixed-point profile of powers 1..15): bucket sizes sum to |Sp6(2)| = 1,451,520  -> 25 buckets
+  [built] exact centralizer orders for all 25 bucket reps (64.3s)
+[FAIL] 1b: for EVERY bucket, the exact centralizer order of its representative divides |G| and |G|/|C(g)| (the true class size) EQUALS the bucket size: each bucket is exactly ONE conjugacy class (bucket = union of classes and contains the rep's class; equal sizes force equality)
+  AMBIGUOUS buckets: [(1, 945, 1008), (7, 45360, 60480), (11, 30240, 40320), (22, 60480, 120960)]
+[FAIL] 1c: RE-A REFUTED (full prominence): the enumeration finds EXACTLY 30 conjugacy classes of Sp6(2) (exhaustive over all 1,451,520 elements) -- found 25  -> 30 buckets, sizes sum 1451520
+[PASS] 1d: WELL-DEFINEDNESS machine-checked on all 30 reps: n odd -> one lift has order n (eps=+ automatic); n even -> g-hat^n = (-g-hat)^n in {1,-1} and both lifts share one order (n or 2n)
+[PASS] 1e: eps is a CLASS FUNCTION: 3 random conjugates per class (90 total, lifted independently) all reproduce the class eps
+
+  THE eps-TABLE (exhaustive over the 30 conjugacy classes of K-bar = Sp6(2)):
+    class   order   class size   eps   lift order in H
+    1A          1            1    +    1
+    2A          2          315    +    2
+    2B          2          945    -    4
+    2C          2         3780    +    2
+    3A          3          672    +    3
+    3B          3         2240    +    3
+    3C          3        13440    +    3
+    4A          4         3780    +    4
+    4B          4        11340    +    4
+    4C          4        45360    -    8
+    5A          5        48384    +    5
+    6A          6        10080    +    6
+    6B          6        20160    +    6
+    6C          6        30240    -    12
+    6D          6        40320    -    12
+    6E          6        40320    +    6
+    6F          6       120960    +    6
+    7A          7       207360    +    7
+    8A          8        90720    +    8
+    8B          8        90720    +    8
+    9A          9       161280    +    9
+    10A        10       145152    -    20
+    12A        12        60480    -    24
+    12B        12       120960    +    12
+    15A        15        96768    +    15
+    (19 classes eps=+, 6 classes eps=-)
+
+[FAIL] 1f: the four involution classes give eps(315)=+, eps(3780)=+, eps(945)=-, eps(63)=- -- MATCHES the sealed square-sign data (consistency with Stone U)  -> [(315, 1), (945, -1), (3780, 1)]
+[PASS] 1g: eps == the sealed square-sign table: on all 30 reps AND on 300 random even-order elements lifted directly (so the sealed kbar_signrow.npy IS the element-level eps on even orders, re-verified independently here)
+[t=  78.2s] check 1 done
+
+------------------------------------------------------------------------------
+CHECK 2 -- THE ONE-DIRECTION THEOREM + the sealed witnesses
+------------------------------------------------------------------------------
+  THEOREM (one direction).  If S <= K-bar contains an involution t
+  with eps(t) = -, then pi^-1(S) is NON-SPLIT.
+  PROOF.  A complement C (C cap {+-1} = 1, pi(C) = S) would contain a
+  preimage of t of order 2 (pi|C is an isomorphism onto S, so the order
+  of the C-preimage of t equals ord(t) = 2).  But BOTH preimages of t
+  square to -1 (eps(t) = -), i.e. have order 4.  Contradiction.  []
+
+  SPLITNESS DECIDED EXACTLY per witness S = <g1, g2>: any complement
+  contains, for each generator g_i, exactly one of its two lifts
+  +-g_i-hat, and is GENERATED by those (pi|C iso).  So S splits iff some
+  of the 2^k sign choices of generator lifts closes to order |S|
+  (order 2|S| means -1 was reached).  All 2^k choices are tried.
+
+  witness      |S|   involution eps-classes (size,sign):count        preimage
+  L27#1        168   {(315, '+'): 21}                               SPLIT
+  L27#2        168   {(315, '+'): 21}                               SPLIT
+  L27#3        168   {(945, '-'): 21}                               NON-SPLIT
+  L27#4        168   {(315, '+'): 21}                               SPLIT
+  A5#1          60   {(945, '-'): 15}                               NON-SPLIT
+  A5#2          60   {(3780, '+'): 15}                              SPLIT
+  A5#3          60   {(945, '-'): 15}                               NON-SPLIT
+  A5#4          60   {(3780, '+'): 15}                              SPLIT
+  A5#5          60   {(3780, '+'): 15}                              SPLIT
+  A5#6          60   {(945, '-'): 15}                               NON-SPLIT
+  S4#1          24   {(315, '+'): 6, (945, '-'): 3}                 NON-SPLIT
+  S4#2          24   {(945, '-'): 9}                                NON-SPLIT
+  S4#3          24   {(945, '-'): 3, (3780, '+'): 6}                NON-SPLIT
+  S4#4          24   {(945, '-'): 3, (3780, '+'): 6}                NON-SPLIT
+  S4#5          24   {(945, '-'): 3, (3780, '+'): 6}                NON-SPLIT
+  S4#6          24   {(945, '-'): 3, (3780, '+'): 6}                NON-SPLIT
+  A4#1          12   {(3780, '+'): 3}                               SPLIT
+  A4#2          12   {(945, '-'): 3}                                NON-SPLIT
+  A4#3          12   {(945, '-'): 3}                                NON-SPLIT
+  C6Z2          12   {(63, '-'): 1, (315, '+'): 1, (3780, '+'): 1}  NON-SPLIT
+[PASS] 2a: ONE-DIRECTION THEOREM verified on all 20 sealed small witnesses: every witness containing an eps=- involution is NON-SPLIT (splitness decided exactly by the 2^k sign-choice closure test)
+[PASS] 2b: and every SPLIT witness contains NO eps=- involution (contrapositive side, same table)
+  [observation, scoped to these witnesses: split <=> no eps=- involution held on every one: True]
+[PASS] 2c: the W(E6)-copy witness (order 51840, 891 involutions, numpy-enumerated from the sealed chain): its involutions resolve in the K-bar classes as {(3780, '+'): 540, (315, '+'): 45, (945, '-'): 270, (63, '-'): 36} -- it CONTAINS eps=- involutions, so the theorem forces NON-SPLIT; the sealed Stone U run computed exactly that independently ([P,P] = P contains -1, check 7k) [C cross-run]
+[t=  78.7s] check 2 done
+
+------------------------------------------------------------------------------
+CHECK 3 -- THE CONVERSE HUNT (RE-B, decisive): power chains of every class
+------------------------------------------------------------------------------
+  For EVERY even-order class c (rep g, order n): the involution
+  power j = g^(n/2), its class, and its eps -- the full chain table.
+  The auditor registered (RE-B): some eps=- class, already at order 4,
+  powers into a PLUS involution class.
+
+    class   eps   -> involution power lands in   its eps
+    2A       +    -> 2A     (size   315)            +
+    2B       -    -> 2B     (size   945)            -
+    2C       +    -> 2C     (size  3780)            +
+    4A       +    -> 2A     (size   315)            +
+    4B       +    -> 2A     (size   315)            +
+    4C       -    -> 2B     (size   945)            -
+    6A       +    -> 2A     (size   315)            +
+    6B       +    -> 2A     (size   315)            +
+    6C       -    -> 2B     (size   945)            -
