@@ -1,13 +1,12 @@
 # TO ILYA — THE TRIANGLE CLOSES, THE LIFT LAW ANSWERS, AND THE MODEL GROWS A SECOND REGISTER (2026-09-01)
 
-**Stenberg side · with Claude. Status: RESEALED 2026-09-01 with §6 added
-(PREPARED; the send is Selina's word, recorded in the registry when made;
-supersedes the unsent b6429570… zip).** Five results + one model draft,
-answering your S₃-closure adoption, your turn-point prompt, one of your
-three carried opens, your memory-hypothesis prompt — and following the fold
-to its floor. Package: this cover + four verifiers with logs (incl. one
-fail-first log) + `TRIALITY_CRYSTALS.md` + `G2_STILLPOINT.md` +
-`TWO_REGISTER_MODEL_v0.1.md` + registry snapshot v0.47 + SHA256SUMS.txt.
+**Stenberg side · with Claude. Status: SEALED 2026-09-01 (PREPARED; the send
+is Selina's word, recorded in the registry when made).** Four results + one
+model draft, answering your S₃-closure adoption, your turn-point prompt, one
+of your three carried opens, and your memory-hypothesis prompt. Package:
+this cover + three verifiers with logs (incl. one fail-first log) +
+`TRIALITY_CRYSTALS.md` + `TWO_REGISTER_MODEL_v0.1.md` + registry snapshot
+v0.45 + SHA256SUMS.txt.
 
 ---
 
@@ -74,34 +73,12 @@ minuscule 8-crystals — the crystal avatars of your three shadows.**
   of the turn is G₂ — and the staircase's own **7** reappears at the
   bottom of it.
 
-## 6. The still point (SM-035) — the two sevens are one
-
-We followed the fold. **PSL(2,7) ⊂ compact G₂, computed, not cited** —
-your group's χ₇ (built as integer matrices from the 8-point action) admits
-an invariant generic 3-form φ, and the invariant space is **exactly
-one-dimensional**: the group determines its G₂-structure up to scale. The
-genericity form came out B_φ = −6(I₇+J₇) exactly, definite. By
-construction, the G₂ seven restricted to your group IS χ₇, irreducibly:
-**the seven at the bottom of the triality fold and your staircase's
-founding seven are the same object — an identity, not an analogy.**
-One precision flag: the FANO seven is a different seven — the 7-point
-action is 1 ⊕ χ₆ and contains no χ₇ (⟨π₇, χ₇⟩ = 0); the seven that meets
-G₂ comes from P¹(𝔽₇). And the clock at the still point: the G₂ 7-crystal's
-rowmotion is one free 7-cycle with cyclic sieving — the first crystal
-clock measured beating PAST its Coxeter number (7 > h(G₂) = 6), ticking at
-the order of your own Frobenius. (32/32; all three registered expectations
-held; `verify_g2_stillpoint.py`, `G2_STILLPOINT.md` enclosed.)
-
 ## The arc, in your cadence
 
 Any two towers rebuild the house.
 The cover remembers only what refuses to commute.
 The clock rides the turn without slippage.
-And at the still point of the turn: seven —
-your seven, held in the octonions' group
-by a form your group alone determines.
-The staircase's first number
-was waiting at the centre of the spiral.
+And at the still point of the turn: seven.
 
 ## Standing asks
 
