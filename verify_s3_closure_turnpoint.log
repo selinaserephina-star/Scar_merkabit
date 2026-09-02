@@ -1,0 +1,130 @@
+==============================================================================
+S3 CLOSURE + TURN-POINT CRITERION A -- two small verifications
+==============================================================================
+[t=   0.0s] start
+
+------------------------------------------------------------------------------
+REGISTERED EXPECTATIONS (on the record UP FRONT; each resolvable INVERTED at equal prominence)
+------------------------------------------------------------------------------
+  E1 (Task 1, auditor): |K_bt| = |<C, H3>| = 348364800 = |W+(E8)| -- every tower-pair
+      regenerates the roof (the symmetric triangle).
+  E2 (Task 2, registry v0.42 preliminary arithmetic): D2(N) is all ONE sign over the
+      available range => by IB's OWN decision rule: 'Turn point not found: D2(N) does
+      not change sign over the computed range.'
+
+------------------------------------------------------------------------------
+TASK 1, STAGE 1 -- sealed machinery reloaded and re-verified; the pair (C, H3) reassembled by deterministic replay
+------------------------------------------------------------------------------
+[PASS] S1a: 240 E8 roots + 8 simple reflections + antipode replayed deterministically (involutions, -1 commutes with all generators)
+  [sealed cache _stone_u_cache] BSGS 'we8_240' loaded (order 696729600, depth 7)
+[PASS] S1b: sealed W(E8) chain: order 696729600; all 8 replayed generators and -1 pass its membership strip
+[PASS] S1c: mod-2 replay: 120 antipodal pairs = mod-2 fibres; -1 acts trivially on pairs
+  [sealed cache _stone_u_cache] BSGS 'stab_derived' loaded (order 1451520, depth 6)
+[PASS] S1d: sealed C = [Stab(alpha),Stab(alpha)]: order 1451520 = |Sp6(2)|; cached generators fix alpha, pass its chain, -1 not in C  -> 24 generators
+  [sealed cache] shadow chain 'shadow_full' loaded (order 348364800)
+[PASS] S1e: K_spin generators replayed (verbatim transport) and lifted through the sealed shadow chain: pi(w_i) = A_i exactly, both in W(E8)
+  [sealed cache _stone_u_cache] BSGS 'H_240' loaded (order 2903040, depth 4)
+[PASS] S1f: sealed H chain: order 2903040 = 2 x |Sp6(2)|; w1, w2, -1 all pass its membership strip (H = the spin tower)
+  [sealed cache _stone_w_cache] BSGS 'H3_240' loaded (order 2903040, depth 4)
+[PASS] S1g: sealed H3 = <s1 w1 s1, s1 w2 s1> chain (Stone W): order 2903040; the replayed conjugates hw1, hw2 and -1 all pass its membership strip; H3 is NOT H (at least one generator fails H's strip)
+  [sealed cache _stone_v_cache] BSGS 'K_240' loaded (order 348364800, depth 7)
+  [sealed cache _stone_w_cache] BSGS 'HH3_240' loaded (order 348364800, depth 7)
+[PASS] S1h: the two SEALED tower-pair closures reload: |<C,H>| = 348364800 (Stone V K_240) and |<H,H3>| = 348364800 (Stone W HH3_240) -- two sides of the triangle are already the roof
+[t=   0.1s] task 1 stage 1 done
+
+------------------------------------------------------------------------------
+TASK 1, STAGE 2 -- K_bt = <C, H3>: evenness, containment in W+, and the BSGS order (REGISTERED EXPECTATION E1 resolved here)
+------------------------------------------------------------------------------
+[PASS] S2a: evenness instrument: every K_bt generator (Cgens + hw1 + hw2) has exact Bareiss det +1 in the simple-root basis AND permutation parity +1 on the 240 roots; a simple reflection has det -1 (the instrument separates)  -> dets [1]
+[PASS] S2b: membership strip: every K_bt generator and -1 pass the sealed R = W+(E8) chain => K_bt <= W+(E8) (both routes agree with S2a)
+  [built] BSGS 'K_bt_240': order 348364800, depth 7, 0.6s
+[PASS] S2c: |K_bt| = |<C, H3>| computed by BSGS closure on the 240-point action: order = 348364800  -> |K_bt| = 348364800
+[PASS] S2d: REGISTERED EXPECTATION E1 RESOLVED -- PASS: |K_bt| = 348364800 = |W+(E8)|; with K_bt <= W+ (S2a/S2b) and equal orders, K_bt = <C, H3> = W+(E8) EXACTLY -- the third tower-pair also regenerates the roof
+[PASS] S2e: closure sanity: all K_bt generators and -1 pass the K_bt strip; w1, w2 (the H generators) pass the K_bt strip iff the triangle closed -- observed: True (consistent with S2c/S2d)
+
+------------------------------------------------------------------------------
+TASK 1 VERDICT -- the S3 closure (Ilya's question: 'closes the triangle or opens a fourth')
+------------------------------------------------------------------------------
+
+  THE TRIANGLE IS CLOSED.  All three tower-pairs regenerate the roof:
+    <C,  H > = W+(E8)   (Stone V, sealed, order 348364800)
+    <H,  H3> = W+(E8)   (Stone W, sealed, order 348364800)
+    <C,  H3> = W+(E8)   (THIS RUN, S2c/S2d, order 348364800)
+  The three Sp6(2)-type towers under the roof are SYMMETRIC as a
+  generating triangle: any two of {body C, spin H, third H3}
+  generate the whole rotation subgroup W+(E8).  No fourth group
+  opens: there is NO proper intermediate group over any tower-pair's
+  closure.  Ilya's question resolves: it CLOSES THE TRIANGLE.
+  [C] throughout (BSGS orders + exact det/parity + sealed strips);
+  scope: this is the closure of the SPECIFIC sealed subgroups C, H,
+  H3 of the sealed root ordering, not a conjugacy-class statement.
+
+[PASS] S3: verdict recorded; expectation E1 resolution: PASS (|<C,H3>| = 348364800 = |W+(E8)|)
+[t=   0.8s] task 1 done
+
+------------------------------------------------------------------------------
+TASK 2 -- TURN-POINT CRITERION A on IB's published floor sequence (sealed; quoted as received)
+------------------------------------------------------------------------------
+  input sha256(RECEIVED_2026-09-01_IB_TUBES_TURNS\PROMPT_ Operationalizing the Turn Point.md) = f0e6a9729832004b52d4b486869d5ddcb455b8a5c2f9550a6a0be87248bcef04
+  input sha256(RECEIVED_2026-09-01_IB_FLOOR_LIMIT\FLOOR LIMIT — FINAL RESULT v0.1.md) = dbfeee4a0f2ac5b32813ea24f52fa09583c99af3f569639bf5498e8d7f692a8e
+[PASS] T1: both input documents read; IB's Criterion A ('second difference sign change'), the double criterion, and the decision-rule clause 'D2(N) does not change sign' are all present verbatim in the turn-point prompt
+[PASS] T2: the five published points N=300..700 match the received FLOOR LIMIT document character-for-character (lambda_min negative, six decimals); N=200 does NOT appear in the received sequence, so the available range is N=300..700  -> 5 points, quoted as received
+  scope: lambda_min(N) are properties of IB's truncated operator A_fixed, quoted as received;
+  this lane re-derives NOTHING about them (the A_fixed engine lives in the Ilya-Riemanns lane).
+
+  CRITERION A TABLES (exact integer arithmetic on the received 6-decimal values; grid step 100,
+  so N+1/N-1 in IB's definition = adjacent grid points):
+
+    N      lambda_min(N)    D1(N) = lam(N)-lam(N-100)    D2(N) = lam(N+100)-2lam(N)+lam(N-100)
+    300    -14.095273       --                           --
+    400    -14.429690       -0.334417                    +0.132597
+    500    -14.631510       -0.201820                    +0.064838
+    600    -14.768492       -0.136982                    +0.039474
+    700    -14.866000       -0.097508                    --
+
+  (IB's required output names 'Table of D2(N) for N = 300..600'; that presumes an N=200 point
+   this lane never received -- with the available grid 300..700,  D2 is computable at the
+   interior points N = 400, 500, 600 exactly.)
+[PASS] T3: first-difference table: D1(N) < 0 at every computable N (the sequence deepens monotonically, no sign change in lambda_min itself -- matches IB's sec. 2 observation)  -> D1 = {400: -334417, 500: -201820, 600: -136982, 700: -97508} (micro-units)
+[PASS] T4: second-difference table: D2(400), D2(500), D2(600) are ALL POSITIVE (all one sign; the sequence is convex over the whole computed range) -- D2 does NOT change sign  -> D2 = {400: 132597, 500: 64838, 600: 39474} (micro-units)
+
+------------------------------------------------------------------------------
+TASK 2 VERDICT -- in IB's own required-output format (turn-point prompt sec. 5/6)
+------------------------------------------------------------------------------
+
+  1. Table of D2(N) (available range; grid step 100):
+
+         N      D2(N)
+         400    +0.132597
+         500    +0.064838
+         600    +0.039474
+
+     (D2 > 0 at every computable point: no sign change.)
+
+  2. Table of localization measures for v_min(N): NOT RUN.
+     This lane does not hold the eigenvectors v_min(N).  The A_fixed
+     engine lives in the Ilya-Riemanns lane; duplicating it here was
+     explicitly averted (registry v0.41).
+
+  3. Candidate N* from each criterion:
+       Criterion A: none (no sign change in D2).
+       Criterion B: NOT RUN (no eigenvectors held here).
+
+  4. Combined N* from the double criterion: NOT EVALUABLE HERE
+     (A alone: not found; B not run).
+
+  5. Statement (IB's decision rule, verbatim clause):
+
+       Turn point not found: D2(N) does not change sign
+       over the computed range.
+
+[PASS] T5: Criterion A verdict by IB's OWN decision rule: 'Turn point not found: D2(N) does not change sign over the computed range' -- REGISTERED EXPECTATION E2 RESOLVED: PASS (preliminary arithmetic of registry v0.42 confirmed exactly)
+[PASS] T6: Criterion B resolved NOT RUN, with computable backing: the received packages contain NO eigenvector/data arrays (v_min was never sent), and this lane holds no A_fixed engine (Ilya-Riemanns lane; duplication averted, registry v0.41)  -> array-like files in RECEIVED dirs: none
+[PASS] T7: combined double criterion: NOT EVALUABLE HERE (A alone: not found; B: not run) -- no 'horizon' language used (prompt sec. 7), and NO RH/GRH statement of any kind appears in this run (house red line)
+[t=   0.8s] task 2 done
+==============================================================================
+RESULT: 21 checks passed, 0 failed
+registered expectation E1 (S3 closure, |<C,H3>|): PASS (|<C,H3>| = 348364800 = |W+(E8)|)
+registered expectation E2 (turn-point D2 one sign): PASS (D2 all positive; turn point not found by IB's rule)
+total time 0.8s
+==============================================================================
