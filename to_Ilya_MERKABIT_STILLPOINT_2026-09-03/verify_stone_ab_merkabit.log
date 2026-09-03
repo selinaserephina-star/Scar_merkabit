@@ -1,0 +1,77 @@
+==============================================================================
+STONE AB -- THE MERKABIT UNDER THE STILL POINT
+the 56-board inside the V-block; iota = t_v; G2(2) on 56 / 28 / 36 / 63;
+theta <-> seven; Psi against the roof's incidence   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AB0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] AB0: the brief is sha-locked: sha256(BRIEF_STONE_AB_MERKABIT_STILLPOINT.md) equals the value in BRIEF_STONE_AB_LOCK.sha256  -> 6f907705b652369d...
+[PASS] AB0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] AB0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=  12.3s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AB1: the board identified -- 56 weights = 56 roots with <r,alpha>=1
+------------------------------------------------------------------------------
+[PASS] AB1a: IDENTIFICATION: the 56 E8 roots r with <r,alpha> = 1 match the 56 sealed vertices BIJECTIVELY by Dynkin label (E7 base built in alpha-perp from a generic functional, Cartan matrix aligned to the sealed C7 by node permutation (0, 6, 1, 5, 2, 3, 4)); every one of the 84 crystal edges of colour i is r_u - r_w = beta_i; the 56 masks are exactly the nonsingular u with B(u,v) = 1 -- THE BOARD IS THE 56-ORBIT
+[PASS] AB1b: THE CHIRALITY BIT: the sealed IOTA is w -> -w on labels and, under the match, u -> u + v on masks -- iota = the transvection t_v of the shadow's defining vector (Dickson 1: outside Omega, exactly as SM-015 saw it vanish in the Clifford quotient)
+[PASS] AB1c: under the match: IOTA extends to the linear isometry t_v (Dickson 1); PSI and PR do NOT extend to any linear map of V consistent on the 56 -- Psi nonlinear, pr odd (SM-015/016), re-seen in the roof's coordinates
+[t=  12.4s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- AB2: the dictionary counts -- 1 + 63 + 56 ; 63 + 72 ; 28 ; 36
+------------------------------------------------------------------------------
+[PASS] AB2a: COUNTS: nonsingular 120 = {v} + 63 Paulis (B(u,v)=0) + 56 board; singular 135 = 63 (B=0) + 72 (B=1); the coset {x : B(x,v)=1} has 128 vectors, q constant on each pair {x, x+v}: 56 nonsingular -> 28 odd forms (the bitangents = iota-pairs), 72 singular -> 36 even forms (the thetas) -- Stone Q's 64 phase points, in the roof's coordinates
+[t=  12.4s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- AB3: THE STILL POINT ON THE BOARD
+------------------------------------------------------------------------------
+  G2(2) orbits: board 56 -> [56] ; bitangents 28 -> [28] ; thetas 36 -> [36] ; Paulis 63 -> [63] ; singular-perp 63 -> [63]
+[PASS] AB3a: REGISTERED EXPECTATION: G2(2) is TRANSITIVE on the 28 bitangents (stabilizer order 12096/28 = 432) and on the 36 even thetas (stabilizer order 12096/36 = 336) and on the 63 Paulis (stabilizer 192)
+[PASS] AB3b: MEASURED: G2(2) on the board itself: orbits [56] (stabilizer order [216])
+[t=  12.4s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- AB4: THETA <-> SEVEN
+------------------------------------------------------------------------------
+[PASS] AB4a: REGISTERED EXPECTATION: every even theta's stabilizer in G2(2) has order 336 (= PGL(2,7)) whose derived subgroup is one of the 36 PSL(2,7)'s of SM-038, the map theta -> seven is a BIJECTION, and each PSL(2,7) fixes exactly ONE even theta: {36 thetas} <-> {36 sevens at the still point}  -> stabilizer orders [336]; fixed thetas per copy [1]
+[PASS] AB4b: the bridge copy on the 36 even thetas: orbits [21, 7, 7, 1] (SM-003's sealed fingerprint [1,7,7,21]) and on the 28 bitangents: [28] (transitive, [28]) -- the fixed theta is its own
+[t=  51.7s] stage 4 done
+
+------------------------------------------------------------------------------
+STAGE 5 -- AB5: two intersections as data
+------------------------------------------------------------------------------
+[PASS] AB5a: |W(E6) cap G2(2)| = |Stab_G(one bitangent)| = 432 (= 432 by transitivity on the 28): the bitangent stabilizer meets the still point in a group of order 432; profile {1: 1, 2: 45, 3: 26, 4: 54, 6: 90, 8: 108, 12: 108}
+[PASS] AB5b: THE 192 (SM-038's raw-turner triple intersection, recomputed: order 192): its orbits on the 63 Paulis are [32, 24, 6, 1] -- it fixes exactly one Pauli and EQUALS the stabilizer in G2(2) of that Pauli: the raw turner's triangle meets at one point of the hexagon
+[t=  53.2s] stage 5 done
+
+------------------------------------------------------------------------------
+STAGE 6 -- AB6: Psi against the roof's incidence on the board
+------------------------------------------------------------------------------
+  pair types on the board: {'v': 28, 'P': 756, 'S': 756} of 1540 pairs
+    iota                       preserves 100.00% of pair types
+    Weyl (a C-bar generator)   preserves 100.00% of pair types
+    Psi                        preserves  65.06% of pair types
+    Psi^2                      preserves  54.68% of pair types
+    Psi^3                      preserves  51.30% of pair types
+    Psi^9                      preserves  61.56% of pair types
+    pr                         preserves  92.99% of pair types
+    random permutations        mean  48.24%, max  51.69% over 200
+[PASS] AB6a: REGISTERED: iota and the Weyl element preserve 100% of pair types (linear); Psi (65.1%) and pr (93.0%) preserve strictly less than 100% and more than the random baseline (mean 48.2%, max 51.7%) -- the merkabit's gates are non-linear yet structured against the roof's own incidence; the numbers are the finding
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  The board is the 56-orbit of the vector shadow; the chirality bit is
+  the transvection t_v; the bitangents and thetas are the phase points of
+  Stone Q read mod v.  The still point acts on all of it: transitive on
+  the 28 and the 36 with the stabilizers registered, the 36 thetas in
+  bijection with its 36 sevens, each seven fixing its own theta.  Psi and
+  pr do not extend linearly, and their scores against the roof's
+  incidence are recorded above.
+
+RESULT: 14 checks passed, 0 failed
+[t=  53.3s] done
