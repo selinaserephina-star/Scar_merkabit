@@ -1,0 +1,82 @@
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   7.3s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   9.4s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=  14.5s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- AA3: the three block point-stabilizers are the three shadows
+------------------------------------------------------------------------------
+[PASS] AA3a: Stab(v) in P(Omega) is C-bar: C-bar fixes v, has order 1,451,520 = |Omega|/120 (orbit-stabilizer on the V-block); tau''^2(C-bar) fixes Phi(v) and tau''(C-bar) fixes Phi^2(v) -- the point stabilizers of the three blocks are the three shadows, and Phi cycles them (block by block, as the identity of AA2c predicts)
+[t=  15.2s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- AA4: THE STILL POINT IN THE STATE SPACE
+------------------------------------------------------------------------------
+[PASS] AA4a: REGISTERED EXPECTATION CONFIRMED: G2(2) COMMUTES with Phi on all 360 points (generators; hence the whole group) and fixes v, Phi(v), Phi^2(v); C-bar is transitive on the S+-block (orbit of Phi(v) has size 120), so |Stab_C-bar(Phi v)| = 12096 = |G| and G = the pointwise stabilizer in Omega of the Phi-orbit {v, Phi v, Phi^2 v}: a vector, a spinor, a co-spinor, one of each
+[t=  15.2s] stage 4 done
+
+------------------------------------------------------------------------------
+STAGE 5 -- AA5: the twisted coset Omega.Phi -- orders and cycle types
+------------------------------------------------------------------------------
+[t=  20.5s] 30000 twisted elements sampled (5.2s)
+  element orders in the coset Omega.Phi (sample of 30000):
+    order   3 :    141  (0.47%)
+    order   6 :   2018  (6.73%)
+    order   9 :   1663  (5.54%)
+    order  12 :   9459  (31.53%)
+    order  18 :   4933  (16.44%)
+    order  21 :   4281  (14.27%)
+    order  24 :   7505  (25.02%)
+  maximal order found: 24; its cycle types on the 360 points:
+    {24: 12, 12: 3, 6: 5, 3: 2}  x3756
+    {24: 12, 12: 5, 6: 1, 3: 2}  x3749
+[PASS] AA5a: MEASUREMENT (tagged [obs]): the twisted coset's element orders are all multiples of 3 ([3, 6, 9, 12, 18, 21, 24]) and the maximal order found among 30000 samples is 24, cycle types above -- the roof's number against 18 at E7 and 6 at D4
+[PASS] AA5b: REGISTERED EXPECTATION CONFIRMED: Phi . g7 (g7 in G2(2) of order 7, commuting with Phi) has order 21 -- the seven-beat clock composed with the turn; cycle type on 360: {21: 17, 3: 1}
+[PASS] AA5c: MEASUREMENT: the standard Coxeter element of W(E8) (product of the 8 simple reflections) has image c-bar of order 15 in Omega (= h(E8)/2 = 15 expected); Phi . c-bar has order 18 with cycle type {18: 16, 9: 7, 3: 3} -- recorded against h(E8) = 30
+[t=  20.5s] stage 5 done
+
+------------------------------------------------------------------------------
+STAGE 6 -- AA6: the bridge seven at the still point, on v-perp
+------------------------------------------------------------------------------
+[PASS] AA6a: Brauer character of the bridge PSL(2,7) on v-perp (7-dim): (7, 1, 0) at element orders (1, 3, 7) -- = chi7 mod 2 = 1 + 3 + 3-bar; stated honestly: 1 + chi6 (the Fano seven) has the SAME 2-modular character, so the character cannot separate the sevens (kernel dims: 1-eigenspaces 3 / 1; cubic kernels 3 / 3)
+[PASS] AA6b: REGISTERED EXPECTATION CONFIRMED -- THE LAGRANGIAN SPLIT: modulo v, the two cubic kernels U, U' (3-dim each) are both PSL(2,7)-invariant, both totally isotropic for B, and v-perp = U + U' + <v>: the still point's seven acts on the 6-dim symplectic quotient as diag(M, M^-T) on a Lagrangian pair -- SM-028's Lagrangian embedding recovered at the still point
+[t=  22.3s] stage 6 done
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  The turn now acts on states: Phi, order three on 360 points, cycling
+  vectors -> spinors -> co-spinors with footprint tau''^-1, and
+  <Omega, Phi> = O8+(2):3 explicit.  The three shadows are the three
+  block stabilizers; the still point is the joint stabilizer of one
+  Phi-orbit.  The twisted coset's orders are measured above (tagged
+  [obs]); the seven-beat clock composed with the turn has order 21.  The
+  bridge seven on v-perp is chi7 mod 2 and splits Lagrangian.
+
+RESULT: 16 checks passed, 0 failed
+[t=  22.3s] done
