@@ -1,0 +1,90 @@
+==============================================================================
+STONE Z -- THE STILL POINT OF THE ROOF TURN
+G = C-bar cap tau'(C-bar) in Omega = O8+(2); the turner normalized to
+order three; the seven at the still point   [sealed caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- Z0: brief lock; Stone X machinery replayed VERBATIM and cross-checked against the sealed witnesses_x.json
+------------------------------------------------------------------------------
+[PASS] Z0: the brief is sha-locked: sha256(BRIEF_STONE_Z_STILLPOINT.md) equals the value in BRIEF_STONE_Z_LOCK.sha256  -> e13da2538b6bf25d...
+[PASS] Z0a: REPLAY cross-check: tau on all 26 Omega-generators, T+, and the tau'^3 intertwiner h' reproduce the sealed Stone X witnesses byte-for-byte (tau_gen_cols, Tplus_cols, hprime_cols; intertwiner space dim 1)
+[t=   0.1s] stage 0 replay done
+[PASS] Z0b: C-bar (the sealed vector shadow, 24 generators) acts faithfully on the 120 nonsingular vectors: BSGS order 1,451,520 = |Sp6(2)|; all elements enumerated (1451520 rows)
+[t=   0.7s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- ZB1: THE STILL POINT  G = C-bar cap tau'(C-bar)
+------------------------------------------------------------------------------
+[PASS] Z1a: tau'(C-bar) = <tau'(24 generators)>: BSGS order 1,451,520 (tau' is an automorphism); every image a Dickson-0 isometry
+[t=   4.8s] exhaustive sift of 1,451,520 elements through tau'(C-bar) done (4.0s)
+[PASS] Z1b: REGISTERED EXPECTATION: |G| = 12096 = |G2(2)| -- the intersection of the vector shadow with its turned image has index 120 in C-bar (C-bar transitive on the 120 nonsingular spinors)  -> |G| = 12096, index 120
+[PASS] Z1c: IDENTIFICATION: [G,G] has order 6048 with G/[G,G] = C2 (index 2); [G,G] is PERFECT (its own derived subgroup, order 6048 = |U3(3)|); element-order census of G = {1,2,3,4,6,7,8,12} -- G = U3(3):2 = G2(2) [orders + [P cited: G2(2) = U3(3):2 is the unique index-120 subgroup class of Sp6(2)]]  -> census {1: 1, 2: 315, 3: 728, 4: 756, 6: 2520, 7: 1728, 8: 3024, 12: 3024}
+[t=  13.2s] stage 1 done
+
+------------------------------------------------------------------------------
+STAGE 2 -- ZB2: the triangle's intersections under the raw tau'
+------------------------------------------------------------------------------
+  tau'(G) = <tau'(gens of G)> has order 12096; tau'(G) == G: False
+  triple intersection |C-bar cap tau'(C-bar) cap tau'^2(C-bar)| = 192
+[PASS] Z2a: G' = tau'(C-bar) cap tau'^2(C-bar) = tau'(G) has order 12096 (automorphism image); tau'^2(C-bar) BSGS order 1,451,520
+[PASS] Z2b: MEASURED (conditional expectation): tau'(G) == G is False and the triple intersection has order 192 -- the RAW turner (tau'^3 = inn(h'), h' != 1) does NOT normalize G; the triangle's three pairwise intersections are three DIFFERENT G2(2)'s -- exactly what ZB3's normalization must repair
+[t=  13.7s] stage 2 done
+
+------------------------------------------------------------------------------
+STAGE 3 -- ZB3: THE TURN OF ORDER THREE -- tau'' = inn(y^-1) o tau'
+------------------------------------------------------------------------------
+  intertwiner space for tau'|_G: dim 2; invertible Dickson-0 isometric solutions: 1
+[PASS] Z3a: an invertible Dickson-0 isometry y with y g y^-1 = tau'(g) on the generators of G EXISTS (tau'|_G is inner-realized: G2(2) is complete and its turned copy is Omega-conjugate)  -> dim 2, 1 candidates
+[PASS] Z3b: tau'' fixes every generator of G (hence G pointwise)
+[PASS] Z3c: REGISTERED EXPECTATION CONFIRMED: tau''^3 = identity on ALL 26 Omega-generators -- the turner normalized to EXACT order three (y columns ((187, 99, 82, 178, 43, 122, 73, 62),)); 1 of 1 intertwiner candidates give order 3
+[t=  13.8s] stage 3 done
+
+------------------------------------------------------------------------------
+STAGE 4 -- ZB4: Fix(tau'') = G, as far as the machine reaches
+------------------------------------------------------------------------------
+[t=  17.8s] second exhaustive sift (through tau''(C-bar)) done (4.0s)
+[PASS] Z4a: C-bar cap tau''(C-bar) = G EXACTLY (order 12096, set equality with G): every tau''-fixed element of the vector shadow lies in G
+[PASS] Z4b: THE TRIANGLE CLOSES under tau'': tau''^3(C-bar) = C-bar (all 24 images pass C-bar's membership strip); G <= tau''^2(C-bar) (all 12096 elements sift), so all three pairwise intersections of (C-bar, tau''(C-bar), tau''^2(C-bar)) equal G (the other two are tau''-images of the first, and tau'' fixes G pointwise)
+[t=  18.7s] random sample of 1200 Omega-elements through tau'' (0.3s)
+[PASS] Z4c: random sample: 1200 elements of Omega (words in the 26 generators; 676 of them happened to lie in C-bar), 5 fixed by tau'', 0 fixed OUTSIDE G -- consistent with Fix(tau'') = G [P cited: the centralizer of an order-3 graph automorphism of O8+(2) is G2(2)]; the machine-checked part is Z4a/Z4b
+[t=  18.7s] stage 4 done
+
+------------------------------------------------------------------------------
+STAGE 5 -- ZB5: THE SEVEN AT THE STILL POINT
+------------------------------------------------------------------------------
+  G has 315 involutions and 728 elements of order 3
+[t=  26.3s] (2,3,7)-pair scan over G done: 36 distinct PSL(2,7) copies (7.0s)
+  G-conjugacy orbits of the copies: sizes [36]
+[PASS] Z5a: G contains PSL(2,7): 36 copies found by the (2,3,7)+[a,b]^4 scan, forming 1 G-conjugacy orbit(s); N_G(L2(7)) has order 336 (= 336 = PGL(2,7) expected: the ambient outer flip lives at the still point); 12096/|N| = 36 copies per orbit
+  orbit of 36 copies: involution class size in C-bar = 315 (BRIDGE), in tau'(C-bar) = 315 (BRIDGE-type)
+[PASS] Z5b: REGISTERED EXPECTATION CONFIRMED: every PSL(2,7) at the still point is the BRIDGE class of C-bar (involutions in the 315-class) -- the seven that meets G2(2) is the P^1(F7) seven, as SM-035 read it at the crystal level
+[PASS] Z5c: MEASURED: the class label read in the spin-type shadow tau'(C-bar) AGREES with the label read in the vector shadow ([(315, 315)]) -- the seven's label survives the turn
+[t=  32.5s] stage 5 done
+
+------------------------------------------------------------------------------
+STAGE 6 -- ZB6: the register of the still point
+------------------------------------------------------------------------------
+  G-class of involutions (size) : class size in C-bar (eps) : class size in tau'(C-bar) (eps)
+      63 :   315 (+) :   315 (+)
+     252 :  3780 (+) :  3780 (+)
+[PASS] Z6a: G's involutions fall into 2 G-classes of sizes [63, 252]; every class resolves in the sealed Sp6(2) involution classes {63,315,945,3780} both in C-bar and in tau'(C-bar)
+[FAIL] Z6b: REGISTERED EXPECTATION INVERTED: all of G's involutions are PLUS in the spin-type reading -- eps cannot decide the splitness of G's spin-tower preimage (SM-033: necessity only); UNDECIDED here, recorded
+  vector-shadow reading: G meets a minus class there too: False (the 63 U3(3)-involutions as symplectic transvections of Stab(v))
+  inner (in [G,G] = U3(3)) involution classes: [(63, 315, 1)] ; outer: [(252, 3780, 1)]
+[PASS] Z6c: POST-REVEAL FINDING (not registered; added after the first run): the 252-class is OUTER (outside [G,G]) and the 63-class INNER; the outer involutions read eps = + in the spin-type shadow, so by M(G2(2)) = 1 [P cited] + the Ext-restriction argument the spin-tower preimage of G is SPLIT: 2 x G2(2), not 2.G2(2) -- the still point lifts through the hinge without twisting (both shadows agree; the register of the still point is TRIVIAL)
+[t=  43.3s] stage 6 done
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  The turn holds still a G2(2) = U3(3):2 of order 12096: the
+  intersection of the vector shadow with its turned image, index 120.
+  Normalized by its own intertwiner, the turner has exact order three and
+  fixes exactly that subgroup (machine-checked inside the three shadows;
+  [P] for the rest).  PSL(2,7) lives at the still point with its ambient
+  outer flip (PGL(2,7) = its normalizer there); its class and the
+  register are read above.
+
+RESULT: 19 checks passed, 1 failed  FAILED: ['Z6b']
+[t=  43.3s] done
