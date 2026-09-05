@@ -1,0 +1,53 @@
+==============================================================================
+STONE AD -- THE FORCED-NARROWING TABLE (IB's subgroup-diversity prompt + addendum)
+==============================================================================
+[PASS] AD0: the brief is sha-locked: sha256(BRIEF_STONE_AD_FORCED_NARROWING.md) equals BRIEF_STONE_AD_LOCK.sha256  -> 3c6cf23c788128f4...
+
+------------------------------------------------------------------------------
+AD1 -- the seven spine groups from raw generators (verbatim SM-026)
+------------------------------------------------------------------------------
+[PASS] AD1: orders 168/12/60/24/12/2/1 from raw generators; the order-12 abelian input is C6xC2 by explicit isomorphism  -> orders [168, 12, 60, 24, 12, 2, 1], L6 = C6xC2
+[PASS] AD1b: the spine groups are NOT nested as subgroups: C6xC2 has an element of order 6 and PSL(2,7) has none, so 'lost subgroups' below is a count difference, not a loss
+
+------------------------------------------------------------------------------
+AD2-AD4 -- the table: subgroups, classes, maximal, normal
+------------------------------------------------------------------------------
+  level | |G|  | #subgroups | #conj classes | #maximal | #normal | maximal classes (type x conjugates)
+      7 | 168  |        179 |            15 |       22 |       2 | F21 x8, S4 x7
+      6 | 12   |         10 |            10 |        4 |      10 | C2xC2 x1, C6 x1
+      5 | 60   |         59 |             9 |       21 |       2 | S3 x10, D5 x6, A4 x5
+      4 | 24   |         30 |            11 |        8 |       4 | S3 x4, D4 x3, A4 x1
+      3 | 12   |         10 |             5 |        5 |       3 | C3 x4, C2xC2 x1
+      2 | 2    |          2 |             2 |        1 |       2 | 1 x1
+      1 | 1    |          1 |             1 |        0 |       1 | 
+[PASS] AD2: REGISTERED: the SM-026 census reproduced: #subgroups 179/10/59/30/10/2/1, #conj classes 15/10/9/11/5/2/1  -> [179, 10, 59, 30, 10, 2, 1] ; [15, 10, 9, 11, 5, 2, 1]
+[PASS] AD3: REGISTERED EXPECTATION: maximal subgroup counts 22/4/21/8/5/1/0 (breakdown above)  -> [22, 4, 21, 8, 5, 1, 0]
+[PASS] AD4: REGISTERED EXPECTATION: normal subgroup counts 2/10/2/4/3/2/1  -> [2, 10, 2, 4, 3, 2, 1]
+
+------------------------------------------------------------------------------
+AD5 -- his two decision rules, applied mechanically
+------------------------------------------------------------------------------
+  subgroup count increases at: [(6, 5, 10, 59)] ; class count increases at: [(5, 4, 9, 11)]
+[PASS] AD5a: REGISTERED: his diversity rule -- NEITHER column is monotone decreasing (subgroups up at 6->5, classes up at 5->4): 'diversity narrowing' NOT SUPPORTED as stated, by his own rule
+  transition | #subgroups(n) - #subgroups(n-1) | his magnitude [I]
+  7->6       |                             169 | 24
+  6->5       |                             -49 | 128
+  5->4       |                              29 | 4
+  4->3       |                              20 | -2
+  3->2       |                               8 | 4
+  2->1       |                               1 | 9
+  largest difference at 7->6 (169); his largest magnitude at 6->5 (128)
+  smallest difference at 6->5 (-49); his smallest magnitude at 5->4 (4); his reversing transition 4->3 (-2)
+[PASS] AD5b: REGISTERED: his forced-narrowing rule -- clause 1 (largest loss at largest compression) fails, clause 2 (smallest loss at smallest-or-reversing transition) fails: both fail -> the mechanism is REFUTED by his own rule (not 'ambiguous')
+
+------------------------------------------------------------------------------
+AD6 -- [obs] only
+------------------------------------------------------------------------------
+  [obs] maximal column NOT monotone; normal column NOT monotone
+  [obs] Spearman rank correlation (average ranks, 6 points) between count difference and his magnitude: -0.319
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 8 checks passed, 0 failed
+[t=   0.3s] done

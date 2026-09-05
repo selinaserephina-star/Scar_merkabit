@@ -1,0 +1,58 @@
+==============================================================================
+STONE AE -- HIS CHAIN IN THE HOUSE'S STILL POINT (reciprocal audit of the axis-spiral package)
+==============================================================================
+[PASS] AE0: the brief is sha-locked: sha256(BRIEF_STONE_AE_HIS_CHAIN_IN_OUR_G22.md) equals BRIEF_STONE_AE_LOCK.sha256  -> 6f30f2f449c9aeb7...
+
+------------------------------------------------------------------------------
+AE0 -- the model: the house G2(2) on the 120 nonsingular vectors
+------------------------------------------------------------------------------
+  G_rows.npy sha256 1d298c8d47a908098193571c2275b1527305adc9482d3b658cc72de81b55c83c, shape (12096, 120)
+[PASS] AE0a: G_rows: 12096 distinct permutations, identity present, closed under 2000 random products, every element fixes v
+  element-order census of G: {1: 1, 2: 315, 3: 728, 4: 756, 6: 2520, 7: 1728, 8: 3024, 12: 3024}
+
+------------------------------------------------------------------------------
+AE1 -- his section 1: PSL(2,7) copies at the still point
+------------------------------------------------------------------------------
+[t=  20.7s] (2,3,7)+[a,b]^4 scan: 36 copies
+[PASS] AE1: REGISTERED: 36 copies of order 168, ONE G-class (orbit of the first copy has 36 members and contains all copies), |N_G(H)| = 336 = |PGL(2,7)|; H is PSL(2,7) by explicit isomorphism to the Moebius model -- his 'order-168 subgroup classes = 1'  -> copies 36, orbit 36, |N_G| 336, H = PSL(2,7)
+
+------------------------------------------------------------------------------
+AE2 -- his section 2: the S4's of H, their normalizers, and the fusion test
+------------------------------------------------------------------------------
+  |H| = 168: 179 subgroups, 15 classes; order-24 subgroups: 14 in 2 H-classes of sizes [7, 7]; types Counter({'S4': 14})
+[PASS] AE2: REGISTERED: 14 S4's in H (explicit iso), two H-classes of 7; for every one N_H(S4) = S4 (24), N_G(S4) = C2xS4 (48, explicit iso), G-class length 12096/48 = 252 -- his section 2 line by line  -> N_H orders [24], N_G orders [48], N_G types ['C2xS4']
+  G-orbit of one S4 has 252 members; of the 14 S4's of H, 14 lie in it (class 1: 7/7, class 2: 7/7)
+[PASS] AE2b: REGISTERED EXPECTATION CONFIRMED: the two H-classes of S4 are FUSED in G -- ONE G-class of 252 S4's contains all 14 S4's of H (N_G(H) = PGL(2,7) swaps the classes); his 'Total S4 copies = 504, Total S4 classes = 2' double-counts: the S4's of G meeting H are one class of 252
+  [measured] of the 168 elements of N_G(H) outside H, 168 conjugate a class-1 S4 into class 2
+
+------------------------------------------------------------------------------
+AE3 -- his section 3: the A4's
+------------------------------------------------------------------------------
+[PASS] AE3: REGISTERED: each S4 has exactly one A4 (explicit iso); N_S4(A4) = S4, N_H(A4) = S4 (24), N_G(A4) = C2xS4 (48), G-class 252 -- his section 3
+[PASS] AE3b: REGISTERED: the two H-classes of A4 FUSE in G (one G-class of 252 contains all 14)  -> orbit 252, in-orbit 14/14
+
+------------------------------------------------------------------------------
+AE4 -- his section 4: the Z2 in the fixed A4
+------------------------------------------------------------------------------
+  involutions in A4: 3, forming 1 A4-class(es); N_A4 = C2xC2 (4), N_S4 = D4 (8), N_H = D4 (8), |N_G| = 192; class length 21 in H, 63 in G
+[PASS] AE4: REGISTERED: one A4-class of 3 involutions; N_A4(Z2) = C2xC2 (4), N_S4(Z2) = D8 (8), N_H(Z2) = D8 (8), |N_G(Z2)| = 192; class length 21 in H and 63 in G -- his section 4 (D8 = the engine's 'D4', dihedral of order 8)
+  z fixes 15 of the 63 Paulis and 8 of the 56 board points; its G-class has 63 elements (SM-038 involution table rows: [63, 252])
+[FAIL] AE4b: REGISTERED EXPECTATION INVERTED: z fixes 15 Paulis, not one -- N_G(Z2) is not a single Pauli stabilizer
+  [obs] element-order census of N_G(Z2) (his '(SL(2,3):C4):C2'): {1: 1, 2: 43, 3: 8, 4: 36, 6: 8, 8: 48, 12: 48}; centre size 2; derived subgroup order 48
+
+------------------------------------------------------------------------------
+AE5 -- the chain as containments in one model
+------------------------------------------------------------------------------
+[PASS] AE5: {e} < Z2 < A4 < S4 < PSL(2,7) < G2(2) as actual subsets of one permutation group, orders 1, 2, 12, 24, 168, 12096; N_G({e}) = G
+
+------------------------------------------------------------------------------
+AE6 -- the chain meets the still point's geometry: S4 = the stabilizer of a theta
+------------------------------------------------------------------------------
+  H on the 36 thetas: orbit sizes [1, 7, 7, 21]
+[FAIL] AE6: REGISTERED: H has orbits [1,7,7,21] on the 36 even thetas; every S4 of H fixes exactly one theta; the seven S4's of one H-class fix the seven thetas of one 7-orbit and the other class the other 7-orbit -- his 'S4 = point stabilizer of the 7-point action', on the board  -> fixed thetas: class 1 [], class 2 []
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 9 checks passed, 2 failed  FAILED: ['AE4b', 'AE6']
+[t=  30.1s] done
