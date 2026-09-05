@@ -1,0 +1,77 @@
+==============================================================================
+STONE AF -- THE THREE EIGHTEENS (what Psi remembers; is the roof's 18 rowmotion?)
+==============================================================================
+[PASS] AF0: the brief is sha-locked: sha256(BRIEF_STONE_AF_THREE_EIGHTEENS.md) equals BRIEF_STONE_AF_LOCK.sha256  -> 52baa7b798299607...
+[PASS] AF0a: the pair type IS the sign of the E7 inner product: P <-> +1/2 (1512 ordered pairs), S <-> -1/2 (1512), v <-> -3/2 (56)
+
+------------------------------------------------------------------------------
+AF1 -- his prompt: what exactly does Psi remember?  per-type survival under Psi^k
+------------------------------------------------------------------------------
+  pair-type counts on the board: {'P': 756, 'S': 756, 'v': 28}
+  random baseline (200 permutations): v 0.0170, P 0.4916, S 0.4919
+   k | overall | v kept | P kept | S kept |  transition counts (from v / P / S -> [v P S])
+   1 | 0.6506 |   1/28 | 504/756 | 497/756 |  v[  1  10  17] P[ 10 504 242] S[ 17 242 497]
+   2 | 0.5468 |   1/28 | 424/756 | 417/756 |  v[  1  10  17] P[ 10 424 322] S[ 17 322 417]
+   3 | 0.5130 |   1/28 | 393/756 | 396/756 |  v[  1  15  12] P[ 15 393 348] S[ 12 348 396]
+   4 | 0.5610 |   1/28 | 434/756 | 429/756 |  v[  1  11  16] P[ 11 434 311] S[ 16 311 429]
+   5 | 0.5662 |   1/28 | 438/756 | 433/756 |  v[  1  11  16] P[ 11 438 307] S[ 16 307 433]
+   6 | 0.5468 |   1/28 | 419/756 | 422/756 |  v[  1  15  12] P[ 15 419 322] S[ 12 322 422]
+   7 | 0.5636 |   1/28 | 437/756 | 430/756 |  v[  1  10  17] P[ 10 437 309] S[ 17 309 430]
+   8 | 0.5532 |   1/28 | 429/756 | 422/756 |  v[  1  10  17] P[ 10 429 317] S[ 17 317 422]
+   9 | 0.6156 |  28/28 | 460/756 | 460/756 |  v[ 28   0   0] P[  0 460 296] S[  0 296 460]
+  10 | 0.5532 |   1/28 | 429/756 | 422/756 |  v[  1  10  17] P[ 10 429 317] S[ 17 317 422]
+  11 | 0.5636 |   1/28 | 437/756 | 430/756 |  v[  1  10  17] P[ 10 437 309] S[ 17 309 430]
+  12 | 0.5468 |   1/28 | 419/756 | 422/756 |  v[  1  15  12] P[ 15 419 322] S[ 12 322 422]
+  13 | 0.5662 |   1/28 | 438/756 | 433/756 |  v[  1  11  16] P[ 11 438 307] S[ 16 307 433]
+  14 | 0.5610 |   1/28 | 434/756 | 429/756 |  v[  1  11  16] P[ 11 434 311] S[ 16 311 429]
+  15 | 0.5130 |   1/28 | 393/756 | 396/756 |  v[  1  15  12] P[ 15 393 348] S[ 12 348 396]
+  16 | 0.5468 |   1/28 | 424/756 | 417/756 |  v[  1  10  17] P[ 10 424 322] S[ 17 322 417]
+  17 | 0.6506 |   1/28 | 504/756 | 497/756 |  v[  1  10  17] P[ 10 504 242] S[ 17 242 497]
+[PASS] AF1a: REGISTERED: at k = 1 the v-pairs kept are 1/28, P 504/756, S 497/756 (the 65.06 % is 1002/1540)
+[PASS] AF1b: REGISTERED: NO type is privileged -- P and S survive within 2 points of each other (66.7 % vs 65.7 %), v is destroyed (3.6 %, random 1.7 %): his decision rule ('one type survives much better') is NOT met
+[PASS] AF1c: REGISTERED: at k = 9 all 28 antipodal pairs are kept and P = S = 460/756 exactly; Psi^9 commutes with iota, is fixed-point-free, and is NOT iota
+  [obs] where the v-pairs go at k = 1: to P 10, to S 17; the antipodal steps (Psi u = iota u) number 8
+
+------------------------------------------------------------------------------
+AF2 -- the E7 Coxeter element on the board: same orbit structure as Psi, ninth power = iota; Psi not in W(E7)
+------------------------------------------------------------------------------
+[PASS] AF2a: REGISTERED: the 7! orderings of the E7 simple reflections give exactly 64 distinct Coxeter elements, every one of order 18 with cycle type [18,18,18,2] on the board -- Psi's orbit structure [18, 18, 18, 2] -- and c^9 = iota for every one  -> distinct 64, orders {18: 64}, types {(18, 18, 18, 2): 64}
+[PASS] AF2b: REGISTERED: the 56 board masks span V (F2-rank 8) and the linear map defined by Psi on a basis of 8 board points DISAGREES with Psi on the board -- Psi is not in W(E7) (SM-040's 'no linear extension', re-seen)
+
+------------------------------------------------------------------------------
+AF3 -- how far Psi is from a Coxeter element
+------------------------------------------------------------------------------
+  agreement (points of the board where Psi = c) over the 64 Coxeter elements: {5: 4, 6: 10, 7: 10, 8: 12, 9: 4, 10: 8, 11: 6, 12: 4, 14: 6}
+[PASS] AF3a: REGISTERED: the maximum agreement of Psi (or Psi^-1) with any Coxeter element is 14 of 56 points  -> max 14
+  [obs] for a best c: Psi o c^-1 has cycle type [24, 11, 5, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], order 1320, and type-score 0.6506 (Psi alone: 0.6506; c alone: 1.0000)
+
+------------------------------------------------------------------------------
+AF4 -- the E7 Coxeter element seen from the roof: c-bar7 on the 120 nonsingular vectors
+------------------------------------------------------------------------------
+  c-bar7: linear True, isometry True, fixes v True, Dickson invariant 1; cycle type on 120: {18: 3, 9: 7, 2: 1, 1: 1}; on the 56 board: {18: 3, 2: 1}; on the 63 Paulis: {9: 7}
+[PASS] AF4a: REGISTERED: c-bar7 (product of the seven transvections t_beta) is a q-isometry fixing v with Dickson invariant 1 -- OUTSIDE Omega, in the coset of iota = t_v
+[PASS] AF4b: REGISTERED: cycle type on the 120: one fixed point (v), one 2-cycle and three 18-cycles on the board, seven 9-cycles on the 63 Paulis
+[FAIL] AF4c: the mod-2 image of a Coxeter element (same ordering) acts on the 56 masks exactly as the real Coxeter element acts on the 56 roots
+
+------------------------------------------------------------------------------
+AF5 -- the roof's 18 is not rowmotion: the coset argument + orbit structures from the sealed SM-039 log
+------------------------------------------------------------------------------
+  from the sealed SM-039 log: Phi.c-bar cycle type on 360 = {18: 16, 9: 7, 3: 3}; maximal twisted order sampled = 24
+  rowmotion orbit structures in hand: E7 minuscule (56 ideals) {18: 3, 2: 1}; E6 minuscule sheet (27 ideals) {12: 2, 3: 1}
+[PASS] AF5a: [P on computed inputs] c-bar7 lies in Omega.iota (Dickson 1) and Phi.c-bar in Omega.Phi (order-3 coset, SM-039); in Omega:S3 conjugation preserves the S3-class of the coset, a 3-cycle is not a transposition: the two eighteens of the roof are NOT conjugate
+[PASS] AF5b: REGISTERED: Phi.c-bar's sealed cycle type on 360 ({18: 16, 9: 7, 3: 3}) matches NO rowmotion orbit structure in hand ([18,18,18,2] on 56; [12,12,3] on 27) and no roof poset is named: under IB's own decision rule, 'Phi.c-bar (or an order-24 element) is rowmotion on a roof poset' is NOT SUPPORTED as stated; the only 18-clock that IS rowmotion is the merkabit's (SM-041)
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+  Three eighteens, one number.  The merkabit's clock Psi is rowmotion and
+  shares the E7 Coxeter element's orbit structure [18,18,18,2] -- and
+  nothing else of it: it is not a Weyl element, it agrees with the best
+  Coxeter element on 14 points of 56, and its ninth power is not the
+  chirality bit (the Coxeter element's is).  Seen from the roof the
+  Coxeter element sits in iota's coset, the turn's eighteen in the
+  triality coset; they are not conjugate, and the roof's eighteen matches
+  no rowmotion in hand.  What Psi remembers is not a type: P and S survive
+  alike, antipodes die at once and come back whole at the ninth beat.
+RESULT: 12 checks passed, 1 failed  FAILED: ['AF4c']
+[t=   0.1s] done
