@@ -1,0 +1,147 @@
+==============================================================================
+STONE AN -- THE ATLAS NAMES (the published table of O8+(2).3 against our fourteen classes)
+==============================================================================
+[PASS] AN0: the brief is sha-locked: sha256(BRIEF_STONE_AN_ATLAS_NAMES.md) equals BRIEF_STONE_AN_LOCK.sha256  -> 4960646b22694033...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=  10.1s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=  12.6s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=  17.4s] stage 2 done
+
+------------------------------------------------------------------------------
+AN-data -- the cited headers, parsed
+------------------------------------------------------------------------------
+  cited: O8+(2) header sha256 1197f2199f1158ea (53 classes); O8+(2).3 header sha256 83703faabba80ffa (55 classes)
+  O8+(2) ATLAS-rule names: ['1A', '2A', '2B', '2C', '2D', '2E', '3A', '3B', '3C', '3D', '3E', '4A', '4B', '4C', '4D', '4E', '4F', '5A', '5B', '5C', '6A', '6B', '6C', '6D', '6E', '6F', '6G', '6H', '6I', '6J', '6K', '6L', '6M', '6N', '7A', '8A', '8B', '9A', '9B', '9C', '10A', '10B', '10C', '12A', '12B', '12C', '12D', '12E', '12F', '12G', '15A', '15B', '15C']
+  O8+(2).3 classes (index, order, centralizer): [(1, 1, 522547200), (2, 2, 331776), (3, 2, 46080), (4, 2, 9216), (5, 3, 77760), (6, 3, 5832), (7, 3, 1944), (8, 4, 13824), (9, 4, 1536), (10, 4, 192), (11, 4, 192), (12, 5, 300), (13, 6, 1728), (14, 6, 288), (15, 6, 648), (16, 6, 216), (17, 6, 72), (18, 6, 72), (19, 7, 21), (20, 8, 96), (21, 8, 96), (22, 9, 27), (23, 10, 20), (24, 12, 144), (25, 12, 108), (26, 12, 24), (27, 15, 15), (28, 3, 36288), (29, 3, 36288), (30, 3, 648), (31, 3, 648), (32, 6, 576), (33, 6, 576), (34, 6, 144), (35, 6, 144), (36, 6, 72), (37, 6, 72), (38, 9, 54), (39, 9, 54), (40, 12, 288), (41, 12, 288), (42, 12, 144), (43, 12, 144), (44, 12, 96), (45, 12, 96), (46, 12, 12), (47, 12, 12), (48, 18, 18), (49, 18, 18), (50, 21, 21), (51, 21, 21), (52, 24, 24), (53, 24, 24), (54, 24, 24), (55, 24, 24)]
+
+------------------------------------------------------------------------------
+AN1 -- the count: 53 / 55 classes, 13 fused triples, 14 fixed classes, 14 outer classes per coset
+------------------------------------------------------------------------------
+  fusion O8+(2) -> O8+(2).3: 13 triples, 14 fixed classes; inner classes of G.3: 27; outer: 28
+  triality-fixed classes of O8+(2): ['1A', '2A', '2E', '3D', '3E', '4A', '4B', '4F', '6G', '6N', '7A', '8A', '8B', '12D']
+[PASS] AN1a: [P cited] O8+(2) has 53 classes, O8+(2).3 has 55; the fusion fuses exactly 13 triples and fixes 14 classes; 27 inner + 28 outer = 55, i.e. 14 classes per outer coset (Brauer's permutation lemma) = our census; the fixed classes are 1A, 2A, 2E, 3D, 3E, 4A, 4B, 4F, 6G, 6N, 7A, 8A, 8B, 12D  -> f = 14
+
+------------------------------------------------------------------------------
+AN2 -- the multiset of (order, centralizer) over the outer classes against ours
+------------------------------------------------------------------------------
+  published outer (order, |C_{G.3}|): [(3, 648), (3, 36288), (6, 72), (6, 144), (6, 576), (9, 54), (12, 12), (12, 96), (12, 144), (12, 288), (18, 18), (21, 21), (24, 24), (24, 24)]
+  ours (order, 3|C_Omega|):          [(3, 648), (3, 36288), (6, 72), (6, 144), (6, 576), (9, 54), (12, 12), (12, 96), (12, 144), (12, 288), (18, 18), (21, 21), (24, 24), (24, 24)]
+[PASS] AN2a: REGISTERED: the 28 outer classes are 14 inverse pairs with equal order and centralizer, and the multiset of (order, centralizer) over the 14 EQUALS ours (order, 3|C_Omega|) exactly: {(3,36288),(3,648),(6,576),(6,144),(6,72),(9,54),(12,288),(12,144),(12,96),(12,12),(18,18),(21,21),(24,24),(24,24)}
+
+------------------------------------------------------------------------------
+AN3 -- the published power maps against our fibre data
+------------------------------------------------------------------------------
+  reference classes: heart(3, 5832) = [6] [3D]; 2A(331776) = [2]; 2E(9216) = [4]; turn(3, 36288) = [28, 29]; Phi.g672-class(3, 648) = [30, 31]
+  18: e^6 -> heart             True
+  18: e^9 -> 2A                True
+  18: e^2 -> (9,54)            True
+  18: e^3 -> inner (6,648)     True
+  21: e^7 -> turn              True
+  21: e^3 -> (7,21)            True
+  24: e^12 -> 2A (both)        True
+  12/288,144,96: e^6 -> 2A     True
+  12/12: e^6 -> 2E             True
+  9: e^3 -> heart              True
+  6/576: e^3 -> 2A             True
+  6/144: e^3 -> 2E             True
+  6/72: e^3 -> 2E              True
+  6/576: e^2 -> turn           True
+  6/144: e^2 -> turn           True
+  6/72: e^2 -> (3,648)         True
+[PASS] AN3a: REGISTERED: every published power-map entry that our stones recorded agrees -- eighteen: sixth power the heart (5832 = 3*1944), ninth power 2A (331776 = 3*110592, our 1,575-class); twenty-fours: twelfth powers 2A; twelves 288/144/96: sixth powers 2A, the 12: 2E (9216 = 3*3072, our 56,700-class); nine: cube the heart; sixes 576/144/72: cubes 2A/2E/2E; seven-beat clock: seventh power the turn, cube the (7,21) class
+
+------------------------------------------------------------------------------
+AN3b -- three entries our stones did not record, computed now
+------------------------------------------------------------------------------
+[PASS] AN3b: REGISTERED: |C_Omega((Phi.c-bar)^3)| = 216 (the published inner class of order 6 and centralizer 648 = 3*216 that the eighteen cubes into) -- so the Omega-class of the cube has 806,400 elements, of which SM-048's 504 still-point elements are the part inside G2(2)  -> |C| = 216
+[t= 366.5s] class of Phi.g672: 806400 (293.0s)
+  squares of sampled order-6 twisted elements, by cycle type: {('{6: 56, 3: 8}', 'elsewhere'): 137, ('{6: 48, 3: 24}', 'elsewhere'): 13}
+[FAIL] AN3c: REGISTERED: the squares of the 576-class {6:48,3:24} are all turns; the type {6:56,3:8} (the 144- and 72-classes of SM-051) squares partly to turns (the 144-class) and partly into the class of Phi.g672 (the 72-class); no square lands elsewhere
+
+------------------------------------------------------------------------------
+AN4 -- the two twenty-fours told apart by their squares
+------------------------------------------------------------------------------
+  published: {52: '24-class 52 squares into (12, 288)', 54: '24-class 54 squares into (12, 96)'}
+[t= 949.8s] type {24: 12, 12: 3, 6: 5, 3: 2}: square has cycle type {12: 24, 6: 6, 3: 12} and |C_Omega(e^2)| = 96 -> the order-12 class of density 1/96, published centralizer 288
+[t=1468.1s] type {24: 12, 12: 5, 6: 1, 3: 2}: square has cycle type {12: 24, 6: 10, 3: 4} and |C_Omega(e^2)| = 32 -> the order-12 class of density 1/32, published centralizer 96
+[PASS] AN4a: REGISTERED: type A's square has cycle type {12:24, 6:6, 3:12} and Omega-centralizer 96 (the 1/96 class, published centralizer 288); type B's square has {12:24, 6:10, 3:4} and centralizer 32 (the 1/32 class, published 96) -- type A <-> the published 24-class squaring into the 288-class, type B <-> the one squaring into the 96-class
+[PASS] AN4b: [P cited] the cubes of the two 24-classes are the two inner order-8 classes (8A, 8B), each with centralizer 96 in G.3, so |C_Omega(g8)| = 32 and the Omega-class of g8 has 5,443,200 elements -- why SM-049 could not enumerate the cube's class
+
+------------------------------------------------------------------------------
+AN5 -- the names [obs]: inner by fusion, outer by the letter rule in table order
+------------------------------------------------------------------------------
+  inner classes of G.3 (index: O8+(2) name(s), order, |C_{G.3}|):
+     1: 1A              1 522547200
+     2: 2A              2   331776
+     3: 2B(=2B/2C/2D)   2    46080
+     4: 2E              2     9216
+     5: 3A(=3A/3B/3C)   3    77760
+     6: 3D              3     5832
+     7: 3E              3     1944
+     8: 4A              4    13824
+     9: 4B              4     1536
+    10: 4C(=4C/4D/4E)   4      192
+    11: 4F              4      192
+    12: 5A(=5A/5B/5C)   5      300
+    13: 6A(=6A/6B/6C)   6     1728
+    14: 6D(=6D/6E/6F)   6      288
+    15: 6G              6      648
+    16: 6H(=6H/6I/6J)   6      216
+    17: 6K(=6K/6L/6M)   6       72
+    18: 6N              6       72
+    19: 7A              7       21
+    20: 8A              8       96
+    21: 8B              8       96
+    22: 9A(=9A/9B/9C)   9       27
+    23: 10A(=10A/10B/10C) 10       20
+    24: 12A(=12A/12B/12C) 12      144
+    25: 12D            12      108
+    26: 12E(=12E/12F/12G) 12       24
+    27: 15A(=15A/15B/15C) 15       15
+  our fourteen classes with the published data (order, |C_Omega|, |C_{G.3}|, table index pair, GAP-style name, what it is):
+    (3, 12096, 36288, [28], ['3D/3E'], 'the turn Phi (and Phi.g56: the heart at the still point, turned)')
+    (3, 216, 648, [30], ['3F/3G'], 'Phi.g672')
+    (6, 192, 576, [32], ['6G/6H'], 'the 576-class')
+    (6, 24, 72, [36], ['6K/6L'], 'the 72-class')
+    (6, 48, 144, [34], ['6I/6J'], 'the 144-class')
+    (9, 18, 54, [38], ['9B/9C'], "(Phi.c-bar)^-2's class")
+    (12, 32, 96, [44], ['12H/12I'], 'the 1/32 class')
+    (12, 4, 12, [46], ['12J/12K'], 'the 1/4 class (not from the still point)')
+    (12, 48, 144, [42], ['12F/12G'], 'the 1/48 class')
+    (12, 96, 288, [40], ['12D/12E'], "the 1/96 class (type A's square)")
+    (18, 6, 18, [48], ['18A/18B'], "Phi.c-bar, the roof's eighteen")
+    (21, 7, 21, [50], ['21A/21B'], 'Phi.g7, the seven-beat clock')
+    (24, 8, 24, [52, 54], ['24A/24B', '24C/24D'], 'Phi.g8, both types (squares into 288 / 96)')
+    (24, 8, 24, [52, 54], ['24A/24B', '24C/24D'], 'Phi.g8, both types (squares into 288 / 96)')
+  key inner classes: heart = O8+(2) 3D (1944 -> 5832 in G.3); E8/D4 hearts = 3A/3B/3C fused (77760); involution fibres: 2A (110592 -> 331776), 2E (3072 -> 9216); the eighteen's cube: the inner (6, 648) class = ['6G']; the seven: 7A; the eights: 8A, 8B
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 16 checks passed, 1 failed  FAILED: ['AN3c']
+[t=1468.1s] done
