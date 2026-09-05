@@ -1,0 +1,26 @@
+7e60907e15c4843c592c6cc503f1ae81ccee51d08c5cb7aa3cae55995251b35d *ADDENDUM_ The Final Strike Tears the Drum.md
+f72126ee7d9a7f4f71e3304dec3d8ea5ca01792f373dbe341a8fd74199d9b21f *ADDENDUM_ The Next Descent Is 14.md
+47fe91ab3157cc547566121d6bf0d4cad536b927f1640454a7dfd9c468b302c2 *COVER NOTE — Axis-Spiral Chain Verification Package.md
+581f0ba5c70d26a5d94aa998a568cf75a8f32485708f4c8e5a2a03af34ed26e4 *CURRENT PICTURE OF HYPOTHESES — 2026-09-04.md
+5470a90ac66f7cd1501f91fab3c643d31c3deeb321204c9bbd94e0ad8359ed95 *HYPOTHESIS_ The Clock Strikes, the Walls Fall, the Geometry Compresses.md
+8b49a156844d699f191510aae97fc4cba8bcc51c0e871fd8b00b95c98f537558 *HYPOTHESIS_ The Expanding Return Spiral.md
+e185e4871861809c35512812d5513db9b05bd5366056f8ef3f5f578430326e3b *HYPOTHESIS_ The Glueball X(2370) as the Pure _Not Entered_ Trace.md
+433bc9c125519b90c0056d898adcc74112c70a29574102d095456e0ea24da3a7 *HYPOTHESIS_ The Klein Quartic Fills with 24 Sevens.md
+032f51319ea00d1651e6711815f0e5b52176f985c1d7c7bd3eda93e2299af0c3 *HYPOTHESIS_ The Roof Clock as Gears Inside, Drummers Outside.md
+263833f8fdcbe317a18a24993128c7158cdd14eb14ad2b4226c8af055a459643 *HYPOTHESIS_ The Roof Clock as Gears, Drummers, and the 56-Drum.md
+110a5533a0b20bb7bf8dfce473c21cb9c1562236d2692faf473a6afcdd7a9711 *HYPOTHESIS_ The Roof Clock as Interlocking Geometric Gears — Refined.md
+fae97c81138db0a15e4d8bca416fa3c6f20f81aed84a8f308c84bb8bb9f0abf0 *HYPOTHESIS_ The Roof Clock as an External Trigger of Triality.md
+022f850a1941156842441bfffb0c303f9b8836ee6b38699860e534fb1a976593 *HYPOTHESIS_ The Roof Clock as the Rhythm of the 56-Drum.md
+a9276820438e112053dfee9a477f91cc5883288e8113fe1bebeea9117eb8d8c6 *HYPOTHESIS_ The Second Descent as the Continuous G₂ Chain.md
+1b4117a21da095c1af177e964c5684bcee82582d765182d7fd009f0eec346bd3 *PROMPT_ Can the Glueball Be the Unique Singlet Trace of the Skeleton_.md
+3f287b76a710ca658cea79ef91aefdc7241c695dcc4f3ac36cde5dc8e0e1eaa9 *PROMPT_ G₂(2) as the Still Point of a Breath Cycle.md
+1d73366cf12c3217cb38af70b211d52d79db85c6d589aca280e0a5788a98eae2 *PROMPT_ What Exactly Does Ψ Remember_.md
+8e665b9b4366ceb303a0523a9a1edaa5f35011ac3e6e02aca1e621eddeebbea0 *REQUEST TO SELINA — Upstream Data for the Seven-Under-Ψ Test.md
+7955e7275ceaa3279fa7e8b429ba6f8205201da6c3f9aac22b53d06f1c424bf0 *RESPONSE TO SELINA — SM-038, SM-039, SM-040 and the Gear-Train Question.md
+81a8e98d016995ebf6403a95ab1ba2e4ceabe1e4097ac7ba47a16ed7d9a0025e *RESULT_ Klein Quartic Order Parameter as the Physical Selection Mechanism.md
+0e0a1c82fa604b347ea995843b313dda9b5bbf1f882b1e9eaa1b1b9944a9ac11 *STATUS_ The Klein Operator Bridge.md
+ab51a68b530f8042751417f3db142e671958397f8bfac59f7fd3f23d09a7a9a1 *STATUS_ The PSL(2,7) → SU(3) Bridge.md
+4d8a59db3669e1bef356f6f4bc230d59c271195697c5aa2908e3b815bd5a9e7b *THE KLEIN COMPUTER — ARCHITECTURE SKETCH.md
+9f54ed8c18acb7a5e51cddf0e903c9371c6ded18debab9e35b3daa00f4703d41 *THE MERIDIAN TREE AND THE GROUP TREE.md
+e78b5fb95119a82c6e5caf9439c4f567ca892a8e64a24743a677e298379be50e *THE THREE, THE AXIS, AND THE FIRST_LAST STRIKE — A CROSS-CULTURAL MAP.md
+c4856451836d678b043017d2a4d71aab52321d259f33d68c318f1b38762a48b8 *axis_spiral_verification_package.zip
