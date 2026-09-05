@@ -1,0 +1,73 @@
+==============================================================================
+STONE AO -- THE MIRROR AND THE GATES
+==============================================================================
+[PASS] AO0: the brief is sha-locked: sha256(BRIEF_STONE_AO_MIRROR_AND_GATES.md) equals BRIEF_STONE_AO_LOCK.sha256  -> e45d83b744e57721...
+[PASS] AO0a: the pair type IS the sign of the E7 inner product (SM-041 AC0a re-seen)
+
+------------------------------------------------------------------------------
+AC1 -- the minuscule poset from the crystal; PSI = rowmotion, exactly
+------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------
+AC2 -- delta(u) = XOR of the toggled simple roots; the antipodal steps
+------------------------------------------------------------------------------
+[PASS] AO0b: the crystal lattice has one top, one bottom, 27 join-irreducibles, 56 distinct ideals, and PSI = rowmotion exactly (SM-041 AC1 re-seen)
+
+------------------------------------------------------------------------------
+AO1 -- the sheets: the node-6 coweight; pr swaps the sheets and fixes the poles
+------------------------------------------------------------------------------
+  coweight-6 values: {'1/2': 27, '-1/2': 27, '-3/2': 1, '3/2': 1}; top 28 has 3/2, bottom 27 has -3/2
+  pr on sheets: {'(Fraction(1, 2), Fraction(-1, 2))': 27, '(Fraction(-1, 2), Fraction(1, 2))': 27, '(Fraction(-3, 2), Fraction(-3, 2))': 1, '(Fraction(3, 2), Fraction(3, 2))': 1}
+  iota on sheets: {'(Fraction(1, 2), Fraction(-1, 2))': 27, '(Fraction(-1, 2), Fraction(1, 2))': 27, '(Fraction(-3, 2), Fraction(3, 2))': 1, '(Fraction(3, 2), Fraction(-3, 2))': 1}
+  [obs] Psi on sheets: {'(Fraction(1, 2), Fraction(1, 2))': 17, '(Fraction(-1, 2), Fraction(-1, 2))': 17, '(Fraction(1, 2), Fraction(-1, 2))': 9, '(Fraction(-1, 2), Fraction(1, 2))': 10, '(Fraction(-3, 2), Fraction(-1, 2))': 1, '(Fraction(3, 2), Fraction(-3, 2))': 1, '(Fraction(1, 2), Fraction(3, 2))': 1}
+[PASS] AO1a: REGISTERED: the coweight takes +-3/2 once each (the top and bottom of the lattice) and +-1/2 twenty-seven times each; pr SWAPS the two 27-sheets and FIXES both poles (its only fixed points); iota swaps the sheets and swaps the poles
+
+------------------------------------------------------------------------------
+AO2 -- pr against the linear involutions; the parity identity for pr
+------------------------------------------------------------------------------
+  pr: order 2, cycle type {2: 27, 1: 2}; pr*iota: order 2, fixed 6; agreement pr/iota 6, pr/sigma 14, pr/w0 2; w0(E6) order 2 fixed 8
+[PASS] AO2a: REGISTERED: pr is an involution of cycle type 2^27 1^2 commuting with iota; pr*iota has 6 fixed points; pr agrees with iota on 6 states, with sigma = -w0(E6) on 14, with w0 on 2 -- the mirror is none of the linear involutions
+  pr: parity identity exceptions 0; kept 1432/1540 = 0.9299 (SM-040: 92.99 %); toggle-multiset sizes {0: 2, 9: 54}
+[PASS] AO2b: REGISTERED: the parity identity B(du,u')+B(u,du')+B(du,du') = flip holds for pr with ZERO exceptions (it is bilinear, hence holds for every board permutation) and the kept count recovers SM-040's 92.99 %
+
+------------------------------------------------------------------------------
+AO3 -- the gates generate everything
+------------------------------------------------------------------------------
+[t=   2.0s] Schreier-Sims for <Psi, pr> (1.6s)
+  |<Psi,iota>| = 36; |<pr,iota>| = 4; |<Psi,pr>| = 710998587804863451854045647463724949736497978881168458687447040000000000000; 56! = 710998587804863451854045647463724949736497978881168458687447040000000000000; |<Psi,iota,pr>| = 56!: True
+[PASS] AO3a: REGISTERED: <Psi,iota> has order 36 (dihedral, iota Psi iota = Psi^-1), <pr,iota> = C2 x C2, and |<Psi,pr>| = 56! -- the clock and the mirror generate the full symmetric group of the board; <Psi,iota,pr> = S56
+[PASS] AO3b: [P] the Cayley graph of S56 on {Psi, Psi^-1, iota, pr} has diameter >= ceil(log_3(56!/2)) = 157 (at most 2*3^d - 1 elements within distance d): the inherited 'exact Cayley diameter (conj. 91-95)' cannot be this graph's -- flagged for the crystal lane, not refuted
+
+------------------------------------------------------------------------------
+AO4 -- the relations of the mirror with the clock
+------------------------------------------------------------------------------
+  orders m_k of pr.Psi^k: {1: 1170, 2: 120, 3: 13860, 4: 840, 5: 840, 6: 40, 7: 9660, 8: 1820, 9: 78, 10: 1820, 11: 9660, 12: 40, 13: 840, 14: 840, 15: 13860, 16: 120, 17: 1170}
+  shortest reduced identity word using pr (length <= 16): None (length None)
+[PASS] AO4a: REGISTERED: the table of orders m_k of pr.Psi^k (k = 1..17) is printed; m_4 = 840 answers the inherited 'shortest pr/Psi^4 relation' as stated: (pr Psi^4)^840 = 1; the shortest reduced identity word involving pr up to length 16 is None
+
+------------------------------------------------------------------------------
+AO5 -- pr on the lattice; iota an antiautomorphism; the colour toggles
+------------------------------------------------------------------------------
+  comparable pairs of ideals: 1407; iota (pres, rev, neither) = (0, 1407, 0); pr = (757, 571, 79); [obs] Psi = (1208, 115, 84)
+[PASS] AO5a: REGISTERED: iota reverses EVERY comparable pair (an antiautomorphism of J(P)); pr is neither order-preserving nor order-reversing (counts printed)
+  [obs] colour toggles T_c (orders {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}) commuting with pr: [1, 3]; with iota: [0, 1, 2, 3, 4, 5, 6]
+
+------------------------------------------------------------------------------
+AO6 -- pr and the sheet clock Psi6
+------------------------------------------------------------------------------
+  sheets by COMP: sizes [27, 27], coweight values {0: ['1/2'], 1: ['-1/2']}
+  Psi6 well-defined on the sheets: True; order 12; cycle type {12: 4, 3: 2, 1: 2}; pr Psi6 pr = Psi6^k for k in [1]; order of pr.Psi6 = 12
+[FAIL] AO6a: REGISTERED GUESS INVERTED (full prominence): pr Psi6 pr = Psi6^[1] -- the mirror normalizes the sheet clock
+
+------------------------------------------------------------------------------
+AO6b -- POST-REVEAL: is pr an order-isomorphism between the two sheets' ideal lattices?
+------------------------------------------------------------------------------
+  pr on the within-sheet ideal order: sheet 0 -> 1 (pres, rev, neither, total) = (324, 0, 0, 324); sheet 1 -> 0 = (324, 0, 0, 324); ideal sizes preserved: True; colour multisets of ideals preserved: False
+[PASS] AO6b: POST-REVEAL FINDING: pr is an ORDER-ISOMORPHISM between the two sheets' ideal lattices J(P6) (every within-sheet comparable pair preserved, both directions, ideal sizes preserved) -- the mirror is the natural identification of the two E6 sheets, which is why it commutes with the sheet clock; its 'neither' pairs on the full lattice are all cross-sheet
+  [obs] induced map on the 16 join-irreducibles of sheet 0: 16 of 16 principal ideals map to principal ideals; colours preserved on 6 of them (colour map Counter({(3, 3): 4, (2, 4): 3, (4, 2): 3, (1, 1): 2, (5, 0): 2, (0, 5): 2}))
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 11 checks passed, 1 failed  FAILED: ['AO6a']
+[t= 104.9s] done
