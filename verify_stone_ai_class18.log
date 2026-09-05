@@ -1,0 +1,72 @@
+==============================================================================
+STONE AI -- THE CLASS OF THE EIGHTEEN, AND THE HEART'S CENTRALIZER
+==============================================================================
+[PASS] AI0: the brief is sha-locked: sha256(BRIEF_STONE_AI_CLASS_OF_THE_EIGHTEEN.md) equals BRIEF_STONE_AI_LOCK.sha256  -> b41ab779a152db85...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   5.6s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   6.4s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=   8.2s] stage 2 done
+
+------------------------------------------------------------------------------
+AI0a -- replay: the class of the heart, with a transversal
+------------------------------------------------------------------------------
+[t=  18.3s] class of x with transversal: 89600 elements (10.1s)
+[PASS] AI0a: Phi equals the sealed cache; class(x) has 89,600 elements with a transversal (u_y x u_y^-1 = y checked on 500 random y); c-bar7^6 and c-bar6^4 in it
+
+------------------------------------------------------------------------------
+AI1 -- the centralizer of the heart by Schreier generators
+------------------------------------------------------------------------------
+[t=  18.6s] centralizer closure from 385 Schreier generators: 1944 elements
+[PASS] AI1a: REGISTERED: C_Omega(x) has order EXACTLY 1944 = 2^3 * 3^5 (Schreier generators closed; |Omega| / |class| = 1944) and every element commutes with x
+[PASS] AI1b: REGISTERED: e = Phi.c-bar centralizes x (its sixth power) and lies outside Omega; C_full(x) = C_Omega(x) u e C_Omega(x) u e^2 C_Omega(x) has order 5832
+  [obs] element-order census of C_Omega(x): {1: 1, 2: 9, 3: 296, 4: 54, 6: 720, 9: 432, 12: 432}; centre of order 9; orbits of C_Omega(x) on the 3 fixed nonsingular vectors of x on V: [3]
+  [obs] x in the centre: True; elements of order 3 in the centre: 8
+
+------------------------------------------------------------------------------
+AI2 -- the centralizer of the eighteen
+------------------------------------------------------------------------------
+[PASS] AI2a: REGISTERED: C_Omega(e) = {h in C_Omega(x) : h e h^-1 = e} has order 6 and equals <e^3>; the class of e has 174,182,400 / 6 = 29,030,400 elements = 1/6 of the coset  -> |C_Omega(e)| = 6
+
+------------------------------------------------------------------------------
+AI3 -- one class: 300 sampled order-18 twisted elements, each tested exactly
+------------------------------------------------------------------------------
+  300 order-18 twisted elements (1736 tries), types {'{18: 16, 9: 7, 3: 3}': 300}; sixth powers in class(x): 300; conjugate to Phi.c-bar (exact): 300
+  [obs] sampled order-18 density 0.1728 vs 1/6 = 0.1667; if a second class existed with density d, 300/300 in one class has probability (1 - 6d)^300: d = 0.01 -> 8.68e-09
+[PASS] AI3a: REGISTERED: all 300 sampled order-18 twisted elements are conjugate to Phi.c-bar (per element: sixth power in class(x), transported to the fibre over x, conjugated by C_Omega(x)) -- one class of density exactly 1/6 to the precision of the sample
+
+------------------------------------------------------------------------------
+AI4 -- [obs] the order-24 twisted elements' centralizers, if their cubes' classes fit the cap
+------------------------------------------------------------------------------
+  [obs] type {24: 12, 12: 5, 6: 1, 3: 2}: the class of e^3 (order 8) exceeds the cap 1500000 -- centralizer not computed
+  [obs] type {24: 12, 12: 3, 6: 5, 3: 2}: the class of e^3 (order 8) exceeds the cap 1500000 -- centralizer not computed
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 15 checks passed, 0 failed
+[t=  42.3s] done
