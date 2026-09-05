@@ -1,0 +1,84 @@
+==============================================================================
+STONE AH -- THE ONE HEART (which clocks of the roof share the order-3 element of SM-045)
+==============================================================================
+[PASS] AH0: the brief is sha-locked: sha256(BRIEF_STONE_AH_ONE_HEART.md) equals BRIEF_STONE_AH_LOCK.sha256  -> 1d056f536d0bff9c...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   5.2s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   5.9s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=   7.7s] stage 2 done
+
+------------------------------------------------------------------------------
+AH0a -- replay: Phi against the sealed cache; x = (Phi.c-bar)^6 and its Omega-class re-enumerated; y = c-bar7^6 in it
+------------------------------------------------------------------------------
+[t=  17.0s] class of x: 89600 elements (9.2s), centralizer 1944
+[PASS] AH0a: Phi equals the sealed phi360.npy; Phi.c-bar has order 18; the Omega-class of x = (Phi.c-bar)^6 has 89,600 elements (centralizer 1944) and contains y = c-bar7^6 -- SM-045 re-seen
+
+------------------------------------------------------------------------------
+AH1 -- the fixed dimensions of the order-3 powers, predicted by the exponents, measured mod 2
+------------------------------------------------------------------------------
+  c-bar^5 (E8)     order 3, Dickson 0, cycle type on 120 {3: 40}, fixed dim 0, q-values on the fixed space {}
+  c-bar6^4 (E6)    order 3, Dickson 0, cycle type on 120 {3: 39, 1: 3}, fixed dim 2, q-values on the fixed space {1: 3}
+  c-bar4^2 (D4)    order 3, Dickson 0, cycle type on 120 {3: 28, 1: 36}, fixed dim 6, q-values on the fixed space {1: 36, 0: 27}
+  c-bar7^6 (E7)    order 3, Dickson 0, cycle type on 120 {3: 39, 1: 3}, fixed dim 2, q-values on the fixed space {1: 3}
+[PASS] AH1: REGISTERED (from the exponents): c-bar^5 has fixed dim 0 ({3:40} on the 120), c-bar6^4 fixed dim 2 with q = 1 on its three nonzero vectors (the A2 lattice mod 2, anisotropic), c-bar4^2 fixed dim 6; all in Omega (Dickson 0); c-bar6 of order 12, c-bar4 of order 6
+
+------------------------------------------------------------------------------
+AH2 -- the heart: which order-3 powers are conjugate in Omega to x = (Phi.c-bar)^6
+------------------------------------------------------------------------------
+  c-bar6^4 in class(x): True; c-bar^5 in class(x): False; c-bar4^2 in class(x): False
+[PASS] AH2a: REGISTERED: the E6 clock's order-3 power c-bar6^4 IS in the Omega-class of (Phi.c-bar)^6 -- one heart for the clocks 12 (E6), 18 (E7), 18 (roof)
+[PASS] AH2b: REGISTERED ([P] by fixed dimension, measured by membership): c-bar^5 (the E8 Coxeter image's own order-3 power) and c-bar4^2 (D4) are NOT in class(x)
+  Omega-class of c-bar^5 (E8): 2240 elements (centralizer 77760) (0.3s); block cycle types [{3: 40}, {3: 28, 1: 36}, {3: 40}]
+  Omega-class of c-bar4^2 (D4): 2240 elements (centralizer 77760) (0.2s); block cycle types [{3: 28, 1: 36}, {3: 40}, {3: 40}]
+  [post-reveal] Phi c-bar^5 Phi^-1 in class(c-bar4^2): False; Phi^2 c-bar^5 Phi^-2 in class(c-bar4^2): True; c-bar^5 itself in class(c-bar4^2): False
+[PASS] AH2c: POST-REVEAL FINDING: the E8 Coxeter image's order-3 power and the D4 Coxeter element's order-3 power are NOT conjugate in Omega but ARE conjugate under the turn -- the D4 heart is the E8 heart turned by Phi (triality images: classes of 2240 with permuted block types)
+  block cycle types: x [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}]; c-bar6^4 [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}]
+
+------------------------------------------------------------------------------
+AH3 -- the Coxeter elements on the 56 board (the E8 roots with <r,alpha> = 1)
+------------------------------------------------------------------------------
+  on the 56: E6 Coxeter {12: 4, 3: 2, 1: 2}; E7 Coxeter {18: 3, 2: 1}; D4 Coxeter {6: 6, 2: 6, 1: 8}
+[PASS] AH3: REGISTERED: the E6 Coxeter element has cycle type {12:4, 3:2, 1:2} on the 56 (two copies of SM-041's E6 rowmotion orbits [12,12,3] plus the two singlets -- Rush-Shi at E6, on the data); the E7 Coxeter element [18,18,18,2] (SM-044); D4 recorded [obs]
+
+------------------------------------------------------------------------------
+AH4 -- are the order-18 twisted elements one class?  necessary conditions on 300 samples
+------------------------------------------------------------------------------
+[t=  18.0s] Omega-class of (Phi.c-bar)^9: 1575 elements (0.1s), centralizer 110592
+  300 order-18 twisted elements drawn (1736 tries); cycle types {'{18: 16, 9: 7, 3: 3}': 300}; e^6 in class(x): 300/300; e^9 in class((Phi.c-bar)^9): 300/300
+[PASS] AH4: REGISTERED: for all 300 sampled order-18 twisted elements e, e^6 lies in class(x) and e^9 in class((Phi.c-bar)^9) -- the single-class question stays OPEN-but-consistent
+
+------------------------------------------------------------------------------
+AH5 -- [obs]
+------------------------------------------------------------------------------
+  [obs] 89,600 = 2^9 * 5^2 * 7; 1944 = 2^3 * 3^5; the centralizer's structure is not computed here
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 17 checks passed, 0 failed
+[t=  18.2s] done

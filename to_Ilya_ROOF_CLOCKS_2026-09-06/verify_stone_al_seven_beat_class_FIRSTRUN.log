@@ -1,0 +1,78 @@
+==============================================================================
+STONE AL -- THE SEVEN-BEAT CLOCK'S CLASS, AND THE TURN'S CENTRALIZER
+==============================================================================
+[PASS] AL0: the brief is sha-locked: sha256(BRIEF_STONE_AL_SEVEN_BEAT_CLASS.md) equals BRIEF_STONE_AL_LOCK.sha256  -> 23871ac0418db584...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   5.3s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   6.2s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=   8.0s] stage 2 done
+
+------------------------------------------------------------------------------
+AL0a -- replay: the still point on 360 points
+------------------------------------------------------------------------------
+[PASS] AL0a: Phi equals the sealed cache; G2(2) on 360 points: 12,096 elements whose vector parts are the sealed G_list
+
+------------------------------------------------------------------------------
+AL1 -- the turn's centralizer is the still point, exactly
+------------------------------------------------------------------------------
+[t=   9.9s] Omega-class of Phi: 14400 elements (1.4s)
+[PASS] AL1a: REGISTERED: the Omega-class of Phi has EXACTLY 14,400 = |Omega|/|G2(2)| elements and its Schreier-closed centralizer C_Omega(Phi) EQUALS the still point G2(2) as a set of 12,096 permutations -- SM-038's Fix(tau'') = G2(2), now exact  -> |C_Omega(Phi)| = 12096
+
+------------------------------------------------------------------------------
+AL2 -- the seven-beat clock's centralizer and class
+------------------------------------------------------------------------------
+[PASS] AL2a: REGISTERED: G2(2)'s 1,728 elements of order 7 form ONE G2(2)-class; C_Omega(Phi.g7) = {h in G2(2): h g7 h^-1 = g7} = <g7> of order 7; the class of Phi.g7 has 174,182,400/7 = 24,883,200 elements = 1/7 of the coset (sampled 14.27 %)  -> |C| = 7
+
+------------------------------------------------------------------------------
+AL3 -- one class: 300 sampled order-21 twisted elements, each tested exactly through the fibre over Phi
+------------------------------------------------------------------------------
+  300 order-21 twisted elements (2117 tries; density 0.1417 vs 1/7 = 0.1429); seventh powers in class(Phi): 300; conjugate to Phi.g7: 300
+[PASS] AL3a: REGISTERED: all 300 sampled order-21 twisted elements have seventh power in the class of Phi and are conjugate to Phi.g7 (exact, via the still point) -- one class of density exactly 1/7 to the precision of the sample
+
+------------------------------------------------------------------------------
+AL4 -- the order-12 twisted elements: types, centralizers, classes
+------------------------------------------------------------------------------
+  200 order-12 twisted elements (706 tries; density 0.2833): cycle types {'{12: 24, 6: 10, 3: 4}': 20, '{12: 28, 6: 4}': 155, '{12: 24, 6: 6, 3: 12}': 25}
+  from the still point: {'Phi.g4 {12: 24, 6: 6, 3: 12}': 378, 'Phi.g12 {12: 24, 6: 6, 3: 12}': 3024, 'Phi.g4 {12: 24, 6: 10, 3: 4}': 378}
+[FAIL] AL4a: REGISTERED GUESS INVERTED: the sampled order-12 types (3) differ from the still point's (2): sample-only 1, still-point-only 0
+[t= 214.3s] type {12: 24, 6: 10, 3: 4}: |class(e^6)| = 1575, |C(e^6)| = 110592, |C_Omega(e)| = 32 -> class density 1/32; sampled of this type 20, conjugate to the representative 20
+[t= 246.0s] type {12: 28, 6: 4}: |class(e^6)| = 56700, |C(e^6)| = 3072, |C_Omega(e)| = 4 -> class density 1/4; sampled of this type 155, conjugate to the representative 155
+[t= 408.3s] type {12: 24, 6: 6, 3: 12}: |class(e^6)| = 1575, |C(e^6)| = 110592, |C_Omega(e)| = 48 -> class density 1/48; sampled of this type 25, conjugate to the representative 19
+[FAIL] AL4b: REGISTERED GUESS: one class per order-12 type (every sampled element conjugate to its type's representative) and the class densities sum to the sampled 31.5 % within error (sum = 0.3021, sampled 0.2833)
+
+------------------------------------------------------------------------------
+AL5 -- [obs] the twisted coset accounted
+------------------------------------------------------------------------------
+  [obs] sampled order-3 twisted elements: 40 in 8695 tries (0.0046); cycle types {'{3: 120}': 40}; Phi's class has 14,400 elements = 0.00008 of the coset
+  [obs] densities in hand: 18 -> 1/6, 24 -> 1/4, 21 -> 1/7, 12 -> 0.3021; total 0.8616; remainder for orders 9, 6, 3: 0.1384 (SM-039 sampled 9: 0.0554, 6: 0.0673, 3: 0.0047 = 0.1274)
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 14 checks passed, 2 failed  FAILED: ['AL4a', 'AL4b']
+[t= 408.9s] done
