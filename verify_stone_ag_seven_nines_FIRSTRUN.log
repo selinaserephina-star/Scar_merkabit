@@ -1,0 +1,70 @@
+==============================================================================
+STONE AG -- THE SEVEN NINES (one object or a counting rhyme; where the two eighteens could meet)
+==============================================================================
+[PASS] AG0: the brief is sha-locked: sha256(BRIEF_STONE_AG_SEVEN_NINES.md) equals BRIEF_STONE_AG_LOCK.sha256  -> fe4dea04e662a8ec...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   5.4s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   6.1s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=   8.1s] stage 2 done
+
+------------------------------------------------------------------------------
+AG0a -- the replayed Phi against the sealed cache; Phi.c-bar recomputed
+------------------------------------------------------------------------------
+[PASS] AG0a: the recomputed Phi equals the sealed phi360.npy exactly; Phi has order 3; Phi.c-bar (c-bar = the E8 Coxeter image, order 15) has order 18 with cycle type {18:16, 9:7, 3:3} on 360 -- SM-039's sealed value  -> {18: 16, 9: 7, 3: 3}
+
+------------------------------------------------------------------------------
+AG1 -- the roof's seven nines, located
+------------------------------------------------------------------------------
+  (Phi.c-bar)^3 per block: [{6: 16, 3: 7, 1: 3}, {6: 16, 3: 7, 1: 3}, {6: 16, 3: 7, 1: 3}]
+  (Phi.c-bar)^6 per block: [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}]
+  (Phi.c-bar)^9 per block: [{2: 48, 1: 24}, {2: 48, 1: 24}, {2: 48, 1: 24}]
+[PASS] AG1a: the 63 points in 9-cycles of Phi.c-bar = Fix((Phi.c-bar)^9) minus Fix((Phi.c-bar)^3): 21 per block; (Phi.c-bar)^3 has {6:16, 3:7, 1:3} on V, (Phi.c-bar)^6 has {3:39, 1:3} on every block, (Phi.c-bar)^9 is an involution with 24 fixed points per block; all three powers lie in Omega
+  [obs] the 21 vectors of the vector block in the roof's nine-cycles: F2-rank of span 6; orthogonal pairs 135 of 210; common orthogonal complement has 3 nonzero vectors
+
+------------------------------------------------------------------------------
+AG2 -- the Coxeter element's seven nines are a field
+------------------------------------------------------------------------------
+[PASS] AG2a: c-bar7 (the E7 Coxeter element as a 240-root permutation, reduced mod 2) has Dickson invariant 1, order 18 on the 120, cycle type {18:3, 9:7, 2:1, 1:1} (SM-044 re-seen), and c-bar7^9 = t_v
+[PASS] AG2b: REGISTERED: c-bar7^2 (order 9) acts on v-perp/v = F2^6 with minimal polynomial x^6 + x^3 + 1 = Phi_9(x) (annihilated by it, by none of x+1, x^2+x+1, x^3+1): F2[c-bar7^2] is the field F64 and the seven 9-cycles on the 63 Paulis are the seven cosets of mu_9 in F64^x -- cycle type on the Paulis {9: 7}
+[PASS] AG2c: REGISTERED reading: the roof's seven nines are seven 3-cycles of (Phi.c-bar)^3 on each of three blocks (3 x 21/3), the Coxeter element's are seven 9-cycles of an order-9 field element on the 63 Paulis of one block (63/9): a counting rhyme, not one object
+
+------------------------------------------------------------------------------
+AG3 -- where the two eighteens could meet: (Phi.c-bar)^6 against c-bar7^6, both of order 3 in Omega
+------------------------------------------------------------------------------
+  x = (Phi.c-bar)^6 per block: [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}]
+  y = c-bar7^6      per block: [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}]
+  fixed subspace on V: x dim 2 (3 nonzero: q-values {1: 3}); y dim 2 (3 nonzero: q-values {1: 3})
+[FAIL] AG3a: REGISTERED GUESS INVERTED (full prominence): x = (Phi.c-bar)^6 and y = c-bar7^6 agree in every invariant tested (block cycle types, fixed-space dimension and q-values on V) -- the conjugacy question is OPEN, not decided by these invariants
+
+------------------------------------------------------------------------------
+AG4 -- the order-24 twisted elements
+------------------------------------------------------------------------------
+[t=  10.1s] 30000 twisted elements sampled (1.9s)
+  orders: {3: 158, 6: 2018, 9: 1663, 12: 9305, 18: 5039, 21: 4248, 24: 7569}
+  order-24 cycle types: {'{24: 12, 12: 3, 6: 5, 3: 2}': 3845, '{24: 12, 12: 5, 6: 1, 3: 2}': 3724}
+[PASS] AG4a: REGISTERED: the re-sampled coset has the order set {3,6,9,12,18,21,24} and no new order; both sealed order-24 cycle types ({24:12,12:3,6:5,3:2}, {24:12,12:5,6:1,3:2}) re-found  -> new order-24 types: 0
