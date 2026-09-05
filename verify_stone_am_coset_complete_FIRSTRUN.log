@@ -1,0 +1,88 @@
+==============================================================================
+STONE AM -- THE COSET COMPLETE
+==============================================================================
+[PASS] AM0: the brief is sha-locked: sha256(BRIEF_STONE_AM_COSET_COMPLETE.md) equals BRIEF_STONE_AM_LOCK.sha256  -> 02d573af2a2f36dc...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   5.5s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   6.2s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=   8.1s] stage 2 done
+
+------------------------------------------------------------------------------
+AM0a -- replay: the still point on 360; the heart's class and centralizer
+------------------------------------------------------------------------------
+[PASS] AM0a: Phi equals the sealed cache; G2(2) on 360 (12,096); class(x) = 89,600 with transversal; C_Omega(x) = 1944
+
+------------------------------------------------------------------------------
+AM1 -- order 9 through the heart
+------------------------------------------------------------------------------
+  150 order-9 twisted elements (2625 tries; density 0.0571 vs 1/18 = 0.0556): types {'{9: 39, 3: 3}': 150}
+[t=  20.8s] order-9 type {9: 39, 3: 3}, class 1: |C_Omega(e)| = 18 -> density 1/18; 150 of 150 samples; (Phi.c-bar)^-2 in it: True
+[PASS] AM1a: REGISTERED: every sampled order-9 twisted element has its cube in the heart's class; REGISTERED GUESS: ONE class of density 1/18 (centralizer 18), all 150 samples conjugate to the representative, (Phi.c-bar)^-2 among them  -> cubes in class(x): 150/150; classes found ['1/18']
+
+------------------------------------------------------------------------------
+AM2 -- order 6 through the involution
+------------------------------------------------------------------------------
+  150 order-6 twisted elements (2169 tries; density 0.0692): types {'{6: 48, 3: 24}': 15, '{6: 56, 3: 8}': 135}
+[t= 178.7s] order-6 type {6: 48, 3: 24}, class 1: |class(e^3)| = 1575, |C(e^3)| = 110592, |C_Omega(e)| = 192 -> density 1/192; 15 of 15 samples
+[t= 189.4s] order-6 type {6: 56, 3: 8}, class 1: |class(e^3)| = 56700, |C(e^3)| = 3072, |C_Omega(e)| = 24 -> density 1/24; 85 of 135 samples
+[t= 199.1s] order-6 type {6: 56, 3: 8}, class 2: |class(e^3)| = 56700, |C(e^3)| = 3072, |C_Omega(e)| = 48 -> density 1/48; 50 of 50 samples
+[PASS] AM2a: MEASURED: the order-6 twisted elements: 3 classes found with densities ['1/192', '1/24', '1/48'] (sum 13/192 = 0.0677; sampled 0.0692); all 150 samples assigned
+
+------------------------------------------------------------------------------
+AM3 -- order 3: the turn's class, the still point's twisted 3-elements, the samples
+------------------------------------------------------------------------------
+[t= 200.9s] class of Phi.g56: 14400 elements (1.4s)
+[t= 287.2s] class of Phi.g672: 806400 elements (84.8s)
+  40 order-3 twisted elements (6614 tries; density 0.00605): in the turn's class 0; in class(Phi.g56) 0; in class(Phi.g672) 40; types {'{3: 120}': 40}
+[FAIL] AM3a: REGISTERED: the Omega-class of Phi.g56 has EXACTLY 806,400 = |Omega|/216 elements; Phi.g672 lies in it (guess); the 40 sampled order-3 twisted elements are none of them turns and all in the class of Phi.g56 -- two order-3 classes, densities 1/216 and 1/12,096  -> |class(Phi.g56)| = 14400; Phi.g672 in it: False; samples: turn 0, g56-class 0, g672-class 40
+
+------------------------------------------------------------------------------
+AM4 -- the census closes
+------------------------------------------------------------------------------
+  class densities by order: {3: ['1/12096', '1/12096', '1/216'], 6: ['1/192', '1/24', '1/48'], 9: ['1/18'], 12: ['1/32', '1/4', '1/48', '1/96'], 18: ['1/6'], 21: ['1/7'], 24: ['1/8', '1/8']}
+  sum = 12097/12096 = 1.000083
+[FAIL] AM4a: REGISTERED: the densities of all classes found (SM-047, 049, 050, this stone) sum to EXACTLY 1  -> excess 1/12096
+
+------------------------------------------------------------------------------
+AM5 -- [obs] the roof's twisted class list, computed
+------------------------------------------------------------------------------
+  order | classes | centralizer orders | share
+     24 |       2 | [8, 8] | 1/8 + 1/8
+     21 |       1 | [7] | 1/7
+     18 |       1 | [6] | 1/6
+     12 |       4 | [32, 4, 48, 96] | 1/32 + 1/4 + 1/48 + 1/96
+      9 |       1 | [18] | 1/18
+      6 |       3 | [192, 24, 48] | 1/192 + 1/24 + 1/48
+      3 |       3 | [12096, 12096, 216] | 1/12096 + 1/12096 + 1/216
+  total classes in the coset: 15
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 13 checks passed, 2 failed  FAILED: ['AM3a', 'AM4a']
+[t= 287.6s] done
