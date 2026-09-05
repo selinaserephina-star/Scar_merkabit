@@ -1,0 +1,68 @@
+==============================================================================
+STONE AJ -- THE HEART AT THE STILL POINT
+==============================================================================
+[PASS] AJ0: the brief is sha-locked: sha256(BRIEF_STONE_AJ_HEART_AT_STILLPOINT.md) equals BRIEF_STONE_AJ_LOCK.sha256  -> 9ae492ed96d6c377...
+==============================================================================
+STONE AA -- THE ROOF CLOCK, FIRST MEASUREMENT
+the turn tau'' realized on the 360 nonsingular points of V, S+, S-;
+<Omega, Phi> = O8+(2):3 explicit; first measurements   [caches READ-ONLY]
+==============================================================================
+
+------------------------------------------------------------------------------
+STAGE 0 -- AA0: brief lock; Stone X + SM-038 machinery replayed VERBATIM
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA0: the brief is sha-locked: sha256(BRIEF_STONE_AA_ROOFCLOCK.md) equals the value in BRIEF_STONE_AA_LOCK.sha256  -> 0759ad94bdd8d1ed...
+[PASS] REPLAY-AA0a: REPLAY cross-check: tau on the 26 generators and T+ reproduce the sealed Stone X witnesses byte-for-byte
+[PASS] REPLAY-AA0b: SM-038 replayed: |G| = 12096 (exhaustive sift, identical to the cached G_rows); y unique and equal to the sealed y_cols; tau'' fixes G's generators; tau''^3 = id on all 26 generators
+[t=   7.4s] stage 0 done
+
+------------------------------------------------------------------------------
+STAGE 1 -- AA1: rho-, Q-, the three 120-point blocks, P(Omega) on 360
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA1a: Q- (the rho-(Omega)-invariant quadratic form on S-) is UNIQUE (nullspace dim 1) and PLUS-TYPE: 120 nonsingular spinors, as Q+ on S+ and q on V
+[PASS] REPLAY-AA1b: P(Omega) on the 360 points: the three blocks are three orbits of size 120 each; BSGS order 174,182,400 = |O8+(2)| (faithful)
+[t=   9.4s] stage 1 done (BSGS on 360 points)
+
+------------------------------------------------------------------------------
+STAGE 2 -- AA2: THE TURN ON STATES -- Phi, order 3, footprint tau''^2
+------------------------------------------------------------------------------
+[PASS] REPLAY-AA2a: T'' = y^-1 s1-bar T+ intertwines: tau''(g) = T'' rho+(g) T''^-1 on all 26 generators; the intertwiner L: S+ -> S- with L rho+(g) = rho-(tau''^2 g) L exists and is UNIQUE (space dim 1, 1 invertible solution)
+[PASS] REPLAY-AA2b: L carries Q+ to Q- on all 256 spinors (an isometry (S+,Q+) -> (S-,Q-)): the twisted spin module is the other half-spin module, with its form
+[PASS] REPLAY-AA2c: REGISTERED EXPECTATION CONFIRMED: Phi is a permutation of the 360 points of EXACT order 3 (V -> S+ -> S- -> V) and Phi P(g) Phi^-1 = P(tau''^2(g)) for ALL 26 generators exactly -- the turn acts on states with footprint tau''^2 = tau''^-1
+[PASS] REPLAY-AA2d: Phi is not in P(Omega) (membership strip) and |<P(Omega), Phi>| = 522,547,200 = 3 |O8+(2)|: O8+(2):3 as an explicit permutation group on 360 points  -> order 522547200
+[t=  14.3s] stage 2 done
+
+------------------------------------------------------------------------------
+AJ0a -- replay: the still point on 360 points; the heart's class with transversal; its centralizer
+------------------------------------------------------------------------------
+[PASS] AJ0a: Phi equals the sealed cache; G2(2) lifted to 360 points: 12,096 distinct permutations whose vector-block parts are exactly the sealed G_list
+[t=  44.5s] class(x) with transversal: 89600 (28.9s)
+[PASS] AJ0b: class(x) has 89,600 elements and C_Omega(x) has order 1944 (SM-047 re-derived)
+
+------------------------------------------------------------------------------
+AJ1 -- the still point commutes with the turn; its twisted orders; the order-24 elements Phi.g8
+------------------------------------------------------------------------------
+  orders in G2(2): {1: 1, 2: 315, 3: 728, 4: 756, 6: 2520, 7: 1728, 8: 3024, 12: 3024}
+  orders of Phi.g over G2(2): {3: 729, 6: 2835, 12: 3780, 21: 1728, 24: 3024}
+  cycle types on 360 of the Phi.g of order 24: {'{24: 12, 12: 3, 6: 5, 3: 2}': 1512, '{24: 12, 12: 5, 6: 1, 3: 2}': 1512}
+[PASS] AJ1a: REGISTERED: Phi P(g) = P(g) Phi for ALL 12,096 g; the orders of Phi.g are exactly lcm(3, ord g): {3, 6, 12, 21, 24} with the census multiplicities (3: 729, 6: 2835, 12: 3780, 21: 1728, 24: 3024) -- NO eighteen: by SM-047's one class, Phi.c-bar is conjugate to no Phi.g with g at the still point; the maximal twisted order 24 IS at the still point (all 3,024 elements of order 8)
+[PASS] AJ1b: REGISTERED GUESS: both sealed order-24 cycle types appear among the Phi.g8  -> types found: 2, in numbers [1512, 1512]
+
+------------------------------------------------------------------------------
+AJ2 -- the heart at the still point: the 728 elements of order 3 of G2(2) against class(x)
+------------------------------------------------------------------------------
+  order-3 class of G2(2) of size 56: fixed dim on V 2, block cycle types [{3: 39, 1: 3}, {3: 39, 1: 3}, {3: 39, 1: 3}], in class(x): True
+  order-3 class of G2(2) of size 672: fixed dim on V 4, block cycle types [{3: 38, 1: 6}, {3: 38, 1: 6}, {3: 38, 1: 6}], in class(x): False
+[PASS] AJ2a: REGISTERED GUESS: the order-3 elements of G2(2) form two G2(2)-classes of sizes 56 and 672; exactly the class of 56 lies in class(x) (56 elements of the still point are hearts), the class of 672 does not  -> in class(x): 56 of 728
+  [obs] |C_{G2(2)}(heart)| = 216 (= 12096/56 = 216)
+
+------------------------------------------------------------------------------
+AJ3 -- the cube of the eighteen at the still point: order-6 elements of G2(2) with square in class(x)
+------------------------------------------------------------------------------
+  order-6 elements of G2(2): 2520; with square in class(x): 504
+  candidates conjugate to (Phi.c-bar)^3: 504 of 504
+[PASS] AJ3a: REGISTERED GUESS: at least one element of order 6 of G2(2) is conjugate in Omega to (Phi.c-bar)^3 -- the eighteen's cube is at the still point  -> conjugate: 504; block types of the candidates: {'[{6: 16, 3: 7, 1: 3}, {6: 16, 3: 7, 1: 3}, {6: 16, 3: 7, 1: 3}]': 504}
+
+------------------------------------------------------------------------------
+AJ4 -- the vector shadow turns into an eighteen
+------------------------------------------------------------------------------
