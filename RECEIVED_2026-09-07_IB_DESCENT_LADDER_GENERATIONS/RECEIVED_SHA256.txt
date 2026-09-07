@@ -1,0 +1,57 @@
+7305787ee6a9c10c84fc145ac47c9c8ceddaf0c7d5cd71179bfc083bc37921f3 *CANDIDATE_ Conjugacy Classes as Interior Angles.md
+15a30c3139c106538bbc1ca5d76ead1929985bcb3b8e80cbf68d826f2fc32d43 *CANDIDATE_ G(Γ) = Number of Nontrivial Conjugacy Classes _ π.md
+1e2a5ea6f2942b8eeb84364df8f2482ec3d5b010aa8363c6e8eecc207678a75b *CHECK_ Circle Shortening Before the Tube.md
+b401674e653f69ed1d162f60a03f454b4a00143da9eb16a30fe81a21f718f55f *CONCLUSION_ The Inbreath Has a Real Crystal Counterpart.md
+9e836fe79360558387ef959d5c887def2544d1b4458ca14997456a5c751f2b84 *CORRECTION_ Level 6 Is A₄, Not C₆ × C₂.md
+1b11d9fbd914b5352831eb72cb1e5bd0456b71b1371a9f2d0a0814362610ffba *FINDING_ 1_π Is Not a Standard Group Invariant.md
+959f77b527bb2d2fb07dac972b395dba5d42c2f917104ce0e52a22300a4f7e52 *FINDING_ 5 → 4 Is Not Sealed — Three C₂s Are Conjugate.md
+a1ba3ac94d0a772645ea8144327d1ee71e7934802b5feeaba0e0af1ab51ca4fc *FINDING_ Generation Masses Require an External Choice.md
+e7b5d2874527efe8d47c82d3c3459fdc86ee29fad2e52197b3856079f4f51aa0 *FINDING_ Generations Are Not Three Points on the 56-Board.md
+d70d2f49df12d829d1d03f5225e0332c7717a742fe53105ba26cd734afd92f42 *FINDING_ Remainders Cannot Be the Generation Weights.md
+26455af40f3055ebcd231f6cf4142ef493dcbb7943db73e73121a63119774a02 *FINDING_ The Generation Axis Selection Is the Vacuum Alignment Problem.md
+3c89fc433d313ba1c9bebd26fb2adc2a6ba39595ddb242ea3e57b81f2ad2b742 *FINDING_ The Inbreath Has No Downward Jump.md
+b53ea6644df25c88848d88c141d16d0a8a76875826378f53675b4900ead73049 *FINDING_ Ψ Cannot Act Through χ₈.md
+93e152ac4b8eef53f7ba6835d69e1cd5fc8d80f12d66234f7fa28b72f3097f51 *GEOMETRY OF THE THREE SECTORS.md
+ae41417764c8f57985f78315194436782fb35ed9abe90f6f3e8092258fae2d4f *HYPOTHESIS_ Every Level Has Its Own Glueball-Like Mass Agent.md
+3737d502cecf69f80e841a75e3f71c7cfcfcb7d7311f186030f350c95db1ceb2 *HYPOTHESIS_ Outbreath Is Decay, Inbreath Is Pure Embedding.md
+0e9115cb959d745181da5650e49aeb9d3e08d1fe42fd180cd399d488a32d79ea *HYPOTHESIS_ The Descent Is Nested Class Geometry.md
+ceef56a354182544faf008bd0829e704bd850e1994decc8c4bcdce46e8165957 *HYPOTHESIS_ The Descent Is a Ladder of Circles, Not a Spiral.md
+063859cc5e2c641203fa1e789dda18f177c066cf5685d5588887949b30369885 *HYPOTHESIS_ The Spiral Axis Gives the Flavon Its Shoulder.md
+39342d5acd33f82edae794eff2df8b73877a7f18198d4d7034aebe79946e77ff *PLAN_ From Generation Directions to Masses.md
+3a967832fc0b8e8e9bdfb3969457af195a808ddbdcf2fb76501e616020bb619d *PROMPT_ Find the Linear Tick 1_π as the Geometry Difference Between Neighbouring Groups.md
+c0602f8c9c32552050f8787fceecc8b57a45eb96734a35b815d1e62017f9e77b *PROMPT_ Verify the Two-Tick Model Through the Group Chain.md
+c096946c269bf6926e5c00b324f2e3bff8a21e70cfdde8f2e59d72688ab74b1d *REQUEST TO SELINA — Canonical Pair for the Ψ-Marker Test.md
+0857a84d76617f6332f6885ad7571dc785c8855c9e25e675e7404115760c7391 *RESULT_ A₄ → V₄ Is the Unique Pure Inbreath.md
+896f76121c5d2a21a101ee02358c8d953a3853069c799fe12620ae47a560604b *RESULT_ Class-Count Tick Sequence.md
+24331785872987f6508b3eced56675b4c4bd09b5b4b16a37bf458f90a638bfa0 *RESULT_ C₂ → {e} Is Realized in Tl₂Cd₂(SO₄)₃.md
+2a351f5c190da958caf43099c3b6165964aab3d8a8a146bee92a65f622464407 *RESULT_ Exact T → D₂ Transition Found, Soft Mode Refuted.md
+872162a7fb7a98e222072faaeda3ce03e07c75ec9689ccc6c52752c59c04b73c *RESULT_ Full Circle-Shortening Sequence Verified.md
+2f95b9336ed9502681aa7057e02d13caa984a1ae7596bfbf374352e0c5a96ad5 *RESULT_ Level 5 = V₄, Explicitly Sealed.md
+2914d5c1428718819e04140e39b744f4ddbdcb3f99ce47be1936fa4d508febe4 *RESULT_ Level 6 = A₄, Explicitly Sealed.md
+8498cd9f44407c7866ec9dd2129c91f4c1c925b5df1ec2f9e8ddf4be37db7016 *RESULT_ One Octet Flavon Splits the Sectors by Operator Order.md
+a525b91397cd1f56b46f5c2ec27cd12c8e6af5d1bac4512889f54971c018a097 *RESULT_ One Z₃ Shaping Symmetry Gives the 0,1,2 Sector Hierarchy.md
+2bd051d311a42f1e3b99db557b0731195e61611e9b2ec1a1ca5b174d7b0252e6 *RESULT_ PSL(2,7) → S₄ Is Combinatorial, Not Crystallographic.md
+3f5f0ac0a932a1a6f89963acc80ebed6ab438a0f60a2842eee6b2c169ff4f0b6 *RESULT_ S₄ → A₄ Is Chiral Symmetry Breaking.md
+3a41cba66f139fda6bb35e8ba5754dee996e63a75a77d058e0c28452199d9bf8 *RESULT_ The C₃-Freezing Is a Real Structural Order Parameter.md
+43863ba9cf7a0619704166bbaf841e39cf3c8d335d73a00aae5f76c6df9b2971 *RESULT_ The Descent Rhythm as Mode Switching.md
+9bfc592f203acbf62fb7f8e3456593677bba886ece4cd156a72508d9ea86da60 *RESULT_ The Inbreath Is Exactly A₄ → V₄.md
+7f96732c0020be6e19763deb1c5d6da465a713361972ae310c324f31a0beeb47 *RESULT_ The Inbreath Is Internal Symmetry Lowering.md
+a5ad9c94b4215767ab06fbe83969746ced37ca8bea7d14ec583fd1e29db1dcf6 *RESULT_ The Inbreath as Tetrahedral Orientational Ordering.md
+3cb96b17c38f81d9beb2ef3c25ee7df1122956b20606ffeab3e09bb24d0fedf3 *RESULT_ The Last Transition Is Pure Descent.md
+4a8893f664453b3efcb8a36c3ddf582822a453a81d1a903d21b97b82d896b103 *RESULT_ The Linear Tick Is the Class Defect, Not a Single Class.md
+f7f227f51d29958571061c0fbc53acc5bf7e18648f2eecc2deb2f27068846f93 *RESULT_ The Minimal Selector Is One S₃-Breaking Direction.md
+2d0c0b1755cfa157630cc9304c52390f0340153ac1f1ad78e1736d19585dc4cf *RESULT_ The Octet VEV Lifts Generations with a Sum Rule.md
+c9f0b072d6758ba47671e58460ba38542624d5b0c10f1969dba30535e3a27871 *RESULT_ The Yukawa Descent Is Sector-Blind.md
+2ab551a91b1b70ea6a070369472c40b0449d2e9462e6d210521db4e1ef1a2d45 *RESULT_ The π-Descent Is Formally Derived.md
+694b6d047722f7cc7915da3da422fbc8f5d15a3f389243f906a13f46d0c7f9d3 *RESULT_ Three Generations Peak at V₄.md
+529747d45238a80e7b3218be7e947426a870814abc6e6bcd718a0f2d89d494c5 *RESULT_ V₄ → C₂ Is Realized in Rochelle Salt.md
+7fdc91105aa1916c11d79404701b02e906ccd0170a64e15b66246b5073f6b01a *RESULT_ Yukawa Degrees of Freedom Follow the Descent.md
+75b6ab9c71ed00ef596ba49ac9cdd598b4d9267a280509a8d56771dca09e1a30 *STATUS_ The Generation Bridge Is Blocked by a Missing Linear Map.md
+bc8b3650c970ab14390e95845f5561e5df2d6b61702f3865551ba93946928470 *THE PHYSICAL DESCENT LADDER.md
+f1a4dc3dc09c8f916c427a2011f8b72b8505695c207fd96844751a36536756a4 *THE ZERO-SUM RULE FOR GENERATION WEIGHTS.md
+864b8c138c7e2baa4ae782addfaa39153d3b5618cbf8625b59f96d0152d46001 *THEOREM CANDIDATE_ The Inbreath Is the Abelian-Nonabelian Boundary.md
+58eb7bd79e5f6a8f05fe0b4bad31466edb9f3380577e7231af1dec1782100e35 *THEOREM_ A₄ → V₄ Is the Unique Lossless Transition.md
+1e75e79460fd505a850a4123c0db630d3f706dd16cac0954d64ac8e5d9cf04a5 *THEOREM_ The Inbreath Is the Abelian Boundary.md
+3f518185b0d8dab41bab650f7756ac056a4762c9b412ee7bebeaa75072fbb2ab *THEOREM_ The Inbreath Step Is Exactly A₄ → V₄.md
+fbae94fa67fe3aca6b107d97fd27aeddb36bb77f491e7b67c495e5554e6928d2 *UPDATED AXIS_ The Descent Now Reaches V₄.md
+df0973fdb1e4a4d3527e9c8bd3857f45cd7da46f6160ac58e664039de3a9b2c3 *WHY ONE BIT SURVIVES AT 2 → 1.md

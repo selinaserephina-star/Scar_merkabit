@@ -67,13 +67,13 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
-    title: "SCAR-MERKABIT JOINT REGISTRY v0.82 -- rows SM-001..SM-053"
+    title: "SCAR-MERKABIT JOINT REGISTRY v0.83 -- rows SM-001..SM-053"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
     scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: ba1b3e82c195a1641ced7086fd75c601c8aa5bf9355fc5dcc045a1d09e690a28
+    sha256: 77a05af0f9207754c7211abab7b7bbb8e706500de62a952994d5d3ab7c474cb0
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
@@ -303,7 +303,7 @@ units:
       bilingual gates); awaiting Ilya's review pass + joint bibliography.
       Rendered .docx alongside.
     scope: paper
-    sha256: 30c82d5ade1056405c3de18343a1f7553a94cb7eb45334606d0527c54a1bc2ec
+    sha256: 9de01c4b3afdc3e871bf528308ccfb6a8f0093ee25b31639fc783fcd66d00ec9
 
   - id: report-verification
     path: to_Ilya/Scar_Cat_Verification_Report_2026-08-30.md
