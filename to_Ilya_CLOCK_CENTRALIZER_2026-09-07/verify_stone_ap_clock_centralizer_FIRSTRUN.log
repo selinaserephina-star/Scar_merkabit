@@ -1,0 +1,78 @@
+==============================================================================
+STONE AP -- THE CLOCK'S LINEAR CENTRALIZER (IB's Psi-marker test answered without a choice)
+==============================================================================
+[PASS] AP0: the brief is sha-locked: sha256(BRIEF_STONE_AP_CLOCK_CENTRALIZER.md) equals BRIEF_STONE_AP_LOCK.sha256  -> 68959fb4e7c7450a...
+  scar56_data.json sha256 0a817fc5a2aa7cd4 (READ-ONLY)
+
+------------------------------------------------------------------------------
+AP1 -- the board: pair type = sign of inner product; iota and the seven reflections linear
+------------------------------------------------------------------------------
+[PASS] AP1a: the pair type IS the sign of the E7 inner product: P <-> +1/2 (1512 ordered pairs), S <-> -1/2 (1512), v <-> -3/2 (56)
+[PASS] AP1b: iota preserves every pair type and has trace -7 on the seven; each simple reflection preserves every pair type with trace 5  -> traces iota -7, reflections [Fraction(5, 1)]
+  [P] a permutation of the 56 weights preserving every pairwise inner product extends to an isometry of the lattice they span;
+      Aut of the E7 lattice is W(E7) (which contains -1 = iota) -- so 'linear' below means: preserves every pair type.
+  [P] trace on the seven: the 56 weights form one W-orbit spanning R^7, so sum_k w_k w_k^T is W-invariant = c.I and
+      tr(A) = 7 * sum_k <A w_k, w_k> / (56 |w|^2); validated on iota (-7) and the reflections (5) above.
+
+------------------------------------------------------------------------------
+AP2 -- the centralizer of Psi in S56, explicitly
+------------------------------------------------------------------------------
+[PASS] AP2a: Psi has cycle type [18,18,18,2] (SM-012)
+[PASS] AP2b: the constructed centralizer has 18^3 * 3! * 2 = 69,984 distinct elements, every one commuting with Psi (= the whole centralizer, [P] |C(sigma)| = prod m_i! l_i^m_i)  -> distinct 69984
+[PASS] AP2c: its involutions number 231 = 15 + 3*72  -> 231
+[t=   0.7s] centralizer built
+
+------------------------------------------------------------------------------
+AP3 -- REGISTERED: the centralizer meets W(E7) in the identity alone
+------------------------------------------------------------------------------
+[PASS] AP3a: REGISTERED: exactly one of the 69,984 elements of C_S56(Psi) lies in W(E7), and it is the identity  -> linear elements found: 1, orders [1]
+[PASS] AP3b: REGISTERED: 0 of the 231 involutions commuting with Psi is linear -- no C2 of W(E7) is normalized by the clock
+[PASS] AP3c: Psi^9 and iota*Psi^9 are involutions commuting with Psi and neither is linear (SM-016 re-seen: nu(Psi^9) > 0)  -> kept pairs: Psi^9 948/1540, iota*Psi^9 948/1540
+[t=   0.7s] AP3 done
+
+------------------------------------------------------------------------------
+AP7 -- REGISTERED GUESS: the best linear agreement among the 231 is 1432/1540 with maximizers of pr's type 2^27 1^2
+------------------------------------------------------------------------------
+[FAIL] AP7: REGISTERED GUESS: max kept = 1432/1540 (pr's 92.99 %%) and all maximizers have type 2^27 1^2  -> max kept 1432/1540 = 0.9299; 1 maximizers with types {'2^1 1^54': 1}
+  [INVERTED] recorded at equal prominence: the registered guess AP7 fails as stated; the numbers above stand as the finding.
+  [obs] pr itself: kept 1432/1540, type 2^27 1^2, commutes with Psi: False
+  [obs] kept-pair histogram over the 231 involutions: [(1432, 1), (1136, 1), (1084, 1), (1048, 1), (1044, 1), (1028, 1), (1016, 1), (984, 1)]
+
+------------------------------------------------------------------------------
+AP4 -- a bridge PSL(2,7) inside W(E7) on the 56 (SM-013 re-seen), by targeted (2,3,7) search
+------------------------------------------------------------------------------
+[PASS] AP4a: a PSL(2,7) transitive on the 28 iota-pairs found inside W(E7) (order 168; (2,3,7) pairs tried 1; samples 34369)
+[PASS] AP4b: every element of the copy is linear (in W(E7)); orbits on the 56 are [28, 28] (SM-013's DQ-1)  -> [28, 28]
+[FAIL] AP4c: class census 1/21/56/42/24/24 (orders 1,2,3,4,7,7) -- PSL(2,7)  -> [(1, 1), (21, 2), (24, 7), (42, 4), (56, 3)]
+[FAIL] AP4d: REGISTERED: fixed points on the 56 by class 56/8/2/4/0/0 = SM-013's permutation character 2(chi1+2chi6+chi7+chi8)  -> {(1, 1): 56, (2, 21): 8, (3, 56): 2, (4, 42): 0, (7, 24): 0}
+[PASS] AP4e: REGISTERED: traces on the seven by class 7/-1/1/-1/0/0 = chi7 -- the seven restricts irreducibly to the bridge class  -> {(1, 1): Fraction(7, 1), (2, 21): Fraction(-1, 1), (3, 56): Fraction(1, 1), (4, 42): Fraction(-1, 1), (7, 24): Fraction(0, 1)}
+  [obs] involution fixed-point spectrum of W(E7) on the 56, as sampled (fixed points: count): [(0, 287), (8, 1), (16, 1481)]
+[t=   2.5s] AP4 done
+
+------------------------------------------------------------------------------
+AP5 -- his test, instantiated for every (2,3,7) pair of the copy
+------------------------------------------------------------------------------
+[PASS] AP5a: the copy has 21 involutions, 56 elements of order 3, and 336 (2,3,7)-generating pairs  -> 21 / 56 / 336
+[PASS] AP5b: for all 336 pairs his words give S4 (24) > A4 (12, normal) > V4 (4, normal, three distinct C2's in it), the three C2's one A4-orbit with normalizer of order 4  -> {(True, True, 0): 336}
+[PASS] AP5c: the V4's reached are exactly the 14 V4 subgroups of the copy  -> 14 reached of 14
+[PASS] AP5d: for EVERY pair, 0 of the 3 C2's is normalized by Psi (all 21 involutions of the copy fail) -- his test NOT SEALED, and by AP3 for every copy of the still point and every PSL(2,7) in W(E7)  -> Psi-fixed C2's summed over 336 pairs: 0
+[t=   3.4s] AP5 done
+
+------------------------------------------------------------------------------
+AP6 -- his two channels D and dL on the chain, in the copy
+------------------------------------------------------------------------------
+[PASS] AP6a: nontrivial class counts along the chain 5, 4, 3, 3, 1, 0  -> [('PSL(2,7)', 5), ('S4', 4), ('A4', 3), ('V4', 3), ('C2', 1), ('{e}', 0)]
+  PSL(2,7)  -> S4     lost 2  created 1  D 1  c_nt diff 1
+  S4        -> A4     lost 2  created 1  D 1  c_nt diff 1
+  A4        -> V4     lost 2  created 2  D 0  c_nt diff 0
+  V4        -> C2     lost 2  created 0  D 2  c_nt diff 2
+  C2        -> {e}    lost 1  created 0  D 1  c_nt diff 1
+[PASS] AP6b: REGISTERED: (lost, created) = (2,1),(2,1),(2,2),(2,0),(1,0); D = 1,1,0,2,1 = c_nt(G) - c_nt(H) on every step (identically: c_nt(H) = c_nt(G) - lost + created)
+[PASS] AP6c: his D(A4,V4) = 2 ('new by splitting: none') is refuted: A4's involution class splits into V4's three, created = 2, D = 0
+  'lossless' is class-count only: |A4|/|V4| = 3, log2(3) = 1.5850 bits of order lost at that step (his own Level-5 number)
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 19 checks passed, 3 failed  FAILED: ['AP7', 'AP4c', 'AP4d']
+[t=   3.5s] done

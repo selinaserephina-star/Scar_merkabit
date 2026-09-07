@@ -1,0 +1,14 @@
+board ok: iota linear, trace -7; the 7 simple reflections linear, trace 5   [t=0.0s]
+centralizer of Psi in S56: order 69984; involutions in it: 231 (expected 15 + 3*72 = 231)
+involutions commuting with Psi that lie in W(E7): 0
+best pair-type agreement among the 231 (1.0 = linear): 0.9299
+Psi^9: involution True  linear False  score 0.6156  iota*Psi^9 linear False  score 0.6156
+ALL 69984 elements of C_S56(Psi) tested: 1 lie in W(E7), by order {1: 1}   [t=1.5s]
+sampled 60000 elements of W(E7): 2 involutions of type 2^24 1^8, 488 order-3 of type 3^18 1^2   [t=5.1s]
+   involution cycle types seen (fixed points -> count): [(0, 467), (8, 3), (16, 2610)]
+(2,3,7) pairs with |ab| = 7 tried: 1; bridge copy found: True   [t=5.1s]
+bridge PSL(2,7) on the 56: order 168, transitive on the 28 pairs, 21 involutions
+   its involutions: (cycle type on 56, trace on 7): {((2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 1, 1, 1, 1, 1), -1.0): 21}
+   involutions of THIS copy commuting with Psi: 0
+   compare: linear involutions commuting with Psi (above) have (cycle type, trace7) = []
+done [t=5.1s]
