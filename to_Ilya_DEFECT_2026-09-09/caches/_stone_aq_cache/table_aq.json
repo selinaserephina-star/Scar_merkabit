@@ -1,0 +1,1551 @@
+{
+ "brief_sha": "5b389725963fa5db9175ab95c1d6f36bf7fc6addffcc0687524f72f06578eb06",
+ "table": [
+  {
+   "fam": "A",
+   "n": 2,
+   "k": 1,
+   "N": 3,
+   "P": 2,
+   "h": 3,
+   "chain": true,
+   "cycle": [
+    3
+   ],
+   "order": 3,
+   "cox_cycle": [
+    [
+     3
+    ]
+   ],
+   "n_cox": 2,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 3,
+   "nu": 0,
+   "cent": 3,
+   "inW": true,
+   "W_enum": 6,
+   "W_formula": 6,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 2,
+   "k": 2,
+   "N": 3,
+   "P": 2,
+   "h": 3,
+   "chain": true,
+   "cycle": [
+    3
+   ],
+   "order": 3,
+   "cox_cycle": [
+    [
+     3
+    ]
+   ],
+   "n_cox": 2,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 3,
+   "nu": 0,
+   "cent": 3,
+   "inW": true,
+   "W_enum": 6,
+   "W_formula": 6,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 1,
+   "N": 4,
+   "P": 3,
+   "h": 4,
+   "chain": true,
+   "cycle": [
+    4
+   ],
+   "order": 4,
+   "cox_cycle": [
+    [
+     4
+    ]
+   ],
+   "n_cox": 4,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 4,
+   "nu": 0,
+   "cent": 4,
+   "inW": true,
+   "W_enum": 24,
+   "W_formula": 24,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 2,
+   "N": 6,
+   "P": 4,
+   "h": 4,
+   "chain": false,
+   "cycle": [
+    4,
+    2
+   ],
+   "order": 4,
+   "cox_cycle": [
+    [
+     4,
+     2
+    ]
+   ],
+   "n_cox": 4,
+   "kept": [
+    11,
+    15
+   ],
+   "kept_f": 0.7333333333333333,
+   "kappa0": 0.68,
+   "agree": 3,
+   "nu": 3,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 24,
+   "W_formula": 24,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 3,
+   "N": 4,
+   "P": 3,
+   "h": 4,
+   "chain": true,
+   "cycle": [
+    4
+   ],
+   "order": 4,
+   "cox_cycle": [
+    [
+     4
+    ]
+   ],
+   "n_cox": 4,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 4,
+   "nu": 0,
+   "cent": 4,
+   "inW": true,
+   "W_enum": 24,
+   "W_formula": 24,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 1,
+   "N": 5,
+   "P": 4,
+   "h": 5,
+   "chain": true,
+   "cycle": [
+    5
+   ],
+   "order": 5,
+   "cox_cycle": [
+    [
+     5
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 5,
+   "nu": 0,
+   "cent": 5,
+   "inW": true,
+   "W_enum": 120,
+   "W_formula": 120,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 2,
+   "N": 10,
+   "P": 6,
+   "h": 5,
+   "chain": false,
+   "cycle": [
+    5,
+    5
+   ],
+   "order": 5,
+   "cox_cycle": [
+    [
+     5,
+     5
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    29,
+    45
+   ],
+   "kept_f": 0.6444444444444445,
+   "kappa0": 0.5555555555555556,
+   "agree": 5,
+   "nu": 5,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 120,
+   "W_formula": 120,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 3,
+   "N": 10,
+   "P": 6,
+   "h": 5,
+   "chain": false,
+   "cycle": [
+    5,
+    5
+   ],
+   "order": 5,
+   "cox_cycle": [
+    [
+     5,
+     5
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    29,
+    45
+   ],
+   "kept_f": 0.6444444444444445,
+   "kappa0": 0.5555555555555556,
+   "agree": 5,
+   "nu": 5,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 120,
+   "W_formula": 120,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 4,
+   "N": 5,
+   "P": 4,
+   "h": 5,
+   "chain": true,
+   "cycle": [
+    5
+   ],
+   "order": 5,
+   "cox_cycle": [
+    [
+     5
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 5,
+   "nu": 0,
+   "cent": 5,
+   "inW": true,
+   "W_enum": 120,
+   "W_formula": 120,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 1,
+   "N": 6,
+   "P": 5,
+   "h": 6,
+   "chain": true,
+   "cycle": [
+    6
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 6,
+   "nu": 0,
+   "cent": 6,
+   "inW": true,
+   "W_enum": 720,
+   "W_formula": 720,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 2,
+   "N": 15,
+   "P": 8,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    6,
+    3
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     6,
+     3
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    71,
+    105
+   ],
+   "kept_f": 0.6761904761904762,
+   "kappa0": 0.5102040816326531,
+   "agree": 6,
+   "nu": 9,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 720,
+   "W_formula": 720,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 3,
+   "N": 20,
+   "P": 9,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    6,
+    6,
+    2
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     6,
+     6,
+     2
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    58,
+    95
+   ],
+   "kept_f": 0.6105263157894737,
+   "kappa0": 0.4515235457063712,
+   "agree": 7,
+   "nu": 13,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 720,
+   "W_formula": 720,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 4,
+   "N": 15,
+   "P": 8,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    6,
+    3
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     6,
+     3
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    71,
+    105
+   ],
+   "kept_f": 0.6761904761904762,
+   "kappa0": 0.5102040816326531,
+   "agree": 6,
+   "nu": 9,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 720,
+   "W_formula": 720,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 5,
+   "N": 6,
+   "P": 5,
+   "h": 6,
+   "chain": true,
+   "cycle": [
+    6
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 6,
+   "nu": 0,
+   "cent": 6,
+   "inW": true,
+   "W_enum": 720,
+   "W_formula": 720,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 1,
+   "N": 7,
+   "P": 6,
+   "h": 7,
+   "chain": true,
+   "cycle": [
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 7,
+   "nu": 0,
+   "cent": 7,
+   "inW": true,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 2,
+   "N": 21,
+   "P": 10,
+   "h": 7,
+   "chain": false,
+   "cycle": [
+    7,
+    7,
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7,
+     7,
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    76,
+    105
+   ],
+   "kept_f": 0.7238095238095238,
+   "kappa0": 0.5,
+   "agree": 10,
+   "nu": 11,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 3,
+   "N": 35,
+   "P": 12,
+   "h": 7,
+   "chain": false,
+   "cycle": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7,
+     7,
+     7,
+     7,
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    339,
+    595
+   ],
+   "kept_f": 0.5697478991596638,
+   "kappa0": 0.4186851211072664,
+   "agree": 10,
+   "nu": 25,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 4,
+   "N": 35,
+   "P": 12,
+   "h": 7,
+   "chain": false,
+   "cycle": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7,
+     7,
+     7,
+     7,
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    339,
+    595
+   ],
+   "kept_f": 0.5697478991596638,
+   "kappa0": 0.4186851211072664,
+   "agree": 10,
+   "nu": 25,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 5,
+   "N": 21,
+   "P": 10,
+   "h": 7,
+   "chain": false,
+   "cycle": [
+    7,
+    7,
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7,
+     7,
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    76,
+    105
+   ],
+   "kept_f": 0.7238095238095238,
+   "kappa0": 0.5,
+   "agree": 10,
+   "nu": 11,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 6,
+   "N": 7,
+   "P": 6,
+   "h": 7,
+   "chain": true,
+   "cycle": [
+    7
+   ],
+   "order": 7,
+   "cox_cycle": [
+    [
+     7
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 7,
+   "nu": 0,
+   "cent": 7,
+   "inW": true,
+   "W_enum": 5040,
+   "W_formula": 5040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 1,
+   "N": 8,
+   "P": 7,
+   "h": 8,
+   "chain": true,
+   "cycle": [
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 8,
+   "nu": 0,
+   "cent": 8,
+   "inW": true,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 2,
+   "N": 28,
+   "P": 12,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8,
+    8,
+    4
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8,
+     8,
+     4
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    145,
+    189
+   ],
+   "kept_f": 0.7671957671957672,
+   "kappa0": 0.5061728395061729,
+   "agree": 15,
+   "nu": 13,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 3,
+   "N": 56,
+   "P": 15,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    431,
+    770
+   ],
+   "kept_f": 0.5597402597402598,
+   "kappa0": 0.4049586776859504,
+   "agree": 12,
+   "nu": 44,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 4,
+   "N": 70,
+   "P": 16,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    4,
+    2
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     4,
+     2
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    417,
+    805
+   ],
+   "kept_f": 0.5180124223602485,
+   "kappa0": 0.3799621928166352,
+   "agree": 12,
+   "nu": 56,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 5,
+   "N": 56,
+   "P": 15,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8,
+     8,
+     8,
+     8,
+     8,
+     8
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    431,
+    770
+   ],
+   "kept_f": 0.5597402597402598,
+   "kappa0": 0.4049586776859504,
+   "agree": 12,
+   "nu": 44,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 6,
+   "N": 28,
+   "P": 12,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8,
+    8,
+    4
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8,
+     8,
+     4
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    145,
+    189
+   ],
+   "kept_f": 0.7671957671957672,
+   "kappa0": 0.5061728395061729,
+   "agree": 15,
+   "nu": 13,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 7,
+   "N": 8,
+   "P": 7,
+   "h": 8,
+   "chain": true,
+   "cycle": [
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    1,
+    1
+   ],
+   "kept_f": 1.0,
+   "kappa0": 1.0,
+   "agree": 8,
+   "nu": 0,
+   "cent": 8,
+   "inW": true,
+   "W_enum": 40320,
+   "W_formula": 40320,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 1,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    2
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     2
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    11,
+    14
+   ],
+   "kept_f": 0.7857142857142857,
+   "kappa0": 0.7551020408163265,
+   "agree": 4,
+   "nu": 3,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 192,
+   "W_formula": 192,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 3,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    2
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     2
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    11,
+    14
+   ],
+   "kept_f": 0.7857142857142857,
+   "kappa0": 0.7551020408163265,
+   "agree": 4,
+   "nu": 3,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 192,
+   "W_formula": 192,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 4,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "chain": false,
+   "cycle": [
+    6,
+    2
+   ],
+   "order": 6,
+   "cox_cycle": [
+    [
+     6,
+     2
+    ]
+   ],
+   "n_cox": 8,
+   "kept": [
+    11,
+    14
+   ],
+   "kept_f": 0.7857142857142857,
+   "kappa0": 0.7551020408163265,
+   "agree": 4,
+   "nu": 3,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 192,
+   "W_formula": 192,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 1,
+   "N": 10,
+   "P": 8,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    2
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     2
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    37,
+    45
+   ],
+   "kept_f": 0.8222222222222222,
+   "kappa0": 0.8024691358024691,
+   "agree": 5,
+   "nu": 5,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 1920,
+   "W_formula": 1920,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 4,
+   "N": 16,
+   "P": 10,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    19,
+    30
+   ],
+   "kept_f": 0.6333333333333333,
+   "kappa0": 0.5555555555555556,
+   "agree": 5,
+   "nu": 10,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 1920,
+   "W_formula": 1920,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 5,
+   "N": 16,
+   "P": 10,
+   "h": 8,
+   "chain": false,
+   "cycle": [
+    8,
+    8
+   ],
+   "order": 8,
+   "cox_cycle": [
+    [
+     8,
+     8
+    ]
+   ],
+   "n_cox": 16,
+   "kept": [
+    19,
+    30
+   ],
+   "kept_f": 0.6333333333333333,
+   "kappa0": 0.5555555555555556,
+   "agree": 5,
+   "nu": 10,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 1920,
+   "W_formula": 1920,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 1,
+   "N": 12,
+   "P": 10,
+   "h": 10,
+   "chain": false,
+   "cycle": [
+    10,
+    2
+   ],
+   "order": 10,
+   "cox_cycle": [
+    [
+     10,
+     2
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    28,
+    33
+   ],
+   "kept_f": 0.8484848484848485,
+   "kappa0": 0.8347107438016529,
+   "agree": 6,
+   "nu": 5,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 23040,
+   "W_formula": 23040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 5,
+   "N": 32,
+   "P": 15,
+   "h": 10,
+   "chain": false,
+   "cycle": [
+    10,
+    10,
+    10,
+    2
+   ],
+   "order": 10,
+   "cox_cycle": [
+    [
+     10,
+     10,
+     10,
+     2
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    79,
+    124
+   ],
+   "kept_f": 0.6370967741935484,
+   "kappa0": 0.46930280957336107,
+   "agree": 9,
+   "nu": 19,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 23040,
+   "W_formula": 23040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 6,
+   "N": 32,
+   "P": 15,
+   "h": 10,
+   "chain": false,
+   "cycle": [
+    10,
+    10,
+    10,
+    2
+   ],
+   "order": 10,
+   "cox_cycle": [
+    [
+     10,
+     10,
+     10,
+     2
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    79,
+    124
+   ],
+   "kept_f": 0.6370967741935484,
+   "kappa0": 0.46930280957336107,
+   "agree": 9,
+   "nu": 19,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 23040,
+   "W_formula": 23040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 1,
+   "N": 14,
+   "P": 12,
+   "h": 12,
+   "chain": false,
+   "cycle": [
+    12,
+    2
+   ],
+   "order": 12,
+   "cox_cycle": [
+    [
+     12,
+     2
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    79,
+    91
+   ],
+   "kept_f": 0.8681318681318682,
+   "kappa0": 0.8579881656804734,
+   "agree": 7,
+   "nu": 7,
+   "cent": 2,
+   "inW": false,
+   "W_enum": 322560,
+   "W_formula": 322560,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 6,
+   "N": 64,
+   "P": 21,
+   "h": 12,
+   "chain": false,
+   "cycle": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    4
+   ],
+   "order": 12,
+   "cox_cycle": [
+    [
+     12,
+     12,
+     12,
+     12,
+     12,
+     4
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    295,
+    504
+   ],
+   "kept_f": 0.5853174603174603,
+   "kappa0": 0.43209876543209874,
+   "agree": 13,
+   "nu": 48,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 322560,
+   "W_formula": 322560,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 7,
+   "N": 64,
+   "P": 21,
+   "h": 12,
+   "chain": false,
+   "cycle": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    4
+   ],
+   "order": 12,
+   "cox_cycle": [
+    [
+     12,
+     12,
+     12,
+     12,
+     12,
+     4
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    295,
+    504
+   ],
+   "kept_f": 0.5853174603174603,
+   "kappa0": 0.43209876543209874,
+   "agree": 13,
+   "nu": 48,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 322560,
+   "W_formula": 322560,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "E",
+   "n": 6,
+   "k": 1,
+   "N": 27,
+   "P": 16,
+   "h": 12,
+   "chain": false,
+   "cycle": [
+    12,
+    12,
+    3
+   ],
+   "order": 12,
+   "cox_cycle": [
+    [
+     12,
+     12,
+     3
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    223,
+    351
+   ],
+   "kept_f": 0.6353276353276354,
+   "kappa0": 0.5266272189349113,
+   "agree": 9,
+   "nu": 15,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 51840,
+   "W_formula": 51840,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "E",
+   "n": 6,
+   "k": 6,
+   "N": 27,
+   "P": 16,
+   "h": 12,
+   "chain": false,
+   "cycle": [
+    12,
+    12,
+    3
+   ],
+   "order": 12,
+   "cox_cycle": [
+    [
+     12,
+     12,
+     3
+    ]
+   ],
+   "n_cox": 32,
+   "kept": [
+    223,
+    351
+   ],
+   "kept_f": 0.6353276353276354,
+   "kappa0": 0.5266272189349113,
+   "agree": 9,
+   "nu": 15,
+   "cent": 1,
+   "inW": false,
+   "W_enum": 51840,
+   "W_formula": 51840,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  },
+  {
+   "fam": "E",
+   "n": 7,
+   "k": 7,
+   "N": 56,
+   "P": 27,
+   "h": 18,
+   "chain": false,
+   "cycle": [
+    18,
+    18,
+    18,
+    2
+   ],
+   "order": 18,
+   "cox_cycle": [
+    [
+     18,
+     18,
+     18,
+     2
+    ]
+   ],
+   "n_cox": 64,
+   "kept": [
+    501,
+    770
+   ],
+   "kept_f": 0.6506493506493507,
+   "kappa0": 0.48231404958677687,
+   "agree": 14,
+   "nu": null,
+   "cent": 1,
+   "inW": false,
+   "W_enum": null,
+   "W_formula": 2903040,
+   "aq7_bad": 0,
+   "cox_ct_match": true
+  }
+ ]
+}
