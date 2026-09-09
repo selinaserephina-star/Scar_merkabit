@@ -1,0 +1,118 @@
+==============================================================================
+STONE AS -- THE SHARED GRAMMAR (W(E7) against its clock-conjugates)
+==============================================================================
+[PASS] AS0: the brief is sha-locked: sha256(BRIEF_STONE_AS_SHARED_GRAMMAR.md) equals BRIEF_STONE_AS_LOCK.sha256  -> ee603df0317966de...
+  board block loaded verbatim from verify_stone_ap_clock_centralizer.py (sha256 afc4e1898b0247f3)
+
+------------------------------------------------------------------------------
+AS1 -- enumerating W(E7) on the 56 by breadth-first closure
+------------------------------------------------------------------------------
+[t=   0.0s] layer 1: 7 new, 8 total
+[t=   0.0s] layer 2: 27 new, 35 total
+[t=   0.0s] layer 3: 77 new, 112 total
+[t=   0.0s] layer 4: 182 new, 294 total
+[t=   0.0s] layer 5: 378 new, 672 total
+[t=   0.0s] layer 6: 713 new, 1385 total
+[t=   0.0s] layer 7: 1247 new, 2632 total
+[t=   0.0s] layer 8: 2051 new, 4683 total
+[t=   0.0s] layer 9: 3205 new, 7888 total
+[t=   0.0s] layer 10: 4795 new, 12683 total
+[t=   0.0s] layer 11: 6909 new, 19592 total
+[t=   0.1s] layer 12: 9632 new, 29224 total
+[t=   0.1s] layer 13: 13040 new, 42264 total
+[t=   0.2s] layer 14: 17194 new, 59458 total
+[t=   0.2s] layer 15: 22134 new, 81592 total
+[t=   0.3s] layer 16: 27874 new, 109466 total
+[t=   0.4s] layer 17: 34398 new, 143864 total
+[t=   0.6s] layer 18: 41657 new, 185521 total
+[t=   0.7s] layer 19: 49567 new, 235088 total
+[t=   0.9s] layer 20: 58009 new, 293097 total
+[t=   1.2s] layer 21: 66831 new, 359928 total
+[t=   1.4s] layer 22: 75852 new, 435780 total
+[t=   1.8s] layer 23: 84868 new, 520648 total
+[t=   2.1s] layer 24: 93659 new, 614307 total
+[t=   2.5s] layer 25: 101997 new, 716304 total
+[t=   3.1s] layer 26: 109655 new, 825959 total
+[t=   4.0s] layer 27: 116417 new, 942376 total
+[t=   4.6s] layer 28: 122087 new, 1064463 total
+[t=   5.1s] layer 29: 126497 new, 1190960 total
+[t=   5.7s] layer 30: 129514 new, 1320474 total
+[t=   6.4s] layer 31: 131046 new, 1451520 total
+[t=   7.0s] layer 32: 131046 new, 1582566 total
+[t=   7.6s] layer 33: 129514 new, 1712080 total
+[t=   8.2s] layer 34: 126497 new, 1838577 total
+[t=   8.8s] layer 35: 122087 new, 1960664 total
+[t=   9.5s] layer 36: 116417 new, 2077081 total
+[t=  10.1s] layer 37: 109655 new, 2186736 total
+[t=  10.6s] layer 38: 101997 new, 2288733 total
+[t=  11.1s] layer 39: 93659 new, 2382392 total
+[t=  11.5s] layer 40: 84868 new, 2467260 total
+[t=  11.9s] layer 41: 75852 new, 2543112 total
+[t=  12.6s] layer 42: 66831 new, 2609943 total
+[t=  13.3s] layer 43: 58009 new, 2667952 total
+[t=  13.8s] layer 44: 49567 new, 2717519 total
+[t=  14.3s] layer 45: 41657 new, 2759176 total
+[t=  14.7s] layer 46: 34398 new, 2793574 total
+[t=  15.0s] layer 47: 27874 new, 2821448 total
+[t=  15.2s] layer 48: 22134 new, 2843582 total
+[t=  15.4s] layer 49: 17194 new, 2860776 total
+[t=  15.6s] layer 50: 13040 new, 2873816 total
+[t=  15.7s] layer 51: 9632 new, 2883448 total
+[t=  15.8s] layer 52: 6909 new, 2890357 total
+[t=  15.8s] layer 53: 4795 new, 2895152 total
+[t=  15.9s] layer 54: 3205 new, 2898357 total
+[t=  15.9s] layer 55: 2051 new, 2900408 total
+[t=  15.9s] layer 56: 1247 new, 2901655 total
+[t=  15.9s] layer 57: 713 new, 2902368 total
+[t=  15.9s] layer 58: 378 new, 2902746 total
+[t=  15.9s] layer 59: 182 new, 2902928 total
+[t=  15.9s] layer 60: 77 new, 2903005 total
+[t=  15.9s] layer 61: 27 new, 2903032 total
+[t=  15.9s] layer 62: 7 new, 2903039 total
+[t=  15.9s] layer 63: 1 new, 2903040 total
+[t=  15.9s] layer 63: 0 new, 2903040 total
+[PASS] AS1a: W has exactly 2,903,040 elements on the 56  -> 2903040
+[PASS] AS1b: every element of W preserves every pair type (the isometry criterion is consistent)  -> 2903040
+[PASS] AS1c: the 63 reflections form one W-class; iota in W; Psi and pr not in W  -> 63
+[t=  87.1s] AS1 done
+
+------------------------------------------------------------------------------
+AS2/AS3 -- what the clock and the mirror generate with W; the mirror as a Weyl element times a pair flip
+------------------------------------------------------------------------------
+[PASS] AS2a: Psi, iota and the reflections are even; <W, Psi> = A56 (order 56!/2)
+[PASS] AS2b: |<W, pr>| = 2^28 * |Sp6(2)| = 2^37 * 3^4 * 5 * 7  -> 389639433093120
+[PASS] AS2c: pr is odd and <W, Psi, pr> = S56
+[t= 104.4s] generated groups done
+[PASS] AS3a: pr fixes exactly the two poles, which form an iota-pair; w = pr o (pole swap) is a Weyl element (SM-016's nu(pr) = 2 re-seen)
+[PASS] AS3b: W is transitive on the 28 iota-pairs, its image there has order |Sp6(2)| = 1,451,520 (kernel <iota>); every single pair-flip lies in <W, pr>  -> |image| = 1451520
+[PASS] AS3c: hence <W, pr> = (2^28 pair-flips) . W with (2^28) ∩ W = <iota>: order 2^28 * |W| / 2, as measured
+[t= 104.5s] AS3 done
+
+------------------------------------------------------------------------------
+AS4 -- REGISTERED GUESS: W ∩ Psi^k W Psi^-k = {1} for k != 9, {1, iota} for k = 9
+------------------------------------------------------------------------------
+[t= 107.0s] k =  1: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 109.7s] k =  2: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 112.3s] k =  3: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 114.9s] k =  4: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 117.6s] k =  5: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 120.2s] k =  6: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 122.7s] k =  7: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 125.3s] k =  8: near-survivors        1, survivors 1  Counter({'1': 1})
+[t= 186.2s] k =  9: near-survivors  2903040, survivors 2  Counter({'1': 1, 'iota': 1})
+[t= 187.5s] k = 17: near-survivors        1, survivors 1  Counter({'1': 1})
+[PASS] AS4: REGISTERED GUESS: |W ∩ W_k| = 1 for k = 1..8 and W ∩ W_9 = {1, iota}  -> {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 2, 17: 1}
+[PASS] AS4b: k and 18-k give intersections of equal order (checked k = 1, 17)
+
+------------------------------------------------------------------------------
+AS5/AS6 -- the reflections and the bridge copy's involutions under every tick
+------------------------------------------------------------------------------
+[PASS] AS5: no reflection of W is linear after conjugation by Psi^k, k = 1..17  -> {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0}
+[PASS] AS6: the bridge copy has order 168 with 21 involutions, and none is linear after conjugation by Psi^k, k = 1..17  -> {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0, 13: 0, 14: 0, 15: 0, 16: 0, 17: 0}
+  [obs] AS7 near-survivor profile (elements of W whose Psi^k-conjugate still commutes with iota): {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 2903040, 17: 1}
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 14 checks passed, 0 failed
+[t= 187.6s] done
