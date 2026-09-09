@@ -1,0 +1,61 @@
+==============================================================================
+STONE AU -- THE REVERSAL THEOREM, THE SHADOW, AND THE MIRROR AS THE PRODUCT OF TWO REVERSALS
+==============================================================================
+[PASS] AU0: the brief is sha-locked: sha256(BRIEF_STONE_AU_TWO_REVERSALS.md) equals BRIEF_STONE_AU_LOCK.sha256  -> 90061d8747ebf623...
+  Minuscule machine loaded verbatim from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993)
+
+------------------------------------------------------------------------------
+AU1 -- the reversal theorem on all 42 boards; AU2 -- the shadow corollary on the self-dual ones
+------------------------------------------------------------------------------
+[t=  24.1s] 42 boards done
+[PASS] AU1: on all 42 boards w0 = -sigma lies in W, sends the top to the bottom, and w0 R w0 = R^-1
+[PASS] AU2: on every self-dual board (12) and every k: #antipodal pairs preserved by R^k = fix(R^2k)/2; E7 column = [1, 1, 1, 1, 1, 1, 1, 1, 28, 1, 1, 1, 1, 1, 1, 1, 1]  -> [('A', 3, 2), ('A', 5, 3), ('A', 7, 4), ('D', 4, 1), ('D', 4, 3), ('D', 4, 4), ('D', 5, 1), ('D', 6, 1), ('D', 6, 5), ('D', 6, 6), ('D', 7, 1), ('E', 7, 7)]
+  board block loaded verbatim from verify_stone_ap_clock_centralizer.py (sha256 afc4e1898b0247f3); scar56_data.json sha256 0a817fc5a2aa7cd4
+
+------------------------------------------------------------------------------
+AU3 -- the two reversals on the 56
+------------------------------------------------------------------------------
+[PASS] AU3a: the node-7 coweight splits the 56 into two poles (+-3/2) and two 27-sheets (+-1/2) (SM-053 AO1)
+[PASS] AU3b: the sheet clock Psi6 (rowmotion on each sheet from the E6 covers, poles fixed) has cycle type [12,12,3]^2 1^2 and order 12  -> [12, 12, 12, 12, 3, 3, 1, 1]
+[t=  35.2s] W(E6) = 51840, W(E7) = 2903040 enumerated on the 56
+[PASS] AU3c: w0(E6) (labels -> -sigma(labels) on each sheet, poles fixed) lies in W(E6) (51,840 on the 56) and is an involution
+[PASS] AU3d: w0(E6) reverses the sheet clock Psi6 and does NOT reverse the board clock Psi; iota reverses both  -> (True, False, True, True)
+
+------------------------------------------------------------------------------
+AU4 -- the mirror identity
+------------------------------------------------------------------------------
+[PASS] AU4: pr = iota o w0(E6) o t exactly (t the pole swap); pr o t = iota o w0(E6) is SM-016's nearest Weyl element; agreement without t is 54/56
+
+------------------------------------------------------------------------------
+AU5 -- REGISTERED GUESS: the reversers are unique
+------------------------------------------------------------------------------
+[PASS] AU5: REGISTERED GUESS: exactly one element of W(E7) reverses Psi (iota) and exactly one element of W(E6) reverses Psi6 (w0(E6))  -> reversers in W(E7): 1, in W(E6): 1
+  [obs] elements of W(E7) that reverse the sheet clock Psi6: 2
+
+------------------------------------------------------------------------------
+AU6 -- consequences of the identity
+------------------------------------------------------------------------------
+[PASS] AU6: pr commutes with Psi6 (both factors reverse it, t fixes the sheets); pr neither commutes with nor reverses Psi; pr^2 = 1; iota and w0(E6) commute; both commute with t
+
+------------------------------------------------------------------------------
+AU7 -- [obs] the relation table
+------------------------------------------------------------------------------
+  iota       order  2  cycle type [(2, 28)]  fixed 0  linear True
+  w0E6       order  2  cycle type [(2, 24), (1, 8)]  fixed 8  linear True
+  t          order  2  cycle type [(1, 54), (2, 1)]  fixed 54  linear False
+  pr         order  2  cycle type [(2, 27), (1, 2)]  fixed 2  linear False
+  iota.w0E6  order  2  cycle type [(2, 28)]  fixed 0  linear True
+  order of iota * w0E6 = 2
+  order of iota * pr = 2
+  order of w0E6 * pr = 2
+  order of w0E6 * Psi = 4
+  order of w0E6 * Psi6 = 2
+  order of iota.w0E6 * Psi = 585
+  order of pr * Psi6 = 12
+  order of iota * Psi6 = 2
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 10 checks passed, 0 failed
+[t=  37.2s] done
