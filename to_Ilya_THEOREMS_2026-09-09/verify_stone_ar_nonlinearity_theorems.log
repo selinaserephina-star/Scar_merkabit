@@ -1,0 +1,57 @@
+==============================================================================
+STONE AR -- THE NON-LINEARITY THEOREMS (chains, the half-turn, the kept fraction)
+==============================================================================
+[PASS] AR0: the brief is sha-locked: sha256(BRIEF_STONE_AR_NONLINEARITY_THEOREMS.md) equals BRIEF_STONE_AR_LOCK.sha256  -> 155018fd02ca84db...
+  Minuscule machine loaded verbatim from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993), lines of the Cartan/machine block
+[t=  49.3s] 42 models built, W enumerated where |W| <= 400000
+
+------------------------------------------------------------------------------
+AR1 -- the lemma data on all 42 cases
+------------------------------------------------------------------------------
+[PASS] AR1: R(top) = bottom; the bottom has one cover p0 = bottom + alpha_{k*} = R(bottom) = min P; <l,l> - <l,w0 l> = c_k = #colour-k join-irreducibles = the predicted value, all 42 cases  -> c_k: {'A2 w1': Fraction(1, 1), 'A2 w2': Fraction(1, 1), 'A3 w1': Fraction(1, 1), 'A3 w2': Fraction(2, 1), 'A3 w3': Fraction(1, 1), 'A4 w1': Fraction(1, 1), 'A4 w2': Fraction(2, 1), 'A4 w3': Fraction(2, 1)} ...
+
+------------------------------------------------------------------------------
+AR2 -- Theorem 1 on the data: c_k = 1 <=> chain <=> R in W
+------------------------------------------------------------------------------
+[PASS] AR2: c_k = 1 <=> P is a chain <=> R in W on all 42 cases; on the 12 chains R is a product of the simple reflections in order  -> chain convention: {'s1..sn': 6, 'sn..s1': 6}; failures []
+
+------------------------------------------------------------------------------
+AR3 -- Theorem 2 on the data: the principal orbit, the rank sequence, the half-turn
+------------------------------------------------------------------------------
+[PASS] AR3a: the R-orbit of the bottom is the rank truncations P_{<j}, of length h, with <w(j),w(j+1)> = <l,l> - s_j (s_r = c_k), all 42 cases
+[PASS] AR3b: the rank sequences of the rectangle, the shifted staircase, D_n omega_1, E6, E7 are as stated in the proof (and c_k as stated)
+[PASS] AR3c: for h even: the extended rank sequence is (h/2)-periodic <=> R^(h/2) in W, and the periodic cases are exactly the even-h chains, D3..D7 omega_1 (A3 omega_2 = D3) and D4 omega_3/omega_4  -> mismatches []; periodic [('A', 3, 1), ('A', 3, 2), ('A', 3, 3), ('A', 5, 1), ('A', 5, 5), ('A', 7, 1), ('A', 7, 7), ('D', 4, 1), ('D', 4, 3), ('D', 4, 4), ('D', 5, 1), ('D', 6, 1), ('D', 7, 1)]
+
+------------------------------------------------------------------------------
+AR4 -- the vector half-turn: R^(n-1) = (e_i -> -e_{n-i}, e_n -> (-1)^(n-1) e_n) in W(D_n), n = 3..9
+------------------------------------------------------------------------------
+[PASS] AR4: for n = 3..9 the rowmotion cycle on D_n omega_1 is as stated and R^(n-1) equals the signed permutation e_i -> -e_{n-i}, e_n -> (-1)^(n-1) e_n, with an even number of sign changes (in W(D_n); membership checked directly for n <= 7)  -> [(3, True, True, 2, True), (4, True, True, 4, True), (5, True, True, 4, True), (6, True, True, 6, True), (7, True, True, 6, True), (8, True, True, 8, None), (9, True, True, 8, None)]
+
+------------------------------------------------------------------------------
+AR5 -- Theorem 3: the explicit rowmotion on 2-subsets and the two kappa formulas, n = 3..9
+------------------------------------------------------------------------------
+[PASS] AR5: n = 3..9: the explicit R on 2-subsets equals the machine's R; kappa(A_n w2) = 1 - (3n^2-9n+4)/C(C(n+1,2),2) and kappa(D_n w1) = 1 - 2(n-1)/(n(2n-1)) exactly  -> [(3, True, '11/15', '11/15', '11/15', '11/15'), (4, True, '29/45', '29/45', '11/14', '11/14'), (5, True, '71/105', '71/105', '37/45', '37/45'), (6, True, '76/105', '76/105', '28/33', '28/33'), (7, True, '145/189', '145/189', '79/91', '79/91'), (8, True, '253/315', '253/315', '53/60', '53/60'), (9, True, '412/495', '412/495', '137/153', '137/153')]
+[t=  56.8s] AR5 done
+
+------------------------------------------------------------------------------
+AR6 -- [obs] a(R) >= C(n,2) - (n-1) on A_n omega_2
+------------------------------------------------------------------------------
+[PASS] AR6: [obs] a(R) >= C(n,2) - (n-1) for n = 3..8 (equality where marked)  -> [(3, 3, 1, False), (4, 5, 3, False), (5, 6, 6, True), (6, 10, 10, True), (7, 15, 15, True), (8, 21, 21, True)]
+[t=  58.7s] AR6 done
+
+------------------------------------------------------------------------------
+AR7 -- REGISTERED GUESS: the changed-pair count on A_n omega_3 is a degree-4 polynomial in n
+------------------------------------------------------------------------------
+[t=  58.8s] A5 w3: N = 20, changed pairs 74
+[t=  59.0s] A6 w3: N = 35, changed pairs 256
+[t=  59.7s] A7 w3: N = 56, changed pairs 678
+[t=  61.8s] A8 w3: N = 84, changed pairs 1480
+[t=  67.4s] A9 w3: N = 120, changed pairs 2832
+[t=  79.9s] A10 w3: N = 165, changed pairs 4934
+[PASS] AR7: REGISTERED GUESS: the degree-4 interpolant through n = 5..9 predicts D3(10) = 4934; measured 4934  -> D3(n) n=5..10: [74, 256, 678, 1480, 2832, 4934]; difference table: [[182, 422, 802, 1352, 2102], [240, 380, 550, 750], [140, 170, 200], [30, 30], [0]]
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 10 checks passed, 0 failed
+[t=  79.9s] done
