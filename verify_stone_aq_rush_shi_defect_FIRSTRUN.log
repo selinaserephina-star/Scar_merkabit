@@ -1,0 +1,9 @@
+==============================================================================
+STONE AQ -- THE RUSH-SHI DEFECT ACROSS THE MINUSCULE FAMILY
+==============================================================================
+[PASS] AQ0: the brief is sha-locked: sha256(BRIEF_STONE_AQ_RUSH_SHI_DEFECT.md) equals BRIEF_STONE_AQ_LOCK.sha256  -> 5b389725963fa5db...
+
+------------------------------------------------------------------------------
+AQ6 -- the table (computed case by case; the registered bars are read off it afterwards)
+------------------------------------------------------------------------------
+  case        |Wl| |P|  h  chain  cycle type of R           order  kept kappa      kappa0     a(R)  nu(R)  |C_W(R)|  R in W  |W|enum
