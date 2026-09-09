@@ -48,16 +48,20 @@ a permutation of 2n−1 boundary subsets and counting what it moves across
 types. Both exact to n = 9. A registered guess that the ω₃ count is a
 degree-4 polynomial was confirmed to n = 10.
 
-## 2. For the draft
+## 2. For the draft — v0.2 enclosed
 
-`THEOREMS_SUMMARY_2026-09-09.md` is written to be §7.6 of
-`Roof_and_Clock_DRAFT.md`: tier three now says, with proofs, for which
-minuscule posets the Rush–Shi bijection is an isometry (chains), for
-which its half-turn is (vectors), and what the defect is on two
-families; the E₇ clock is at the far end of every statement. If your
-review pass agrees, v0.2 carries it; if a specialist finds these in the
-literature, they become citations and the tier shrinks again, which is
-the honest outcome either way.
+`Roof_and_Clock_DRAFT.md` **v0.2** is in this envelope and supersedes the
+v0.1 you hold from the framing envelope. It differs only in the abstract,
+§1 (tier three restated), §7 (new §7.6 with the three theorems and their
+proofs, new §7.7 with SM-055's table), §11–13 and Appendix A; nothing in
+the spine moved. Tier three now says, with proofs, for which minuscule
+posets the Rush–Shi bijection is an isometry (chains), for which its
+half-turn is (vectors), and what the defect is on two families; the E₇
+clock is at the far end of every statement. `THEOREMS_SUMMARY_2026-09-09.md`
+is the same §7.6 as a standalone note. If your review pass agrees, v0.2
+is the text; if a specialist finds these in the literature, they become
+citations and the tier shrinks again, which is the honest outcome either
+way.
 
 ## 3. Nothing new is asked
 
