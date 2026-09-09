@@ -1,0 +1,13 @@
+==============================================================================
+STONE AT -- THE SHARED GRAMMAR ACROSS THE MINUSCULE FAMILY (I_k against C_W(R^k))
+==============================================================================
+[PASS] AT0: the brief is sha-locked: sha256(BRIEF_STONE_AT_GRAMMAR_FAMILY.md) equals BRIEF_STONE_AT_LOCK.sha256  -> 3f6f47b732b41a09...
+[PASS] AT0b: the amendment is sha-locked before the run: sha256(AMENDMENT_STONE_AT_2026-09-09.md) equals AMENDMENT_STONE_AT_LOCK.sha256  -> b3b7b4827fca3d66...
+  Minuscule machine loaded verbatim from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993)
+
+------------------------------------------------------------------------------
+the computation, case by case
+------------------------------------------------------------------------------
+[t=   0.0s] A2 w1: |W| = 6, h = 3; |I_k| = [6, 6]
+[t=   0.0s] A2 w2: |W| = 6, h = 3; |I_k| = [6, 6]
+[t=   0.0s] A3 w1: |W| = 24, h = 4; |I_k| = [24, 24, 24]
