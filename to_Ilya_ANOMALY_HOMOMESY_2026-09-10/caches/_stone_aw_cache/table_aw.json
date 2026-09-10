@@ -1,0 +1,741 @@
+{
+ "brief_sha": "dbf5759f965f848e9a7ba68bb071178a9adaa5d372da07a81dc1fd7041009984",
+ "table": [
+  {
+   "fam": "A",
+   "n": 2,
+   "k": 1,
+   "N": 3,
+   "P": 2,
+   "h": 3,
+   "orbits": [
+    3
+   ],
+   "plus": "2/3",
+   "zero": "2/3",
+   "toggle": "4/3",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 2,
+   "k": 2,
+   "N": 3,
+   "P": 2,
+   "h": 3,
+   "orbits": [
+    3
+   ],
+   "plus": "2/3",
+   "zero": "2/3",
+   "toggle": "4/3",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 1,
+   "N": 4,
+   "P": 3,
+   "h": 4,
+   "orbits": [
+    4
+   ],
+   "plus": "3/4",
+   "zero": "3/2",
+   "toggle": "3/2",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 2,
+   "N": 6,
+   "P": 4,
+   "h": 4,
+   "orbits": [
+    4,
+    2
+   ],
+   "plus": "1",
+   "zero": "1",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 3,
+   "k": 3,
+   "N": 4,
+   "P": 3,
+   "h": 4,
+   "orbits": [
+    4
+   ],
+   "plus": "3/4",
+   "zero": "3/2",
+   "toggle": "3/2",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 1,
+   "N": 5,
+   "P": 4,
+   "h": 5,
+   "orbits": [
+    5
+   ],
+   "plus": "4/5",
+   "zero": "12/5",
+   "toggle": "8/5",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 2,
+   "N": 10,
+   "P": 6,
+   "h": 5,
+   "orbits": [
+    5,
+    5
+   ],
+   "plus": "6/5",
+   "zero": "8/5",
+   "toggle": "12/5",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 3,
+   "N": 10,
+   "P": 6,
+   "h": 5,
+   "orbits": [
+    5,
+    5
+   ],
+   "plus": "6/5",
+   "zero": "8/5",
+   "toggle": "12/5",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 4,
+   "k": 4,
+   "N": 5,
+   "P": 4,
+   "h": 5,
+   "orbits": [
+    5
+   ],
+   "plus": "4/5",
+   "zero": "12/5",
+   "toggle": "8/5",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 1,
+   "N": 6,
+   "P": 5,
+   "h": 6,
+   "orbits": [
+    6
+   ],
+   "plus": "5/6",
+   "zero": "10/3",
+   "toggle": "5/3",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 2,
+   "N": 15,
+   "P": 8,
+   "h": 6,
+   "orbits": [
+    6,
+    6,
+    3
+   ],
+   "plus": "4/3",
+   "zero": "7/3",
+   "toggle": "8/3",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 3,
+   "N": 20,
+   "P": 9,
+   "h": 6,
+   "orbits": [
+    6,
+    6,
+    6,
+    2
+   ],
+   "plus": "3/2",
+   "zero": "2",
+   "toggle": "3",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 4,
+   "N": 15,
+   "P": 8,
+   "h": 6,
+   "orbits": [
+    6,
+    6,
+    3
+   ],
+   "plus": "4/3",
+   "zero": "7/3",
+   "toggle": "8/3",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 5,
+   "k": 5,
+   "N": 6,
+   "P": 5,
+   "h": 6,
+   "orbits": [
+    6
+   ],
+   "plus": "5/6",
+   "zero": "10/3",
+   "toggle": "5/3",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 1,
+   "N": 7,
+   "P": 6,
+   "h": 7,
+   "orbits": [
+    7
+   ],
+   "plus": "6/7",
+   "zero": "30/7",
+   "toggle": "12/7",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 2,
+   "N": 21,
+   "P": 10,
+   "h": 7,
+   "orbits": [
+    7,
+    7,
+    7
+   ],
+   "plus": "10/7",
+   "zero": "22/7",
+   "toggle": "20/7",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 3,
+   "N": 35,
+   "P": 12,
+   "h": 7,
+   "orbits": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "plus": "12/7",
+   "zero": "18/7",
+   "toggle": "24/7",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 4,
+   "N": 35,
+   "P": 12,
+   "h": 7,
+   "orbits": [
+    7,
+    7,
+    7,
+    7,
+    7
+   ],
+   "plus": "12/7",
+   "zero": "18/7",
+   "toggle": "24/7",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 5,
+   "N": 21,
+   "P": 10,
+   "h": 7,
+   "orbits": [
+    7,
+    7,
+    7
+   ],
+   "plus": "10/7",
+   "zero": "22/7",
+   "toggle": "20/7",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 6,
+   "k": 6,
+   "N": 7,
+   "P": 6,
+   "h": 7,
+   "orbits": [
+    7
+   ],
+   "plus": "6/7",
+   "zero": "30/7",
+   "toggle": "12/7",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 1,
+   "N": 8,
+   "P": 7,
+   "h": 8,
+   "orbits": [
+    8
+   ],
+   "plus": "7/8",
+   "zero": "21/4",
+   "toggle": "7/4",
+   "chain": true
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 2,
+   "N": 28,
+   "P": 12,
+   "h": 8,
+   "orbits": [
+    8,
+    8,
+    8,
+    4
+   ],
+   "plus": "3/2",
+   "zero": "4",
+   "toggle": "3",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 3,
+   "N": 56,
+   "P": 15,
+   "h": 8,
+   "orbits": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "plus": "15/8",
+   "zero": "13/4",
+   "toggle": "15/4",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 4,
+   "N": 70,
+   "P": 16,
+   "h": 8,
+   "orbits": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    4,
+    2
+   ],
+   "plus": "2",
+   "zero": "3",
+   "toggle": "4",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 5,
+   "N": 56,
+   "P": 15,
+   "h": 8,
+   "orbits": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+   ],
+   "plus": "15/8",
+   "zero": "13/4",
+   "toggle": "15/4",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 6,
+   "N": 28,
+   "P": 12,
+   "h": 8,
+   "orbits": [
+    8,
+    8,
+    8,
+    4
+   ],
+   "plus": "3/2",
+   "zero": "4",
+   "toggle": "3",
+   "chain": false
+  },
+  {
+   "fam": "A",
+   "n": 7,
+   "k": 7,
+   "N": 8,
+   "P": 7,
+   "h": 8,
+   "orbits": [
+    8
+   ],
+   "plus": "7/8",
+   "zero": "21/4",
+   "toggle": "7/4",
+   "chain": true
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 1,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "orbits": [
+    6,
+    2
+   ],
+   "plus": "1",
+   "zero": "2",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 3,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "orbits": [
+    6,
+    2
+   ],
+   "plus": "1",
+   "zero": "2",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 4,
+   "k": 4,
+   "N": 8,
+   "P": 6,
+   "h": 6,
+   "orbits": [
+    6,
+    2
+   ],
+   "plus": "1",
+   "zero": "2",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 1,
+   "N": 10,
+   "P": 8,
+   "h": 8,
+   "orbits": [
+    8,
+    2
+   ],
+   "plus": "1",
+   "zero": "3",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 4,
+   "N": 16,
+   "P": 10,
+   "h": 8,
+   "orbits": [
+    8,
+    8
+   ],
+   "plus": "5/4",
+   "zero": "5/2",
+   "toggle": "5/2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 5,
+   "k": 5,
+   "N": 16,
+   "P": 10,
+   "h": 8,
+   "orbits": [
+    8,
+    8
+   ],
+   "plus": "5/4",
+   "zero": "5/2",
+   "toggle": "5/2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 1,
+   "N": 12,
+   "P": 10,
+   "h": 10,
+   "orbits": [
+    10,
+    2
+   ],
+   "plus": "1",
+   "zero": "4",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 5,
+   "N": 32,
+   "P": 15,
+   "h": 10,
+   "orbits": [
+    10,
+    10,
+    10,
+    2
+   ],
+   "plus": "3/2",
+   "zero": "3",
+   "toggle": "3",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 6,
+   "k": 6,
+   "N": 32,
+   "P": 15,
+   "h": 10,
+   "orbits": [
+    10,
+    10,
+    10,
+    2
+   ],
+   "plus": "3/2",
+   "zero": "3",
+   "toggle": "3",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 1,
+   "N": 14,
+   "P": 12,
+   "h": 12,
+   "orbits": [
+    12,
+    2
+   ],
+   "plus": "1",
+   "zero": "5",
+   "toggle": "2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 6,
+   "N": 64,
+   "P": 21,
+   "h": 12,
+   "orbits": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    4
+   ],
+   "plus": "7/4",
+   "zero": "7/2",
+   "toggle": "7/2",
+   "chain": false
+  },
+  {
+   "fam": "D",
+   "n": 7,
+   "k": 7,
+   "N": 64,
+   "P": 21,
+   "h": 12,
+   "orbits": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    4
+   ],
+   "plus": "7/4",
+   "zero": "7/2",
+   "toggle": "7/2",
+   "chain": false
+  },
+  {
+   "fam": "E",
+   "n": 6,
+   "k": 1,
+   "N": 27,
+   "P": 16,
+   "h": 12,
+   "orbits": [
+    12,
+    12,
+    3
+   ],
+   "plus": "4/3",
+   "zero": "10/3",
+   "toggle": "8/3",
+   "chain": false
+  },
+  {
+   "fam": "E",
+   "n": 6,
+   "k": 6,
+   "N": 27,
+   "P": 16,
+   "h": 12,
+   "orbits": [
+    12,
+    12,
+    3
+   ],
+   "plus": "4/3",
+   "zero": "10/3",
+   "toggle": "8/3",
+   "chain": false
+  },
+  {
+   "fam": "E",
+   "n": 7,
+   "k": 7,
+   "N": 56,
+   "P": 27,
+   "h": 18,
+   "orbits": [
+    18,
+    18,
+    18,
+    2
+   ],
+   "plus": "3/2",
+   "zero": "4",
+   "toggle": "3",
+   "chain": false
+  }
+ ],
+ "AW5": {
+  "Psi6 (E6 labels, per sheet)": {
+   "1": false,
+   "-1": false,
+   "0": false,
+   "kept": false
+  },
+  "pr": {
+   "1": false,
+   "-1": false,
+   "0": false,
+   "kept": false
+  },
+  "pr.Psi": {
+   "1": false,
+   "-1": false,
+   "0": false,
+   "kept": false
+  },
+  "Psi": {
+   "1": true,
+   "-1": true,
+   "0": true,
+   "kept": false
+  }
+ }
+}

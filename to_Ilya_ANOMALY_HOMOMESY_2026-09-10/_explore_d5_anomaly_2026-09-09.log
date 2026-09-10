@@ -1,0 +1,14 @@
+D4 half-spin: N = 8 = F2^3; rowmotion affine over F2 for powers j in [3] (of 1..5)
+D5 half-spin: N = 16 = F2^4; rowmotion affine over F2 for powers j in [] (of 1..7)
+  k = 3: |I| = 2, |C| = 1
+     2^6 1^4  commutes with R^k: False  (R^-k g R^k = itself: False); signed perm e_i -> ['+e3', '+e5', '+e1', '+e4', '+e2']
+  k = 4: |I| = 8, |C| = 4
+     4^4  commutes with R^k: False  (R^-k g R^k = itself: False); signed perm e_i -> ['-e4', '+e3', '-e2', '+e1', '+e5']
+     2^8  commutes with R^k: True  (R^-k g R^k = itself: True); signed perm e_i -> ['-e1', '-e2', '-e3', '-e4', '+e5']
+     2^8  commutes with R^k: True  (R^-k g R^k = itself: True); signed perm e_i -> ['+e1', '+e3', '+e2', '-e4', '-e5']
+     2^8  commutes with R^k: True  (R^-k g R^k = itself: True); signed perm e_i -> ['-e1', '-e3', '-e2', '+e4', '-e5']
+     2^8  commutes with R^k: False  (R^-k g R^k = itself: False); signed perm e_i -> ['+e4', '+e2', '-e3', '+e1', '-e5']
+     2^8  commutes with R^k: False  (R^-k g R^k = itself: False); signed perm e_i -> ['-e4', '-e2', '+e3', '-e1', '-e5']
+     4^4  commutes with R^k: False  (R^-k g R^k = itself: False); signed perm e_i -> ['+e4', '-e3', '+e2', '-e1', '+e5']
+D6 half-spin: N = 32 = F2^5; rowmotion affine over F2 for powers j in [] (of 1..9)
+D7 half-spin: N = 64 = F2^6; rowmotion affine over F2 for powers j in [] (of 1..11)

@@ -1,0 +1,33 @@
+D5 half-spin: N = 16  |W| = 1920  R type 8^2  |P| = 10
+R-orbits: [8, 8]
+w0 = -(e1..e4): preserves the two orbits; in W: True  reverses R: True
+k = 1: |I| = 1 |C| = 1
+k = 2: |I| = 1 |C| = 1
+k = 3: |I| = 2 |C| = 1
+    2^6 1^4   mixes     extra        ['+e3', '+e5', '+e1', '+e4', '+e2']
+k = 4: |I| = 8 |C| = 4
+    2^8       preserves centralizer  ['-e1', '-e2', '-e3', '-e4', '+e5']
+    2^8       preserves extra        ['+e4', '+e2', '-e3', '+e1', '-e5']
+    4^4       preserves extra        ['-e4', '+e3', '-e2', '+e1', '+e5']
+    2^8       preserves extra        ['-e4', '-e2', '+e3', '-e1', '-e5']
+    2^8       preserves centralizer  ['+e1', '+e3', '+e2', '-e4', '-e5']
+    2^8       preserves centralizer  ['-e1', '-e3', '-e2', '+e4', '-e5']
+    4^4       preserves extra        ['+e4', '-e3', '+e2', '-e1', '+e5']
+
+B4 spinor: N = 16  |W| = 384  R type 8^2  |P| = 10
+D5 rowmotion transported to the B4 labelling equals B4 rowmotion: True  (or its inverse: False )
+W(B4) transported into the D5 board lies inside W(D5): True  |intersection| = 384
+B4 k = 1: |I| = 1 |C| = 1  extra: []
+B4 k = 2: |I| = 1 |C| = 1  extra: []
+B4 k = 3: |I| = 1 |C| = 1  extra: []
+B4 k = 4: |I| = 8 |C| = 4  extra: ["2^8 ['+e4', '+e2', '-e3', '+e1']", "4^4 ['-e4', '+e3', '-e2', '+e1']", "4^4 ['+e4', '-e3', '+e2', '-e1']", "2^8 ['-e4', '-e2', '+e3', '-e1']"]
+
+altitude nu(R^k) = min Hamming distance to a Weyl element (B4 board / D5 board):
+  k = 1: nu_B4 = 10  nu_D5 = 10  (#nearest in W(D5): 3)
+  k = 2: nu_B4 = 11  nu_D5 = 10  (#nearest in W(D5): 1)
+  k = 3: nu_B4 = 11  nu_D5 =  7  (#nearest in W(D5): 1)
+  k = 4: nu_B4 =  8  nu_D5 =  8  (#nearest in W(D5): 1)
+  k = 5: nu_B4 = 11  nu_D5 =  7  (#nearest in W(D5): 1)
+  k = 6: nu_B4 = 11  nu_D5 = 10  (#nearest in W(D5): 1)
+  k = 7: nu_B4 = 10  nu_D5 = 10  (#nearest in W(D5): 3)
+  R^4 = w . c with w = ['-e1', '-e3', '-e2', '+e4', '-e5']  c type 2^4 1^8  c moves 8 points; c in W: False
