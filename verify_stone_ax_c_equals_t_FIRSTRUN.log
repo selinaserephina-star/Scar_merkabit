@@ -1,0 +1,109 @@
+==============================================================================
+STONE AX -- C = T: THE REVERSER AS A CONSTRAINT ON THE GRAMMAR
+==============================================================================
+[PASS] AX0: the brief is sha-locked: sha256(BRIEF_STONE_AX_C_EQUALS_T.md) equals BRIEF_STONE_AX_LOCK.sha256  -> 7f68512a221fb1b8...
+  Minuscule machine loaded verbatim from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993)
+
+------------------------------------------------------------------------------
+AX1 -- reversers = w0 . C_W(R) on the family;  AX2 -- the automorphism the reverser induces
+------------------------------------------------------------------------------
+[t=   0.0s] A2 w1: |W| = 6, h = 3; reversers 3, |C_W(R)| = 3; central False; sigma [1, 0]
+[t=   0.0s] A2 w2: |W| = 6, h = 3; reversers 3, |C_W(R)| = 3; central False; sigma [1, 0]
+[t=   0.0s] A3 w1: |W| = 24, h = 4; reversers 4, |C_W(R)| = 4; central False; sigma [2, 1, 0]
+[t=   0.0s] A3 w2: |W| = 24, h = 4; reversers 2, |C_W(R)| = 2; central False; sigma [2, 1, 0]
+[t=   0.0s] A3 w3: |W| = 24, h = 4; reversers 4, |C_W(R)| = 4; central False; sigma [2, 1, 0]
+[t=   0.1s] A4 w1: |W| = 120, h = 5; reversers 5, |C_W(R)| = 5; central False; sigma [3, 2, 1, 0]
+[t=   0.1s] A4 w2: |W| = 120, h = 5; reversers 1, |C_W(R)| = 1; central False; sigma [3, 2, 1, 0]
+[t=   0.1s] A4 w3: |W| = 120, h = 5; reversers 1, |C_W(R)| = 1; central False; sigma [3, 2, 1, 0]
+[t=   0.1s] A4 w4: |W| = 120, h = 5; reversers 5, |C_W(R)| = 5; central False; sigma [3, 2, 1, 0]
+[t=   0.1s] A5 w1: |W| = 720, h = 6; reversers 6, |C_W(R)| = 6; central False; sigma [4, 3, 2, 1, 0]
+[t=   0.2s] A5 w2: |W| = 720, h = 6; reversers 1, |C_W(R)| = 1; central False; sigma [4, 3, 2, 1, 0]
+[t=   0.3s] A5 w3: |W| = 720, h = 6; reversers 1, |C_W(R)| = 1; central False; sigma [4, 3, 2, 1, 0]
+[t=   0.4s] A5 w4: |W| = 720, h = 6; reversers 1, |C_W(R)| = 1; central False; sigma [4, 3, 2, 1, 0]
+[t=   0.4s] A5 w5: |W| = 720, h = 6; reversers 6, |C_W(R)| = 6; central False; sigma [4, 3, 2, 1, 0]
+[t=   0.5s] A6 w1: |W| = 5040, h = 7; reversers 7, |C_W(R)| = 7; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   0.7s] A6 w2: |W| = 5040, h = 7; reversers 1, |C_W(R)| = 1; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   1.4s] A6 w3: |W| = 5040, h = 7; reversers 1, |C_W(R)| = 1; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   2.0s] A6 w4: |W| = 5040, h = 7; reversers 1, |C_W(R)| = 1; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   2.2s] A6 w5: |W| = 5040, h = 7; reversers 1, |C_W(R)| = 1; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   2.3s] A6 w6: |W| = 5040, h = 7; reversers 7, |C_W(R)| = 7; central False; sigma [5, 4, 3, 2, 1, 0]
+[t=   3.1s] A7 w1: |W| = 40320, h = 8; reversers 8, |C_W(R)| = 8; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=   4.0s] A7 w2: |W| = 40320, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=   6.0s] A7 w3: |W| = 40320, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=   8.8s] A7 w4: |W| = 40320, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=  10.3s] A7 w5: |W| = 40320, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=  10.7s] A7 w6: |W| = 40320, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=  10.9s] A7 w7: |W| = 40320, h = 8; reversers 8, |C_W(R)| = 8; central False; sigma [6, 5, 4, 3, 2, 1, 0]
+[t=  11.0s] D4 w1: |W| = 192, h = 6; reversers 2, |C_W(R)| = 2; central True; sigma [0, 1, 2, 3]
+[t=  11.0s] D4 w3: |W| = 192, h = 6; reversers 2, |C_W(R)| = 2; central True; sigma [0, 1, 2, 3]
+[t=  11.0s] D4 w4: |W| = 192, h = 6; reversers 2, |C_W(R)| = 2; central True; sigma [0, 1, 2, 3]
+[t=  11.0s] D5 w1: |W| = 1920, h = 8; reversers 2, |C_W(R)| = 2; central False; sigma [0, 1, 2, 4, 3]
+[t=  11.1s] D5 w4: |W| = 1920, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [0, 1, 2, 4, 3]
+[t=  11.1s] D5 w5: |W| = 1920, h = 8; reversers 1, |C_W(R)| = 1; central False; sigma [0, 1, 2, 4, 3]
+[t=  11.3s] D6 w1: |W| = 23040, h = 10; reversers 2, |C_W(R)| = 2; central True; sigma [0, 1, 2, 3, 4, 5]
+[t=  11.7s] D6 w5: |W| = 23040, h = 10; reversers 1, |C_W(R)| = 1; central True; sigma [0, 1, 2, 3, 4, 5]
+[t=  12.0s] D6 w6: |W| = 23040, h = 10; reversers 1, |C_W(R)| = 1; central True; sigma [0, 1, 2, 3, 4, 5]
+[t=  14.1s] D7 w1: |W| = 322560, h = 12; reversers 2, |C_W(R)| = 2; central False; sigma [0, 1, 2, 3, 4, 6, 5]
+[t=  18.5s] D7 w6: |W| = 322560, h = 12; reversers 1, |C_W(R)| = 1; central False; sigma [0, 1, 2, 3, 4, 6, 5]
+[t=  22.8s] D7 w7: |W| = 322560, h = 12; reversers 1, |C_W(R)| = 1; central False; sigma [0, 1, 2, 3, 4, 6, 5]
+[t=  23.3s] E6 w1: |W| = 51840, h = 12; reversers 1, |C_W(R)| = 1; central False; sigma [5, 1, 4, 3, 2, 0]
+[t=  23.8s] E6 w6: |W| = 51840, h = 12; reversers 1, |C_W(R)| = 1; central False; sigma [5, 1, 4, 3, 2, 0]
+[t=  24.6s] E7 w7: |W| = 2903040 > cap (counts cited from SM-058/059); w0 in W by isometry True, reverses True; central True; sigma [0, 1, 2, 3, 4, 5, 6]
+[PASS] AX1: on the 38 boards with |W| <= 400,000 the number of reversers of R in W equals |C_W(R)|, w0 among them; on the 4 large boards w0 in W and reverses (counts cited)
+  [C] the reverser is unique on 22 of the 38 enumerated boards (those with C_W(R) = 1) -- plus E7 (SM-059 AU5), re-measured below
+[PASS] AX2a: on all 42 boards w0 s_i w0 = s_sigma(i) for every simple reflection, sigma the diagram automorphism (identity where -1 in W)
+[FAIL] AX2b: w0 is central in W exactly on the 10 boards where -1 in W (D4, D6, D8 x3, E7)  -> 7
+[PASS] AX2c: on every self-dual board the reverser w0 equals the antipode of the weights exactly when -1 in W
+  [obs, beyond the brief] self-dual boards with -1 NOT in W (antipode a permutation of the weights but not w0): (board, antipode reverses R, antipode in W by isometry) = [('A3 w2', True, True), ('A5 w3', True, True), ('A7 w4', True, True), ('D5 w1', True, True), ('D7 w1', True, True)]
+[t=  24.6s] family done
+  board block loaded verbatim from verify_stone_ap_clock_centralizer.py (sha256 afc4e1898b0247f3); scar56_data.json sha256 0a817fc5a2aa7cd4
+
+------------------------------------------------------------------------------
+AX2 on the 56 -- iota central; w0(E6) induces sigma_6 on the E6 reflections; GUESS: it moves the seventh
+------------------------------------------------------------------------------
+[PASS] AX2d: on the 56: iota s_i iota = s_i for all seven simple reflections (iota central, SM-013)
+[PASS] AX2e: w0(E6) s_i w0(E6) = s_sigma6(i) for the six E6 nodes (sigma6: 0<->5, 2<->4)  -> [5, 1, 4, 3, 2, 0]
+[PASS] AX2f: REGISTERED GUESS: w0(E6) does NOT commute with the seventh reflection s_6  -> w0(E6) s_6 w0(E6) is not a simple reflection (moves 24 points; s_6 moves the poles: [26, 29])
+  [obs] w0(E6) s_6 w0(E6) is a reflection of W(E7)? linear True, cycle type 2^12 1^32, trace on the seven 5
+
+------------------------------------------------------------------------------
+AX3 -- the bridge copy's normaliser in W(E7): REGISTERED GUESS 2 x PGL(2,7)
+------------------------------------------------------------------------------
+[PASS] AX3a: the cached bridge pair generates a group of order 168 with fixed points 56/8/2/0/0 by element order 1/2/3/4/7 (SM-054 AP4 re-seen)  -> {3: {2}, 7: {0}, 2: {8}, 4: {0}, 1: {56}}
+[PASS] AX3b: W(E7) enumerated on the 56: 2,903,040 elements (SM-057 AS1)  -> 2903040
+[t=  57.6s] W(E7) enumerated
+[t=  71.6s] normaliser and centraliser found: candidates 672, exact |N| = 672, |C| = 2
+[PASS] AX3c: REGISTERED GUESS: C_W(E7)(P) = <iota> (order 2), |N_W(E7)(P)| = 672, N/C = PGL(2,7): the outer automorphism is realised by Weyl elements  -> |C| = 2, |N| = 672, |N \ P.C| = 336, C = ['1^56', '2^28']
+[PASS] AX3d: a chosen normalising element c outside P.C carries a 7-element to the OTHER 7-class (the outer automorphism, Ilya's C on PSL(2,7))  -> c: order 2, cycle type 2^24 1^8, fixed 8
+[PASS] AX3e: the outer coset contains involutions of type 2^24 1^8 (8 fixed points; the guess from x -> 1/x on the projective line)  -> {'2^24 1^8': 28, '2^28': 28}
+
+------------------------------------------------------------------------------
+AX4 -- C != T on the grammar
+------------------------------------------------------------------------------
+[PASS] AX4a: iota commutes with every element of P (induces the identity automorphism on the flavour group)
+[PASS] AX4b: c is not iota, c is linear, c does not commute with Psi (SM-054) and does not reverse Psi (SM-059): the flavour C and the board's T are different elements  -> #{x: cPsic^-1 x = Psi x} = 4, #{x: = Psi^-1 x} = 2
+[PASS] AX4c: |<P, c>| = 336 (PGL(2,7)) and |<P, c, iota>| = 672  -> (336, 672)
+  [C] <P, c, iota> equals N: True
+[PASS] AX4d: inside N the only reverser of Psi is iota and the only element commuting with Psi is 1 (SM-059 AU5, SM-054 AP3 re-measured on the 672)  -> (1, 1)
+[PASS] AX1-E7: on the 56 the number of reversers of Psi in W(E7) is 1 (= |C_W(Psi)| = 1): the coset statement on the large board, re-measured  -> (1, 1)
+
+------------------------------------------------------------------------------
+AX5 -- what C has to act on: the pairs
+------------------------------------------------------------------------------
+[PASS] AX5a: P acts on the 28 iota-pairs with fixed points 28/4/1/0/0 by element order 1/2/3/4/7 (transitive, SM-013)  -> {3: {1}, 7: {0}, 2: {4}, 4: {0}, 1: {28}}
+[PASS] AX5b: the permutation character on the pairs decomposes as chi1 + 2 chi6 + chi7 + chi8 -- no chi3, no chi3bar (SM-013's erratum seen on the pairs); census 1/21/56/42/48  -> ({'chi1': 1.0, 'chi3': 0.0, 'chi3bar': 0.0, 'chi6': 2.0, 'chi7': 1.0, 'chi8': 1.0}, {3: 56, 7: 48, 2: 21, 4: 42, 1: 1})
+[PASS] AX5c: iota is fixed-point-free of type 2^28 (swaps every pair) and c permutes the pairs (c normalises <iota>)
+
+------------------------------------------------------------------------------
+AX6 [obs] -- the class of c in W(E7)
+------------------------------------------------------------------------------
+  c: order 2, cycle type 2^24 1^8, fixed points 8, trace on the seven 1, det on the seven 0 (in the iota-coset), linear True
+  outer coset: element orders {2: 56, 6: 112, 8: 168}; cycle types of its involutions {'2^24 1^8': 28, '2^28': 28}
+  iota.c: order 2, cycle type 2^28, trace -1
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 20 checks passed, 1 failed
+  FAILED: AX2b
+[t=  78.5s] done
