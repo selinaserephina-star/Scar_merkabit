@@ -1,0 +1,265 @@
+==============================================================================
+STONE AY -- THE D5 ANOMALY BY HAND (the half-turn is a Weyl element on one orbit)
+==============================================================================
+[PASS] AY0: the brief is sha-locked: sha256(BRIEF_STONE_AY_D5_BY_HAND.md) equals BRIEF_STONE_AY_LOCK.sha256  -> bc81504212c12f6a...
+  board machine loaded verbatim from verify_stone_av_d5_anomaly.py (sha256 c5d56d4cc4439220)
+[t=   0.0s] B4 spinor (|W| = 384) and D5 half-spin (|W| = 1920) built
+  machine: |I_4| = 8, |C_4| = 4; tau in W: True; C_4 == {1, -1, tau, -tau}: True
+
+------------------------------------------------------------------------------
+AY2 -- the hand clock (REGISTERED: as written)
+------------------------------------------------------------------------------
+[FAIL] AY2: the machine's rowmotion on the B4 board is the two registered 8-cycles, as written (not reversed)  -> INVERSE (the machine's R is the hand's R^-1; phases read backwards); O1: {} -> {1,2,3,4} -> {1,2,3} -> {1,2,4} -> {1,3} -> {2,4} -> {3} -> {4}; O2: {1} -> {2,3,4} -> {1,2} -> {1,3,4} -> {2,3} -> {1,4} -> {2} -> {3,4}
+[PASS] AY2b: O1 (from {}) and O2 (from {1}) are exactly the two free clock orbits
+
+------------------------------------------------------------------------------
+AY3 -- H1: the agreement sets of R^4 with the Weyl elements (REGISTERED)
+------------------------------------------------------------------------------
+[PASS] AY3: R^4 agrees with -tau exactly on O2; -tau is the unique nearest Weyl element (distance 8); no other Weyl element agrees on all of O2; none agrees on all of O1  -> |Y(-tau)| = 8, min distance 8 attained by 1 element(s), agree-on-all-O2: 1, max agreement on O1: 4 of 8
+  agreement-size histogram over W(B4): 0:237, 2:108, 4:34, 6:4, 8:1
+
+------------------------------------------------------------------------------
+AY4 -- H2/H3: Lemma B on the 4-cube
+------------------------------------------------------------------------------
+[PASS] AY4a: the pointwise stabilizer of O2 in W(B4) is trivial (O2 determines Weyl elements)  -> 1 element(s)
+[PASS] AY4b: c = (-tau) R^4 fixes exactly O2, equals R^4 (-tau), and I_4 = C_W(c)  -> |Fix c| = 8, |C_W(c)| = 8, |I_4| = 8, c type 2^4 1^8
+
+------------------------------------------------------------------------------
+AY5 -- H4: Stab_W(O1) and I_4 by the hand list (REGISTERED)
+------------------------------------------------------------------------------
+[PASS] AY5a: Stab_W(O1) is exactly the sixteen listed affine maps  -> |Stab_W(O1)| = 16
+[PASS] AY5b: I_4 is exactly the eight with pi in V = {1,(14),(23),(14)(23)}; C_4 = C_W(c) meet C_W(tau)
+[PASS] AY5c: the four extras are E1, E4, E2, E3 as named; in Stone AV's coordinates: (e1<->e4,-e3), (e1<->-e4,-e2), the signed 4-cycle, its inverse  -> ('+e4', '+e2', '-e3', '+e1'); ('-e4', '-e2', '+e3', '-e1'); ('+e4', '-e3', '+e2', '-e1'); ('-e4', '+e3', '-e2', '+e1')
+
+------------------------------------------------------------------------------
+AY6 -- H5: the transport on I_4 is conjugation by tau
+------------------------------------------------------------------------------
+[PASS] AY6a: for every g in I_4: R^-4 g R^4 = tau g tau
+[PASS] AY6b: E1 <-> E4 and E2 <-> E3 = E2^-1 under the transport (Stone AV's AV6b map); E2^2 = -1; [E1, R^4] = E1 E4 = -1
+
+------------------------------------------------------------------------------
+AY7 -- H6: the orbit swappers
+------------------------------------------------------------------------------
+[PASS] AY7: Stab_W({O1,O2}) has order 32; (e2 e3)(-e1) swaps the orbits; no element of I_4 swaps them  -> |Stab| = 32, |swappers| = 16, (e2e3)(-e1) = ('-e1', '+e3', '+e2', '+e4')
+
+------------------------------------------------------------------------------
+AY8 -- H7: the binary phases (REGISTERED)
+------------------------------------------------------------------------------
+[PASS] AY8: -1 = XOR 111 on both orbits; tau = XOR 001 on O1 and XOR 011 on O2; R^4 = XOR 100 on both; the four extras are phase translations on neither orbit  -> -1: O1 [7] O2 [7]; tau: O1 [1] O2 [3]; R^4: O1 [4] O2 [4]; extras on O1: [[], [], [], []]
+  C_4 on O1 = translations {000,111,001,110}; on O2 = {000,111,011,100}
+
+------------------------------------------------------------------------------
+AY1 -- Lemma A numerically: I_k = union_w C_W(R^k w^-1) on B4 and D5, all lags
+------------------------------------------------------------------------------
+  B4: k=1 |I|=1 |union|=1 =; k=2 |I|=1 |union|=1 =; k=3 |I|=1 |union|=1 =; k=4 |I|=8 |union|=8 =; k=5 |I|=1 |union|=1 =; k=6 |I|=1 |union|=1 =; k=7 |I|=1 |union|=1 =
+  D5: k=1 |I|=1 |union|=1 =; k=2 |I|=1 |union|=1 =; k=3 |I|=2 |union|=2 =; k=4 |I|=8 |union|=8 =; k=5 |I|=2 |union|=2 =; k=6 |I|=1 |union|=1 =; k=7 |I|=1 |union|=1 =
+[PASS] AY1: Lemma A holds numerically on B4 and D5 at every lag k = 1..7
+[t=   2.7s] Lemma A checked
+
+------------------------------------------------------------------------------
+AY9 -- D5 half-spin: lag 3 (REGISTERED), lag 5, lag 4
+------------------------------------------------------------------------------
+  k=3: |I|=2 |C|=1; nearest distance 7 attained by 1; w_k = ('-e2', '-e1', '+e5', '-e4', '-e3'); |Y| = 9, pointwise stabilizer 1; p in C_W(c): True (|C_W(c)| = 2); I_k == C_W(c): True; #w carrying p: 32; transport of p = conj by w_k: True
+  k=5: |I|=2 |C|=1; nearest distance 7 attained by 1; w_k = ('-e2', '-e1', '-e5', '-e4', '+e3'); |Y| = 9, pointwise stabilizer 1; p in C_W(c): False (|C_W(c)| = 2); I_k == C_W(c): True; #w carrying p: 0; transport of p = conj by w_k: False
+[PASS] AY9: REGISTERED GUESS: on D5 at lag 3 the nearest Weyl element is unique (distance 7), its agreement set (9 points) determines Weyl elements, the survivor (e1 e3)(e2 e5) commutes with the correction, I_3 = C_W(R^3 w^-1) = {1, p}, and p's transport is conjugation by w  -> p in W(D5): True; {'nI': 2, 'nC': 1, 'dmin': 7, 'nnear': 1, 'w': ('-e2', '-e1', '+e5', '-e4', '-e3'), 'Ysize': 9, 'pstab': 1, 'p_in_Cc': True, 'Cc': 2, 'Ik_eq_Cc': True, 'ncarriers': 32, 'transport': True}
+[FAIL] AY9b: the same at lag 5 (SM-059's reversal)  -> {'nI': 2, 'nC': 1, 'dmin': 7, 'nnear': 1, 'w': ('-e2', '-e1', '-e5', '-e4', '+e3'), 'Ysize': 9, 'pstab': 1, 'p_in_Cc': False, 'Cc': 2, 'Ik_eq_Cc': True, 'ncarriers': 0, 'transport': False}
+[PASS] AY9c: lag 4 on D5 with w = (-e1,-e3,-e2,+e4,-e5): the correction fixes exactly the D5 image of O2, that set determines W(D5), and I_4 = C_W(correction) of order 8  -> |Fix| = 8, pointwise stabilizer 1, |C_W(c)| = 8, |I_4| = 8
+[t=   2.8s] D5 done
+
+------------------------------------------------------------------------------
+AY10 -- the family: one correction suffices (REGISTERED GUESS)
+------------------------------------------------------------------------------
+  B3 spinor      k=3 |I|=16 |C|=8 |W|=48: solutions w: 0 (of |W|)
+  B4 spinor      k=4 |I|=8 |C|=4 |W|=384: solutions w: 4 (of |W|); example type 2^8, commutes with R^k: True
+  D5 half-spin   k=3 |I|=2 |C|=1 |W|=1920: solutions w: 32 (of |W|); example type 2^8, commutes with R^k: False
+  D5 half-spin   k=4 |I|=8 |C|=4 |W|=1920: solutions w: 4 (of |W|); example type 2^8, commutes with R^k: False
+  D5 half-spin   k=5 |I|=2 |C|=1 |W|=1920: solutions w: 32 (of |W|); example type 8^2, commutes with R^k: False
+  Minuscule machine from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993); BFS from verify_stone_at_grammar_family.py (sha256 7063393558f83fcc)
+  anomalous boards from SM-058's table: 21 boards, 93 (board, lag) pairs
+[t=   2.9s] A2 k=1: |W| = 6, N = 3
+    lag  1: |I|=     6 |C|=    3  solutions w:      1; example 3^1, commutes with R^k, = R^1
+    lag  2: |I|=     6 |C|=    3  solutions w:      1; example 3^1, commutes with R^k, = R^2
+[t=   2.9s] A2 k=2: |W| = 6, N = 3
+    lag  1: |I|=     6 |C|=    3  solutions w:      1; example 3^1, commutes with R^k, = R^1
+    lag  2: |I|=     6 |C|=    3  solutions w:      1; example 3^1, commutes with R^k, = R^2
+[t=   2.9s] A3 k=1: |W| = 24, N = 4
+    lag  1: |I|=    24 |C|=    4  solutions w:      1; example 4^1, commutes with R^k, = R^1
+    lag  2: |I|=    24 |C|=    8  solutions w:      1; example 2^2, commutes with R^k, = R^2
+    lag  3: |I|=    24 |C|=    4  solutions w:      1; example 4^1, commutes with R^k, = R^3
+[t=   2.9s] A3 k=2: |W| = 24, N = 6
+    lag  1: |I|=     4 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  2: |I|=    24 |C|=    4  solutions w:      1; example 2^2 1^2, commutes with R^k, = R^2
+    lag  3: |I|=     4 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+[t=   2.9s] A3 k=3: |W| = 24, N = 4
+    lag  1: |I|=    24 |C|=    4  solutions w:      1; example 4^1, commutes with R^k, = R^1
+    lag  2: |I|=    24 |C|=    8  solutions w:      1; example 2^2, commutes with R^k, = R^2
+    lag  3: |I|=    24 |C|=    4  solutions w:      1; example 4^1, commutes with R^k, = R^3
+[t=   2.9s] A4 k=1: |W| = 120, N = 5
+    lag  1: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^1
+    lag  2: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^2
+    lag  3: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^3
+    lag  4: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^4
+[t=   2.9s] A4 k=4: |W| = 120, N = 5
+    lag  1: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^1
+    lag  2: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^2
+    lag  3: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^3
+    lag  4: |I|=   120 |C|=    5  solutions w:      1; example 5^1, commutes with R^k, = R^4
+[t=   2.9s] A5 k=1: |W| = 720, N = 6
+    lag  1: |I|=   720 |C|=    6  solutions w:      1; example 6^1, commutes with R^k, = R^1
+    lag  2: |I|=   720 |C|=   18  solutions w:      1; example 3^2, commutes with R^k, = R^2
+    lag  3: |I|=   720 |C|=   48  solutions w:      1; example 2^3, commutes with R^k, = R^3
+    lag  4: |I|=   720 |C|=   18  solutions w:      1; example 3^2, commutes with R^k, = R^4
+    lag  5: |I|=   720 |C|=    6  solutions w:      1; example 6^1, commutes with R^k, = R^5
+[t=   2.9s] A5 k=5: |W| = 720, N = 6
+    lag  1: |I|=   720 |C|=    6  solutions w:      1; example 6^1, commutes with R^k, = R^1
+    lag  2: |I|=   720 |C|=   18  solutions w:      1; example 3^2, commutes with R^k, = R^2
+    lag  3: |I|=   720 |C|=   48  solutions w:      1; example 2^3, commutes with R^k, = R^3
+    lag  4: |I|=   720 |C|=   18  solutions w:      1; example 3^2, commutes with R^k, = R^4
+    lag  5: |I|=   720 |C|=    6  solutions w:      1; example 6^1, commutes with R^k, = R^5
+[t=   3.0s] A6 k=1: |W| = 5040, N = 7
+    lag  1: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^1
+    lag  2: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^2
+    lag  3: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^3
+    lag  4: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^4
+    lag  5: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^5
+    lag  6: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^6
+[t=   3.0s] A6 k=6: |W| = 5040, N = 7
+    lag  1: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^1
+    lag  2: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^2
+    lag  3: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^3
+    lag  4: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^4
+    lag  5: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^5
+    lag  6: |I|=  5040 |C|=    7  solutions w:      1; example 7^1, commutes with R^k, = R^6
+[t=   3.3s] A7 k=1: |W| = 40320, N = 8
+    lag  1: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^1
+    lag  2: |I|= 40320 |C|=   32  solutions w:      1; example 4^2, commutes with R^k, = R^2
+    lag  3: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^3
+    lag  4: |I|= 40320 |C|=  384  solutions w:      1; example 2^4, commutes with R^k, = R^4
+    lag  5: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^5
+    lag  6: |I|= 40320 |C|=   32  solutions w:      1; example 4^2, commutes with R^k, = R^6
+    lag  7: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^7
+[t=   3.8s] A7 k=7: |W| = 40320, N = 8
+    lag  1: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^1
+    lag  2: |I|= 40320 |C|=   32  solutions w:      1; example 4^2, commutes with R^k, = R^2
+    lag  3: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^3
+    lag  4: |I|= 40320 |C|=  384  solutions w:      1; example 2^4, commutes with R^k, = R^4
+    lag  5: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^5
+    lag  6: |I|= 40320 |C|=   32  solutions w:      1; example 4^2, commutes with R^k, = R^6
+    lag  7: |I|= 40320 |C|=    8  solutions w:      1; example 8^1, commutes with R^k, = R^7
+[t=   4.1s] D4 k=1: |W| = 192, N = 8
+    lag  1: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+    lag  3: |I|=   192 |C|=   16  solutions w:      2; example 2^2 1^4, commutes with R^k
+    lag  5: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+[t=   4.1s] D4 k=3: |W| = 192, N = 8
+    lag  1: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+    lag  3: |I|=   192 |C|=   16  solutions w:      2; example 2^2 1^4, commutes with R^k
+    lag  5: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+[t=   4.1s] D4 k=4: |W| = 192, N = 8
+    lag  1: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+    lag  3: |I|=   192 |C|=   16  solutions w:      2; example 2^2 1^4, commutes with R^k
+    lag  5: |I|=     6 |C|=    2  solutions w:      2; example 2^2 1^4, does NOT commute with R^k
+[t=   4.1s] D5 k=1: |W| = 1920, N = 10
+    lag  1: |I|=     8 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  2: |I|=    32 |C|=    8  solutions w:      0  -- NONE: two corrections needed
+    lag  3: |I|=     8 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  4: |I|=  1920 |C|=   32  solutions w:      1; example 2^4 1^2, commutes with R^k, = R^4
+    lag  5: |I|=     8 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  6: |I|=    32 |C|=    8  solutions w:      0  -- NONE: two corrections needed
+    lag  7: |I|=     8 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+[t=   4.2s] D5 k=4: |W| = 1920, N = 16
+    lag  3: |I|=     2 |C|=    1  solutions w:     32; example 2^8, does NOT commute with R^k
+    lag  4: |I|=     8 |C|=    4  solutions w:      4; example 2^8, commutes with R^k
+    lag  5: |I|=     2 |C|=    1  solutions w:     32; example 2^8, does NOT commute with R^k
+[t=   4.2s] D5 k=5: |W| = 1920, N = 16
+    lag  3: |I|=     2 |C|=    1  solutions w:     32; example 2^8, does NOT commute with R^k
+    lag  4: |I|=     8 |C|=    4  solutions w:      4; example 2^8, commutes with R^k
+    lag  5: |I|=     2 |C|=    1  solutions w:     32; example 2^8, does NOT commute with R^k
+[t=   4.3s] D6 k=1: |W| = 23040, N = 12
+    lag  1: |I|=    10 |C|=    2  solutions w:      2; example 2^4 1^4, does NOT commute with R^k
+    lag  3: |I|=    10 |C|=    2  solutions w:      2; example 2^4 1^4, does NOT commute with R^k
+    lag  5: |I|= 23040 |C|=  128  solutions w:      2; example 2^4 1^4, commutes with R^k
+    lag  7: |I|=    10 |C|=    2  solutions w:      2; example 2^4 1^4, does NOT commute with R^k
+    lag  9: |I|=    10 |C|=    2  solutions w:      2; example 2^4 1^4, does NOT commute with R^k
+[t=   5.8s] D7 k=1: |W| = 322560, N = 14
+    lag  1: |I|=    12 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  2: |I|=    72 |C|=   12  solutions w:      2; example 2^6 1^2, does NOT commute with R^k
+    lag  3: |I|=   384 |C|=   16  solutions w:      0  -- NONE: two corrections needed
+    lag  5: |I|=    12 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  6: |I|=322560 |C|=  384  solutions w:      1; example 2^6 1^2, commutes with R^k, = R^6
+    lag  7: |I|=    12 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+    lag  9: |I|=   384 |C|=   16  solutions w:      0  -- NONE: two corrections needed
+    lag 10: |I|=    72 |C|=   12  solutions w:      2; example 2^6 1^2, does NOT commute with R^k
+    lag 11: |I|=    12 |C|=    2  solutions w:      0  -- NONE: two corrections needed
+[PASS] AY10a: [P] SM-058's (|I_k|, |C_k|) reproduced on every anomalous board and lag from the AQ/AT machines
+[FAIL] AY10: REGISTERED GUESS: on every anomalous board and lag (the 42's chains, A3w2, D_n vectors, D5 half-spins; B3 lag 3; B4 lag 4) the transport on I_k is conjugation by a single Weyl element  -> INVERTED: first failure B3 spinor lag 3 (|I|=16, |C|=8); 15 failures of 98
+[t=   9.0s] family done
+
+------------------------------------------------------------------------------
+POST-REVEAL (labelled, after the first sealed run): AY2-b, AY9b-b, AY10b
+------------------------------------------------------------------------------
+[PASS] AY2-b: POST-REVEAL: the machine's rowmotion on the B4 board is exactly the inverse of the hand's two 8-cycles (the AV machine grows ideals from the lowest weight, the hand from the highest: dual lattices, inverse rowmotion); the phases of AY8 were read along the hand's direction
+[PASS] AY9b-b: POST-REVEAL: the lag-5 survivor is the transport of p, R^-3 p R^3 = w_3^-1 p w_3 (the brief named p itself: the auditor's slip); with it, Lemma B holds at lag 5 with the nearest w_5: p_5 commutes with the correction, I_5 = C_W(R^5 w_5^-1), and p_5's transport is conjugation by w_5  -> p_5 = ('+e3', '-e5', '+e1', '+e4', '-e2')
+  the four Weyl elements realising the transport on the 4-cube: ('-e1', '-e3', '-e2', '+e4'); ('-e1', '+e3', '+e2', '+e4'); ('+e1', '-e3', '-e2', '-e4'); ('+e1', '+e3', '+e2', '-e4')  (the coset (-tau) C_W(I_4))
+  B3 spinor      lag  3 |I|=  16: 8 of 16 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 8
+  A3 w2          lag  1 |I|=   4: 2 of 4 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 2
+  A3 w2          lag  3 |I|=   4: 2 of 4 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 2
+  D5 w1          lag  1 |I|=   8: 4 of 8 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 4
+  D5 w1          lag  2 |I|=  32: 18 of 32 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 8
+  D5 w1          lag  3 |I|=   8: 4 of 8 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 4
+  D5 w1          lag  5 |I|=   8: 4 of 8 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 4
+  D5 w1          lag  6 |I|=  32: 18 of 32 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 8
+  D5 w1          lag  7 |I|=   8: 4 of 8 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 4
+  D7 w1          lag  1 |I|=  12: 6 of 12 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 6
+  D7 w1          lag  3 |I|= 384: 252 of 384 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 48
+  D7 w1          lag  5 |I|=  12: 6 of 12 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 6
+  D7 w1          lag  7 |I|=  12: 6 of 12 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 6
+  D7 w1          lag  9 |I|= 384: 252 of 384 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 48
+  D7 w1          lag 11 |I|=  12: 6 of 12 elements have a transport that is NOT W-conjugate to them (the union of centralizers is a strict subset of I_k; no cover exists); the best single w carries 6
+[PASS] AY1-b: POST-REVEAL, the auditor's own error: Lemma A's proof is wrong as written (only the inclusion union <= I_k holds; equality needs every transport W-conjugate to its element). Measured: the equality holds on B4 and D5 (AY1) and FAILS on the B3 spinor at lag 3, where transports leave the W-conjugacy classes  -> pairs with non-inner transports: 15 of 15 failing pairs: B3 spinor k=3 (8 of 16); A3 w2 k=1 (2 of 4); A3 w2 k=3 (2 of 4); D5 w1 k=1 (4 of 8); D5 w1 k=2 (18 of 32); D5 w1 k=3 (4 of 8); D5 w1 k=5 (4 of 8); D5 w1 k=6 (18 of 32); D5 w1 k=7 (4 of 8); D7 w1 k=1 (6 of 12); D7 w1 k=3 (252 of 384); D7 w1 k=5 (6 of 12); D7 w1 k=7 (6 of 12); D7 w1 k=9 (252 of 384); D7 w1 k=11 (6 of 12)
+  A3 w2    lag  1: antipode in W: False; of 2 non-inner transports, 0 equal conjugation by the antipode
+  A3 w2    lag  3: antipode in W: False; of 2 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  1: antipode in W: False; of 4 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  2: antipode in W: False; of 18 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  3: antipode in W: False; of 4 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  5: antipode in W: False; of 4 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  6: antipode in W: False; of 18 non-inner transports, 0 equal conjugation by the antipode
+  D5 w1    lag  7: antipode in W: False; of 4 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag  1: antipode in W: False; of 6 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag  3: antipode in W: False; of 252 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag  5: antipode in W: False; of 6 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag  7: antipode in W: False; of 6 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag  9: antipode in W: False; of 252 non-inner transports, 0 equal conjugation by the antipode
+  D7 w1    lag 11: antipode in W: False; of 6 non-inner transports, 0 equal conjugation by the antipode
+[FAIL] AY10c: POST-REVEAL [obs]: on A3w2 and the odd D_n vectors the antipode is not a Weyl element and every non-inner transport is conjugation by the antipode  -> A3 w2 k=1 0/2; A3 w2 k=3 0/2; D5 w1 k=1 0/4; D5 w1 k=2 0/18; D5 w1 k=3 0/4; D5 w1 k=5 0/4; D5 w1 k=6 0/18; D5 w1 k=7 0/4; D7 w1 k=1 0/6; D7 w1 k=3 0/252; D7 w1 k=5 0/6; D7 w1 k=7 0/6; D7 w1 k=9 0/252; D7 w1 k=11 0/6
+  B3 spinor      lag  3: overgroup <W(B3), R^3> (= W(D4) by Stone AV) of order 192 (= 4 x |W|): elements of I_k not carried by any u: 0; single u realising the whole transport: 4
+  A3 w2          lag  1: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 48 (= 2 x |W|): elements of I_k not carried by any u: 2; single u realising the whole transport: 0
+  A3 w2          lag  3: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 48 (= 2 x |W|): elements of I_k not carried by any u: 2; single u realising the whole transport: 0
+  D5 w1          lag  1: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 4; single u realising the whole transport: 0
+  D5 w1          lag  2: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 18; single u realising the whole transport: 0
+  D5 w1          lag  3: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 4; single u realising the whole transport: 0
+  D5 w1          lag  5: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 4; single u realising the whole transport: 0
+  D5 w1          lag  6: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 18; single u realising the whole transport: 0
+  D5 w1          lag  7: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 3840 (= 2 x |W|): elements of I_k not carried by any u: 4; single u realising the whole transport: 0
+  D7 w1          lag  1: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 6; single u realising the whole transport: 0
+  D7 w1          lag  3: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 252; single u realising the whole transport: 0
+  D7 w1          lag  5: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 6; single u realising the whole transport: 0
+  D7 w1          lag  7: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 6; single u realising the whole transport: 0
+  D7 w1          lag  9: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 252; single u realising the whole transport: 0
+  D7 w1          lag 11: overgroup <W, one antipodal swap> (the stabilizer of the pairing) of order 645120 (= 2 x |W|): elements of I_k not carried by any u: 6; single u realising the whole transport: 0
+[FAIL] AY10d: POST-REVEAL [obs]: every non-inner transport in the family is inner in the overgroup (W(D4) for B3; the pairing stabilizer W(B_n) for A3w2 and the odd D_n vectors), and there a single element realises the whole transport  -> B3 spinor k=3: 0 uncarried, 4 single u; A3 w2 k=1: 2 uncarried, 0 single u; A3 w2 k=3: 2 uncarried, 0 single u; D5 w1 k=1: 4 uncarried, 0 single u; D5 w1 k=2: 18 uncarried, 0 single u; D5 w1 k=3: 4 uncarried, 0 single u; D5 w1 k=5: 4 uncarried, 0 single u; D5 w1 k=6: 18 uncarried, 0 single u; D5 w1 k=7: 4 uncarried, 0 single u; D7 w1 k=1: 6 uncarried, 0 single u; D7 w1 k=3: 252 uncarried, 0 single u; D7 w1 k=5: 6 uncarried, 0 single u; D7 w1 k=7: 6 uncarried, 0 single u; D7 w1 k=9: 252 uncarried, 0 single u; D7 w1 k=11: 6 uncarried, 0 single u
+[PASS] AY10b: POST-REVEAL [obs]: on every failing pair whose transports are all W-inner, exactly two corrections cover I_k  -> no such pair: every failure is a non-inner transport
+[t= 250.3s] post-reveal done
+
+------------------------------------------------------------------------------
+AY11 -- [obs], by hand
+------------------------------------------------------------------------------
+  the anomaly is already on B4, whose reverser -1 is central in W(B4); it is not tied to D5's non-central reverser (SM-062 section 7.11.4). No computation.
+
+==============================================================================
+SUMMARY: 20 PASS, 5 FAIL of 25 checks
+  FAIL: AY2
+  FAIL: AY9b
+  FAIL: AY10
+  FAIL: AY10c
+  FAIL: AY10d
+[t= 250.4s] done
