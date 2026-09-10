@@ -1,0 +1,72 @@
+==============================================================================
+STONE AW -- HOMOMESY ON THE BOARDS: WHAT THE CLOCK CONSERVES ON AVERAGE
+==============================================================================
+[PASS] AW0: the brief is sha-locked: sha256(BRIEF_STONE_AW_HOMOMESY.md) equals BRIEF_STONE_AW_LOCK.sha256  -> dbf5759f965f848e...
+  Minuscule machine loaded verbatim from verify_stone_aq_rush_shi_defect.py (sha256 b83aa9958d7df993)
+
+------------------------------------------------------------------------------
+AW1-AW4 -- all 42 boards
+------------------------------------------------------------------------------
+[t=   0.0s] A2 w1: orbits [3]  +1 2/3  0 2/3  toggle 4/3
+[t=   0.0s] A2 w2: orbits [3]  +1 2/3  0 2/3  toggle 4/3
+[t=   0.0s] A3 w1: orbits [4]  +1 3/4  0 3/2  toggle 3/2
+[t=   0.0s] A3 w2: orbits [4, 2]  +1 1  0 1  toggle 2
+[t=   0.0s] A3 w3: orbits [4]  +1 3/4  0 3/2  toggle 3/2
+[t=   0.0s] A4 w1: orbits [5]  +1 4/5  0 12/5  toggle 8/5
+[t=   0.0s] A4 w2: orbits [5, 5]  +1 6/5  0 8/5  toggle 12/5
+[t=   0.0s] A4 w3: orbits [5, 5]  +1 6/5  0 8/5  toggle 12/5
+[t=   0.0s] A4 w4: orbits [5]  +1 4/5  0 12/5  toggle 8/5
+[t=   0.0s] A5 w1: orbits [6]  +1 5/6  0 10/3  toggle 5/3
+[t=   0.0s] A5 w2: orbits [6, 6, 3]  +1 4/3  0 7/3  toggle 8/3
+[t=   0.1s] A5 w3: orbits [6, 6, 6, 2]  +1 3/2  0 2  toggle 3
+[t=   0.1s] A5 w4: orbits [6, 6, 3]  +1 4/3  0 7/3  toggle 8/3
+[t=   0.1s] A5 w5: orbits [6]  +1 5/6  0 10/3  toggle 5/3
+[t=   0.1s] A6 w1: orbits [7]  +1 6/7  0 30/7  toggle 12/7
+[t=   0.1s] A6 w2: orbits [7, 7, 7]  +1 10/7  0 22/7  toggle 20/7
+[t=   0.2s] A6 w3: orbits [7, 7, 7, 7, 7]  +1 12/7  0 18/7  toggle 24/7
+[t=   0.3s] A6 w4: orbits [7, 7, 7, 7, 7]  +1 12/7  0 18/7  toggle 24/7
+[t=   0.4s] A6 w5: orbits [7, 7, 7]  +1 10/7  0 22/7  toggle 20/7
+[t=   0.4s] A6 w6: orbits [7]  +1 6/7  0 30/7  toggle 12/7
+[t=   0.4s] A7 w1: orbits [8]  +1 7/8  0 21/4  toggle 7/4
+[t=   0.5s] A7 w2: orbits [8, 8, 8, 4]  +1 3/2  0 4  toggle 3
+[t=   0.8s] A7 w3: orbits [8, 8, 8, 8, 8, 8, 8]  +1 15/8  0 13/4  toggle 15/4
+[t=   1.4s] A7 w4: orbits [8, 8, 8, 8, 8, 8, 8, 8, 4, 2]  +1 2  0 3  toggle 4
+[t=   1.8s] A7 w5: orbits [8, 8, 8, 8, 8, 8, 8]  +1 15/8  0 13/4  toggle 15/4
+[t=   1.9s] A7 w6: orbits [8, 8, 8, 4]  +1 3/2  0 4  toggle 3
+[t=   1.9s] A7 w7: orbits [8]  +1 7/8  0 21/4  toggle 7/4
+[t=   1.9s] D4 w1: orbits [6, 2]  +1 1  0 2  toggle 2
+[t=   1.9s] D4 w3: orbits [6, 2]  +1 1  0 2  toggle 2
+[t=   1.9s] D4 w4: orbits [6, 2]  +1 1  0 2  toggle 2
+[t=   1.9s] D5 w1: orbits [8, 2]  +1 1  0 3  toggle 2
+[t=   1.9s] D5 w4: orbits [8, 8]  +1 5/4  0 5/2  toggle 5/2
+[t=   2.0s] D5 w5: orbits [8, 8]  +1 5/4  0 5/2  toggle 5/2
+[t=   2.0s] D6 w1: orbits [10, 2]  +1 1  0 4  toggle 2
+[t=   2.1s] D6 w5: orbits [10, 10, 10, 2]  +1 3/2  0 3  toggle 3
+[t=   2.1s] D6 w6: orbits [10, 10, 10, 2]  +1 3/2  0 3  toggle 3
+[t=   2.2s] D7 w1: orbits [12, 2]  +1 1  0 5  toggle 2
+[t=   2.6s] D7 w6: orbits [12, 12, 12, 12, 12, 4]  +1 7/4  0 7/2  toggle 7/2
+[t=   3.1s] D7 w7: orbits [12, 12, 12, 12, 12, 4]  +1 7/4  0 7/2  toggle 7/2
+[t=   3.2s] E6 w1: orbits [12, 12, 3]  +1 4/3  0 10/3  toggle 8/3
+[t=   3.3s] E6 w6: orbits [12, 12, 3]  +1 4/3  0 10/3  toggle 8/3
+[t=   3.7s] E7 w7: orbits [18, 18, 18, 2]  +1 3/2  0 4  toggle 3
+[PASS] AW1: Rush-Wang seen on the data: the mean weight of every rowmotion orbit is zero on all 42 boards
+[PASS] AW2: the ternary label counts #(+1), #(-1), #(0) are homomesic on all 42 boards with means |P|/h, |P|/h, r - 2|P|/h
+[PASS] AW3: REGISTERED GUESS: the toggle size |I delta R(I)| is homomesic on all 42 boards with mean 2|P|/h
+[PASS] AW4: registered negatives on every non-chain board (30): #distinct colours toggled, the kept count, and the number of lattice elements below are NOT homomesic  -> {'colours': 30, 'kept': 30, 'below': 30}
+
+------------------------------------------------------------------------------
+AW5 -- REGISTERED GUESS: on the 56 under the sheet clock, the mirror, and pr.Psi
+------------------------------------------------------------------------------
+  Psi6 (E6 labels, per sheet)  orbits [(12, 4), (3, 2), (1, 2)]  ternary counts homomesic [False, False, False]  kept-count homomesic False
+  pr                           orbits [(2, 27), (1, 2)]  ternary counts homomesic [False, False, False]  kept-count homomesic False
+  pr.Psi                       orbits [(9, 3), (5, 2), (6, 1), (13, 1)]  ternary counts homomesic [False, False, False]  kept-count homomesic False
+  Psi                          orbits [(18, 3), (2, 1)]  ternary counts homomesic [True, True, True]  kept-count homomesic False
+[FAIL] AW5: REGISTERED GUESS: on the 56 the ternary counts are homomesic under Psi6 (E6 labels) and under pr; the kept count under neither; the ternary counts NOT homomesic under pr.Psi  -> {'Psi6 (E6 labels, per sheet)': {1: False, -1: False, 0: False, 'kept': False}, 'pr': {1: False, -1: False, 0: False, 'kept': False}, 'pr.Psi': {1: False, -1: False, 0: False, 'kept': False}, 'Psi': {1: True, -1: True, 0: True, 'kept': False}}
+  [INVERTED] recorded at equal prominence.
+[PASS] AW5b: POST-REVEAL: on the two 27-sheets alone (poles excluded) the ternary E6-label counts are homomesic under the sheet clock Psi6 across both sheets (Rush-Wang on each E6 sheet; means 4/3, 4/3, 10/3)  -> {1: ['4/3', '4/3', '4/3', '4/3', '4/3', '4/3'], -1: ['4/3', '4/3', '4/3', '4/3', '4/3', '4/3'], 0: ['10/3', '10/3', '10/3', '10/3', '10/3', '10/3']}
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 6 checks passed, 1 failed  FAILED: ['AW5']
+[t=   3.8s] done
