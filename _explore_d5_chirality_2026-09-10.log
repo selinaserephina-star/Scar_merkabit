@@ -1,0 +1,17 @@
+orbit of size 8: e5 signs {'+': 4, '-': 4} ; minus-parity of e1..e4 {0: 4, 1: 4}
+orbit of size 8: e5 signs {'+': 4, '-': 4} ; minus-parity of e1..e4 {0: 4, 1: 4}
+lag 3     2^6 1^4 EXTRA        mixes chirality      ('+e3', '+e5', '+e1', '+e4', '+e2')
+half-turn 4^4    EXTRA        preserves chirality  ('+e4', '-e3', '+e2', '-e1', '+e5')
+half-turn 2^8    EXTRA        swaps chirality      ('+e4', '+e2', '-e3', '+e1', '-e5')
+half-turn 2^8    centralizer  swaps chirality      ('-e1', '-e3', '-e2', '+e4', '-e5')
+half-turn 4^4    EXTRA        preserves chirality  ('-e4', '+e3', '-e2', '+e1', '+e5')
+half-turn 2^8    EXTRA        swaps chirality      ('-e4', '-e2', '+e3', '-e1', '-e5')
+half-turn 2^8    centralizer  preserves chirality  ('-e1', '-e2', '-e3', '-e4', '+e5')
+half-turn 2^8    centralizer  swaps chirality      ('+e1', '+e3', '+e2', '-e4', '-e5')
+R^1: mixes chirality
+R^2: mixes chirality
+R^3: mixes chirality
+R^4: mixes chirality
+elements of W(D5) preserving-or-swapping the D4 chirality split: 384 of 1920
+half-turn survivors inside that stabilizer: 8 of 8; centralizer inside: 4 of 4
+clock orbits == chirality classes: False
