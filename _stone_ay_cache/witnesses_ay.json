@@ -1,0 +1,1848 @@
+{
+ "brief_sha": "bc81504212c12f6a7f787d55ea6e1094ff814e3911da70826993c1ffbe11a384",
+ "clock_direction": "INVERSE (the machine's R is the hand's R^-1; phases read backwards)",
+ "O1": [
+  "{}",
+  "{1,2,3,4}",
+  "{1,2,3}",
+  "{1,2,4}",
+  "{1,3}",
+  "{2,4}",
+  "{3}",
+  "{4}"
+ ],
+ "O2": [
+  "{1}",
+  "{2,3,4}",
+  "{1,2}",
+  "{1,3,4}",
+  "{2,3}",
+  "{1,4}",
+  "{2}",
+  "{3,4}"
+ ],
+ "agreement_hist_B4_k4": {
+  "0": 237,
+  "2": 108,
+  "4": 34,
+  "6": 4,
+  "8": 1
+ },
+ "stab_O1": [
+  [
+   "+e1",
+   "+e2",
+   "+e3",
+   "+e4"
+  ],
+  [
+   "-e1",
+   "-e2",
+   "-e3",
+   "-e4"
+  ],
+  [
+   "+e2",
+   "+e1",
+   "+e4",
+   "+e3"
+  ],
+  [
+   "-e2",
+   "-e1",
+   "-e4",
+   "-e3"
+  ],
+  [
+   "+e1",
+   "+e3",
+   "+e2",
+   "-e4"
+  ],
+  [
+   "-e1",
+   "-e3",
+   "-e2",
+   "+e4"
+  ],
+  [
+   "+e2",
+   "+e4",
+   "+e1",
+   "-e3"
+  ],
+  [
+   "-e2",
+   "-e4",
+   "-e1",
+   "+e3"
+  ],
+  [
+   "+e4",
+   "+e2",
+   "-e3",
+   "+e1"
+  ],
+  [
+   "-e4",
+   "-e2",
+   "+e3",
+   "-e1"
+  ],
+  [
+   "+e3",
+   "+e1",
+   "-e4",
+   "+e2"
+  ],
+  [
+   "-e3",
+   "-e1",
+   "+e4",
+   "-e2"
+  ],
+  [
+   "+e4",
+   "-e3",
+   "+e2",
+   "-e1"
+  ],
+  [
+   "-e4",
+   "+e3",
+   "-e2",
+   "+e1"
+  ],
+  [
+   "+e3",
+   "-e4",
+   "+e1",
+   "-e2"
+  ],
+  [
+   "-e3",
+   "+e4",
+   "-e1",
+   "+e2"
+  ]
+ ],
+ "I4": [
+  [
+   "+e1",
+   "+e2",
+   "+e3",
+   "+e4"
+  ],
+  [
+   "-e1",
+   "-e2",
+   "-e3",
+   "-e4"
+  ],
+  [
+   "+e1",
+   "+e3",
+   "+e2",
+   "-e4"
+  ],
+  [
+   "-e1",
+   "-e3",
+   "-e2",
+   "+e4"
+  ],
+  [
+   "+e4",
+   "+e2",
+   "-e3",
+   "+e1"
+  ],
+  [
+   "-e4",
+   "-e2",
+   "+e3",
+   "-e1"
+  ],
+  [
+   "+e4",
+   "-e3",
+   "+e2",
+   "-e1"
+  ],
+  [
+   "-e4",
+   "+e3",
+   "-e2",
+   "+e1"
+  ]
+ ],
+ "D5": {
+  "3": {
+   "nI": 2,
+   "nC": 1,
+   "dmin": 7,
+   "nnear": 1,
+   "w": [
+    "-e2",
+    "-e1",
+    "+e5",
+    "-e4",
+    "-e3"
+   ],
+   "Ysize": 9,
+   "pstab": 1,
+   "p_in_Cc": true,
+   "Cc": 2,
+   "Ik_eq_Cc": true,
+   "ncarriers": 32,
+   "transport": true,
+   "Ik": [
+    [
+     "+e3",
+     "+e5",
+     "+e1",
+     "+e4",
+     "+e2"
+    ],
+    [
+     "+e1",
+     "+e2",
+     "+e3",
+     "+e4",
+     "+e5"
+    ]
+   ]
+  },
+  "5": {
+   "nI": 2,
+   "nC": 1,
+   "dmin": 7,
+   "nnear": 1,
+   "w": [
+    "-e2",
+    "-e1",
+    "-e5",
+    "-e4",
+    "+e3"
+   ],
+   "Ysize": 9,
+   "pstab": 1,
+   "p_in_Cc": false,
+   "Cc": 2,
+   "Ik_eq_Cc": true,
+   "ncarriers": 0,
+   "transport": false,
+   "Ik": [
+    [
+     "+e1",
+     "+e2",
+     "+e3",
+     "+e4",
+     "+e5"
+    ],
+    [
+     "+e3",
+     "-e5",
+     "+e1",
+     "+e4",
+     "-e2"
+    ]
+   ],
+   "survivor_p5": [
+    "+e3",
+    "-e5",
+    "+e1",
+    "+e4",
+    "-e2"
+   ]
+  }
+ },
+ "family": [
+  {
+   "board": "B3 spinor",
+   "k": 3,
+   "nI": 16,
+   "nC": 8,
+   "nW": 48,
+   "n_sol": 0,
+   "gens": 3,
+   "example": null,
+   "ex_commutes_Rk": false
+  },
+  {
+   "board": "B4 spinor",
+   "k": 4,
+   "nI": 8,
+   "nC": 4,
+   "nW": 384,
+   "n_sol": 4,
+   "gens": 2,
+   "example": "2^8",
+   "ex_commutes_Rk": true
+  },
+  {
+   "board": "D5 half-spin",
+   "k": 3,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "2^8",
+   "ex_commutes_Rk": false
+  },
+  {
+   "board": "D5 half-spin",
+   "k": 4,
+   "nI": 8,
+   "nC": 4,
+   "nW": 1920,
+   "n_sol": 4,
+   "gens": 2,
+   "example": "2^8",
+   "ex_commutes_Rk": false
+  },
+  {
+   "board": "D5 half-spin",
+   "k": 5,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "8^2",
+   "ex_commutes_Rk": false
+  },
+  {
+   "board": "A2 w1",
+   "k": 1,
+   "nI": 6,
+   "nC": 3,
+   "nW": 6,
+   "n_sol": 1,
+   "gens": 2,
+   "example": "3^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A2 w1",
+   "k": 2,
+   "nI": 6,
+   "nC": 3,
+   "nW": 6,
+   "n_sol": 1,
+   "gens": 2,
+   "example": "3^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A2 w2",
+   "k": 1,
+   "nI": 6,
+   "nC": 3,
+   "nW": 6,
+   "n_sol": 1,
+   "gens": 2,
+   "example": "3^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A2 w2",
+   "k": 2,
+   "nI": 6,
+   "nC": 3,
+   "nW": 6,
+   "n_sol": 1,
+   "gens": 2,
+   "example": "3^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A3 w1",
+   "k": 1,
+   "nI": 24,
+   "nC": 4,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "4^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A3 w1",
+   "k": 2,
+   "nI": 24,
+   "nC": 8,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "2^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A3 w1",
+   "k": 3,
+   "nI": 24,
+   "nC": 4,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "4^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A3 w2",
+   "k": 1,
+   "nI": 4,
+   "nC": 2,
+   "nW": 24,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "A3 w2",
+   "k": 2,
+   "nI": 24,
+   "nC": 4,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "2^2 1^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A3 w2",
+   "k": 3,
+   "nI": 4,
+   "nC": 2,
+   "nW": 24,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "A3 w3",
+   "k": 1,
+   "nI": 24,
+   "nC": 4,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "4^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A3 w3",
+   "k": 2,
+   "nI": 24,
+   "nC": 8,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "2^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A3 w3",
+   "k": 3,
+   "nI": 24,
+   "nC": 4,
+   "nW": 24,
+   "n_sol": 1,
+   "gens": 3,
+   "example": "4^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A4 w1",
+   "k": 1,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A4 w1",
+   "k": 2,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A4 w1",
+   "k": 3,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A4 w1",
+   "k": 4,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A4 w4",
+   "k": 1,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A4 w4",
+   "k": 2,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A4 w4",
+   "k": 3,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A4 w4",
+   "k": 4,
+   "nI": 120,
+   "nC": 5,
+   "nW": 120,
+   "n_sol": 1,
+   "gens": 4,
+   "example": "5^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A5 w1",
+   "k": 1,
+   "nI": 720,
+   "nC": 6,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "6^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A5 w1",
+   "k": 2,
+   "nI": 720,
+   "nC": 18,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "3^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A5 w1",
+   "k": 3,
+   "nI": 720,
+   "nC": 48,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "2^3",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A5 w1",
+   "k": 4,
+   "nI": 720,
+   "nC": 18,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "3^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A5 w1",
+   "k": 5,
+   "nI": 720,
+   "nC": 6,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "6^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A5 w5",
+   "k": 1,
+   "nI": 720,
+   "nC": 6,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "6^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A5 w5",
+   "k": 2,
+   "nI": 720,
+   "nC": 18,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "3^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A5 w5",
+   "k": 3,
+   "nI": 720,
+   "nC": 48,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "2^3",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A5 w5",
+   "k": 4,
+   "nI": 720,
+   "nC": 18,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "3^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A5 w5",
+   "k": 5,
+   "nI": 720,
+   "nC": 6,
+   "nW": 720,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "6^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A6 w1",
+   "k": 1,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A6 w1",
+   "k": 2,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A6 w1",
+   "k": 3,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A6 w1",
+   "k": 4,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A6 w1",
+   "k": 5,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A6 w1",
+   "k": 6,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 6
+  },
+  {
+   "board": "A6 w6",
+   "k": 1,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A6 w6",
+   "k": 2,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A6 w6",
+   "k": 3,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A6 w6",
+   "k": 4,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A6 w6",
+   "k": 5,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A6 w6",
+   "k": 6,
+   "nI": 5040,
+   "nC": 7,
+   "nW": 5040,
+   "n_sol": 1,
+   "gens": 6,
+   "example": "7^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 6
+  },
+  {
+   "board": "A7 w1",
+   "k": 1,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A7 w1",
+   "k": 2,
+   "nI": 40320,
+   "nC": 32,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "4^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A7 w1",
+   "k": 3,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A7 w1",
+   "k": 4,
+   "nI": 40320,
+   "nC": 384,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "2^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A7 w1",
+   "k": 5,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A7 w1",
+   "k": 6,
+   "nI": 40320,
+   "nC": 32,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "4^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 6
+  },
+  {
+   "board": "A7 w1",
+   "k": 7,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 7
+  },
+  {
+   "board": "A7 w7",
+   "k": 1,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 1
+  },
+  {
+   "board": "A7 w7",
+   "k": 2,
+   "nI": 40320,
+   "nC": 32,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "4^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 2
+  },
+  {
+   "board": "A7 w7",
+   "k": 3,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 3
+  },
+  {
+   "board": "A7 w7",
+   "k": 4,
+   "nI": 40320,
+   "nC": 384,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "2^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "A7 w7",
+   "k": 5,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 5
+  },
+  {
+   "board": "A7 w7",
+   "k": 6,
+   "nI": 40320,
+   "nC": 32,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "4^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 6
+  },
+  {
+   "board": "A7 w7",
+   "k": 7,
+   "nI": 40320,
+   "nC": 8,
+   "nW": 40320,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "8^1",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 7
+  },
+  {
+   "board": "D4 w1",
+   "k": 1,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w1",
+   "k": 3,
+   "nI": 192,
+   "nC": 16,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 4,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w1",
+   "k": 5,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w3",
+   "k": 1,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w3",
+   "k": 3,
+   "nI": 192,
+   "nC": 16,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 4,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w3",
+   "k": 5,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w4",
+   "k": 1,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w4",
+   "k": 3,
+   "nI": 192,
+   "nC": 16,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 4,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D4 w4",
+   "k": 5,
+   "nI": 6,
+   "nC": 2,
+   "nW": 192,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^2 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 1,
+   "nI": 8,
+   "nC": 2,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 2,
+   "nI": 32,
+   "nC": 8,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 3,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 3,
+   "nI": 8,
+   "nC": 2,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 4,
+   "nI": 1920,
+   "nC": 32,
+   "nW": 1920,
+   "n_sol": 1,
+   "gens": 5,
+   "example": "2^4 1^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 4
+  },
+  {
+   "board": "D5 w1",
+   "k": 5,
+   "nI": 8,
+   "nC": 2,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 6,
+   "nI": 32,
+   "nC": 8,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 3,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w1",
+   "k": 7,
+   "nI": 8,
+   "nC": 2,
+   "nW": 1920,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w4",
+   "k": 3,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "2^8",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w4",
+   "k": 4,
+   "nI": 8,
+   "nC": 4,
+   "nW": 1920,
+   "n_sol": 4,
+   "gens": 2,
+   "example": "2^8",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w4",
+   "k": 5,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "2^8",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w5",
+   "k": 3,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "2^8",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w5",
+   "k": 4,
+   "nI": 8,
+   "nC": 4,
+   "nW": 1920,
+   "n_sol": 4,
+   "gens": 2,
+   "example": "2^8",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D5 w5",
+   "k": 5,
+   "nI": 2,
+   "nC": 1,
+   "nW": 1920,
+   "n_sol": 32,
+   "gens": 1,
+   "example": "2^8",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D6 w1",
+   "k": 1,
+   "nI": 10,
+   "nC": 2,
+   "nW": 23040,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^4 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D6 w1",
+   "k": 3,
+   "nI": 10,
+   "nC": 2,
+   "nW": 23040,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^4 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D6 w1",
+   "k": 5,
+   "nI": 23040,
+   "nC": 128,
+   "nW": 23040,
+   "n_sol": 2,
+   "gens": 6,
+   "example": "2^4 1^4",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D6 w1",
+   "k": 7,
+   "nI": 10,
+   "nC": 2,
+   "nW": 23040,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^4 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D6 w1",
+   "k": 9,
+   "nI": 10,
+   "nC": 2,
+   "nW": 23040,
+   "n_sol": 2,
+   "gens": 2,
+   "example": "2^4 1^4",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 1,
+   "nI": 12,
+   "nC": 2,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 2,
+   "nI": 72,
+   "nC": 12,
+   "nW": 322560,
+   "n_sol": 2,
+   "gens": 3,
+   "example": "2^6 1^2",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 3,
+   "nI": 384,
+   "nC": 16,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 4,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 5,
+   "nI": 12,
+   "nC": 2,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 6,
+   "nI": 322560,
+   "nC": 384,
+   "nW": 322560,
+   "n_sol": 1,
+   "gens": 7,
+   "example": "2^6 1^2",
+   "ex_commutes_Rk": true,
+   "ex_power_of_R": 6
+  },
+  {
+   "board": "D7 w1",
+   "k": 7,
+   "nI": 12,
+   "nC": 2,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 9,
+   "nI": 384,
+   "nC": 16,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 4,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 10,
+   "nI": 72,
+   "nC": 12,
+   "nW": 322560,
+   "n_sol": 2,
+   "gens": 3,
+   "example": "2^6 1^2",
+   "ex_commutes_Rk": false,
+   "ex_power_of_R": null
+  },
+  {
+   "board": "D7 w1",
+   "k": 11,
+   "nI": 12,
+   "nC": 2,
+   "nW": 322560,
+   "n_sol": 0,
+   "gens": 2,
+   "example": null,
+   "ex_commutes_Rk": null,
+   "ex_power_of_R": null
+  }
+ ],
+ "B4_transport_solutions": [
+  [
+   "-e1",
+   "-e3",
+   "-e2",
+   "+e4"
+  ],
+  [
+   "-e1",
+   "+e3",
+   "+e2",
+   "+e4"
+  ],
+  [
+   "+e1",
+   "-e3",
+   "-e2",
+   "-e4"
+  ],
+  [
+   "+e1",
+   "+e3",
+   "+e2",
+   "-e4"
+  ]
+ ],
+ "antipode": [
+  {
+   "board": "A3 w2",
+   "k": 1,
+   "iota_in_W": false,
+   "uncarried": 2,
+   "by_antipode": 0
+  },
+  {
+   "board": "A3 w2",
+   "k": 3,
+   "iota_in_W": false,
+   "uncarried": 2,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 1,
+   "iota_in_W": false,
+   "uncarried": 4,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 2,
+   "iota_in_W": false,
+   "uncarried": 18,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 3,
+   "iota_in_W": false,
+   "uncarried": 4,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 5,
+   "iota_in_W": false,
+   "uncarried": 4,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 6,
+   "iota_in_W": false,
+   "uncarried": 18,
+   "by_antipode": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 7,
+   "iota_in_W": false,
+   "uncarried": 4,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 1,
+   "iota_in_W": false,
+   "uncarried": 6,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 3,
+   "iota_in_W": false,
+   "uncarried": 252,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 5,
+   "iota_in_W": false,
+   "uncarried": 6,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 7,
+   "iota_in_W": false,
+   "uncarried": 6,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 9,
+   "iota_in_W": false,
+   "uncarried": 252,
+   "by_antipode": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 11,
+   "iota_in_W": false,
+   "uncarried": 6,
+   "by_antipode": 0
+  }
+ ],
+ "overgroup": [
+  {
+   "board": "B3 spinor",
+   "k": 3,
+   "overgroup": "<W(B3), R^3> (= W(D4) by Stone AV)",
+   "over_order": 192,
+   "W_order": 48,
+   "uncarried_in_overgroup": 0,
+   "single_u_in_overgroup": 4
+  },
+  {
+   "board": "A3 w2",
+   "k": 1,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 48,
+   "W_order": 24,
+   "uncarried_in_overgroup": 2,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "A3 w2",
+   "k": 3,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 48,
+   "W_order": 24,
+   "uncarried_in_overgroup": 2,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 1,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 4,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 2,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 18,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 3,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 4,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 5,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 4,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 6,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 18,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D5 w1",
+   "k": 7,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 3840,
+   "W_order": 1920,
+   "uncarried_in_overgroup": 4,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 1,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 6,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 3,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 252,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 5,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 6,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 7,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 6,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 9,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 252,
+   "single_u_in_overgroup": 0
+  },
+  {
+   "board": "D7 w1",
+   "k": 11,
+   "overgroup": "<W, one antipodal swap> (the stabilizer of the pairing)",
+   "over_order": 645120,
+   "W_order": 322560,
+   "uncarried_in_overgroup": 6,
+   "single_u_in_overgroup": 0
+  }
+ ],
+ "cover": [
+  {
+   "board": "B3 spinor",
+   "k": 3,
+   "nI": 16,
+   "uncarried": 8,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 8
+  },
+  {
+   "board": "A3 w2",
+   "k": 1,
+   "nI": 4,
+   "uncarried": 2,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 2
+  },
+  {
+   "board": "A3 w2",
+   "k": 3,
+   "nI": 4,
+   "uncarried": 2,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 2
+  },
+  {
+   "board": "D5 w1",
+   "k": 1,
+   "nI": 8,
+   "uncarried": 4,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 4
+  },
+  {
+   "board": "D5 w1",
+   "k": 2,
+   "nI": 32,
+   "uncarried": 18,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 8
+  },
+  {
+   "board": "D5 w1",
+   "k": 3,
+   "nI": 8,
+   "uncarried": 4,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 4
+  },
+  {
+   "board": "D5 w1",
+   "k": 5,
+   "nI": 8,
+   "uncarried": 4,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 4
+  },
+  {
+   "board": "D5 w1",
+   "k": 6,
+   "nI": 32,
+   "uncarried": 18,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 8
+  },
+  {
+   "board": "D5 w1",
+   "k": 7,
+   "nI": 8,
+   "uncarried": 4,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 4
+  },
+  {
+   "board": "D7 w1",
+   "k": 1,
+   "nI": 12,
+   "uncarried": 6,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 6
+  },
+  {
+   "board": "D7 w1",
+   "k": 3,
+   "nI": 384,
+   "uncarried": 252,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 48
+  },
+  {
+   "board": "D7 w1",
+   "k": 5,
+   "nI": 12,
+   "uncarried": 6,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 6
+  },
+  {
+   "board": "D7 w1",
+   "k": 7,
+   "nI": 12,
+   "uncarried": 6,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 6
+  },
+  {
+   "board": "D7 w1",
+   "k": 9,
+   "nI": 384,
+   "uncarried": 252,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 48
+  },
+  {
+   "board": "D7 w1",
+   "k": 11,
+   "nI": 12,
+   "uncarried": 6,
+   "min_corrections": null,
+   "exact": true,
+   "maximal_carried_subsets": null,
+   "max_carried": 6
+  }
+ ]
+}
