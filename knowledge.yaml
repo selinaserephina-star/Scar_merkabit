@@ -1,4 +1,4 @@
-kcp_version: "0.12"
+kcp_version: "0.32"
 project: scar-merkabit-joint
 version: "0.1"
 description: >
@@ -67,26 +67,35 @@ units:
 
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
+    audience: [human, agent]
     title: "SCAR-MERKABIT JOINT REGISTRY v1.20 -- rows SM-001..SM-065"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
-    scope: registry
+    scope: project
+    x-house-scope: registry
     hints: { load_strategy: eager, priority: primary }
-    sha256: ef2b5b3ea52e075ef0a49adcafd86c92017b5b5978cfcf47454f1343d1751a24
+    content_hash:
+      algorithm: sha256
+      value: "ef2b5b3ea52e075ef0a49adcafd86c92017b5b5978cfcf47454f1343d1751a24"
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
+    audience: [human, agent]
     title: "Stone S brief (sha-locked before code)"
     intent: >
       IB's ONE LAW / TWO PROJECTIONS operationalized: two declared
       translations, under-specifications returned; incl. the registered
       inversion guess the data refuted.
-    scope: brief
-    sha256: 45031dd47e38b7074ab836790f35413239de3835e8d675275fc418391db07082
+    scope: project
+    x-house-scope: brief
+    content_hash:
+      algorithm: sha256
+      value: "45031dd47e38b7074ab836790f35413239de3835e8d675275fc418391db07082"
 
   - id: stone-s-doc
     path: STONE_S_RIGIDITY.md
+    audience: [human, agent]
     title: "SM-018 -- Stone S: the rigidity threshold"
     intent: >
       His decision rule executed on the two computable projections
@@ -94,31 +103,43 @@ units:
       refuted, identity-return / symmetry / swap=cut-join-or-TWIST laws,
       parity = orientability memory, verdict = equal at n<=5 + containment
       always + odd sector downstairs only; witnesses listed.
-    scope: theorem
-    sha256: f55487665ff7ca2e9cb7650075bde131c79f77196b0b72193e186af2887dfa58
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "f55487665ff7ca2e9cb7650075bde131c79f77196b0b72193e186af2887dfa58"
 
   - id: stone-s-verifier
     path: verify_stone_s_rigidity.py
+    audience: [human, agent]
     title: "Stone S verifier (14 checks, ~2 min)"
     intent: >
       Stone 1b matching machinery reused verbatim; exhaustive S_n class
       products; event mining with identity mechanisms excluded; the
       even-sector comparison and containment.
-    scope: verifier
-    sha256: 7f14dfa0763ed101a44e39620ffec48ba12bfa0cce65dad7d633fa5f06c2cbd0
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "7f14dfa0763ed101a44e39620ffec48ba12bfa0cce65dad7d633fa5f06c2cbd0"
 
   - id: stone-t-brief
     path: BRIEF_STONE_T_TGATE.md
+    audience: [human, agent]
     title: "Stone T brief (sha-locked before code; lock + pre-reveal amendment)"
     intent: >
       Pre-registered bars TB1..TB5 for first Clifford+T contact; the
       locked fit/test protocol whose refutation branch fired; amendment
       instantiated the sample and cap pre-reveal.
-    scope: brief
-    sha256: fa6816e965e0e3eeb3a685a7143bf61f407717ce5739b0c94ef2b253c2c86a93
+    scope: project
+    x-house-scope: brief
+    content_hash:
+      algorithm: sha256
+      value: "fa6816e965e0e3eeb3a685a7143bf61f407717ce5739b0c94ef2b253c2c86a93"
 
   - id: stone-t-doc
     path: STONE_T_TGATE.md
+    audience: [human, agent]
     title: "SM-017 -- Stone T: first contact with the T gate"
     intent: >
       Exhaustive n=1 ground truth (36,816 unitaries, T-count <= 9, exact
@@ -128,30 +149,42 @@ units:
       signed perms at canonical sqrt2-scale (528/528; one coset per layer
       k<=3); bitangent skeleton = exactly the T-free stratum (normalizer
       theorem). Open problem #3 boundary, final form.
-    scope: theorem
-    sha256: e090bd7e2f71de5e234e557db13256ad33e8c3ae2ee79a7f79df79a47b66ffd9
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "e090bd7e2f71de5e234e557db13256ad33e8c3ae2ee79a7f79df79a47b66ffd9"
 
   - id: stone-t-verifier
     path: verify_stone_t_tgate.py
+    audience: [human, agent]
     title: "Stone T verifier (11 checks, ~5 min)"
     intent: >
       Exact Z[omega] arithmetic, BFS layers C(TC)^k mod phase, MA word
       enumeration, locked invariant protocol, channel canonicalization
       (proper rotations, canonical scale), n=3 phase-point exit checks.
-    scope: verifier
-    sha256: fc859263ef087ab3c6ec4da889535a11c35bc6f827d3e881fdeda9156d19aadd
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "fc859263ef087ab3c6ec4da889535a11c35bc6f827d3e881fdeda9156d19aadd"
 
   - id: stone-r-brief
     path: BRIEF_STONE_R_ALTITUDE.md
+    audience: [human, agent]
     title: "Stone R brief (sha-locked before code; lock file alongside)"
     intent: >
       Pre-registered bars RB1..RB4 for the altitude measurement, incl. the
       Coxeter-class minimizer guess that the data refuted.
-    scope: brief
-    sha256: 57db98a7b0e4eeca122c31260dc1ae5e052d3591b859d6a574bdfb09bafcf7a5
+    scope: project
+    x-house-scope: brief
+    content_hash:
+      algorithm: sha256
+      value: "57db98a7b0e4eeca122c31260dc1ae5e052d3591b859d6a574bdfb09bafcf7a5"
 
   - id: stone-r-doc
     path: STONE_R_ALTITUDE.md
+    audience: [human, agent]
     title: "SM-016 -- Stone R: the altitude"
     intent: >
       Exact linearity gaps nu(g) by full W(E7) enumeration: nu(pr)=2 with
@@ -159,30 +192,42 @@ units:
       guesses; the clock's own antipode iota_Psi = Psi^9 (conjugator-
       independent, 4/28 axis overlap); Pauli sign-gauge explanation of the
       one-spectrum [obs]; the unitary sign-flip trace obstruction.
-    scope: theorem
-    sha256: 4beb0ad5eebff6904812e7f44530d74c73b06e79eedc77a045dfe7c4ac4792ee
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "4beb0ad5eebff6904812e7f44530d74c73b06e79eedc77a045dfe7c4ac4792ee"
 
   - id: stone-r-verifier
     path: verify_stone_r_altitude.py
+    audience: [human, agent]
     title: "Stone R verifier (17 checks)"
     intent: >
       BSGS transversal chain + numpy full enumeration (56 x 51840), cycle
       alignment conjugator, char-poly witness characterization, matching
       overlap, Pauli conjugation and phase-point traces.
-    scope: verifier
-    sha256: 9a0559e9815274033693ab20e9c014fe489c975557ad01bc5e62c7612086822a
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "9a0559e9815274033693ab20e9c014fe489c975557ad01bc5e62c7612086822a"
 
   - id: stoneq-brief
     path: BRIEF_STONEQ_CLIFFORD.md
+    audience: [human, agent]
     title: "Stone Q brief (sha-locked before code; lock file alongside)"
     intent: >
       Pre-registered bars QB1..QB5 and expectations for the Clifford
       transport, incl. the disclosed descent risk that fired inverted.
-    scope: brief
-    sha256: bb7a68225b425403db69977396fe84e9ff76ef11a1310d3d2aaf0ff747ffb316
+    scope: project
+    x-house-scope: brief
+    content_hash:
+      algorithm: sha256
+      value: "bb7a68225b425403db69977396fe84e9ff76ef11a1310d3d2aaf0ff747ffb316"
 
   - id: stoneq-doc
     path: STONEQ_CLIFFORD.md
+    audience: [human, agent]
     title: "SM-015 -- Stone Q: the Clifford transport"
     intent: >
       Sp6(2) = 3-qubit Clifford mod phases/Paulis exhibited; bridge
@@ -190,91 +235,131 @@ units:
       W(E6) = one-form stabilizer, PSL(2,7) transitive, Coxeter clock =
       7-gate circuit); membership boundary (Psi nonlinear, pr odd, iota
       erased); SHADOW COLLAPSE depth 1; descent-by-cancellation refutation.
-    scope: theorem
-    sha256: c205ceae4cb7fb15bdc81c26365dd1b873cb89dd7644c57395c5db74d419e054
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "c205ceae4cb7fb15bdc81c26365dd1b873cb89dd7644c57395c5db74d419e054"
 
   - id: stoneq-verifier
     path: verify_stoneq_clifford.py
+    audience: [human, agent]
     title: "Stone Q verifier (35 checks)"
     intent: >
       Tableau Sp6(2), Arf split + phase points, phi via root lattice mod 2,
       symplectic Gram-Schmidt transport, PSL(2,7) push, membership strips,
       bidirectional circuit search, shadow-depth certificate.
-    scope: verifier
-    sha256: 221e2b9fe8f0d181199f3057345643378ff2a62b1aeb9d40471c63075c732bf0
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "221e2b9fe8f0d181199f3057345643378ff2a62b1aeb9d40471c63075c732bf0"
 
   - id: readme
     path: README.md
+    audience: [human, agent]
     title: "Lane orientation"
     intent: Founding, contents table, house rules, pointers to parent lanes.
-    scope: orientation
-    sha256: 263b2d3c133181458ab9f859b2c96ec78b84162a3330789f0c7567f0d2289c06
+    scope: project
+    x-house-scope: orientation
+    content_hash:
+      algorithm: sha256
+      value: "263b2d3c133181458ab9f859b2c96ec78b84162a3330789f0c7567f0d2289c06"
 
   - id: tsc-audit
     path: TSC_SCARCAT.md
+    audience: [human, agent]
     title: "T-SC -- the Scar-Cat registry audit"
     intent: >
       Independent recomputation of the Scar-Cat master registry: character
       table derived by Burnside-Dixon, 35+ GAP rows confirmed, 9 classical,
       corrections R-SC-1..5 (incl. lambda=1/8 -> m_H 13-sigma), note-7
       credited, backport rule prescribed.
-    scope: audit
-    sha256: 46a6cba76194948623fb6f72accb23f1700d3dee4d90a0b34108d7553008ba2f
+    scope: project
+    x-house-scope: audit
+    content_hash:
+      algorithm: sha256
+      value: "46a6cba76194948623fb6f72accb23f1700d3dee4d90a0b34108d7553008ba2f"
 
   - id: tsc-verifier
     path: verify_tsc_scarcat.py
+    audience: [human, agent]
     title: "T-SC verifier (48 checks)"
     intent: Exact Q(sqrt(-7)) machinery; the 2 designed FAILs are R-SC-1/2.
-    scope: verifier
-    sha256: 01c7da523521b28e15e0e71f151a6606d979cc5888f03b907b741fe60b9b24a9
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "01c7da523521b28e15e0e71f151a6606d979cc5888f03b907b741fe60b9b24a9"
 
   - id: tbr-bridge
     path: TBR_BRIDGE.md
+    audience: [human, agent]
     title: "T-BR -- the bitangent bridge"
     intent: >
       Fields (zeta_21 = the two character fields, disjoint), E6 no-go,
       Sp6(2) home with the shared S3, 56 = 2x28, both Lie branchings of the
       27. Closes the Scar-Cat 'Bridge' conjecture row.
-    scope: theorem
-    sha256: 4656a4438a0543232fb347384ae4888ae442a0f53531f283580d0450df264c28
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "4656a4438a0543232fb347384ae4888ae442a0f53531f283580d0450df264c28"
 
   - id: tbr-verifier
     path: verify_tbr_bridge.py
+    audience: [human, agent]
     title: "T-BR verifier (20 checks)"
     intent: Symplectic F2^6 model, theta characteristics, orbits, branchings.
-    scope: verifier
-    sha256: 6bdf3ea2530774a4c54b5c7d79fbeb1f9ebed9164841f4dd8e7a9a621d5a2ee3
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "6bdf3ea2530774a4c54b5c7d79fbeb1f9ebed9164841f4dd8e7a9a621d5a2ee3"
 
   - id: fano-verifier
     path: verify_fano_syndrome.py
+    audience: [human, agent]
     title: "The chiral Fano pair (14 checks)"
     intent: >
       The 7-channel syndrome's motion group is S3; native incidence = affine
       E6 tree; exactly 2 invariant Fanos (chiral pair, 3 shared centre-lines,
       swapped by inner/outer duality). One bit from Fano; never forced.
-    scope: verifier
-    sha256: cd435086af210e7371c9ab9468e59d14c096d47c6cd04c30cb7901596197509d
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "cd435086af210e7371c9ab9468e59d14c096d47c6cd04c30cb7901596197509d"
 
   - id: dq6-resurrection
     path: verify_dq6_resurrection.py
+    audience: [human, agent]
     title: "THE RESURRECTION THEOREM (12 checks) + machine data emitter"
     intent: >
       E6-branching of the E7 56 = 27+27bar+1+1; pr fixes the two singlets
       and cross-pairs the sheets; iota = second duality (3/27 shared); Psi
       crosses the wall. Corollary: pr,iota bilingual; the clock is the sole
       magic source. Emits scar56_data.json.
-    scope: verifier
-    sha256: a39cfdf60fd40af7a500b4b131da6626f6272243375fe31d420fb29bb69d5699
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "a39cfdf60fd40af7a500b4b131da6626f6272243375fe31d420fb29bb69d5699"
 
   - id: machine-data
     path: scar56_data.json
+    audience: [human, agent]
     title: "56-machine tables (verifier output)"
     intent: PSI/PR/IOTA permutations, branching, frames, CSP census, edges.
-    scope: data
-    sha256: 0a817fc5a2aa7cd4695436eaa6662810ff2e4dd012fbfb604fe0d6579c88fb66
+    scope: project
+    x-house-scope: data
+    content_hash:
+      algorithm: sha256
+      value: "0a817fc5a2aa7cd4695436eaa6662810ff2e4dd012fbfb604fe0d6579c88fb66"
 
   - id: machine-artifact
     path: artifact_56/machine56.html
+    audience: [human, agent]
     title: "The 56-State Machine (interactive instrument)"
     intent: >
       Mirrored two-sheet board; frame view; WAVES view (standing waves
@@ -282,164 +367,283 @@ units:
       meters (28x28 assignment in-browser, validated vs scipy); parity lamp;
       clock census. Published (private):
       https://claude.ai/code/artifact/a7d069f2-be97-45fa-b5af-6524e858eb82
-    scope: instrument
-    sha256: 1de0c5e7f2f1248f0bdac2065c9e2661492dc39fde67bbf6d46627944c9d043f
+    scope: project
+    x-house-scope: instrument
+    content_hash:
+      algorithm: sha256
+      value: "1de0c5e7f2f1248f0bdac2065c9e2661492dc39fde67bbf6d46627944c9d043f"
 
   - id: brief-56
     path: 56_MACHINE_BRIEF.md
+    audience: [human, agent]
     title: "The 56-machine design brief (+ post-brief updates)"
     intent: >
       The joint architecture: frames x chirality, three gate families,
       two-axis resource theory, DQ-1..5; sec 7 records DQ-6 answered and
       DQ-2 partial.
-    scope: design
-    sha256: bac9976a42fbd36b047937b0ce9d7bd5fed0a73a979386274fe182d4fdcf1eb7
+    scope: project
+    x-house-scope: design
+    content_hash:
+      algorithm: sha256
+      value: "bac9976a42fbd36b047937b0ce9d7bd5fed0a73a979386274fe182d4fdcf1eb7"
 
   - id: joint-paper
     path: joint_paper/Bitangent_Bridge_DRAFT.md
+    audience: [human, agent]
     title: "The Bitangent Bridge -- Stenberg . Balashov, draft v0.1"
     intent: >
       The publishable synthesis (secs 1-9 incl. 7.5 resurrection +
       bilingual gates); awaiting Ilya's review pass + joint bibliography.
       Rendered .docx alongside.
-    scope: paper
-    sha256: 9de01c4b3afdc3e871bf528308ccfb6a8f0093ee25b31639fc783fcd66d00ec9
+    scope: project
+    x-house-scope: paper
+    content_hash:
+      algorithm: sha256
+      value: "9de01c4b3afdc3e871bf528308ccfb6a8f0093ee25b31639fc783fcd66d00ec9"
 
   - id: report-verification
     path: to_Ilya/Scar_Cat_Verification_Report_2026-08-30.md
+    audience: [human, agent]
     title: "Verification report (sent-form of T-SC)"
     intent: Letter form; corrections C1-C5 each with a GAP one-liner.
-    scope: correspondence
-    sha256: ff41a258f2297c8b74493a234f1c2467b7f7571e136a74a0d622d685bfd02c1e
+    scope: project
+    x-house-scope: correspondence
+    content_hash:
+      algorithm: sha256
+      value: "ff41a258f2297c8b74493a234f1c2467b7f7571e136a74a0d622d685bfd02c1e"
 
   - id: report-bridge
     path: to_Ilya/The_Bridge_Report_2026-08-30.md
+    audience: [human, agent]
     title: "Bridge report (sent-form of T-BR)"
     intent: Letter form; closes the Bridge conjecture row; proposals 1-3.
-    scope: correspondence
-    sha256: 6624cbbf3c3e731176670e19b1736219bfa0dca9c34d858e51929084cb06870f
+    scope: project
+    x-house-scope: correspondence
+    content_hash:
+      algorithm: sha256
+      value: "6624cbbf3c3e731176670e19b1736219bfa0dca9c34d858e51929084cb06870f"
 
   - id: stone1-certificate
     path: verify_stone1_certificate.py
+    audience: [human, agent]
     title: "Stone 1: transportation certificate, generalized (9 checks)"
     intent: >
       Abstract Young/wreath magic-depth certificate; anchor 27-wreath=2
       (=CN-012), new theorems 27-Young=3, 56-Young=5, 56-wreath=2 (the
       mirror is worth three magic gates); hyperoctahedral frontier mapped.
       Companion doc STONE1_CERTIFICATE.md (sha in registry row SM-009 era).
-    scope: verifier
-    sha256: 89d498e4742431db29b872913ff1060368a97548fbc80806dcab2c554fa16997
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "89d498e4742431db29b872913ff1060368a97548fbc80806dcab2c554fa16997"
 
   - id: stone1b-calculus
     path: verify_stone1b_hyperoct.py
+    audience: [human, agent]
     title: "Stone 1b: hyperoctahedral calculus (tables, mining, validation)"
     intent: >
       Exact (S_2n,B_n) support tables n<=7; triangle necessity; two refuted
       law guesses; BFS validation 4/4; scaled preview depth 2. Companion
       straggler/close scripts + witness cache complete the campaign.
-    scope: verifier
-    sha256: 958ff4029fd96e6f4082d7101fc47811160291fe3bb967a106bc58adae1a633d
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "958ff4029fd96e6f4082d7101fc47811160291fe3bb967a106bc58adae1a633d"
 
   - id: stone1b-witnesses
     path: stone1b_witnesses.json
+    audience: [human, agent]
     title: "3718 verified depth-2 witnesses (frame grammar theorem)"
     intent: Every coset type's explicit M2; re-verifiable in seconds.
-    scope: data
-    sha256: b33de3b16cf0920dd568bdc1f495b4184008cbf0c7a533e433fd8cc2d6ea1cbb
+    scope: project
+    x-house-scope: data
+    content_hash:
+      algorithm: sha256
+      value: "b33de3b16cf0920dd568bdc1f495b4184008cbf0c7a533e433fd8cc2d6ea1cbb"
 
   - id: stone1-doc
     path: STONE1_CERTIFICATE.md
+    audience: [human, agent]
     title: "Stone 1 write-up: the transportation certificate generalizes"
     intent: Results table (3/2, 5/2), exchange-rate corollaries, frontier.
-    scope: theorem
-    sha256: d41cbb11a5882175a14ef5d33f993933af16a9766078b144d05388144276830e
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "d41cbb11a5882175a14ef5d33f993933af16a9766078b144d05388144276830e"
 
   - id: stone1b-doc
     path: STONE1B_HYPEROCT.md
+    audience: [human, agent]
     title: "Stone 1b write-up: hyperoctahedral calculus + second depth-2 theorem"
     intent: Coset-type calculus, refuted laws, witness-campaign theorem.
-    scope: theorem
-    sha256: b575fd5144f48a35d8fdb810d950a26271c9f6b40a45ed5aa95d964cba1a09f0
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "b575fd5144f48a35d8fdb810d950a26271c9f6b40a45ed5aa95d964cba1a09f0"
 
   - id: stone1b-stragglers
     path: verify_stone1b_stragglers.py
+    audience: [human, agent]
     title: "Witness campaign pass 2 (soft dual-cost annealing)"
     intent: 1.2M samples + annealing; closed 2039 of 2112 stragglers.
-    scope: verifier
-    sha256: a7e3bfdb1f445d162d38873a4d62d1a9507ba22b67637c209e137ac07bb2d185
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "a7e3bfdb1f445d162d38873a4d62d1a9507ba22b67637c209e137ac07bb2d185"
 
   - id: stone1b-close73
     path: verify_stone1b_close73.py
+    audience: [human, agent]
     title: "Witness campaign pass 3 (dual-direction orbit sampling)"
     intent: Closed the final 73 types; completed the 3718-witness theorem.
-    scope: verifier
-    sha256: 263ef9b20a229c161d4436602d81c4e745e8ede3f5bd902707b4feee3b56f4e4
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "263ef9b20a229c161d4436602d81c4e745e8ede3f5bd902707b4feee3b56f4e4"
 
   - id: methods-note
     path: joint_paper/Magic_Depth_Methods_DRAFT.md
+    audience: [human, agent]
     title: "Magic Depth by Transportation Certificates and Witness Campaigns -- draft v0.1"
     intent: >
       The second joint paper: certificate theorem, four exact depth
       results, exchange rates, witness-campaign theorem, lessons,
       benchmarks, three open problems. Awaiting Ilya's review pass.
-    scope: paper
-    sha256: 85aec92c263af7cc66812055030cd5f52d72a1a5b1fdffb4c6489ccf04b4088a
+    scope: project
+    x-house-scope: paper
+    content_hash:
+      algorithm: sha256
+      value: "85aec92c263af7cc66812055030cd5f52d72a1a5b1fdffb4c6489ccf04b4088a"
 
   - id: stonef-field
     path: verify_stonef_field.py
+    audience: [human, agent]
     title: "Stone F(a): the field machine (13 checks)"
     intent: >
       Standing-wave spectrum; CSP = trace formula; sector masses; the axis
       frame; DQ-4 closed; pr frequency-mixing; chirality-odd quark sectors
       (character level). Doc STONEF_FIELD.md.
-    scope: verifier
-    sha256: 43d9055f0bdfdad94c70e4953fdfe3647e56137b905ed92c12b6ead4a4c770ef
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "43d9055f0bdfdad94c70e4953fdfe3647e56137b905ed92c12b6ead4a4c770ef"
 
   - id: stonef-doc
     path: STONEF_FIELD.md
+    audience: [human, agent]
     title: "Stone F(a) write-up"
     intent: The field lift's results and the F(b)-(d) programme.
-    scope: theorem
-    sha256: 1109e56c011c1d46204bfb22f0add297aec207c02f379b6642398c4fcef43b30
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "1109e56c011c1d46204bfb22f0add297aec207c02f379b6642398c4fcef43b30"
 
   - id: stonef-b-dq1
     path: verify_stonef_b_dq1.py
+    audience: [human, agent]
     title: "Stone F(b): DQ-1 answered + SM-012 erratum (11 checks)"
     intent: >
       Explicit W(E7) on the 56; canonical bridge-class PSL(2,7); orbits
       [28,28]; C^56 = 2*pi_28 (untwisted lift unique); quark sectors absent
       from the Weyl action; second class = Fano-doubled. Erratum backported
       into STONEF_FIELD.md.
-    scope: verifier
-    sha256: 317525b2b11f7c7889fdf84b5dc3a4dfcf9c68d6d39f9dd008e0fc12d6f8cfec
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "317525b2b11f7c7889fdf84b5dc3a4dfcf9c68d6d39f9dd008e0fc12d6f8cfec"
 
   - id: stonef-c-quantum
     path: verify_stonef_c_quantum.py
+    audience: [human, agent]
     title: "Stone F(c): the beam-splitter machine (12 checks)"
     intent: >
       Exact D16 local algebra; W-depth = max local H-length + parity
       superselection (exhaustive n=2,3 validation); 56 group order
       2*8^28*28!, W-depth 4; mixed-regime frontier located. Doc
       STONEF_C_QUANTUM.md.
-    scope: verifier
-    sha256: c4fdea00115d6ea7b31058109964014a0b2aa44128be2d9503db495b206d2273
+    scope: project
+    x-house-scope: verifier
+    content_hash:
+      algorithm: sha256
+      value: "c4fdea00115d6ea7b31058109964014a0b2aa44128be2d9503db495b206d2273"
 
   - id: stonef-c-doc
     path: STONEF_C_QUANTUM.md
+    audience: [human, agent]
     title: "Stone F(c) write-up"
     intent: The quantum lift's certificate, theorems, and the day's depth ladder.
-    scope: theorem
-    sha256: aedf16102dc007ad91b635512223f0f01acfacebf5b23afcd505b4732aaaec00
+    scope: project
+    x-house-scope: theorem
+    content_hash:
+      algorithm: sha256
+      value: "aedf16102dc007ad91b635512223f0f01acfacebf5b23afcd505b4732aaaec00"
 
   - id: compendium
     path: to_Ilya/Joint_World_Compendium_2026-08-30.md
+    audience: [human, agent]
     title: "The Joint World -- complete findings compendium (letter)"
     intent: >
       The map of everything for Ilya (who has seen only the bridge):
       audit, resurrection, depth + field theorems, refutations ledger,
       open problems, invitations. Entry point of the COMPLETE package.
-    scope: correspondence
-    sha256: d05ba5b850dc4b8be349fac3c4f00ffa7991f9e92159fda9923f6617ec2bed83
+    scope: project
+    x-house-scope: correspondence
+    content_hash:
+      algorithm: sha256
+      value: "d05ba5b850dc4b8be349fac3c4f00ffa7991f9e92159fda9923f6617ec2bed83"
+relationships:
+
+  # audit spine
+  - { from: tsc-verifier,  to: tsc-audit,      type: backs,        class: evidence-audit, status: registered }
+  - { from: report-verification, to: tsc-audit, type: derives-from, class: correspondence, status: sent-2026-08-30 }
+
+  # bridge spine
+  - { from: tbr-verifier,  to: tbr-bridge,     type: backs,        class: evidence-audit, status: registered }
+  - { from: tbr-bridge,    to: tsc-audit,      type: builds-on,    class: dependency,     status: registered }
+  - { from: report-bridge, to: tbr-bridge,     type: derives-from, class: correspondence, status: sent-2026-08-30 }
+  - { from: fano-verifier, to: tbr-bridge,     type: refines,      class: dependency,     status: registered }
+  - { from: machine-data,  to: dq6-resurrection, type: emitted-by, class: provenance,     status: registered }
+  - { from: machine-artifact, to: machine-data, type: realizes,    class: instrument,     status: registered }
+  - { from: machine-artifact, to: brief-56,    type: realizes,     class: instrument,     status: registered }
+  - { from: brief-56,      to: tbr-bridge,     type: builds-on,    class: dependency,     status: registered }
+
+  # synthesis
+  - { from: joint-paper,   to: tsc-audit,      type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: tbr-bridge,     type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: fano-verifier,  type: synthesizes,  class: synthesis,      status: registered }
+  - { from: joint-paper,   to: dq6-resurrection, type: synthesizes, class: synthesis,     status: registered }
+  - { from: stone1-certificate, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
+  - { from: stone1b-calculus, to: stone1-certificate, type: extends, class: dependency, status: registered }
+  - { from: stone1b-witnesses, to: stone1b-calculus, type: backs, class: evidence-audit, status: registered }
+  - { from: stone1-doc, to: stone1-certificate, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-doc, to: stone1b-calculus, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-doc, to: stone1b-witnesses, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stone1b-stragglers, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
+  - { from: stone1b-close73, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
+  - { from: methods-note, to: stone1-doc, type: synthesizes, class: synthesis, status: registered }
+  - { from: methods-note, to: stone1b-doc, type: synthesizes, class: synthesis, status: registered }
+  - { from: methods-note, to: joint-paper, type: companion-of, class: synthesis, status: registered }
+  - { from: stonef-doc, to: stonef-field, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stonef-field, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-field, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-b-dq1, to: stonef-field, type: corrects, class: erratum, status: registered }
+  - { from: stonef-b-dq1, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-c-doc, to: stonef-c-quantum, type: backed-by, class: evidence-audit, status: registered }
+  - { from: stonef-c-quantum, to: stonef-field, type: builds-on, class: dependency, status: registered }
+  - { from: stonef-c-quantum, to: methods-note, type: answers-open-problem-partially, class: resolution, status: registered }
+  - { from: compendium, to: joint-registry, type: summarizes, class: correspondence, status: registered }
+
+# --- EXTERNAL UNITS (paths outside this lane root; not validated here; x- keys are ignored by KCP) ---
+x-external-units:
 
 # --- EXTERNAL ANCHORS (not governed here) ------------------------------------
   - id: "external:scar-cat-registry"
@@ -463,57 +667,18 @@ units:
     title: "v1 architecture paper (the dual-spinor intuition's origin)"
     scope: external
 
-edges:
-
-  # audit spine
-  - { from: tsc-verifier,  to: tsc-audit,      type: backs,        class: evidence-audit, status: registered }
+# --- CROSS-MANIFEST RELATIONSHIPS (an endpoint lives in another lane or an external unit) ---
+x-external-relationships:
   - { from: tsc-audit,     to: "external:scar-cat-registry", type: audits, class: evidence-audit, status: registered }
-  - { from: report-verification, to: tsc-audit, type: derives-from, class: correspondence, status: sent-2026-08-30 }
-
-  # bridge spine
-  - { from: tbr-verifier,  to: tbr-bridge,     type: backs,        class: evidence-audit, status: registered }
-  - { from: tbr-bridge,    to: tsc-audit,      type: builds-on,    class: dependency,     status: registered }
   - { from: tbr-bridge,    to: "external:merkabit-crystal", type: builds-on, class: dependency, status: registered }
   - { from: tbr-bridge,    to: "external:scar-cat-registry", type: closes-conjecture, class: resolution, status: registered }   # the 'Bridge' row
-  - { from: report-bridge, to: tbr-bridge,     type: derives-from, class: correspondence, status: sent-2026-08-30 }
 
   # machine spine
   - { from: fano-verifier, to: "external:crystal-native-v2", type: probes, class: evidence-audit, status: registered }  # CN-001's 7-channel syndrome
-  - { from: fano-verifier, to: tbr-bridge,     type: refines,      class: dependency,     status: registered }
   - { from: dq6-resurrection, to: "external:merkabit-crystal", type: builds-on, class: dependency, status: registered }  # the E7 thread
   - { from: dq6-resurrection, to: "external:ternary-v1", type: resurrects-one-floor-up, class: reinterpretation, status: registered }  # refuted at E6, true at E7
-  - { from: machine-data,  to: dq6-resurrection, type: emitted-by, class: provenance,     status: registered }
-  - { from: machine-artifact, to: machine-data, type: realizes,    class: instrument,     status: registered }
-  - { from: machine-artifact, to: brief-56,    type: realizes,     class: instrument,     status: registered }
-  - { from: brief-56,      to: tbr-bridge,     type: builds-on,    class: dependency,     status: registered }
-
-  # synthesis
-  - { from: joint-paper,   to: tsc-audit,      type: synthesizes,  class: synthesis,      status: registered }
-  - { from: joint-paper,   to: tbr-bridge,     type: synthesizes,  class: synthesis,      status: registered }
-  - { from: joint-paper,   to: fano-verifier,  type: synthesizes,  class: synthesis,      status: registered }
-  - { from: joint-paper,   to: dq6-resurrection, type: synthesizes, class: synthesis,     status: registered }
 
   # governance
   - { from: joint-registry, to: "external:corpus-triage", type: continues, class: governance, status: registered }
   - { from: joint-registry, to: "external:crystal-native-v2", type: peers-with, class: governance, status: registered }
-  - { from: stone1-certificate, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
   - { from: stone1-certificate, to: "external:crystal-native-v2", type: generalizes, class: method, status: registered }   # CN-012's depth-2 proof
-  - { from: stone1b-calculus, to: stone1-certificate, type: extends, class: dependency, status: registered }
-  - { from: stone1b-witnesses, to: stone1b-calculus, type: backs, class: evidence-audit, status: registered }
-  - { from: stone1-doc, to: stone1-certificate, type: backed-by, class: evidence-audit, status: registered }
-  - { from: stone1b-doc, to: stone1b-calculus, type: backed-by, class: evidence-audit, status: registered }
-  - { from: stone1b-doc, to: stone1b-witnesses, type: backed-by, class: evidence-audit, status: registered }
-  - { from: stone1b-stragglers, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
-  - { from: stone1b-close73, to: stone1b-witnesses, type: contributes, class: provenance, status: registered }
-  - { from: methods-note, to: stone1-doc, type: synthesizes, class: synthesis, status: registered }
-  - { from: methods-note, to: stone1b-doc, type: synthesizes, class: synthesis, status: registered }
-  - { from: methods-note, to: joint-paper, type: companion-of, class: synthesis, status: registered }
-  - { from: stonef-doc, to: stonef-field, type: backed-by, class: evidence-audit, status: registered }
-  - { from: stonef-field, to: dq6-resurrection, type: builds-on, class: dependency, status: registered }
-  - { from: stonef-field, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
-  - { from: stonef-b-dq1, to: stonef-field, type: corrects, class: erratum, status: registered }
-  - { from: stonef-b-dq1, to: tbr-bridge, type: builds-on, class: dependency, status: registered }
-  - { from: stonef-c-doc, to: stonef-c-quantum, type: backed-by, class: evidence-audit, status: registered }
-  - { from: stonef-c-quantum, to: stonef-field, type: builds-on, class: dependency, status: registered }
-  - { from: stonef-c-quantum, to: methods-note, type: answers-open-problem-partially, class: resolution, status: registered }
-  - { from: compendium, to: joint-registry, type: summarizes, class: correspondence, status: registered }
