@@ -1,0 +1,136 @@
+==============================================================================
+STONE BA -- THE CLOCK'S CLIFFORD HIERARCHY
+==============================================================================
+[PASS] BA0: the brief is sha-locked: sha256(BRIEF_STONE_BA_CLIFFORD_HIERARCHY.md) equals BRIEF_STONE_BA_LOCK.sha256  -> 89960a6d4a349891...
+  Minuscule from verify_stone_aq_rush_shi_defect.py (b83aa9958d7df993); BFS from verify_stone_at_grammar_family.py (7063393558f83fcc); boards from verify_stone_av_d5_anomaly.py (c5d56d4cc4439220)
+[t=  12.6s] 44 boards enumerated
+
+------------------------------------------------------------------------------
+the hierarchy, board by board (BA1, BA2 checked inline; BA3/BA4 gathered)
+------------------------------------------------------------------------------
+  A2 w1       |W|=      6 h= 3 reversers 3 (|C_W(R)| = 3): depth by lag [1, 1]; core sizes [6, 6]
+[t=  12.6s] A2 w1
+  A2 w2       |W|=      6 h= 3 reversers 3 (|C_W(R)| = 3): depth by lag [1, 1]; core sizes [6, 6]
+[t=  12.6s] A2 w2
+  A3 w1       |W|=     24 h= 4 reversers 4 (|C_W(R)| = 4): depth by lag [1, 1, 1]; core sizes [24, 24, 24]
+[t=  12.6s] A3 w1
+  A3 w2       |W|=     24 h= 4 reversers 2 (|C_W(R)| = 2): depth by lag [2, 1, 2]; core sizes [4, 24, 4]
+[t=  12.6s] A3 w2
+  A3 w3       |W|=     24 h= 4 reversers 4 (|C_W(R)| = 4): depth by lag [1, 1, 1]; core sizes [24, 24, 24]
+[t=  12.6s] A3 w3
+  A4 w1       |W|=    120 h= 5 reversers 5 (|C_W(R)| = 5): depth by lag [1, 1, 1, 1]; core sizes [120, 120, 120, 120]
+[t=  12.6s] A4 w1
+  A4 w2       |W|=    120 h= 5 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2]; core sizes [1, 1, 1, 1]
+[t=  12.6s] A4 w2
+  A4 w3       |W|=    120 h= 5 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2]; core sizes [1, 1, 1, 1]
+[t=  12.6s] A4 w3
+  A4 w4       |W|=    120 h= 5 reversers 5 (|C_W(R)| = 5): depth by lag [1, 1, 1, 1]; core sizes [120, 120, 120, 120]
+[t=  12.6s] A4 w4
+  A5 w1       |W|=    720 h= 6 reversers 6 (|C_W(R)| = 6): depth by lag [1, 1, 1, 1, 1]; core sizes [720, 720, 720, 720, 720]
+[t=  12.6s] A5 w1
+  A5 w2       |W|=    720 h= 6 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2]; core sizes [1, 1, 2, 1, 1]
+[t=  12.7s] A5 w2
+  A5 w3       |W|=    720 h= 6 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2]; core sizes [1, 1, 2, 1, 1]
+[t=  12.7s] A5 w3
+  A5 w4       |W|=    720 h= 6 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2]; core sizes [1, 1, 2, 1, 1]
+[t=  12.7s] A5 w4
+  A5 w5       |W|=    720 h= 6 reversers 6 (|C_W(R)| = 6): depth by lag [1, 1, 1, 1, 1]; core sizes [720, 720, 720, 720, 720]
+[t=  12.7s] A5 w5
+  A6 w1       |W|=   5040 h= 7 reversers 7 (|C_W(R)| = 7): depth by lag [1, 1, 1, 1, 1, 1]; core sizes [5040, 5040, 5040, 5040, 5040, 5040]
+[t=  13.0s] A6 w1
+  A6 w2       |W|=   5040 h= 7 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 1]
+[t=  13.2s] A6 w2
+  A6 w3       |W|=   5040 h= 7 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 1]
+[t=  13.4s] A6 w3
+  A6 w4       |W|=   5040 h= 7 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 1]
+[t=  13.6s] A6 w4
+  A6 w5       |W|=   5040 h= 7 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 1]
+[t=  13.8s] A6 w5
+  A6 w6       |W|=   5040 h= 7 reversers 7 (|C_W(R)| = 7): depth by lag [1, 1, 1, 1, 1, 1]; core sizes [5040, 5040, 5040, 5040, 5040, 5040]
+[t=  14.0s] A6 w6
+  A7 w1       |W|=  40320 h= 8 reversers 8 (|C_W(R)| = 8): depth by lag [1, 1, 1, 1, 1, 1, 1]; core sizes [40320, 40320, 40320, 40320, 40320, 40320, 40320]
+[t=  15.6s] A7 w1
+  A7 w2       |W|=  40320 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 2, 1, 1, 1]
+[t=  17.6s] A7 w2
+  A7 w3       |W|=  40320 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 2, 1, 1, 1]
+[t=  19.9s] A7 w3
+  A7 w4       |W|=  40320 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 2, 1, 1, 1]
+[t=  23.0s] A7 w4
+  A7 w5       |W|=  40320 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 2, 1, 1, 1]
+[t=  25.7s] A7 w5
+  A7 w6       |W|=  40320 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 2, 1, 1, 1]
+[t=  27.8s] A7 w6
+  A7 w7       |W|=  40320 h= 8 reversers 8 (|C_W(R)| = 8): depth by lag [1, 1, 1, 1, 1, 1, 1]; core sizes [40320, 40320, 40320, 40320, 40320, 40320, 40320]
+[t=  29.4s] A7 w7
+  D4 w1       |W|=    192 h= 6 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 1, 2, 2]; core sizes [6, 6, 192, 6, 6]
+[t=  29.4s] D4 w1
+  D4 w3       |W|=    192 h= 6 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 1, 2, 2]; core sizes [6, 6, 192, 6, 6]
+[t=  29.4s] D4 w3
+  D4 w4       |W|=    192 h= 6 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 1, 2, 2]; core sizes [6, 6, 192, 6, 6]
+[t=  29.4s] D4 w4
+  D5 w1       |W|=   1920 h= 8 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 2, 1, 2, 2, 2]; core sizes [8, 32, 8, 1920, 8, 32, 8]
+[t=  29.5s] D5 w1
+  D5 w4       |W|=   1920 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 3, 2, 3, 2, 2]; core sizes [1, 1, 1, 8, 1, 1, 1]
+[t=  29.6s] D5 w4
+  D5 w5       |W|=   1920 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 3, 2, 3, 2, 2]; core sizes [1, 1, 1, 8, 1, 1, 1]
+[t=  29.7s] D5 w5
+  D6 w1       |W|=  23040 h=10 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 2, 2, 1, 2, 2, 2, 2]; core sizes [10, 10, 10, 10, 23040, 10, 10, 10, 10]
+[t=  30.8s] D6 w1
+  D6 w5       |W|=  23040 h=10 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 4, 1, 1, 1, 1]
+[t=  32.1s] D6 w5
+  D6 w6       |W|=  23040 h=10 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 4, 1, 1, 1, 1]
+[t=  33.4s] D6 w6
+  D7 w1       |W|= 322560 h=12 reversers 2 (|C_W(R)| = 2): depth by lag [2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2]; core sizes [12, 72, 384, 72, 12, 322560, 12, 72, 384, 72, 12]
+[t=  56.6s] D7 w1
+  D7 w6       |W|= 322560 h=12 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[t= 102.3s] D7 w6
+  D7 w7       |W|= 322560 h=12 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[t= 142.4s] D7 w7
+  E6 w1       |W|=  51840 h=12 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[t= 145.2s] E6 w1
+  E6 w6       |W|=  51840 h=12 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 1, 2, 1, 1, 1, 1, 1]
+[t= 148.0s] E6 w6
+  B3 spinor   |W|=     48 h= 6 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2]; core sizes [1, 2, 16, 2, 1]
+[t= 148.0s] B3 spinor
+  B4 spinor   |W|=    384 h= 8 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 8, 1, 1, 1]
+[t= 148.0s] B4 spinor
+  B5 spinor   |W|=   3840 h=10 reversers 1 (|C_W(R)| = 1): depth by lag [2, 2, 2, 2, 2, 2, 2, 2, 2]; core sizes [1, 1, 1, 1, 2, 1, 1, 1, 1]
+[t= 148.1s] B5 spinor
+[PASS] BA1: [Lemma F] on every board and lag the chain equals the run of partial intersections of the clock-conjugates of W, and the core is normalised by R^k and equals the intersection over the whole <R^k>-orbit
+[PASS] BA2: [Lemma G] on every board and lag, P_3 = P_2 if and only if a reverser in W normalises I_k
+[PASS] BA2b: [SM-062 re-seen] the reversers number |C_W(R)| on every enumerated board
+
+------------------------------------------------------------------------------
+BA3 -- REGISTERED: depth and cores
+------------------------------------------------------------------------------
+[PASS] BA3: REGISTERED: depth <= 2 everywhere except the D5 half-spins at lags 3 and 5 (depth 3, trivial core); depth 1 exactly where I_k = W; cores: W on chains, C_W(R^2k) on the vectors, I_k elsewhere (= C_W(R^k) on rich boards; the order-8 I_4 on B4 and the D5 half-spins)  -> all 278 (board, lag) pairs
+  depth-3 chains: [('D5 w4', 3, [1920, 2, 1]), ('D5 w4', 5, [1920, 2, 1]), ('D5 w5', 3, [1920, 2, 1]), ('D5 w5', 5, [1920, 2, 1])]
+
+------------------------------------------------------------------------------
+BA4 -- REGISTERED: the core is not W-normal; the core of W in <W,R>
+------------------------------------------------------------------------------
+[PASS] BA4a: REGISTERED: wherever 2 < |core| < |W| the core is not a normal subgroup of W  -> 44 cores tested, none normal
+  A3 w2: |<W,R>| = 360; Core_<W,R>(W) has order 1; P_inf(1) has order 4
+  D4 w1: |<W,R>| = 20160; Core_<W,R>(W) has order 1; P_inf(1) has order 6
+  B3 spinor: |<W,R>| = 20160; Core_<W,R>(W) has order 1; P_inf(1) has order 1
+[PASS] BA4b: REGISTERED: on the D3 and D4 vector boards the core of W in <W,R> is trivial, hence strictly smaller than P_inf(1); B3 recorded  -> {'A3 w2': {'order_WR': 360, 'core_in_WR': 1, 'P_inf_1': 4}, 'D4 w1': {'order_WR': 20160, 'core_in_WR': 1, 'P_inf_1': 6}, 'B3 spinor': {'order_WR': 20160, 'core_in_WR': 1, 'P_inf_1': 1}}
+
+------------------------------------------------------------------------------
+BA5 -- [obs] the 4-cube's and the D5 half-spin's chains, element by element
+------------------------------------------------------------------------------
+  D5 w4 lag 3: {2: ('+e1', '+e2', '+e3', '+e4', '+e5'); ('+e3', '+e5', '-e1', '-e2', '-e3', '-e5', '+e1', '+e2', '+e3', '+e2', '+e3', '+e4', '+e5', '-e2', '-e3')} > {1: ('+e1', '+e2', '+e3', '+e4', '+e5')}
+  D5 w4 lag 4: {8: ('+e1', '+e2', '+e3', '+e4', '+e5'); ('+e1', '+e2', '-e2', '+e2', '+e3', '+e4', '+e5', '-e4', '-e5'); ('-e2', '-e3', '+e2', '+e3', '+e4', '+e5', '-e1', '-e2', '-e3', '-e4', '-e5', '+e1', '+e2', '+e3', '+e5', '+e1', '+e2', '+e3', '+e4'); ('+e3', '+e4', '+e5', '-e2', '-e3', '-e4', '-e5', '+e1', '+e2', '+e3', '+e4', '+e5', '-e1', '-e2', '-e3', '-e5', '-e1', '-e2', '-e3', '-e4'); ('-e3', '-e4', '-e5', '+e2', '+e3', '+e4', '+e5', '-e1', '-e2', '-e3', '-e4', '-e5', '+e1', '+e2', '+e3', '+e4', '+e1', '+e2', '+e3', '+e5'); ('+e2', '+e3', '-e2', '-e3', '-e4', '-e5', '+e1', '+e2', '+e3', '+e4', '+e5', '-e1', '-e2', '-e3', '-e4', '-e1', '-e2', '-e3', '-e5'); ('-e1', '-e2', '+e2', '-e2', '-e3', '-e4', '-e5', '+e5', '+e4'); ('-e1', '-e2', '-e3', '-e5', '-e4')}
+  D5 w4 lag 5: {2: ('+e1', '+e2', '+e3', '+e4', '+e5'); ('+e3', '+e4', '-e1', '-e2', '-e3', '-e4', '+e1', '+e2', '+e3', '-e2', '-e3', '+e2', '+e3', '+e4', '+e5')} > {1: ('+e1', '+e2', '+e3', '+e4', '+e5')}
+  B4 spinor lag 3: {1: ('+e1', '+e2', '+e3', '+e4')}
+  B4 spinor lag 4: {8: ('+e1', '+e2', '+e3', '+e4'); ('+e1', '+e3', '+e2', '-e4'); ('+e4', '+e2', '-e3', '+e1'); ('+e4', '-e3', '+e2', '-e1'); ('-e4', '+e3', '-e2', '+e1'); ('-e4', '-e2', '+e3', '-e1'); ('-e1', '-e3', '-e2', '+e4'); ('-e1', '-e2', '-e3', '-e4')}
+  B4 spinor lag 5: {1: ('+e1', '+e2', '+e3', '+e4')}
+  the 56 (SM-057, not re-run): I_k = 1 for k != 9 and I_9 = {1, iota} with iota central, so depth 2 everywhere and the core is trivial except {1, iota} at the half-turn.
+
+------------------------------------------------------------------------------
+BA6 -- [I] the reading, recorded as a reading
+------------------------------------------------------------------------------
+  the Pauli group of the analogy is the core, the largest subgroup of W the clock normalises. Trivial (or +-1) on every rich board and the 56: the clock is beyond every level. C_W(R^2k) on the vectors, the dihedral I_4 on the 4-cube: there the clock is a level-three gate for that group, and W contains it without normalising it.
+
+==============================================================================
+SUMMARY: 7 PASS, 0 FAIL of 7 checks
+[t= 149.4s] done
