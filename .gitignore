@@ -2,3 +2,5 @@ package/Scar_merkabit_2026-08-30/
 package/Scar_merkabit_COMPLETE_2026-08-30/
 __pycache__/
 *.pyc
+_stone_aa_cache/phi360.npy
+_stone_z_cache/G_rows.npy
