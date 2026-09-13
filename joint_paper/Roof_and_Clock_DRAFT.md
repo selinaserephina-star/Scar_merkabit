@@ -1,8 +1,8 @@
 ---
 title: "The Roof and the Clock"
-subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.4"
+subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.5"
 author: "Selina Stenberg · Ilya Balashov · with Claude (Anthropic Fable 5)"
-date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); v0.4 (2026-09-13) adds §11 Discussion, synthesis only, no new claims; prepared on the Stenberg side; sealed-not-sent, awaiting the second author's word"
+date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); v0.4–v0.5 (2026-09-13) add §12 Discussion (synthesis only) and §11, a Stenberg-side collation of the Balashov tower and the bitangent bridge from the sealed joint record — no new claims; prepared on the Stenberg side; sealed-not-sent, awaiting the second author's word"
 ---
 
 **Status.** Draft of the paper whose spine both parties agreed on
@@ -23,12 +23,15 @@ grammar, the anomaly by hand with the doubled clock, and the clock's
 Clifford hierarchy (SM-057..065) — merged from the six summaries sent
 in envelopes between 2026-09-09 and 2026-09-11, with the second author's
 review of v0.2 applied (§7.4 addendum, §7.10 corollary, Appendix A) and
-§§12–14 extended; nothing computational was changed or re-run, and the
+§§13–15 extended; nothing computational was changed or re-run, and the
 sub-headings of §§7.8–7.13 keep their summaries' internal numbering.
-v0.4 (2026-09-13) adds a Discussion (§11) synthesizing the graded results
-already present — no computation added, changed, or re-run, and no new claim
-— and renumbers the former §§11–13 (Refutations, What is not claimed,
-Reproducibility) to §§12–14.
+v0.4–v0.5 (2026-09-13) add two sections, each with no computation added,
+changed, or re-run and no new claim: §12, a Discussion synthesizing the
+graded results already present; and §11, a collation on the Stenberg side of
+the Balashov-side tower and the bitangent bridge from the sealed joint record
+(SM-001, SM-003, SM-013, SM-015, SM-021–024/028), pending the second author's
+expansion. The former §§11–13 (Refutations, What is not claimed,
+Reproducibility) are renumbered to §§13–15.
 Claims are graded: **[P]** classical with citation or proved
 here, **[C]** computed exactly by a named verifier under a brief locked
 before code, **[obs]** observed and not explained. No physical
@@ -169,7 +172,8 @@ and their first-run logs.
 ## 3. The roof: W⁺(E₈) [C, SM-030]
 
 Two towers were built earlier by the two authors: a chain of subgroups of
-PSL(2,7) on the Balashov side (PSL(2,7) ⊃ C₆×C₂, A₅, S₄, A₄, C₂) and a
+PSL(2,7) on the Balashov side (PSL(2,7) ⊃ C₆×C₂, A₅, S₄, A₄, C₂; developed,
+with its bridge into Sp₆(2), in §11) and a
 tower of Schur covers and bridges on the Stenberg side (SL(2,7), 2·I,
 GL(2,3), 2·O, 2·T, C₃×D₄, 2·W(E₆), 2×PGL(2,7), with the split covers Ih,
 Th). Stone V exhibits all sixteen members inside W(E₈) with witnesses: the
@@ -1209,7 +1213,139 @@ The gates generate everything: |⟨Ψ, ι⟩| = 36, |⟨pr, ι⟩| = 4, and
 diameter of that generating set is at least 157 by counting [P]. 11 PASS
 + 1 INVERTED.
 
-## 11. Discussion
+## 11. The other tower: PSL(2,7), the 28 bitangents, and the bridge into Sp₆(2) [P/C, SM-001, SM-003, SM-013, SM-015, SM-021–024]
+
+Section 3 placed two towers inside W⁺(E₈); §§4–10 developed the Stenberg-side
+machine on that frame. This section collects the Balashov-side tower — the
+PSL(2,7) framework — and the classical geometry in which the two frameworks
+meet: the 28 bitangents of a genus-3 curve, inside Sp₆(𝔽₂) ≅ W(E₇)/{±1}. It
+is a collation, on the Stenberg side, of the bridge results already sealed in
+the joint registry (SM-001, SM-003, SM-013, SM-015, SM-021, SM-022,
+SM-024/028) and of the standalone note *The Bitangent Bridge* (SM-008); the
+second author's own expansion of the representation-theoretic framework and
+the joint bibliography are pending his review.
+
+### 11.1 The PSL(2,7) framework [P/C, SM-001]
+
+PSL(2,7) ≅ GL(3,𝔽₂), order 168, with six conjugacy classes 1A, 2A, 3A, 4A,
+7A, 7B of sizes 1, 21, 56, 42, 24, 24. Its character table, derived from
+scratch by the Burnside–Dixon class-algebra method and verified exactly over
+ℚ(√−7) (`verify_tsc_scarcat.py`, 48 checks; 35+ rows of the second author's
+registry independently confirmed):
+
+| | 1A | 2A | 3A | 4A | 7A | 7B |
+|---|---|---|---|---|---|---|
+| χ₁ | 1 | 1 | 1 | 1 | 1 | 1 |
+| χ₃ | 3 | −1 | 0 | 1 | α | ᾱ |
+| χ̄₃ | 3 | −1 | 0 | 1 | ᾱ | α |
+| χ₆ | 6 | 2 | 0 | 0 | −1 | −1 |
+| χ₇ | 7 | −1 | 1 | −1 | 0 | 0 |
+| χ₈ | 8 | 0 | −1 | 0 | 1 | 1 |
+
+with α = (−1+√−7)/2. The Balashov-side tower is the odd spine PSL(2,7) ⊃ A₅ ⊃
+A₄ ⊃ C₂ with Schur covers SL(2,7), 2·I = SL(2,5), 2·T = SL(2,3) (each a
+non-split central ℤ₂-extension) and the split covers Ih = A₅×ℤ₂, Th = A₄×ℤ₂,
+GL(2,3) = 2·S₄; it is closed at the top by W(E₆) < Sp₆(2) at index 28
+(SM-021, `verify_tower_b.py`, 22 checks) — the second of the two towers §3
+hangs over the single central C₂.
+
+### 11.2 No meeting at E₆; the field-level shadow [P/C, SM-003]
+
+Because 7 ∤ |W(E₆)| = 51840 and 168/27 ∉ ℤ, PSL(2,7) embeds in no
+W(E₆)-geometry and has no transitive action on 27: the two frameworks cannot
+meet at the 27. At field level, Gal(ℚ(ζ₂₁)/ℚ) ≅ C₆ × C₂ has quadratic
+subfields ℚ(√−3), ℚ(√−7), ℚ(√21) (Gauss sums g₃² = −3, g₇² = −7,
+(g₃g₇)² = +21); ℚ(√−7) is the character field of PSL(2,7) — the unique
+irrationality in the table, and the CM field of the Klein quartic — while
+ℚ(√−3) is the Eisenstein field of the E₆ side. The two are linearly disjoint:
+at field level the frameworks meet only in ℚ (`verify_tbr_bridge.py`).
+
+### 11.3 The bitangent home [C, SM-003]
+
+Realize PSL(2,7) = GL(3,𝔽₂) on V ⊕ V* ≅ 𝔽₂⁶ with the symplectic form
+ω((v,f),(w,h)) = f(w) + h(v). The 64 quadratic refinements of ω split by Arf
+invariant into 36 even and 28 odd. Computed in `verify_tbr_bridge.py`
+(20 checks):
+
+- PSL(2,7) fixes exactly one even refinement; its orbits on the 36 even
+  refinements are **[1, 7, 7, 21]** — the fixed form, the Fano points, the
+  Fano planes, the flags [obs]. The stabilizer of an even form in Sp₆(2) is
+  O₆⁺(2) ≅ S₈ (order 8! = 40,320), and PSL(2,7) sits inside it by its
+  8-point action on P¹(𝔽₇).
+- PSL(2,7) is transitive on the 28 odd refinements (the bitangents), with
+  stabilizer S₃ = N(⟨z₃⟩) and permutation character χ₁ ⊕ 2χ₆ ⊕ χ₇ ⊕ χ₈. The
+  stabilizer of an odd form in Sp₆(2) is O₆⁻(2) ≅ W(E₆), order 51,840.
+
+### 11.4 The bridge [C + P, SM-003, SM-024/028]
+
+Inside Sp₆(2) ≅ W(E₇)/{±1}: **W(E₆) is the stabilizer of one bitangent,
+PSL(2,7) is transitive on all 28, and PSL(2,7) ∩ Stab(bitangent) = S₃ =
+N(⟨z₃⟩).** This S₃ is at once (i) the "universal stabilizer" of the Scar-Cat
+registry (28 = 168/6), (ii) the canonical stabilizer of the strata
+decomposition 168 = 31 + 62 + 75, and (iii) the type group S₃ of the E₆
+architecture's typed algebra — the two frameworks are the two point-of-view
+subgroups of one bitangent configuration, and the bridge closes the second
+author's open "Bridge" conjecture. The embedding is canonical up to a single
+outer flip: C_{Sp₆(2)}(PSL(2,7)) = 1 and N_{Sp₆(2)}(PSL(2,7)) = PGL(2,7) at
+index 2, the outer automorphism realized as the symplectic duality X ↔ X*
+(SM-024 by an exhaustive 1,451,520-element pass; SM-028 by the second
+author's structural route — two engines, one answer).
+
+### 11.5 The bridge lands on the board [C, SM-003, SM-013]
+
+The map z ↦ N(⟨z⟩) is exactly 2-to-1 from the 56 elements of class 3A onto
+the 28 bitangent stabilizers — the group-internal incarnation of the ±-doubling
+by which the 28 bitangents index the 56 weights of the E₇ minuscule
+representation. This is the same 56 the clock runs on (§§6, 7.1): PSL(2,7)
+acts on it with orbits **[28, 28]**, the two bitangent sheets interchanged by
+the antipode ι, weight-stabilizer S₃ (SM-013, answering design question DQ-1;
+the registered single-orbit guess refuted). The Weyl-level content is
+ℂ⁵⁶ = 2(χ₁ ⊕ 2χ₆ ⊕ χ₇ ⊕ χ₈), the untwisted lift unique because PSL(2,7) is
+perfect; the quark sectors χ₃/χ̄₃ do not occur in the Weyl action, only in the
+Lie-group embeddings of §11.6.
+
+### 11.6 Branchings of the 27 [C, SM-003]
+
+Two canonical restrictions of the 27 follow from the two embeddings:
+trinification E₆ ⊃ SU(3)³ with PSL(2,7) diagonal by Klein's χ₃ gives
+**27| = 3χ₁ ⊕ 3χ₈**; and PSL(2,7) ⊂ G₂ = Aut(𝕆) with 27 = J₃(𝕆) gives
+**27| = 6χ₁ ⊕ 3χ₇**. The earlier conjecture "27 ↔ 2χ₈" is impossible, as
+dimension 16 appears in no restriction of the 27.
+
+### 11.7 The Clifford reading and the chiral Fano pair [C + obs, SM-015]
+
+The bridge transports into quantum terms. Sp₆(2) = W(E₇)/± is the 3-qubit
+Clifford group modulo phases and Paulis, exhibited computationally from both
+sides in shared coordinates (`verify_stoneq_clifford.py`, 35 checks): the 28
+bitangents are the 28 odd Pauli sign-functions, W(E₆) the Clifford stabilizer
+of one, and PSL(2,7) a Clifford subgroup transitive on all 28, its fingerprint
+[28] / [1,7,7,21] / S₃ landing intact. The clock Ψ has **no** Clifford shadow
+(ιΨι = Ψ⁻¹ against central ι; it does not act on the 28 pairs) — the
+group-theoretic face of the non-linearity of §7.6. Separately, on the E₆
+architecture's 7-channel syndrome, exactly 2 of the 30 Fano structures on 7
+labels are invariant under the syndrome's motion group S₃ — a chiral pair,
+"one bit" (a chirality convention) from a full Fano labelling, compatible but
+never forced [obs] (`verify_fano_syndrome.py`). The v1 "two counter-posed 27s"
+intuition, refuted as a description of the E₆ crystal, is true one floor up as
+the E₆-branching 27 ⊕ 27̄ ⊕ 1 ⊕ 1 of the 56, with the mirror gate pr the
+diagram automorphism (§10).
+
+### 11.8 What is the second author's, what is classical, what is joint
+
+The skeleton — bitangents, theta characteristics, O₆± ≅ W(E₆) / S₈,
+Sp₆(2) ≅ W(E₇)/± — is classical. The PSL(2,7) framework, its
+representation-ring selection rules, and the registry under audit are the
+second author's; SM-001 records that audit (35+ rows independently confirmed,
+his own predictions audit credited). What the joint work adds is the
+identification — that two independently built frameworks each singled out, for
+internal reasons, the *same* S₃ at the same place in this classical geometry —
+together with the [obs] items (the even-orbit structure [1,7,7,21], the chiral
+Fano pair, the resurrection reading of §11.7) and audit-grade reproducibility.
+This section is a Stenberg-side collation of the joint record; the second
+author's corrections and additions, and the joint bibliography, are to be
+merged.
+
+## 12. Discussion
 
 We collect here what the parts establish together. Nothing in this section
 is a new claim; each sentence points back to a graded result above.
@@ -1225,9 +1361,9 @@ G₂(2) recovered as an exact intersection with PSL(2,7) sitting inside it as
 the bitangent class (§4), and the fourteen outer classes of O₈⁺(2).3
 enumerated and matched name-for-name to the published table before any
 character value was read (§§8–9). The value of the construction is not that
-these objects are new — they are not, and §13 says so — but that they are
+these objects are new — they are not, and §14 says so — but that they are
 built, not asserted, each from the last, and re-executed independently by
-the second author (§14).
+the second author (§15).
 
 **The clock on that frame is rowmotion.** The 56-state machine, built by
 other means on the Stenberg side, has its states identified with the vector
@@ -1265,7 +1401,7 @@ findings in their own right. Every unit was sealed under a brief whose
 SHA-256 was fixed before its script existed, so that each identification in
 §§9–10 is made against numbers the model produced before the reference table
 was consulted; and every registered expectation that failed is reported at
-the same prominence as those that held (§12), including the
+the same prominence as those that held (§13), including the
 second author's and our own — nineteen inversions and one lemma reported
 false as stated (§7.12) across the run. The model's credibility rests on
 those two rules more than on any single tally.
@@ -1280,9 +1416,9 @@ literature search before it can be sharpened to a claim of novelty. Whether
 the coincidence of the number 18 between the board's Coxeter number and the
 roof's twisted classes (§§5, 8) is more than a coincidence is left as it was
 found — two different objects (§7.1) — and any reading of the clock beyond
-combinatorics remains marked [I] and unclaimed (§13).
+combinatorics remains marked [I] and unclaimed (§14).
 
-## 12. Refutations, at equal prominence
+## 13. Refutations, at equal prominence
 
 Across the twelve spine units, the registered expectations that failed:
 
@@ -1317,7 +1453,7 @@ realising pair lies; and five slips of the executor's own (SM-060 twice,
 SM-062 once, SM-063 twice), each reported in its row. SM-057, SM-059 and
 SM-065 had every registered guess confirmed.
 
-## 13. What is not claimed
+## 14. What is not claimed
 
 No physical identification of any object here. No claim that the
 Coxeter-number periodicity, the fixed group of triality, the outer
@@ -1338,7 +1474,7 @@ AY's Lemma A (§7.12) is false as stated and is used nowhere. Nothing
 physical: no lepton, no flavour model, and no reading of the clock as time
 beyond the paragraphs marked [I].
 
-## 14. Reproducibility
+## 15. Reproducibility
 
 Every unit is a Python 3 script with numpy (and sympy in one place), run
 under a brief whose SHA-256 was recorded before the script existed; each
@@ -1379,15 +1515,19 @@ and are regenerated by that stone's verifier.
 - Bourbaki, N. *Lie Groups and Lie Algebras, Chapters 4–6.* Springer, 2002.
 - Breuer, T. *The GAP Character Table Library*, Version 1.3.11. RWTH Aachen. (Tables "O8+(2)" and "O8+(2).3", file `ctoorth2.tbl`.)
 - Cameron, P. J.; Fon-der-Flaass, D. G. Orbits of antichains revisited. *European J. Combin.* 16 (1995) 545–554.
+- Cohen, A. M.; Wales, D. B. Finite subgroups of G₂(ℂ). *Comm. Algebra* 11 (1983) 441–459.
 - Conway, J. H. Three lectures on exceptional groups. In *Finite Simple Groups* (Oxford, 1969), Academic Press, 1971, 215–247. Reprinted in Conway–Sloane (1999), ch. 10.
 - Conway, J. H.; Curtis, R. T.; Norton, S. P.; Parker, R. A.; Wilson, R. A. *ATLAS of Finite Groups.* Oxford University Press, 1985.
 - Conway, J. H.; Sloane, N. J. A. *Sphere Packings, Lattices and Groups*, 3rd ed. Springer, 1999.
 - Defant, C.; Hopkins, S.; Poznanović, S.; Propp, J. Homomesy via toggleability statistics. *Algebraic Combinatorics*; arXiv:2108.13227 (2021).
 - Dolgachev, I. *Classical Algebraic Geometry: A Modern View.* Cambridge University Press, 2012.
+- Elkies, N. D. The Klein quartic in number theory. In *The Eightfold Way: The Beauty of Klein's Quartic Curve* (S. Levy, ed.), MSRI Publications 35, Cambridge University Press, 1999, 51–101.
 - Gottesman, D.; Chuang, I. L. Demonstrating the viability of universal quantum computation using teleportation and single-qubit operations. *Nature* 402 (1999) 390–393.
 - Green, R. M. *Combinatorics of Minuscule Representations.* Cambridge Tracts in Mathematics 199, Cambridge University Press, 2013.
 - Green, R. M.; Xu, T. Branching rules of minuscule representations via a new partial order. arXiv:2402.06732 (2024), to appear in *Combinatorial Theory*.
 - Kleidman, P. B. The maximal subgroups of the finite 8-dimensional orthogonal groups PΩ₈⁺(q) and of their automorphism groups. *J. Algebra* 110 (1987) 173–242.
+- Klein, F. Über die Transformation siebenter Ordnung der elliptischen Functionen. *Math. Ann.* 14 (1878) 428–471.
+- Levy, S. (ed.). *The Eightfold Way: The Beauty of Klein's Quartic Curve.* MSRI Publications 35, Cambridge University Press, 1999. (Bibliography for §11 to be completed jointly with the second author.)
 - Marczinzik, R.; Thomas, H.; Yıldırım, E. On the interaction of the Coxeter transformation and the rowmotion bijection. *J. Comb. Algebra* 8 (2024) 359–374. doi:10.4171/JCA/101.
 - Okada, S. Birational rowmotion and Coxeter-motion on minuscule posets. *Electron. J. Combin.* 28(1) (2021) P1.17; arXiv:2004.05364.
 - Panyushev, D. I. Weight posets associated with gradings of simple Lie algebras, Weyl groups, and arrangements of hyperplanes. *J. Algebraic Combin.*; arXiv:1412.0987.
