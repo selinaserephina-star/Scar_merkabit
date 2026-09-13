@@ -1,8 +1,8 @@
 ---
 title: "The Roof and the Clock"
-subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.3"
+subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.4"
 author: "Selina Stenberg · Ilya Balashov · with Claude (Anthropic Fable 5)"
-date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); prepared on the Stenberg side; sealed-not-sent"
+date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); v0.4 (2026-09-13) adds §11 Discussion, synthesis only, no new claims; prepared on the Stenberg side; sealed-not-sent, awaiting the second author's word"
 ---
 
 **Status.** Draft of the paper whose spine both parties agreed on
@@ -23,8 +23,12 @@ grammar, the anomaly by hand with the doubled clock, and the clock's
 Clifford hierarchy (SM-057..065) — merged from the six summaries sent
 in envelopes between 2026-09-09 and 2026-09-11, with the second author's
 review of v0.2 applied (§7.4 addendum, §7.10 corollary, Appendix A) and
-§§11–13 extended; nothing computational was changed or re-run, and the
+§§12–14 extended; nothing computational was changed or re-run, and the
 sub-headings of §§7.8–7.13 keep their summaries' internal numbering.
+v0.4 (2026-09-13) adds a Discussion (§11) synthesizing the graded results
+already present — no computation added, changed, or re-run, and no new claim
+— and renumbers the former §§11–13 (Refutations, What is not claimed,
+Reproducibility) to §§12–14.
 Claims are graded: **[P]** classical with citation or proved
 here, **[C]** computed exactly by a named verifier under a brief locked
 before code, **[obs]** observed and not explained. No physical
@@ -1205,7 +1209,80 @@ The gates generate everything: |⟨Ψ, ι⟩| = 36, |⟨pr, ι⟩| = 4, and
 diameter of that generating set is at least 157 by counting [P]. 11 PASS
 + 1 INVERTED.
 
-## 11. Refutations, at equal prominence
+## 11. Discussion
+
+We collect here what the parts establish together. Nothing in this section
+is a new claim; each sentence points back to a graded result above.
+
+**One frame holds two machines.** The organizing fact of §§3–6 is that a
+single classical group, the rotation subgroup W⁺(E₈), was found to contain
+two towers built independently and for unrelated reasons — a chain inside
+PSL(2,7) on the Balashov side, a tower of Schur covers on the Stenberg
+side — over one central C₂ [C, SM-030]. Everything downstream lives on that
+frame in one coordinate system: the quotient O₈⁺(2), the triality Φ realized
+as an explicit order-3 permutation of the 360 points (§5), the still point
+G₂(2) recovered as an exact intersection with PSL(2,7) sitting inside it as
+the bitangent class (§4), and the fourteen outer classes of O₈⁺(2).3
+enumerated and matched name-for-name to the published table before any
+character value was read (§§8–9). The value of the construction is not that
+these objects are new — they are not, and §13 says so — but that they are
+built, not asserted, each from the last, and re-executed independently by
+the second author (§14).
+
+**The clock on that frame is rowmotion.** The 56-state machine, built by
+other means on the Stenberg side, has its states identified with the vector
+block of the roof — the 56 weights of the minuscule representation of E₇ —
+and its clock Ψ shown to be exactly rowmotion on the 27-element E₇ minuscule
+poset in the standard convention [C, SM-041]. That this rowmotion has order
+18 with orbit structure [18, 18, 18, 2] is the Coxeter number and
+Coxeter-element cycle type, and is Rush–Shi's theorem, not ours (§7.1). What
+is ours is the identification of a machine with that rowmotion, and the
+mirror gate pr with the E₆ diagram automorphism (§10), after which the two
+gates and the clock generate the full symmetric group on the 56 states.
+
+**The group and the clock share little, and exactly how little is the
+theorem.** The question of §§7.8–7.13 — what a Weyl group shares with the
+translates of itself by its own clock — has a sharp answer: the intersection
+of W(E₇) with the centralizer of a clock power is the centralizer and
+nothing more, meeting W(E₇) itself in the identity alone [C, SM-054]; the
+longest element reverses the clock [C + P, SM-059]; three label counts and
+the toggle size are homomesic, the last as a corollary of
+Defant–Hopkins–Poznanović–Propp [C, SM-060/061]; the one anomaly in the
+family carries a mechanism rather than an exception (on the 4-cube the
+half-turn is a Weyl element on one orbit, §7.12); and the Clifford-hierarchy
+analogy for the clock holds for exactly one level and no further [P + C,
+SM-065]. Read together with the non-linearity theorems (§§7.6–7.7) — that
+rowmotion is a Weyl element exactly on chains, its half-turn exactly on the
+D_n vectors, with the defect in closed form on two families and tabulated
+for 42 cases — the picture is consistent: the E₇ clock is as far from being
+a symmetry of the board as it can be, and fails every linearity condition at
+the first place it can (§7.6). The parity rule (§7.2) is the local face of
+the same fact: a single tick preserves an inner-product sign iff a toggle-set
+parity is even, exactly, on all 1,485 pairs.
+
+**Method.** Two disciplines carried the work and are worth stating as
+findings in their own right. Every unit was sealed under a brief whose
+SHA-256 was fixed before its script existed, so that each identification in
+§§9–10 is made against numbers the model produced before the reference table
+was consulted; and every registered expectation that failed is reported at
+the same prominence as those that held (§12), including the
+second author's and our own — nineteen inversions and one lemma reported
+false as stated (§7.12) across the run. The model's credibility rests on
+those two rules more than on any single tally.
+
+**Outlook.** Several directions are open and are named here as future work,
+not as gaps in the present claims. The non-simply-laced minuscule weights
+(B_n ω_n, C_n ω₁), promotion, and birational rowmotion (Okada 2021) are
+untouched here; a closed form for the defect κ on the spinors, on E₆ and E₇,
+and on A_n ω_k for k ≥ 3 beyond the observed degree at k = 3 is not known to
+us; and the "not found" status of §§7.2, 7.6, 7.7 (§7.4) awaits a specialist
+literature search before it can be sharpened to a claim of novelty. Whether
+the coincidence of the number 18 between the board's Coxeter number and the
+roof's twisted classes (§§5, 8) is more than a coincidence is left as it was
+found — two different objects (§7.1) — and any reading of the clock beyond
+combinatorics remains marked [I] and unclaimed (§13).
+
+## 12. Refutations, at equal prominence
 
 Across the twelve spine units, the registered expectations that failed:
 
@@ -1240,7 +1317,7 @@ realising pair lies; and five slips of the executor's own (SM-060 twice,
 SM-062 once, SM-063 twice), each reported in its row. SM-057, SM-059 and
 SM-065 had every registered guess confirmed.
 
-## 12. What is not claimed
+## 13. What is not claimed
 
 No physical identification of any object here. No claim that the
 Coxeter-number periodicity, the fixed group of triality, the outer
@@ -1261,7 +1338,7 @@ AY's Lemma A (§7.12) is false as stated and is used nowhere. Nothing
 physical: no lepton, no flavour model, and no reading of the clock as time
 beyond the paragraphs marked [I].
 
-## 13. Reproducibility
+## 14. Reproducibility
 
 Every unit is a Python 3 script with numpy (and sympy in one place), run
 under a brief whose SHA-256 was recorded before the script existed; each
