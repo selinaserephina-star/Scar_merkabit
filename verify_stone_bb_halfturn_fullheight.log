@@ -1,0 +1,8 @@
+BB0 PASS: brief locked, sha256 = a5fab2bfc5ec...
+BB1 PASS: R^4 shifts every rank by +-2 on O1, +-1 on O2.
+BB2 PASS: no u reproduces O1 (=> R^4|O1 not Weyl); u=1110 reproduces O2 (=> -tau).
+BB3 PASS: lambda forces wt(u)=2; O1 spans => odd overlap => contradiction.
+BB4 PASS: O2 linear part (23) in S4; O1 = (23) + transvection on {1,4}, not Weyl.
+BB5 PASS [obs]: O1 unique full-height orbit; rowmotion wraps w0.lambda -> lambda.
+
+STONE BB: 6 PASS + 0 FAIL. Theorem BB proved and re-checked.

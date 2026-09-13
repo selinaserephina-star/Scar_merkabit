@@ -1,6 +1,6 @@
 ---
 title: "The Roof and the Clock"
-subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.5"
+subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.6"
 author: "Selina Stenberg · Ilya Balashov · with Claude (Anthropic Fable 5)"
 date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); v0.4–v0.5 (2026-09-13) add §12 Discussion (synthesis only) and §11, a Stenberg-side collation of the Balashov tower and the bitangent bridge from the sealed joint record — no new claims; prepared on the Stenberg side; sealed-not-sent, awaiting the second author's word"
 ---
@@ -31,7 +31,10 @@ graded results already present; and §11, a collation on the Stenberg side of
 the Balashov-side tower and the bitangent bridge from the sealed joint record
 (SM-001, SM-003, SM-013, SM-015, SM-021–024/028), pending the second author's
 expansion. The former §§11–13 (Refutations, What is not claimed,
-Reproducibility) are renumbered to §§13–15.
+Reproducibility) are renumbered to §§13–15. v0.6 (2026-09-13) rewrites §7.12.4
+to state the theorem SM-066 (the half-turn on the full-height orbit, proved by
+the Weyl rank-shift lemma) in place of its former open line, and renumbers the
+remaining open items to §7.12.5.
 Claims are graded: **[P]** classical with citation or proved
 here, **[C]** computed exactly by a named verifier under a brief locked
 before code, **[obs]** observed and not explained. No physical
@@ -1048,15 +1051,33 @@ half-turn (the four extras), it is because the half-turn is, for half
 the board, one of the board's own symmetries. The exception is not a
 crack in the rule; it is the rule seen from inside one orbit.
 
-#### 7.12.4 Open
+#### 7.12.4 Why the orbit without λ [P + C, SM-066]
 
-Why the orbit not containing λ is the one on which the half-turn is a
-Weyl element (a proof, not a computation). Boards without a W-central
-reverser (the E₆ 27, the D_odd half-spins, A_n ω_k with 2k ≠ n + 1):
-Lemma C does not apply and nothing is claimed. Whether C_W(R^{2k}) ⊆
-I_k beyond the vectors: it is strict on A₅ω₃, A₇ω₄ and the D₆
-half-spins at the half-turn. Which group the vectors' outer transports
-are inner in, if any short of Sym(2n).
+The question left open above — *why* the half-turn is a Weyl element on the
+orbit not containing λ — has a proof, not a search. Grade the spinor weights
+by rank (number of minus signs); W(B₄) = 𝔽₂⁴ ⋊ S₄ acts affinely, w(x) =
+π(x) ⊕ v. **Lemma (Weyl rank-shift).** For w = (π,v), writing u = π⁻¹(v),
+rank(w(x)) = wt(π(x)⊕v) = wt(x⊕u), so the rank-shift is Δ_w(x) = wt(u) −
+2|x∩u| — a function of the single vector u. **Theorem [SM-066].** R⁴ agrees
+with no Weyl element on O₁ and with −τ on O₂. On O₁ the half-turn shifts every
+rank by exactly ±2 (O₁ is the full-height orbit, its ranks reading 0,1,1,2,2,
+3,3,4, and R⁴ pairs positions differing by 2); at λ the shift is +2, forcing
+wt(u) = 2, whereupon |Δ| = 2 forces ⟨x,u⟩ = 0 for all x ∈ O₁, and O₁ spans
+𝔽₂⁴, so u = 0 — contradiction. On O₂ the shifts are ±1, realised by u = 1110,
+i.e. −τ. The cause is λ: the top weight pins wt(u) at rank 0, so only an orbit
+avoiding the extreme ranks can carry the half-turn as a symmetry. The argument
+is dimension-free (Δ_w(x) = wt(u) − 2|x∩u| in every B_n): on the full-height
+orbit of B_n the half-turn shifts rank by ±n/2, so for every n ≥ 4 the
+extreme-weight orbit's half-turn is not a Weyl element, the n > 4 case
+reducing to the fact that the shift is exactly ±n/2 (verified at B₄; B₈ next).
+
+#### 7.12.5 Open
+
+Boards without a W-central reverser (the E₆ 27, the D_odd half-spins, A_n ω_k
+with 2k ≠ n + 1): Lemma C does not apply and nothing is claimed. Whether
+C_W(R^{2k}) ⊆ I_k beyond the vectors: it is strict on A₅ω₃, A₇ω₄ and the D₆
+half-spins at the half-turn. Which group the vectors' outer transports are
+inner in, if any short of Sym(2n).
 
 
 ### 7.13 The clock's Clifford hierarchy [P + C, SM-065]
@@ -1564,3 +1585,7 @@ inverted or corrected), SM-059 (Stone AU, 10/10), SM-060 (Stone AV, 9 + 4),
 SM-061 (Stone AW, 6 + 1), SM-062 (Stone AX, 21 + 1), SM-063 (Stone AY,
 20 + 5, including its own Lemma A reported false), SM-064 (Stone AZ,
 11 + 2); SM-065 (Stone BA, 7/7, 2026-09-11) travels with this draft.
+
+Added in v0.6 (§7.12.4): SM-066 (Stone BB, 6/6, 2026-09-13) — the half-turn on
+the full-height orbit, closing SM-063 §7.12.4 open #1 by the Weyl rank-shift
+lemma; prepared on the Stenberg side, awaiting the second author's word.
