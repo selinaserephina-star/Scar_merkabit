@@ -1,6 +1,6 @@
 ---
 title: "The Roof and the Clock"
-subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.7"
+subtitle: "A verified computational model of W⁺(E₈), O₈⁺(2).3 and rowmotion on the E₇ minuscule poset, with three theorems on the non-linearity of rowmotion, and what the symmetry group and the clock share — DRAFT v0.8"
 author: "Selina Stenberg · Ilya Balashov · with Claude (Anthropic Fable 5)"
 date: "2026-09-11 — draft v0.3 (v0.2 of 2026-09-09, approved by Ilya Balashov on 2026-09-10, plus §§7.8–7.13 on SM-057..065 merged from their six summaries, his §7.4 addendum, the Defant–Hopkins–Poznanović–Propp corollary in §7.10, and Appendix A brought to JOINT); v0.4–v0.5 (2026-09-13) add §12 Discussion (synthesis only) and §11, a Stenberg-side collation of the Balashov tower and the bitangent bridge from the sealed joint record — no new claims; prepared on the Stenberg side; sealed-not-sent, awaiting the second author's word"
 ---
@@ -37,7 +37,10 @@ the Weyl rank-shift lemma) in place of its former open line, and renumbers the
 remaining open items to §7.12.5. v0.7 (2026-09-14) records the second author's
 word of that date: §§7.8–7.13 (SM-057–064) are now JOINT (Appendix A), §11.3
 and §12 independently re-verified on his side, and the §11 bibliography
-completed with the three references he supplied.
+completed with the three references he supplied. v0.8 (2026-09-14) adds §11.9
+(the second author's χ₆ = Fano-plane deleted permutation module, his code
+re-run on the Stenberg side), with the §11.3 "Fano points" identity settled
+(both size-7 orbits carry 1⊕χ₆); the flavon-potential use is kept out (Rule 3).
 Claims are graded: **[P]** classical with citation or proved
 here, **[C]** computed exactly by a named verifier under a brief locked
 before code, **[obs]** observed and not explained. No physical
@@ -1366,8 +1369,38 @@ internal reasons, the *same* S₃ at the same place in this classical geometry �
 together with the [obs] items (the even-orbit structure [1,7,7,21], the chiral
 Fano pair, the resurrection reading of §11.7) and audit-grade reproducibility.
 This section is a Stenberg-side collation of the joint record; the second
-author's corrections and additions, and the joint bibliography, are to be
-merged.
+author's independent re-verification of §11.3 (2026-09-14, the 36/28 split,
+[1,7,7,21], the single 28-orbit and the χ₁+2χ₆+χ₇+χ₈ character, rebuilt from
+scratch) and his own expansion (§11.9) are merged, and the bibliography is
+completed.
+
+### 11.9 The sextet χ₆ as the Fano plane's deleted permutation module [P + C, second author]
+
+The second author contributes an explicit geometric model of the
+6-dimensional irreducible χ₆: it is the **deleted permutation module on the
+7 points of the Fano plane** (7 = 1 ⊕ 6, the singlet the overall labelling).
+Realizing PSL(2,7) = GL(3,𝔽₂) on the 7 nonzero vectors of 𝔽₂³, the generators
+A (order 2), B (order 3), AB (order 7) have traces 2, 0, −1 on the 6-dimensional
+sum-zero subspace — exactly χ₆'s character at the classes 2A, 3A, 7A/7B — which
+by character theory is a complete proof that this module is χ₆. The same fact
+is stated, independently, in Luhn–Nasri–Ramond (2007, §7). His construction was
+re-run on the Stenberg side, reproducing the trace match exactly.
+
+**This is the same Fano plane as §11.3.** The two size-7 orbits of PSL(2,7) on
+the 36 even refinements — the "Fano points" and "Fano planes" of §11.3 — both
+carry permutation character 1 ⊕ χ₆ (verified: the fixed-point counts (7,3,1,1,
+0,0) over the six classes agree with the point action's on the nose), so each
+is a 7-element PSL(2,7)-set realizing χ₆ as its deleted permutation module: the
+points and the lines of the one Fano plane, dual under the diagram
+automorphism. The second author's χ₆-model is thus the "Fano points" orbit of
+§11.3 exactly, and the "Fano planes" orbit is its dual — resolving the question
+of whether these are the same object or a look-alike in favour of the same.
+
+He further builds the six independent quartic invariants of χ₆ from the Fano
+combinatorics (the 7 points, the 7 lines, and an antisymmetric pairing), rank 6
+by an explicit computation — a representation-theoretic count. Their use in the
+King–Luhn flavon-potential and vacuum-alignment programme is a physical
+identification and is **not** taken up here (Rule 3).
 
 ## 12. Discussion
 
