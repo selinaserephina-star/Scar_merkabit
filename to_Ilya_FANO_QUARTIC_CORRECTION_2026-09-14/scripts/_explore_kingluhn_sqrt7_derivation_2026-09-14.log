@@ -1,0 +1,18 @@
+[1] gradient matrix at chi_top: shape (12, 7), rank 3
+    singular values: [126.7272  18.6667  18.3606   0.       0.       0.       0.    ]
+    null-space dimension (allowed coupling families) = 4
+
+[2] For each null-space basis vector, the shape couplings (kappa_1..5 = c1..c5):
+           k1       k2       k3       k4       k5       k2-k3k2-(k4+k5/sqrt7)
+       0.0003   1.0000   1.0000   0.4979   1.3283    1.86e-13        3.25e-13
+      -0.0388   1.0000   1.0000   1.1029  -0.2721   -3.44e-13       -2.26e-13
+       0.2584   1.0000   1.0000   0.1686   2.1996    1.05e-12        6.90e-13
+    -38561.9212   1.0000   1.0000  -0.9689   5.2091    8.56e-12        2.15e-11
+
+[3] max |k2 - k3| over null space           = 8.56e-12
+    max |k2 - (k4 + k5/sqrt7)| over null space = 2.15e-11
+    sqrt(7) = 2.645751
+
+[4] King-Luhn relation  kappa_2 = kappa_3 = kappa_4 + kappa_5/sqrt7  REPRODUCED from raw eqs + top VEV (transcription validated).
+
+Done. [free exploration; not a sealed stone]

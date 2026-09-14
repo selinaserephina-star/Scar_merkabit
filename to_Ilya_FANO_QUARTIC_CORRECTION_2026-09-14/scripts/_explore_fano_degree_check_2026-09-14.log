@@ -1,0 +1,23 @@
+[T1] homogeneity degree of each Ilya invariant (I(t*chi)/I(chi) vs t^4, t^6):
+           Ig1: ratio    16.000   => degree 4.000   (QUARTIC)
+           Ig2: ratio    16.000   => degree 4.000   (QUARTIC)
+         Iline: ratio    16.000   => degree 4.000   (QUARTIC)
+         Iprod: ratio    64.000   => degree 6.000   (SEXTIC)
+        Imixed: ratio    16.000   => degree 4.000   (QUARTIC)
+      Iantisym: ratio    16.000   => degree 4.000   (QUARTIC)
+
+[T2] dim of PSL(2,7)-invariant quartic (2,2) forms = <Sym2,Sym2> = 6.0000  (expect 6)
+     independent quartic invariants among 12 random equivariant H: rank 6 (expect 6)
+
+[T3] is each Ilya invariant inside the quartic (2,2) span?
+           Ig1: rel residual fitting from quartic span = 2.36e-15  (in quartic space)
+           Ig2: rel residual fitting from quartic span = 2.38e-15  (in quartic space)
+         Iline: rel residual fitting from quartic span = 2.26e-15  (in quartic space)
+         Iprod: rel residual fitting from quartic span = 4.36e-01  (NOT quartic)
+        Imixed: rel residual fitting from quartic span = 2.55e-15  (in quartic space)
+      Iantisym: rel residual fitting from quartic span = 2.98e-15  (in quartic space)
+
+     Ilya invariants that ARE quartic: ['Ig1', 'Ig2', 'Iline', 'Imixed', 'Iantisym']
+     they span a subspace of the 6-dim quartic space of dim = 5
+
+Done. [free exploration; not a sealed stone]

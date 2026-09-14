@@ -1,0 +1,15 @@
+[1] quartic space rank (random equiv-H): 6 (expect 6)
+    Ilya's five quartics rank: 5 (expect 5)
+[2] Q_chiral degree: ratio 16.000 -> 4.000 (expect 4)
+[3] chirality: Q(chi)=-3.4784, Q(conj chi)=3.4784, sum=0.00e+00 (expect ~0: odd under conjugation)
+[4] Q_chiral in the quartic (2,2) space? rel residual 1.09e-14 (YES)
+[5] rank(Ilya's 5 + Q_chiral) = 6  (COMPLETES the basis -> Q_chiral IS the missing sixth quartic)
+[6] rank([full quartic basis | Ilya5 | Q_chiral]) = 6 (==6 confirms {Ilya5,Q_chiral} spans the entire quartic space)
+
+EXPLICIT FORM of the missing sixth quartic (in Fano 7-point coords, sum-zero chi):
+   Q_miss(chi) = Im  sum_{i=0}^{6}  conj(chi_i^2) * ( sum_{L ni i} chi_j chi_k )
+             = Im < pointwise-square , line-collinearity-map >
+   (both maps are PSL(2,7)-equivariant 6->6; their Hermitian cross-pairing's
+    imaginary part is the chiral 6-6' cross channel = King-Luhn's kappa_5 direction)
+
+Done. [free exploration; not a sealed stone]

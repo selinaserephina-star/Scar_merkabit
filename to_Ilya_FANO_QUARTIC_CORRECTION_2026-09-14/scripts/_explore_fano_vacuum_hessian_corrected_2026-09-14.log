@@ -1,0 +1,33 @@
+[0] vacuum chis = [ 4 -3 -3  4  4 -3 -3]  (+4 on 3 points, -3 on 4)
+    |stabiliser of v0| = 24 (expect 24 = S4)
+[1] character-projector ranks on R^6:  2->2, 3->3, 3'->0  (chi6|S4 = 1+2+3 => expect 2,3,0)
+
+[V] VALIDATION vs Ilya Result 3 (basis g1,g2,line,mixed,prod; couplings=1; expect
+    doublet: 336 g1 +192 g2 + 96 line +360 mixed -2240 prod (-2 m^2)
+    triplet: 336 g1 +108 g2 + 96 line +416 mixed -2240 prod (-2 m^2))
+        g1: doublet-block eigs [ 336.  336. 1008. 1008.]   triplet-block eigs [336. 336. 336. 336. 336. 336.]
+        g2: doublet-block eigs [ 64. 192. 192. 576.]   triplet-block eigs [ 36.  36.  36. 108. 108. 108.]
+      line: doublet-block eigs [ 32.  96.  96. 288.]   triplet-block eigs [32. 32. 32. 96. 96. 96.]
+     mixed: doublet-block eigs [ 232.  360.  696. 1080.]   triplet-block eigs [416. 416. 416. 512. 512. 512.]
+      prod: doublet-block eigs [-6720. -2240.  2240.  6720.]   triplet-block eigs [-2240. -2240. -2240.  2240.  2240.  2240.]
+      mass: doublet-block eigs [2. 2. 6. 6.]   triplet-block eigs [2. 2. 2. 2. 2. 2.]
+
+[C] CORRECTED basis {g1,g2,line,mixed,antisym,Qmiss}. Doublet/triplet block eigenvalues:
+          g1: doublet eigs [ 336.  336. 1008. 1008.]    triplet eigs [336. 336. 336. 336. 336. 336.]
+          g2: doublet eigs [ 64. 192. 192. 576.]    triplet eigs [ 36.  36.  36. 108. 108. 108.]
+        line: doublet eigs [ 32.  96.  96. 288.]    triplet eigs [32. 32. 32. 96. 96. 96.]
+       mixed: doublet eigs [ 232.  360.  696. 1080.]    triplet eigs [416. 416. 416. 512. 512. 512.]
+     antisym: doublet eigs [  -0.    0.  672. 2016.]    triplet eigs [ -0.  -0.   0. 672. 672. 672.]
+       Qmiss: doublet eigs [-252.  -84.   84.  252.]    triplet eigs [-56. -56. -56.  56.  56.  56.]
+        mass: doublet eigs [2. 2. 6. 6.]    triplet eigs [2. 2. 2. 2. 2. 2.]
+
+[D] King-Luhn cross channels I4=Re<6|6'>, I5=Im<6|6'> (matched normalisation).
+    I5 vs Qmiss proportional? corr=0.189986  ratio~-0.0001
+     I4(Re-cross): doublet eigs [-0.021 -0.007 -0.004 -0.001]   triplet eigs [-0.003 -0.003 -0.003  0.002  0.002  0.002]
+     I5(Im-cross): doublet eigs [-0.019 -0.006 -0.    -0.   ]   triplet eigs [-0.003 -0.003 -0.003  0.001  0.001  0.001]
+
+[E] cross-channel block-scale ratios (looking for sqrt7=2.6458 or 1/sqrt7=0.3780):
+    doublet |I4|/|I5| = 1.0981 ,  |I5|/|I4| = 0.9107
+    triplet |I4|/|I5| = 0.8897 ,  |I5|/|I4| = 1.1240
+
+Done. [free exploration; not a sealed stone]

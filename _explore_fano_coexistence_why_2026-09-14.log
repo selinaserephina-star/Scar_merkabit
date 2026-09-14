@@ -1,0 +1,53 @@
+[0] endpoints: m2A=24.1833, m2B=4.368
+
+[Q1] tracking S4 and S2 stability along A->B (min Hessian eigenvalue):
+         t S4 exists  S4 minEig  S4 stab | S2 exists  S2 minEig  S2 stab | coexist
+     0.000      True      3.733     True |      True     -2.186    False |
+     0.010      True      3.383     True |      True     -1.965    False |
+     0.020      True      3.045     True |      True     -1.750    False |
+     0.030      True      2.721     True |      True     -1.542    False |
+     0.040      True      2.409     True |      True     -1.341    False |
+     0.050      True      2.109     True |      True     -1.146    False |
+     0.060      True      1.821     True |      True     -0.957    False |
+     0.070      True      1.543     True |      True     -0.773    False |
+     0.080      True      1.277     True |      True     -0.596    False |
+     0.090      True      1.021     True |      True     -0.424    False |
+     0.100      True      0.775     True |      True     -0.258    False |
+     0.110      True      0.538     True |      True     -0.097    False |
+     0.120      True      0.311     True |      True      0.059     True |  <== BOTH
+     0.130      True      0.093     True |      True      0.210     True |  <== BOTH
+     0.140      True     -0.116    False |      True      0.355     True |
+     0.150      True     -0.317    False |      True      0.440     True |
+     0.160      True     -0.509    False |      True      0.505     True |
+     0.170      True     -0.694    False |      True      0.569     True |
+     0.180      True     -0.871    False |      True      0.630     True |
+     0.190      True     -1.041    False |      True      0.689     True |
+     0.200      True     -1.203    False |      True      0.745     True |
+     0.210      True     -1.359    False |      True      0.800     True |
+     0.220      True     -1.507    False |      True      0.852     True |
+     0.230      True     -1.649    False |      True      0.902     True |
+     0.240      True     -1.785    False |      True      0.950     True |
+     0.250      True     -1.915    False |      True      0.997     True |
+     0.260      True     -2.039    False |      True      1.041     True |
+     0.270      True     -2.157    False |      True      1.083     True |
+     0.280      True     -2.269    False |      True      1.124     True |
+     0.290      True     -2.376    False |      True      1.162     True |
+     0.300      True     -2.477    False |      True      1.199     True |
+
+    => coexistence window t in [0.12,0.13]. Left edge = S2 min turns stable; right edge = S4 min destabilises.
+
+[Q2] at the window point t=0.125, k_prod=-0.0069 (tiny). Vary k_prod, refix m2 for S4 criticality:
+       k_prod        m2  S4 stab  S2 stab  coexist
+       -0.100    27.503     True    False
+       -0.050    28.050     True     True  <== BOTH
+       -0.020    28.378     True     True  <== BOTH
+       -0.007    28.520     True     True  <== BOTH
+        0.000    28.597     True     True  <== BOTH
+        0.007    28.673    False     True
+        0.020    28.815    False     True
+        0.050    29.144    False     True
+
+[Q2b] with k_prod=0 identically, scan t in [0,0.3] (refix m2 at scale 1) for any coexistence:
+    pure-quartic coexistence at t = [np.float64(0.12)]
+
+Done. [free exploration; not a sealed stone]

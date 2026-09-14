@@ -1,0 +1,20 @@
+[0] paper realization unitary?  max||rho^dag rho - I|| = 5.05e-15
+[1] singular values of S: [0.203794 0.077027 0.077027 0.077027 0.077027 0.077027]
+    ratio sv[0]/sv[1] = 2.6457513111   sqrt(7) = 2.6457513111
+    (ratio)^2 = 7.0000000000   (expect 7)
+
+[2] eig(S^dag S) normalised: [1. 1. 1. 1. 1. 7.]
+    eig(group-avg metric)   : [1. 1. 1. 1. 1. 7.]
+    ||S^dag S  -  group-avg metric|| (both normalised) = 3.76e-14
+
+[3] distinguished (stretched) direction in Fano 6-coords:
+    [1. 1. 1. 1. 1. 1.]
+
+[4] pullback metric U^T U (plain permutation metric on R^7, restricted):
+    eig(U^T U) = [1. 1. 1. 1. 1. 7.]   -> normalised [1. 1. 1. 1. 1. 7.]
+    |<stretched dir | U^TU big dir>| = 1.000000  (1.0 = same axis)
+
+[5] |<stretched dir | S4 vacuum>| = 0.198030
+    |<stretched dir | U^+ (1,...,1)>| = 0.099015
+
+Done. [free exploration; not a sealed stone]

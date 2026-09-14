@@ -1,0 +1,30 @@
+[0] LNR realization unitary: max||U^dag U - I|| = 5.1e-15  (channels will be orthogonal)
+[1] Sym^2(6)=1+6+6'+8 : isotypic ranks  1->1, 6-iso->12, 8->8  (sum 21/21)
+[2] 6-block split by a commutant operator: two 6-copies, ranks 6,6
+[3] rank of Ilya's six over 60 samples: 6 ;  KL six: 6
+[4] change-of-basis fit residual (max|KL - M*Fano|): 1.49e+01  rank 6
+
+    M  (rows = KL channels, cols = Ilya Fano invariants):
+                  Ig1=(S|x|^2)^2   Ig2=S|x|^4        Iline        Iprod       Imixed     Iantisym
+          I1=|1|^2      0.00001     -0.00000      0.00000     -0.00000     -0.00000     -0.00001
+          I2=|6|^2     -0.00005      0.00006      0.00001      0.00000      0.00003      0.00001
+         I3=|6'|^2      0.00005     -0.00002      0.00000     -0.00000     -0.00004      0.00000
+          I8=|8|^2      0.00003     -0.00004     -0.00001     -0.00000      0.00001     -0.00001
+       I4=Re<6|6'>     -0.00002     -0.00001      0.00001     -0.00000      0.00002     -0.00000
+       I5=Im<6|6'>     -0.00001     -0.00001      0.00001      0.00000      0.00000      0.00000
+
+[5] sqrt(7) = 2.64575 ;  7 = 7.0 ;  1/sqrt(7)=0.37796
+    notable entry ratios within rows (looking for sqrt7 / 7):
+            I1=|1|^2: [Ig1=(S|x|^2)^2:+1.0000, Iantisym:-1.0000]
+            I2=|6|^2: [Ig1=(S|x|^2)^2:+1.0000, Ig2=S|x|^4:-1.1454, Iline:-0.1934, Imixed:-0.5049, Iantisym:-0.2303]
+           I3=|6'|^2: [Ig1=(S|x|^2)^2:+1.0000, Ig2=S|x|^4:-0.3534, Imixed:-0.6663]
+            I8=|8|^2: [Ig1=(S|x|^2)^2:+1.0000, Ig2=S|x|^4:-1.5000, Iline:-0.3750, Imixed:+0.3750, Iantisym:-0.2500]
+         I4=Re<6|6'>: [Ig1=(S|x|^2)^2:+1.0000, Ig2=S|x|^4:+0.2663, Iline:-0.2969, Imixed:-0.7267]
+         I5=Im<6|6'>: [Ig1=(S|x|^2)^2:+1.0000, Ig2=S|x|^4:+1.6099, Iline:-0.8485, Iantisym:-0.5104]
+
+[6] (TRANSCRIBED, flagged) projective little group order:
+    King-Luhn top vacuum (2.10): |stab| = 1   (24 = S4 expected for a 3-3 top alignment)
+    Ilya's S4 (+4/-3) vacuum   : |stab| = 24
+    |<Ilya-vac | KL-top>| (raw, no relabel) = 0.6078
+
+Done. [free exploration; not a sealed stone]

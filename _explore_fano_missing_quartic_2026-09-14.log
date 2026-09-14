@@ -1,0 +1,43 @@
+[1] rank(King-Luhn 6 channels) = 6  (full quartic space, expect 6)
+    rank(Ilya's 5 quartics)     = 5  (expect 5)
+
+[2] Ilya's 5 quartics reconstructed from channels, residual 1.6e-07
+    MISSING quartic direction, in channel coordinates ['|1|^2', '|6|^2', "|6'|^2", '|8|^2', "Re<6|6'>", "Im<6|6'>"]:
+    [ 0.      0.3279 -0.3279  0.     -0.9638  1.    ]
+    dominant channel: Im<6|6'>  (weight 1.0000)
+
+[3] do natural Fano candidates supply the missing 6th quartic? (rank of Ilya5 + candidate):
+         C1=pairs|xi xj|^2: rank(Ilya5+cand)=5  |corr with missing dir|=0.0005  
+        C2=collinear pairs: rank(Ilya5+cand)=5  |corr with missing dir|=0.0040  
+        C3=line pair-sum^2: rank(Ilya5+cand)=5  |corr with missing dir|=0.0420  
+           C4=|sum xi^2|^2: rank(Ilya5+cand)=5  |corr with missing dir|=0.0029  
+
+[4] W: each Ilya quartic as a combination of King-Luhn channels (exact, residual 1.6e-07):
+                    |1|^2      |6|^2     |6'|^2      |8|^2   Re<6|6'>   Im<6|6'>
+           Ig1 28407.3870 28407.3870 28407.3870 28407.3870     0.0000    -0.0000
+           Ig2 24349.1889 15031.1325  5259.8582    -0.0000-11095.0221-13897.7332
+         Iline 97396.7556 31431.3438 49732.6192    -0.0000 53850.8264 57902.8557
+        Imixed 24349.1889 34741.0998 13957.2780 42611.0806  9470.7379  2311.9229
+      Iantisym-142036.9352 28407.3870 28407.3870 28407.3870    -0.0000    -0.0000
+    (note: |1|^2 and |8|^2 columns show which Ilya quartics carry singlet/octet weight)
+
+[5] No naive real Fano quartic (C1-C4) supplies the missing 6th; it is a chiral 6-6' cross channel.
+    Completing the basis with the canonical missing channel-direction itself.
+    rank(Ilya5 + missing) = 6
+    change of basis [KL channels] = M [Ilya5 + MISS], residual 3.18e-12:
+                       Ig1        Ig2      Iline     Imixed   IantisymMISS(6-6' chiral)
+          |1|^2     0.0000     0.0000    -0.0000     0.0000    -0.0000    -0.0000
+          |6|^2    -0.0000     0.0001     0.0000     0.0000     0.0000     0.1530
+         |6'|^2     0.0001    -0.0000     0.0000    -0.0000     0.0000    -0.1530
+          |8|^2     0.0000    -0.0000    -0.0000     0.0000    -0.0000     0.0000
+       Re<6|6'>    -0.0000     0.0000     0.0000     0.0000     0.0000    -0.4495
+       Im<6|6'>     0.0000    -0.0000     0.0000    -0.0000    -0.0000     0.4664
+
+[6] sqrt7=2.64575, 1/sqrt7=0.37796, 7=7.0 ; scan W (Ilya->channel) ratios per Ilya-invariant:
+           Ig1 (norm to |1|^2): [|1|^2:+1.0000, |6|^2:+1.0000, |6'|^2:+1.0000, |8|^2:+1.0000]
+           Ig2 (norm to |1|^2): [|1|^2:+1.0000, |6|^2:+0.6173, |6'|^2:+0.2160, Re<6|6'>:-0.4557, Im<6|6'>:-0.5708]
+         Iline (norm to |1|^2): [|1|^2:+1.0000, |6|^2:+0.3227, |6'|^2:+0.5106, Re<6|6'>:+0.5529, Im<6|6'>:+0.5945]
+        Imixed (norm to |8|^2): [|1|^2:+0.5714, |6|^2:+0.8153, |6'|^2:+0.3276, |8|^2:+1.0000, Re<6|6'>:+0.2223, Im<6|6'>:+0.0543]
+      Iantisym (norm to |1|^2): [|1|^2:+1.0000, |6|^2:-0.2000, |6'|^2:-0.2000, |8|^2:-0.2000]
+
+Done. [free exploration; not a sealed stone]
