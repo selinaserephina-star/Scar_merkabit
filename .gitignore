@@ -7,3 +7,9 @@ _stone_z_cache/G_rows.npy
 
 # 166 MB Stone U cache (regenerable by verify_stone_u_*.py); dropped from history 2026-09-19, see HISTORY_REWRITE_2026-09-19.md
 _stone_u_cache/kbar_elements.npy
+
+# LaTeX by-products
+joint_paper/*.aux
+joint_paper/*.out
+joint_paper/*.toc
+joint_paper/*.log
