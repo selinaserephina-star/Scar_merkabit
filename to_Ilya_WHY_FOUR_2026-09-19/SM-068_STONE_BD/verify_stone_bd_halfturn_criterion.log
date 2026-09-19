@@ -1,0 +1,96 @@
+==============================================================================
+STONE BD -- THE HALF-TURN CRITERION
+==============================================================================
+[PASS] BD0: the brief is sha-locked: sha256(BRIEF_STONE_BD_HALFTURN_CRITERION.md) equals BRIEF_STONE_BD_LOCK.sha256  -> 0dbad52fb86684c8...
+[t=   0.0s] B3: |W| = 48, R type 6^1 2^1
+[t=   0.0s] B4: |W| = 384, R type 8^2
+[t=   0.0s] B5: |W| = 3840, R type 10^3 2^1
+[t=   0.1s] B6: |W| = 46080, R type 12^5 4^1
+[t=   0.2s] B7: |W| = 645120, R type 14^9 2^1
+[t=   1.1s] B8: |W| = 10321920, R type 16^16
+
+------------------------------------------------------------------------------
+C_m, I_m and the nearest Weyl elements to the half-turn on B3..B8
+------------------------------------------------------------------------------
+  B3: |C_m| = 8, |I_m| = 16 (ANOMALOUS); nearest Weyl elements to R^3: best agreement 4/8, 4 element(s): ['(e1 -> -e1) (e3 -> -e3)', '(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)', '(e1 -> e3 -> e1) (e2 -> -e2)', '(e1 -> -e3 -> e1)']; closed under w -> -w: False
+  B4: |C_m| = 4, |I_m| = 8 (ANOMALOUS); nearest Weyl elements to R^4: best agreement 8/16, 1 element(s): ['(e1 -> -e1) (e2 -> -e3 -> e2)']; closed under w -> -w: False
+  B5: |C_m| = 2, |I_m| = 2 (clean); nearest Weyl elements to R^5: best agreement 10/32, 1 element(s): ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e4) (e5 -> -e5)']; closed under w -> -w: False
+  B6: |C_m| = 2, |I_m| = 2 (clean); nearest Weyl elements to R^6: best agreement 24/64, 1 element(s): ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4)']; closed under w -> -w: False
+  B7: |C_m| = 2, |I_m| = 2 (clean); nearest Weyl elements to R^7: best agreement 22/128, 1 element(s): ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e6) (e7 -> -e7)']; closed under w -> -w: False
+  B8: |C_m| = 2, |I_m| = 2 (clean); nearest Weyl elements to R^8: best agreement 52/256, 1 element(s): ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)']; closed under w -> -w: False
+[t=   4.5s] centralizers, shared grammars and nearest elements done
+
+------------------------------------------------------------------------------
+BD1 -- B4, w = -tau
+------------------------------------------------------------------------------
+  [BD1] B4 w = (e1 -> -e1) (e2 -> -e3 -> e2)                         agree   8/ 16 (Y affdim 4)  c: type 2^4 1^8                c^2=1:True  R^m w R^m = w^-1:True  w in C_m:True  |C_W(c)|=8   |C_W(w)|=16  |Stab(Y)|=16  |C_m|=4   |I_m|=8  
+        Lemma B (I_m cap Stab Y = C_W(c)): True; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): True; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: False
+[PASS] BD1: REGISTERED GUESS: B4 with w = -tau: w in C_4, c^2 = 1, |Stab_W(O2)| = 16, I_4 <= Stab_W(O2), I_4 = C_W(c) of order 8, and the four extras are C_W(c) \ C_W(w)  -> C_W(c) = ['(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4)', '(e1 -> -e1) (e2 -> -e3 -> e2)', '(e1 -> -e4 -> -e1) (e2 -> e3 -> -e2)', '(e1 -> -e4 -> e1) (e2 -> -e2)', '(e1 -> e4 -> -e1) (e2 -> -e3 -> -e2)', '(e1 -> e4 -> e1) (e3 -> -e3)', '(e2 -> e3 -> e2) (e4 -> -e4)', '1']
+
+------------------------------------------------------------------------------
+BD2 -- B8, w = -(e2 e3)(e4 e5)(e6 e7)
+------------------------------------------------------------------------------
+  [BD2] B8 w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)  agree  52/256 (Y affdim 8)  c: type 8^8 4^12 3^12 2^28 1^52 c^2=1:False R^m w R^m = w^-1:False w in C_m:False |C_W(c)|=2   |C_W(w)|=1536 |Stab(Y)|=4   |C_m|=2   |I_m|=2  
+        Lemma B (I_m cap Stab Y = C_W(c)): True; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): True; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+[PASS] BD2a: B8: w is an involution not in C_8, hence (Lemma BD-A) c^2 != 1; R^8 w R^8 != w^-1; C_W(c) = {+-1} = C_8 = I_8; Lemma B holds
+[FAIL] BD2: REGISTERED GUESS: B8: Stab_W(Fix c) = {+-1} -- the 52-point agreement set has no Weyl symmetry beyond the antipode  -> |Stab_W(Y)| = 4
+  [INVERTED] BD2 -- recorded at equal prominence.
+  POST-REVEAL [C]: Stab_W(Y) on B8 = {1; (e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8); (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6); (e2 -> e3 -> e2) (e4 -> e5 -> e4) (e6 -> e7 -> e6) (e8 -> -e8)}; its two elements beyond +-1 lie in I_8: [True, True, False, False], commute with c: [True, True, False, False] (Lemma B: they are the elements of Stab(Y) outside C_W(c), hence outside I_8)
+
+------------------------------------------------------------------------------
+BD3 -- B3 inside W(B3) (R^3 is Weyl in W(D4), not in W(B3))
+------------------------------------------------------------------------------
+  [BD3] B3 w = (e1 -> -e1) (e3 -> -e3)                               agree   4/  8 (Y affdim 2)  c: type 2^2 1^4                c^2=1:True  R^m w R^m = w^-1:True  w in C_m:True  |C_W(c)|=8   |C_W(w)|=16  |Stab(Y)|=8   |C_m|=8   |I_m|=16 
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): False; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+  [BD3] B3 w = (e1 -> -e1) (e2 -> -e2) (e3 -> -e3)                   agree   4/  8 (Y affdim 2)  c: type 2^2 1^4                c^2=1:True  R^m w R^m = w^-1:True  w in C_m:True  |C_W(c)|=8   |C_W(w)|=48  |Stab(Y)|=8   |C_m|=8   |I_m|=16 
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): False; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+  [BD3] B3 w = (e1 -> e3 -> e1) (e2 -> -e2)                          agree   4/  8 (Y affdim 2)  c: type 2^2 1^4                c^2=1:True  R^m w R^m = w^-1:True  w in C_m:True  |C_W(c)|=8   |C_W(w)|=8   |Stab(Y)|=8   |C_m|=8   |I_m|=16 
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): False; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+  [BD3] B3 w = (e1 -> -e3 -> e1)                                     agree   4/  8 (Y affdim 2)  c: type 2^2 1^4                c^2=1:True  R^m w R^m = w^-1:True  w in C_m:True  |C_W(c)|=8   |C_W(w)|=8   |Stab(Y)|=8   |C_m|=8   |I_m|=16 
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): False; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+[FAIL] BD3: REGISTERED GUESS: B3: a nearest Weyl element w in W(B3) to R^3 has a spanning agreement set, Lemma B applies, w in C_3, c^2 = 1, and the eight extras are C_W(c) \ C_W(w)  -> nearest: ['(e1 -> -e1) (e3 -> -e3)', '(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)', '(e1 -> e3 -> e1) (e2 -> -e2)', '(e1 -> -e3 -> e1)']; per element (agree, w in C_3, c^2=1, |C_W(c)|, extras_eq, Lemma B): [(4, True, True, 8, True, None), (4, True, True, 8, True, None), (4, True, True, 8, True, None), (4, True, True, 8, True, None)]
+  [INVERTED] BD3 -- recorded at equal prominence.
+  POST-REVEAL [C] B3: over all 48 Weyl elements, best agreement with R^3 is 4/8; 0 elements have an affinely SPANNING agreement set (Lemma B applies), best among them 0/8: none
+  POST-REVEAL [C] B4: over all 384 Weyl elements, best agreement with R^4 is 8/16; 1 elements have an affinely SPANNING agreement set (Lemma B applies), best among them 8/16: ['(e1 -> -e1) (e2 -> -e3 -> e2)']
+  POST-REVEAL [C] B5: over all 3840 Weyl elements, best agreement with R^5 is 10/32; 0 elements have an affinely SPANNING agreement set (Lemma B applies), best among them 0/32: none
+  POST-REVEAL [C] B6: over all 46080 Weyl elements, best agreement with R^6 is 24/64; 9 elements have an affinely SPANNING agreement set (Lemma B applies), best among them 24/64: ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4)']
+  POST-REVEAL [C] B7: over all 645120 Weyl elements, best agreement with R^7 is 22/128; 6 elements have an affinely SPANNING agreement set (Lemma B applies), best among them 18/128: ['(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> -e6 -> e4) (e7 -> -e7)', '(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e6 -> -e5 -> e4) (e7 -> -e7)']
+[PASS] BD3b: POST-REVEAL [C]: within W(B3) NO Weyl element agrees with R^3 on an affinely spanning set (max agreement 4 of 8, on a 2-flat), so Lemma B and the sentence never apply on B3 -- the B3 anomaly is the overgroup's (SM-060 AV5c), not the 4-cube's; on B4 the spanning survey returns -tau as the best spanning element (8/16)  -> {3: (4, 0, 0), 4: (8, 1, 8), 5: (10, 0, 0), 6: (24, 9, 24), 7: (22, 6, 18)}
+[t=  42.7s] spanning survey done (B8 not surveyed: 10.3M elements)
+
+------------------------------------------------------------------------------
+BD4 -- the clean boards B5, B6, B7
+------------------------------------------------------------------------------
+  [BD4] B5 w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e4) (e5 -> -e5)  agree  10/ 32 (Y affdim 4)  c: type 5^2 4^2 2^2 1^10       c^2=1:False R^m w R^m = w^-1:False w in C_m:False |C_W(c)|=2   |C_W(w)|=192 |Stab(Y)|=12  |C_m|=2   |I_m|=2  
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): True; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+  [BD4] B6 w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4)       agree  24/ 64 (Y affdim 6)  c: type 3^8 2^8 1^24           c^2=1:False R^m w R^m = w^-1:False w in C_m:False |C_W(c)|=2   |C_W(w)|=128 |Stab(Y)|=4   |C_m|=2   |I_m|=2  
+        Lemma B (I_m cap Stab Y = C_W(c)): True; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): True; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+  [BD4] B7 w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e6) (e7 -> -e7)  agree  22/128 (Y affdim 6)  c: type 10^4 8^2 5^4 4^2 3^2 2^8 1^22 c^2=1:False R^m w R^m = w^-1:False w in C_m:False |C_W(c)|=2   |C_W(w)|=1536 |Stab(Y)|=4   |C_m|=2   |I_m|=2  
+        Lemma B (I_m cap Stab Y = C_W(c)): None; C_W(c) <= Stab(Y): True; I_m <= Stab(Y): True; two-imply-third: True; extras (I_m cap Stab Y) \ C_m == C_W(c) \ C_W(w): True; C_W(c) <= C_m: True
+[PASS] BD4: REGISTERED GUESS: B5, B6, B7: no nearest Weyl element to the half-turn commutes with it; C_W(w^-1 R^m) <= C_m for each; Lemma B's equality holds wherever the agreement set spans  -> {5: [(10, 4, False, False, 2, True, None)], 6: [(24, 6, False, False, 2, True, True)], 7: [(22, 6, False, False, 2, True, None)]}
+
+------------------------------------------------------------------------------
+BD5 -- the criterion: anomaly iff some nearest Weyl element commutes with the half-turn
+------------------------------------------------------------------------------
+  B3: |I_m| =  16 |C_m| =   8 anomalous=True  | nearest: 4 element(s), agreement 4/8, some commute with R^m: True  some c involution: True 
+  B4: |I_m| =   8 |C_m| =   4 anomalous=True  | nearest: 1 element(s), agreement 8/16, some commute with R^m: True  some c involution: True 
+  B5: |I_m| =   2 |C_m| =   2 anomalous=False | nearest: 1 element(s), agreement 10/32, some commute with R^m: False some c involution: False
+  B6: |I_m| =   2 |C_m| =   2 anomalous=False | nearest: 1 element(s), agreement 24/64, some commute with R^m: False some c involution: False
+  B7: |I_m| =   2 |C_m| =   2 anomalous=False | nearest: 1 element(s), agreement 22/128, some commute with R^m: False some c involution: False
+  B8: |I_m| =   2 |C_m| =   2 anomalous=False | nearest: 1 element(s), agreement 52/256, some commute with R^m: False some c involution: False
+[PASS] BD5: REGISTERED GUESS: on B3..B8: I_{h/2} exceeds C_{h/2} iff some nearest Weyl element to R^{h/2} commutes with R^{h/2}  -> {3: (True, True), 4: (True, True), 5: (False, False), 6: (False, False), 7: (False, False), 8: (False, False)}
+[FAIL] BD5b: REGISTERED GUESS: on each of the six boards the nearest Weyl element is unique up to the antipode (the set is {w, -w})  -> {3: (4, False), 4: (1, False), 5: (1, False), 6: (1, False), 7: (1, False), 8: (1, False)}
+  [INVERTED] BD5b -- recorded at equal prominence.
+  also: anomaly iff some correction is an involution: True
+  CAVEAT (post-reveal): on B3 the criterion holds as a marker only -- its nearest elements have non-spanning agreement sets, Lemma B does not apply, and the extras come from the overgroup W(D4) (BD3 INVERTED, BD3b); the explanatory chain nearest-w -> commutes -> c involution -> C_W(c) \ C_W(w) is verified on B4 (positive) and on B5..B8 (negative: w does not commute, c is not an involution, C_W(c) = C_m)
+
+------------------------------------------------------------------------------
+BD6 -- Lemmas BD-A and BD-B on every nearest (and carrying) w
+------------------------------------------------------------------------------
+[PASS] BD6: Lemma BD-A (c^2 = 1 iff R^m w R^m = w^-1; for involutions iff w in C_m) and Lemma BD-B (two-imply-third; extras = C_W(c) \ C_W(w)) hold as computations on all 9 elements examined  -> BD-A True, BD-B True; involutions among them: 9
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 7 checks passed, 3 failed  FAILED (registered guesses INVERTED unless a bug is shown): ['BD2', 'BD3', 'BD5b']
+[t=  43.2s] done

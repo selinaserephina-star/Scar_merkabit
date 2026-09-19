@@ -507,6 +507,13 @@ pairs of them) and that every orbit spans (61 do not); one instrumentation
 error in the centralizer search, fixed and cross-checked, in the first-run
 log.''')
 
+# ---------------------------------------------------------------- abstract: the reason for the anomaly (SM-070)
+rep('''Weyl element on one of its two orbits — and the vector boards' shared''',
+'''Weyl element on one of its two orbits — and, by the end, a reason: the
+element of that shape agrees with the half-turn on the middle-rank orbits of
+every spinor board with a free clock and commutes with it only on the 4-cube,
+a theorem for every even n (§7.12.4) — and the vector boards' shared''')
+
 # ---------------------------------------------------------------- Appendix A closed
 rep('''(Stone AZ, 11 + 2); SM-065 (Stone BA, 7/7, 2026-09-11) sent, awaiting his word.''',
 '''(Stone AZ, 11 + 2); SM-065 (Stone BA, 7/7, 2026-09-11) — JOINT on his word

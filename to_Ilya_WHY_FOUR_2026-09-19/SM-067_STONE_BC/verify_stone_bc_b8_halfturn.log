@@ -1,0 +1,185 @@
+==============================================================================
+STONE BC -- DOES THE 4-CUBE ANOMALY RECUR ON THE 8-CUBE?
+==============================================================================
+[PASS] BC0: the brief is sha-locked: sha256(BRIEF_STONE_BC_B8_HALFTURN.md) equals BRIEF_STONE_BC_LOCK.sha256  -> fb2d56104653fca5...
+
+------------------------------------------------------------------------------
+BOARDS -- B8 spinor (256), D9 half-spin (256, cross-check), B6 (64), B7 (128), B4 (16), B5 (32)
+------------------------------------------------------------------------------
+[t=   0.4s] B8 spinor built: |P| = 36, rowmotion type 16^16
+[t=   1.0s] D9 half-spin built (AV machine): |P| = 36
+[t=  28.0s] D9 omega_9 built (AQ Minuscule machine): N = 256, |P| = 36
+[PASS] BC1-x: one clock on three builds: the B8 spinor rowmotion (AV machine), the D9 half-spin rowmotion (AV machine, 9th coordinate dropped) and D9 omega_9 (AQ Minuscule machine from the Cartan matrix, labels -> signs) are the same permutation of the 256 sign patterns; |P| = 36 = |delta_8|
+[t=  28.6s] W(B8) as (pi, v): 40320 pi x 256 v = 10321920 elements
+[t=  35.3s] W(D9) as (pi, v): 362880 pi x 256 v = 92897280 elements
+
+------------------------------------------------------------------------------
+ENGINE CHECK -- the affine engine against Stone AV's materialised W on B4 (384) and B5 (3840)
+------------------------------------------------------------------------------
+  B4: I_k and C_k agree with AV's materialised sets at every lag: True
+  B5: I_k and C_k agree with AV's materialised sets at every lag: True
+  D5 (W(D5) = 1920 as (pi in S5, v in F2^4) on the B4 board): I_k, C_k agree with AV's sets at every lag: True
+[PASS] BC-engine: the affine (pi, v) engine reproduces Stone AV's materialised I_k and C_k as sets on B4 (all 7 lags, |I_4| = 8, |C_4| = 4), B5 (all 9 lags) and the D5 half-spin (all 7 lags, I_3 = I_5 = 2, I_4 = 8)
+[t=  37.8s] engine check done
+
+------------------------------------------------------------------------------
+BC1 -- orbit structure of R on the B8 spinor
+------------------------------------------------------------------------------
+[PASS] BC1: REGISTERED GUESS: R acts freely on the 256 weights of the B8 spinor: 16 orbits of size 16 (h = 16)  -> type 16^16, order 16
+
+------------------------------------------------------------------------------
+BC2 -- O1 (the orbit of lambda): ranks around the clock, the +-4 shift, no Weyl u
+------------------------------------------------------------------------------
+[PASS] BC2: REGISTERED GUESS: O1 is the full-height orbit, ranks 0,1,1,2,2,...,7,7,8 around the clock from lambda (read in either direction); R^8 shifts every rank on it by exactly +-4; O1 spans F2^8; no u in F2^8 reproduces its shift (Lemma BB-B, m = 4: R^8|O1 is not Weyl)  -> ranks in R-order [0, 8, 7, 7, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1]; shifts [-4, 4]; span 8; reproducing u: []
+  POST-REVEAL, labelled: the FIRST RUN scored the literal list in R-order (0,1,1,...,7,7,8) and FAILED on orientation alone (_FIRSTRUN.log kept): in R-order the ranks read 0,8,7,7,...,1,1 --
+[PASS] BC2-orient: POST-REVEAL [C]: on the AV machine R(lambda) = w0.lambda on B4 and on B8 (the paper's sec 7.6 Lemma (a)), and R^-1(lambda) has rank 1; Stone BB's O1 list (0,1,1,2,2,3,3,4) is therefore in R^-1 order, and the phrase 'rowmotion sends w0.lambda straight to lambda' (BB5; MATH v2 Thm 6.2 proof) is R^-1's reading -- nothing in Theorem BB depends on it (the half-turn is its own inverse)
+  Lemma BB-B engine at n = 8: lambda's shift is +4, pinning wt(u) = 4; every weight-4 u has odd overlap with some x in O1: True
+[t=  37.8s] BC2 done
+
+------------------------------------------------------------------------------
+BC3 -- for every orbit: the u's reproducing its half-turn rank-shift, the nearest Weyl element, the affine extension
+------------------------------------------------------------------------------
+  O1  min=  0 lambda=1 w0lambda=1 ranks 0..8 affdim 8 shifts {-4: 8, 4: 8}                |u|=0 best agreement  8/16 (x240) carrying=False
+  O2  min=  1 lambda=0 w0lambda=0 ranks 1..7 affdim 8 shifts {-4: 4, -3: 4, 3: 4, 4: 4}   |u|=0 best agreement  4/16 (x6048) carrying=False
+  O3  min=  2 lambda=0 w0lambda=0 ranks 1..7 affdim 8 shifts {-4: 2, -3: 4, -2: 2, 2: 2, 3: 4, 4: 2} |u|=0 best agreement  4/16 (x34) carrying=False
+  O4  min=  3 lambda=0 w0lambda=0 ranks 1..7 affdim 8 shifts {-4: 2, -3: 4, -2: 2, 2: 2, 3: 4, 4: 2} |u|=0 best agreement  4/16 (x34) carrying=False
+  O5  min=  4 lambda=0 w0lambda=0 ranks 1..7 affdim 8 shifts {-3: 6, -1: 2, 1: 2, 3: 6}   |u|=0 best agreement  6/16 (x3) carrying=False
+  O6  min=  5 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-2: 8, 2: 8}                |u|=0 best agreement  8/16 (x48) carrying=False
+  O7  min=  6 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-3: 4, -2: 4, 2: 4, 3: 4}   |u|=0 best agreement  4/16 (x7200) carrying=False
+  O8  min=  7 lambda=0 w0lambda=0 ranks 1..7 affdim 8 shifts {-3: 6, -1: 2, 1: 2, 3: 6}   |u|=0 best agreement  6/16 (x3) carrying=False
+  O9  min=  9 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-2: 4, -1: 4, 1: 4, 2: 4}   |u|=0 best agreement  4/16 (x45) carrying=False
+  O10 min= 10 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-2: 4, -1: 4, 1: 4, 2: 4}   |u|=0 best agreement  4/16 (x6912) carrying=False
+  O11 min= 12 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-3: 2, -2: 4, -1: 2, 1: 2, 2: 4, 3: 2} |u|=0 best agreement  4/16 (x28) carrying=False
+  O12 min= 13 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-2: 4, -1: 4, 1: 4, 2: 4}   |u|=0 best agreement  4/16 (x45) carrying=False
+  O13 min= 14 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-3: 2, -2: 4, -1: 2, 1: 2, 2: 4, 3: 2} |u|=0 best agreement  4/16 (x28) carrying=False
+  O14 min= 17 lambda=0 w0lambda=0 ranks 2..6 affdim 8 shifts {-2: 4, -1: 4, 1: 4, 2: 4}   |u|=0 best agreement  8/16 (x8) carrying=False
+  O15 min= 19 lambda=0 w0lambda=0 ranks 3..5 affdim 8 shifts {-1: 8, 1: 8}                |u|=1 best agreement 16/16 (x1) carrying=True  w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)
+  O16 min= 25 lambda=0 w0lambda=0 ranks 3..5 affdim 8 shifts {-1: 8, 1: 8}                |u|=1 best agreement 16/16 (x1) carrying=True  w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)
+[PASS] BC3: REGISTERED GUESS: at least one R-orbit O != O1 carries the half-turn as a Weyl element (some (pi, v) agrees with R^8 on all 16 points of O)  -> carrying orbits: [15, 16]
+[FAIL] BC3b: REGISTERED GUESS: (low confidence) the number of carrying orbits is exactly 2, and w0 = -1 exchanges them  -> count 2; w0 maps carrying orbits to [15, 16]
+  [INVERTED] BC3b -- recorded at equal prominence.
+  agreement with a Weyl element per orbit: [8, 4, 4, 4, 6, 8, 4, 6, 4, 4, 4, 4, 4, 8, 16, 16]
+  u's reproducing the shift, per orbit (count): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]; affine extension is Weyl (linear part a permutation): [False, False, False, False, False, False, False, False, False, False, False, False, False, False, True, True]
+[t=  38.5s] BC3 done
+
+------------------------------------------------------------------------------
+BC4 -- |C_8|, |I_8| by enumeration; the Lemma-B prediction; the extras
+------------------------------------------------------------------------------
+[t=  43.6s] |C_8| = 2 (2.0s), |I_8| = 2 (3.1s) over 10,321,920 elements
+  O15, w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6): c = w^-1 R^8 has Fix(c) of size 52 (affine dim 8, pointwise stabilizer trivial), cycle type 8^8 4^12 3^12 2^28 1^52; |C_W(c)| = 2; I_8 cap Stab(Y) = C_W(c): True; transport = conj by w on it: True
+  O16, w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6): c = w^-1 R^8 has Fix(c) of size 52 (affine dim 8, pointwise stabilizer trivial), cycle type 8^8 4^12 3^12 2^28 1^52; |C_W(c)| = 2; I_8 cap Stab(Y) = C_W(c): True; transport = conj by w on it: True
+[PASS] BC4a: Lemma B holds at n = 8 from every carrying orbit: Fix(c) has trivial pointwise stabilizer, I_8 cap Stab_W(Fix c) = C_W(c), and the transport there is conjugation by w
+[FAIL] BC4: REGISTERED GUESS: |I_8| > |C_8|, I_8 is exactly the Lemma-B prediction C_W(c) from a carrying orbit, and |I_8| / |C_8| = 2  -> |I_8| = 2, |C_8| = 2, ratio 1; I_8 == C_W(c) for some carrying orbit: True; I_8 == union of the predictions: True
+  [INVERTED] BC4 -- recorded at equal prominence.
+  B4 by the same engine: -tau = (e1 -> -e1) (e2 -> -e3 -> e2) agrees with R^4 on O2; c = (-tau)^-1 R^4 has type 2^4 1^8, |C_W(c)| = 8 (= |I_4|, SM-063)
+  the carrying element w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6): v = 11111110 (wt 7), u = pi^-1(v) = 11111110 (wt 7); shift = 7 - 2|x cap u| = +-1 iff |x cap u| in {3, 4}; the SAME w carries every carrying orbit: True
+  nearest Weyl element to R^8 on the whole board: agreement 52/256 (altitude 204), attained by 1 element(s); w's agreement set Fix(c) = 52 points = the carrying orbits (32) + 20 more
+[PASS] BC4b: POST-REVEAL [C]: on B8 the carrying Weyl element is -(e2 e3)(e4 e5)(e6 e7) with e8 fixed -- the analogue of B4's -tau = -(e2 e3) with e4 fixed -- and it is the unique nearest Weyl element to R^8 (agreement 52 of 256); its correction c = w^-1 R^8 is NOT an involution (B4's is), and C_W(c) = {+-1}  -> w = (e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)
+  w0 = -1 on the 16 orbits: fixes [1, 2, 6, 7, 10, 14, 15, 16], swaps [(3, 4), (5, 8), (9, 12), (11, 13)]
+  I_8 element orders {1: 1, 2: 1}; C_8 element orders {1: 1, 2: 1}; I_8 abelian: True
+  C_8 (2):
+    1                                                             [preserves]
+    (e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8)  [permutes orbits [(3, 4), (4, 3), (5, 8), (8, 5), (9, 12), (11, 13), (12, 9), (13, 11)]]
+  extras I_8 \ C_8 (0):
+[t=  48.2s] BC4 done
+
+------------------------------------------------------------------------------
+BC5 -- |I_k| vs |C_k| on B8 for k = 1..15
+------------------------------------------------------------------------------
+  k =  1  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k =  2  R^k type 8^32         |I_k| =    1  |C_k| =    1  
+  k =  3  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k =  4  R^k type 4^64         |I_k| =    1  |C_k| =    1  
+  k =  5  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k =  6  R^k type 8^32         |I_k| =    1  |C_k| =    1  
+  k =  7  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k =  8  R^k type 2^128        |I_k| =    2  |C_k| =    2  
+  k =  9  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k = 10  R^k type 8^32         |I_k| =    1  |C_k| =    1  
+  k = 11  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k = 12  R^k type 4^64         |I_k| =    1  |C_k| =    1  
+  k = 13  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+  k = 14  R^k type 8^32         |I_k| =    1  |C_k| =    1  
+  k = 15  R^k type 16^16        |I_k| =    1  |C_k| =    1  
+[PASS] BC5: REGISTERED GUESS: on B8, I_k = C_k as sets for every k != 8 (the anomaly is at the half-turn only)  -> sizes {1: (1, 1), 2: (1, 1), 3: (1, 1), 4: (1, 1), 5: (1, 1), 6: (1, 1), 7: (1, 1), 8: (2, 2), 9: (1, 1), 10: (1, 1), 11: (1, 1), 12: (1, 1), 13: (1, 1), 14: (1, 1), 15: (1, 1)}; wall 64s for the 14 other lags
+[t= 112.4s] BC5 done
+
+------------------------------------------------------------------------------
+BC6 -- the D9 half-spin: containment, the affine-fit method, then (disclosed tightening) full enumeration
+------------------------------------------------------------------------------
+[PASS] BC6a: containment: every element of I_8(B8) and its transport lie in W(B8) < W(D9), so I_8(B8) is contained in I_8(D9); for the B8 EXTRAS the statement is vacuous -- there are none (BC4). (The first run demanded extras and FAILED on that condition; _FIRSTRUN.log kept)
+  altitude of R^k (min disagreement over W, whole board) against W(D9): {1: 214, 2: 236, 3: 238, 4: 236, 5: 222, 6: 224, 7: 205, 8: 204, 9: 205, 10: 224, 11: 222, 12: 236, 13: 238, 14: 236, 15: 214}
+  altitude of R^k against W(B8): {1: 214, 2: 236, 3: 238, 4: 240, 5: 238, 6: 224, 7: 229, 8: 204, 9: 229, 10: 224, 11: 238, 12: 240, 13: 238, 14: 236, 15: 214}
+  agreement of the nearest W(D9) element with R^8 per orbit: [8, 4, 4, 4, 6, 8, 4, 6, 4, 4, 4, 4, 4, 8, 16, 16] (against W(B8): [8, 4, 4, 4, 6, 8, 4, 6, 4, 4, 4, 4, 4, 8, 16, 16])
+[t= 213.1s] BC6 affine fit done
+  D9 k =  1  |I_k| =    1  |C_k| =    1  
+  D9 k =  2  |I_k| =    1  |C_k| =    1  
+  D9 k =  3  |I_k| =    1  |C_k| =    1  
+  D9 k =  4  |I_k| =    1  |C_k| =    1  
+  D9 k =  5  |I_k| =    1  |C_k| =    1  
+  D9 k =  6  |I_k| =    1  |C_k| =    1  
+  D9 k =  7  |I_k| =    1  |C_k| =    1  
+  D9 k =  8  |I_k| =    2  |C_k| =    2  
+  D9 k =  9  |I_k| =    1  |C_k| =    1  
+  D9 k = 10  |I_k| =    1  |C_k| =    1  
+  D9 k = 11  |I_k| =    1  |C_k| =    1  
+  D9 k = 12  |I_k| =    1  |C_k| =    1  
+  D9 k = 13  |I_k| =    1  |C_k| =    1  
+  D9 k = 14  |I_k| =    1  |C_k| =    1  
+  D9 k = 15  |I_k| =    1  |C_k| =    1  
+[PASS] BC6c: TIGHTENING [C, full enumeration of W(D9), 583s for 15 lags]: I_8(D9) contains the B8 extras; sizes at every lag recorded  -> D9 sizes {1: (1, 1), 2: (1, 1), 3: (1, 1), 4: (1, 1), 5: (1, 1), 6: (1, 1), 7: (1, 1), 8: (2, 2), 9: (1, 1), 10: (1, 1), 11: (1, 1), 12: (1, 1), 13: (1, 1), 14: (1, 1), 15: (1, 1)}
+[FAIL] BC6: REGISTERED GUESS: (low confidence) D9 carries at least one extra survivor at a lag coprime to 16 that is a pure coordinate permutation mixing the ninth axis in  -> lags with I_k != C_k on D9: []; coprime-lag extras that are pure permutations moving e9: {}
+  [INVERTED] BC6 -- recorded at equal prominence.
+  C_8(D9) = I_8(D9) = {1, (e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8)}
+  B8 extras (0) inside I_8(D9) (2): True; I_8(D9) cap W(B8) = I_8(B8): True
+[t= 795.8s] BC6 done
+
+------------------------------------------------------------------------------
+BC7 -- B6 (64, h = 12) and B7 (128, h = 14): |I_k| vs |C_k| at every lag
+------------------------------------------------------------------------------
+  B6: R type 12^5 4^1; sizes {1: (1, 1), 2: (1, 1), 3: (1, 1), 4: (1, 1), 5: (1, 1), 6: (2, 2), 7: (1, 1), 8: (1, 1), 9: (1, 1), 10: (1, 1), 11: (1, 1)}; I_k = C_k at every lag: True
+  B7: R type 14^9 2^1; sizes {1: (1, 1), 2: (1, 1), 3: (1, 1), 4: (1, 1), 5: (1, 1), 6: (1, 1), 7: (2, 2), 8: (1, 1), 9: (1, 1), 10: (1, 1), 11: (1, 1), 12: (1, 1), 13: (1, 1)}; I_k = C_k at every lag: True
+[PASS] BC7: REGISTERED GUESS: on B6 and B7 (non-free clocks) I_k = C_k for every k -- the anomaly does not occur  -> B6 clean True, B7 clean True
+  B6 half-turn survivors I_6 = C_6 = {1, (e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6)}
+  B7 half-turn survivors I_7 = C_7 = {1, (e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7)}
+[FAIL] BC7-law: REGISTERED GUESS: the brief's stated conjecture (sec 2, BC7): among the B_n spinors the shared grammar exceeds the centralizer at some lag iff n is a power of 2 (n >= 4) -- tested at its one new instance, n = 8  -> B8: I_k = C_k at every lag (BC4, BC5); the 'if' direction fails at n = 8. Anomalous spinor boards among B3..B8: B4 (SM-060) and B3 by the overgroup W(D4) (SM-060) only
+  [INVERTED] BC7-law -- recorded at equal prominence.
+[t= 798.2s] BC7 done
+
+------------------------------------------------------------------------------
+BC8 [P + C] -- what distinguishes the carrying orbits (observation; promoted only if it proves)
+------------------------------------------------------------------------------
+  orbit  lambda  ranks   affdim  |shift| multiset            #u  carrying  w0->
+  O1     1       0..8    8       {4: 16}                     0  False     O1
+  O2     0       1..7    8       {3: 8, 4: 8}                0  False     O2
+  O3     0       1..7    8       {2: 4, 3: 8, 4: 4}          0  False     O4
+  O4     0       1..7    8       {2: 4, 3: 8, 4: 4}          0  False     O3
+  O5     0       1..7    8       {1: 4, 3: 12}               0  False     O8
+  O6     0       2..6    8       {2: 16}                     0  False     O6
+  O7     0       2..6    8       {2: 8, 3: 8}                0  False     O7
+  O8     0       1..7    8       {1: 4, 3: 12}               0  False     O5
+  O9     0       2..6    8       {1: 8, 2: 8}                0  False     O12
+  O10    0       2..6    8       {1: 8, 2: 8}                0  False     O10
+  O11    0       2..6    8       {1: 4, 2: 8, 3: 4}          0  False     O13
+  O12    0       2..6    8       {1: 8, 2: 8}                0  False     O9
+  O13    0       2..6    8       {1: 4, 2: 8, 3: 4}          0  False     O11
+  O14    0       2..6    8       {1: 8, 2: 8}                0  False     O14
+  O15    0       3..5    8       {1: 16}                     1  True      O15
+  O16    0       3..5    8       {1: 16}                     1  True      O16
+  carrying <=> some u reproduces the shift (rank-shift is necessary, not sufficient -- an observation): True
+  carrying <=> affine extension of R^8|O has a permutation linear part (exact on affinely spanning orbits): True
+  carrying => all half-turn shifts have |shift| = 1 (as O2 on B4): True
+  non-carrying => some |shift| >= 2: True
+  carrying orbits avoid ranks 0 and 8: True
+  every orbit affinely spans F2^8: True
+  |shift| = 1 on every point <=> carrying (both directions): True
+  carrying <=> the orbit's ranks lie in the middle band {n/2-1, n/2, n/2+1} = {3,4,5} (both directions): True
+  the same band statement on B4: O2 (carrying) has ranks {1,2,3} = {n/2-1, n/2, n/2+1}, O1 has 0..4: True
+[PASS] BC8: [obs] the table of distinguishers is recorded for all 16 orbits; consistency: the enumeration's 'carrying' agrees with the affine-extension criterion (exact where the orbit affinely spans)
+[t= 798.2s] BC8 done
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 14 checks passed, 4 failed  FAILED (registered guesses INVERTED unless a bug is shown): ['BC3b', 'BC4', 'BC6', 'BC7-law']
+[t= 798.2s] done

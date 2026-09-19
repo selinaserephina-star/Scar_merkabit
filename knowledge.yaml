@@ -68,7 +68,7 @@ units:
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
     audience: [human, agent]
-    title: "SCAR-MERKABIT JOINT REGISTRY v1.40 -- rows SM-001..SM-070"
+    title: "SCAR-MERKABIT JOINT REGISTRY v1.41 -- rows SM-001..SM-070"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
@@ -77,7 +77,7 @@ units:
     hints: { load_strategy: eager, priority: primary }
     content_hash:
       algorithm: sha256
-      value: "c97f8bfb34afc45c5de54d0711d62968115c60af83f30a3bdd02fba15b49c416"
+      value: "cdfd2f93d899c0a005446292550d19a0e908b3c8de8b6095eb1242401f36641d"
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md

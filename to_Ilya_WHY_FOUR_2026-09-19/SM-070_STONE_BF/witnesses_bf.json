@@ -1,0 +1,40 @@
+{
+ "brief_sha": "03a0ed630bae2213e0d3fbc93970b6e2a04fd43e029a0f7111e223f0b1824b70",
+ "BF5": {
+  "4": [
+   true,
+   false,
+   0
+  ],
+  "6": [
+   false,
+   true,
+   24
+  ],
+  "8": [
+   false,
+   true,
+   148
+  ],
+  "10": [
+   false,
+   true,
+   736
+  ],
+  "12": [
+   false,
+   true,
+   3304
+  ],
+  "14": [
+   false,
+   true,
+   14328
+  ],
+  "16": [
+   false,
+   true,
+   60076
+  ]
+ }
+}
