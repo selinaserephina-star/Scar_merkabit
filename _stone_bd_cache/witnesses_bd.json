@@ -1,0 +1,378 @@
+{
+ "brief_sha": "0dbad52fb86684c891119ebe347beee7abc753fc4c8339b10b14f6899d201848",
+ "BD1": {
+  "board": 4,
+  "w": "(e1 -> -e1) (e2 -> -e3 -> e2)",
+  "w_inv": true,
+  "agree": 8,
+  "Y_affdim": 4,
+  "c_type": "2^4 1^8",
+  "c_inv": true,
+  "RwR_eq_winv": true,
+  "w_in_Cm": true,
+  "CWc": 8,
+  "CWw": 16,
+  "StabY": 16,
+  "Cm": 4,
+  "Im": 8,
+  "CWc_in_StabY": true,
+  "Im_in_StabY": true,
+  "lemmaB": true,
+  "two_imply_third": true,
+  "extras_eq": true,
+  "CWc_in_Cm": false,
+  "CWc_names": [
+   "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4)",
+   "(e1 -> -e1) (e2 -> -e3 -> e2)",
+   "(e1 -> -e4 -> -e1) (e2 -> e3 -> -e2)",
+   "(e1 -> -e4 -> e1) (e2 -> -e2)",
+   "(e1 -> e4 -> -e1) (e2 -> -e3 -> -e2)",
+   "(e1 -> e4 -> e1) (e3 -> -e3)",
+   "(e2 -> e3 -> e2) (e4 -> -e4)",
+   "1"
+  ]
+ },
+ "BD2": {
+  "board": 8,
+  "w": "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)",
+  "w_inv": true,
+  "agree": 52,
+  "Y_affdim": 8,
+  "c_type": "8^8 4^12 3^12 2^28 1^52",
+  "c_inv": false,
+  "RwR_eq_winv": false,
+  "w_in_Cm": false,
+  "CWc": 2,
+  "CWw": 1536,
+  "StabY": 4,
+  "Cm": 2,
+  "Im": 2,
+  "CWc_in_StabY": true,
+  "Im_in_StabY": true,
+  "lemmaB": true,
+  "two_imply_third": true,
+  "extras_eq": true,
+  "CWc_in_Cm": true,
+  "CWc_names": [
+   "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8)",
+   "1"
+  ]
+ },
+ "StabY8": [
+  "1",
+  "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8)",
+  "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)",
+  "(e2 -> e3 -> e2) (e4 -> e5 -> e4) (e6 -> e7 -> e6) (e8 -> -e8)"
+ ],
+ "BD3": [
+  {
+   "board": 3,
+   "w": "(e1 -> -e1) (e3 -> -e3)",
+   "w_inv": true,
+   "agree": 4,
+   "Y_affdim": 2,
+   "c_type": "2^2 1^4",
+   "c_inv": true,
+   "RwR_eq_winv": true,
+   "w_in_Cm": true,
+   "CWc": 8,
+   "CWw": 16,
+   "StabY": 8,
+   "Cm": 8,
+   "Im": 16,
+   "CWc_in_StabY": true,
+   "Im_in_StabY": false,
+   "lemmaB": null,
+   "two_imply_third": true,
+   "extras_eq": true,
+   "CWc_in_Cm": true,
+   "CWc_names": [
+    "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)",
+    "(e1 -> -e1) (e3 -> -e3)",
+    "(e1 -> -e3 -> e1)",
+    "(e1 -> -e3 -> e1) (e2 -> -e2)",
+    "(e1 -> e3 -> e1)",
+    "(e1 -> e3 -> e1) (e2 -> -e2)",
+    "(e2 -> -e2)",
+    "1"
+   ]
+  },
+  {
+   "board": 3,
+   "w": "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)",
+   "w_inv": true,
+   "agree": 4,
+   "Y_affdim": 2,
+   "c_type": "2^2 1^4",
+   "c_inv": true,
+   "RwR_eq_winv": true,
+   "w_in_Cm": true,
+   "CWc": 8,
+   "CWw": 48,
+   "StabY": 8,
+   "Cm": 8,
+   "Im": 16,
+   "CWc_in_StabY": true,
+   "Im_in_StabY": false,
+   "lemmaB": null,
+   "two_imply_third": true,
+   "extras_eq": true,
+   "CWc_in_Cm": true,
+   "CWc_names": [
+    "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)",
+    "(e1 -> -e1) (e3 -> -e3)",
+    "(e1 -> -e3 -> e1)",
+    "(e1 -> -e3 -> e1) (e2 -> -e2)",
+    "(e1 -> e3 -> e1)",
+    "(e1 -> e3 -> e1) (e2 -> -e2)",
+    "(e2 -> -e2)",
+    "1"
+   ]
+  },
+  {
+   "board": 3,
+   "w": "(e1 -> e3 -> e1) (e2 -> -e2)",
+   "w_inv": true,
+   "agree": 4,
+   "Y_affdim": 2,
+   "c_type": "2^2 1^4",
+   "c_inv": true,
+   "RwR_eq_winv": true,
+   "w_in_Cm": true,
+   "CWc": 8,
+   "CWw": 8,
+   "StabY": 8,
+   "Cm": 8,
+   "Im": 16,
+   "CWc_in_StabY": true,
+   "Im_in_StabY": false,
+   "lemmaB": null,
+   "two_imply_third": true,
+   "extras_eq": true,
+   "CWc_in_Cm": true,
+   "CWc_names": [
+    "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)",
+    "(e1 -> -e1) (e3 -> -e3)",
+    "(e1 -> -e3 -> e1)",
+    "(e1 -> -e3 -> e1) (e2 -> -e2)",
+    "(e1 -> e3 -> e1)",
+    "(e1 -> e3 -> e1) (e2 -> -e2)",
+    "(e2 -> -e2)",
+    "1"
+   ]
+  },
+  {
+   "board": 3,
+   "w": "(e1 -> -e3 -> e1)",
+   "w_inv": true,
+   "agree": 4,
+   "Y_affdim": 2,
+   "c_type": "2^2 1^4",
+   "c_inv": true,
+   "RwR_eq_winv": true,
+   "w_in_Cm": true,
+   "CWc": 8,
+   "CWw": 8,
+   "StabY": 8,
+   "Cm": 8,
+   "Im": 16,
+   "CWc_in_StabY": true,
+   "Im_in_StabY": false,
+   "lemmaB": null,
+   "two_imply_third": true,
+   "extras_eq": true,
+   "CWc_in_Cm": true,
+   "CWc_names": [
+    "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3)",
+    "(e1 -> -e1) (e3 -> -e3)",
+    "(e1 -> -e3 -> e1)",
+    "(e1 -> -e3 -> e1) (e2 -> -e2)",
+    "(e1 -> e3 -> e1)",
+    "(e1 -> e3 -> e1) (e2 -> -e2)",
+    "(e2 -> -e2)",
+    "1"
+   ]
+  }
+ ],
+ "spanning_survey": {
+  "3": [
+   4,
+   0,
+   0,
+   []
+  ],
+  "4": [
+   8,
+   1,
+   8,
+   [
+    "(e1 -> -e1) (e2 -> -e3 -> e2)"
+   ]
+  ],
+  "5": [
+   10,
+   0,
+   0,
+   []
+  ],
+  "6": [
+   24,
+   9,
+   24,
+   [
+    "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4)"
+   ]
+  ],
+  "7": [
+   22,
+   6,
+   18,
+   [
+    "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> -e6 -> e4) (e7 -> -e7)",
+    "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e6 -> -e5 -> e4) (e7 -> -e7)"
+   ]
+  ]
+ },
+ "BD4": {
+  "5": [
+   {
+    "board": 5,
+    "w": "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e4) (e5 -> -e5)",
+    "w_inv": true,
+    "agree": 10,
+    "Y_affdim": 4,
+    "c_type": "5^2 4^2 2^2 1^10",
+    "c_inv": false,
+    "RwR_eq_winv": false,
+    "w_in_Cm": false,
+    "CWc": 2,
+    "CWw": 192,
+    "StabY": 12,
+    "Cm": 2,
+    "Im": 2,
+    "CWc_in_StabY": true,
+    "Im_in_StabY": true,
+    "lemmaB": null,
+    "two_imply_third": true,
+    "extras_eq": true,
+    "CWc_in_Cm": true,
+    "CWc_names": [
+     "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5)",
+     "1"
+    ]
+   }
+  ],
+  "6": [
+   {
+    "board": 6,
+    "w": "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4)",
+    "w_inv": true,
+    "agree": 24,
+    "Y_affdim": 6,
+    "c_type": "3^8 2^8 1^24",
+    "c_inv": false,
+    "RwR_eq_winv": false,
+    "w_in_Cm": false,
+    "CWc": 2,
+    "CWw": 128,
+    "StabY": 4,
+    "Cm": 2,
+    "Im": 2,
+    "CWc_in_StabY": true,
+    "Im_in_StabY": true,
+    "lemmaB": true,
+    "two_imply_third": true,
+    "extras_eq": true,
+    "CWc_in_Cm": true,
+    "CWc_names": [
+     "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6)",
+     "1"
+    ]
+   }
+  ],
+  "7": [
+   {
+    "board": 7,
+    "w": "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e6) (e7 -> -e7)",
+    "w_inv": true,
+    "agree": 22,
+    "Y_affdim": 6,
+    "c_type": "10^4 8^2 5^4 4^2 3^2 2^8 1^22",
+    "c_inv": false,
+    "RwR_eq_winv": false,
+    "w_in_Cm": false,
+    "CWc": 2,
+    "CWw": 1536,
+    "StabY": 4,
+    "Cm": 2,
+    "Im": 2,
+    "CWc_in_StabY": true,
+    "Im_in_StabY": true,
+    "lemmaB": null,
+    "two_imply_third": true,
+    "extras_eq": true,
+    "CWc_in_Cm": true,
+    "CWc_names": [
+     "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7)",
+     "1"
+    ]
+   }
+  ]
+ },
+ "BD5": {
+  "3": {
+   "anomalous": true,
+   "some_nearest_commutes": true,
+   "some_c_involution": true,
+   "Im": 16,
+   "Cm": 8,
+   "n_nearest": 4,
+   "best": 4
+  },
+  "4": {
+   "anomalous": true,
+   "some_nearest_commutes": true,
+   "some_c_involution": true,
+   "Im": 8,
+   "Cm": 4,
+   "n_nearest": 1,
+   "best": 8
+  },
+  "5": {
+   "anomalous": false,
+   "some_nearest_commutes": false,
+   "some_c_involution": false,
+   "Im": 2,
+   "Cm": 2,
+   "n_nearest": 1,
+   "best": 10
+  },
+  "6": {
+   "anomalous": false,
+   "some_nearest_commutes": false,
+   "some_c_involution": false,
+   "Im": 2,
+   "Cm": 2,
+   "n_nearest": 1,
+   "best": 24
+  },
+  "7": {
+   "anomalous": false,
+   "some_nearest_commutes": false,
+   "some_c_involution": false,
+   "Im": 2,
+   "Cm": 2,
+   "n_nearest": 1,
+   "best": 22
+  },
+  "8": {
+   "anomalous": false,
+   "some_nearest_commutes": false,
+   "some_c_involution": false,
+   "Im": 2,
+   "Cm": 2,
+   "n_nearest": 1,
+   "best": 52
+  }
+ }
+}
