@@ -348,6 +348,12 @@ rep('''    pr = ι ∘ w₀(E₆) ∘ t,   t = the swap of the two poles,
 '''  $$\\mathrm{pr} = \\iota \\circ w_0(E_6) \\circ t, \\qquad t = \\text{the swap of the two poles},$$
 ''')
 
+# ---------------------------------------------------------------- §7.9.5 stale phrase (the reason is §7.12)
+rep('''  Spin(10) — is the one board in the family that shares more, for a
+  reason not yet found.''',
+'''  Spin(10) — is the one board in the family that shares more; the
+  mechanism is given in §7.12.2 and the reason in §7.12.4.''')
+
 # ---------------------------------------------------------------- §7.10
 rep('''  #(+1) = #(−1) = |P|/h,   #(0) = r − 2|P|/h,
 ''',

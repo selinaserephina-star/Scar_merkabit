@@ -723,8 +723,8 @@ the E₆ diagram automorphism (0↔5, 2↔4). Then:
   non-linear; the longest word always survives the half-turn because it
   is the one Weyl element that runs the clock backwards; and the D₅
   spinor board — the sixteen pure spin-½ patterns, one chirality of
-  Spin(10) — is the one board in the family that shares more, for a
-  reason not yet found.
+  Spin(10) — is the one board in the family that shares more; the
+  mechanism is given in §7.12.2 and the reason in §7.12.4.
 
 #### 7.9.6 Not claimed
 
