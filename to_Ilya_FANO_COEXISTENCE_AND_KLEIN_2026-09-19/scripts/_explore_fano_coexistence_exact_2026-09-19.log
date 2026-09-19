@@ -1,0 +1,46 @@
+
+=== ORIGINAL Result-6 point (t=0.125, kappa_prod=-0.0069 kept, m2 interpolated)
+    kappa = (g1=1.116625, g2=0.694583333333333333333333333333, line=0.174625, prod=-0.006875, mixed=1.087375),  m2 = 21.7064166667
+    S4 point  a=b=c=0.872109143246   |grad|_max=1.26e-29
+       6-dim Hessian eigenvalues: [ 0.2012  0.2012  0.3223  0.3223  0.3223 86.6517]   (ones-direction: 25.496)
+       -> S4 STABLE (min = 0.20121)
+    S2 point  a=1.84898464208  b=c=-0.308164107014   |grad|_max=1.26e-29
+       6-dim Hessian eigenvalues: [ 0.1349  0.1349  0.2645  0.2645  0.2645 86.8222]   (ones-direction: 25.418)
+       -> S2 STABLE (min = 0.13487)
+    V(S4) = -43.30807942   V(S2) = -43.28782328
+
+=== OUR CLAIM: same point with kappa_prod=0, m2 refixed for S4 criticality at scale 1
+    kappa = (g1=1.116625, g2=0.694583333333333333333333333333, line=0.174625, prod=0.0, mixed=1.087375),  m2 = 28.5966979167
+    S4 point  a=b=c=1.0   |grad|_max=0.0
+       6-dim Hessian eigenvalues: [1.0442e-01 1.0442e-01 2.6367e-01 2.6367e-01 2.6367e-01 1.1439e+02]   (ones-direction: 33.417)
+       -> S4 STABLE (min = 0.10442)
+    S2 point  a=2.12221068467  b=c=-0.353701780779   |grad|_max=2.52e-29
+       6-dim Hessian eigenvalues: [  0.1937   0.1937   0.3325   0.3325   0.3325 114.3868]   (ones-direction: 33.494)
+       -> S2 STABLE (min = 0.19368)
+    V(S4) = -75.06633203   V(S2) = -75.12935756
+
+=== (2) rescaled to the original m2 (verdict must be identical by homogeneity)
+    kappa = (g1=1.116625, g2=0.694583333333333333333333333333, line=0.174625, prod=0.0, mixed=1.087375),  m2 = 21.7064166667
+    S4 point  a=b=c=0.871236624618   |grad|_max=1.26e-29
+       6-dim Hessian eigenvalues: [7.9258e-02 7.9258e-02 2.0014e-01 2.0014e-01 2.0014e-01 8.6826e+01]   (ones-direction: 25.366)
+       -> S4 STABLE (min = 0.07926)
+    S2 point  a=1.84894767364  b=c=-0.308157945607   |grad|_max=1.35e-30
+       6-dim Hessian eigenvalues: [ 0.147   0.147   0.2524  0.2524  0.2524 86.8257]   (ones-direction: 25.423)
+       -> S2 STABLE (min = 0.14702)
+    V(S4) = -43.2503564   V(S2) = -43.28666931
+
+=== scan along A->B with kappa_prod=0 identically, exact 6-dim Hessians
+         t  S4 min eig  S2 min eig  coexist
+     0.100      0.8302     -0.3084
+     0.105      0.6850     -0.2090
+     0.110      0.5399     -0.1090
+     0.115      0.3947     -0.0086
+     0.120      0.2496      0.0923  <== BOTH
+     0.125      0.1044      0.1937  <== BOTH
+     0.130     -0.0407      0.2955
+     0.135     -0.1859      0.3978
+     0.140     -0.3311      0.4878
+     0.145     -0.4762      0.5400
+     0.150     -0.6214      0.5925
+     0.155     -0.7665      0.6451
+     0.160     -0.9117      0.6980

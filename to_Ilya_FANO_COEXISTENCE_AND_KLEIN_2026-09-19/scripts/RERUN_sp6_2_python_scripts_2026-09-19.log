@@ -1,0 +1,60 @@
+sympy 1.14.0 mpmath 1.3.0
+===== totally_real_window.py =====
+deg p28(0,x) = 28   deg q28(0,x) = 21
+
+Real root count at a spread of t values (exact rationals):
+  t=            -0.001: real=28/28   squarefree=True
+  t=              -0.1: real=28/28   squarefree=True
+  t=              -1.0: real=28/28   squarefree=True
+  t=           -1000.0: real=28/28   squarefree=True
+  t=        -1000000.0: real=28/28   squarefree=True
+  t=     -1000000000.0: real=28/28   squarefree=True
+  t=  -1000000000000.0: real=28/28   squarefree=True
+  t= -10000000000000.0: real=4/28   squarefree=True
+  t= -40000000000000.0: real=4/28   squarefree=True
+
+Locating the lower boundary of the totally-real window (28 real roots) via exact bisection between t=-1e12 and t=-1e13:
+  branch point at t ~ -2874440312387 .. -2874440580608   (paper's own estimate: ~ -2.8e12)
+
+Conclusion: the alpha=0 specialization IS totally real (28 real roots) for t in roughly (that branch point, 0), matching Theorem 4.2's own claimed interval closely -- confirming the underlying theorem even though the printed Corollary 4.3 coefficients did not reproduce it for us.
+
+real	1m2.782s
+user	0m0.062s
+sys	0m0.093s
+===== frobenius_chebotarev.py =====
+primes checked (3 <= p < 10000): 1228
+ramified: [3, 5, 7]
+UNMATCHED cycle types (should be empty!): {}
+unramified & matched: 1225
+
+cycle type                                       |C|/|G|   expected   observed
+7,7,7,7                                          0.14286     175.00        174
+1,3,6,6,6,6                                      0.12500     153.12        150
+1,9,9,9                                          0.11111     136.11        127
+1,2,5,5,5,10                                     0.10000     122.50        132
+1,3,12,12                                        0.08333     102.08        112
+3,5,5,15                                         0.06667      81.67         79
+1,1,2,8,8,8                                      0.06250      76.56         57
+4,8,8,8                                          0.06250      76.56         81
+2,3,3,4,4,12                                     0.04167      51.04         54
+1,1,4,4,6,12                                     0.04167      51.04         41
+1,1,2,2,2,4,4,4,4,4                              0.03646      44.66         45
+1,1,1,5,5,5,5,5                                  0.03333      40.83         47
+1,3,3,3,3,3,6,6                                  0.02778      34.03         47
+1,1,2,2,2,2,3,3,6,6                              0.02083      25.52         28
+1,3,3,3,3,3,3,3,3,3                              0.01080      13.23          8
+2,2,4,4,4,4,4,4                                  0.00781       9.57         12
+1,1,1,1,2,2,2,6,6,6                              0.00694       8.51          6
+1,1,1,1,2,2,2,3,3,3,3,6                          0.00694       8.51          8
+1,1,1,1,1,1,2,4,4,4,4,4                          0.00521       6.38          7
+1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2                  0.00282       3.46          5
+1,1,1,1,4,4,4,4,4,4                              0.00260       3.19          4
+1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2              0.00065       0.80          1
+1,1,1,1,1,1,1,1,1,1,3,3,3,3,3,3                  0.00046       0.57          0
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2      0.00004       0.05          0
+1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1    0.00000       0.00          0
+
+real	0m1.828s
+user	0m0.046s
+sys	0m0.015s
+

@@ -1,0 +1,15 @@
+   p p mod 7 #X(7)(F_p)  a1(J) a_p(49a1)  3 a_p  reading
+  29       1         24      6         2      6  p=1 mod 7: a1 = 3 a_p  -> E^3 split over F_p
+  37       2         38      0        -6    -18  order 3 mod 7: a1 = 0  -> split only over F_{p^3} (cubic twist)
+  43       1         80    -36       -12    -36  p=1 mod 7: a1 = 3 a_p  -> E^3 split over F_p
+  53       4         54      0       -10    -30  order 3 mod 7: a1 = 0  -> split only over F_{p^3} (cubic twist)
+  71       1         24     48        16     48  p=1 mod 7: a1 = 3 a_p  -> E^3 split over F_p
+  79       2         80      0         8     24  order 3 mod 7: a1 = 0  -> split only over F_{p^3} (cubic twist)
+ 113       1        108      6         2      6  p=1 mod 7: a1 = 3 a_p  -> E^3 split over F_p
+ 127       1         80     48        16     48  p=1 mod 7: a1 = 3 a_p  -> E^3 split over F_p
+
+IB's P_J over F_37 factors as (37*T**2 + 6*T + 1)*(1369*T**4 - 222*T**3 - T**2 - 6*T + 1) ; remainder of P_J / E(T): 0
+alpha^3 + alphabar^3 for E at 37 = 450  (matches the -450 T^3 coefficient: P_J = (1 - alpha^3 T^3)(1 - alphabar^3 T^3))
+
+PASS: J(X(7)) ~ E_49^3 geometrically; the F_37 'E x simple A, Hom(E,A)=0' is the cubic-twist shadow of E^3 over a field without zeta_7^+.
+Consequence for the cycle count: rank NS(E^3) = 3 + 3*rank End(E) = 3 + 6 = 9 -- IB's 'nine classes' -- of which six are the cross classes from Hom(E,E) that the E x A picture would set to zero.
