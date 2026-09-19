@@ -68,7 +68,7 @@ units:
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
     audience: [human, agent]
-    title: "SCAR-MERKABIT JOINT REGISTRY v1.30 -- rows SM-001..SM-066"
+    title: "SCAR-MERKABIT JOINT REGISTRY v1.31 -- rows SM-001..SM-066"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
