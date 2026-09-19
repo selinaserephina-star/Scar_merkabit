@@ -1147,7 +1147,30 @@ every half-turn rank-shift is ±1 — an observation on two boards, not a
 theorem [obs]. One orientation slip in the record is corrected in passing:
 R(λ) = w₀λ (§7.6, Lemma (a)), so the rank list 0,1,1,2,2,3,3,4 of SM-066 is
 read in the direction of R⁻¹; nothing in Theorem BB depends on the direction.
-Nothing about B₁₆ or beyond.
+Nothing about B₃₂ or beyond.
+
+**The criterion, and the 16-cube [P + C, SM-068, SM-069].** Why B₄ and not
+B₈ is one commutation. For w ∈ W and the correction c = w⁻¹R^m (m = h/2),
+c² = 1 iff R^m w R^m = w⁻¹ — for an involution w, iff w commutes with R^m
+[P]; and if w commutes with R^m then w, c and R^m pairwise commute, any two of
+"g commutes with w / with R^m / with c" imply the third, and the extras of I_m
+on Stab_W(Fix c) are exactly C_W(c) ∖ C_W(w) [P] (SM-063's "commute with c but
+not with τ" as a lemma). Computed on B₃..B₈: the shared grammar at the
+half-turn exceeds the centralizer exactly when the Weyl element nearest to
+the half-turn commutes with it — −τ does on B₄; on B₅..B₈ the nearest element,
+always of the shape −(e₂e₃)(e₄e₅)…, does not, its correction is not an
+involution, and C_W(c) = {±1}; on B₃ no element of W(B₃) agrees with R³ on a
+spanning set, so the criterion is a marker only and the B₃ excess is the
+overgroup's (§7.10.1). On B₁₆ (65,536 weights, W not enumerated), computed at
+the orbit level: the clock is free (2,048 orbits of 32), the orbit of λ shifts
+by exactly ±8, **sixteen** orbits carry the half-turn as a Weyl element, all
+by the same −(e₂e₃)…(e₁₄e₁₅) with e₁₆ fixed, and they are exactly the orbits
+with ranks in {7,8,9} (the band, on three boards: 1, 2, 16 carrying orbits
+[obs]); that element does not commute with R¹⁶, C_W(R¹⁶) = {±1}, the
+stabilizer of its 1,900-point agreement set is ⟨−1, w⟩ and C_W(c) = {±1}, so
+by Lemma B no half-turn survivor beyond ±1 preserves the agreement set;
+|I₁₆| itself is not decided. Open, sharpened: why does −(e₂e₃)(e₄e₅)… commute
+with the half-turn only at n = 4.
 
 #### 7.12.5 Open
 
@@ -1595,7 +1618,15 @@ In SM-067 (§7.12.4, B₈): the guesses that the half-turn anomaly recurs on the
 −1 exchanges the two carrying orbits (it fixes each), and that D₉ carries a
 survivor at a lag coprime to 16 (none); two scoring slips of the executor's
 own (the rank list read against the clock's direction; a containment bar that
-demanded extras which do not exist), both kept in the first-run log.
+demanded extras which do not exist), both kept in the first-run log. In
+SM-068 (the criterion): that the agreement set on B₈ has no Weyl symmetry
+beyond ±1 (it has ⟨−1, w⟩), that the criterion explains B₃ from inside W(B₃)
+(no spanning agreement set exists there), and that the nearest element is
+unique only up to the antipode (it is unique outright). In SM-069 (the
+16-cube): that two orbits carry the half-turn (sixteen do, −1 swapping four
+pairs of them) and that every orbit spans (61 do not); one instrumentation
+error in the centralizer search, fixed and cross-checked, in the first-run
+log.
 
 ## 14. What is not claimed
 
@@ -1730,10 +1761,11 @@ deleted permutation module, his construction re-run on the Stenberg side; the
 identity with §11.3's size-7 orbits verified (`verify_fano_bitangent_identity.py`).
 All thirty-six units cited above are JOINT as of 2026-09-14.
 
-Added 2026-09-19 (§7.12.4, the B₈ paragraph): SM-067 (Stone BC, 14 + 4 inverted) — the
-8-cube computation, prepared on the Stenberg side under a brief locked before
-code; the second author's re-execution is invited. It is the one unit cited in
-this paper that is not yet JOINT.
+Added 2026-09-19 (§7.12.4, the B₈ paragraphs): SM-067 (Stone BC, 14 + 4
+inverted), SM-068 (Stone BD, 7 + 3), SM-069 (Stone BE, 9 + 2) — the 8-cube,
+the criterion and the 16-cube, prepared on the Stenberg side under briefs
+locked before code; the second author's re-execution is invited. They are the
+three units cited in this paper that are not yet JOINT.
 
 ## Appendix B. The literature search behind "not found"
 
