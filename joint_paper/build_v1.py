@@ -51,7 +51,8 @@ approved by the second author 09-10); v0.3 (09-11, §§7.8–7.13); v0.4–0.5
 (09-13, §§11–12); v0.6 (09-13, §7.12.4); v0.7 (09-14, the second author's
 acceptances and references); v0.8 (09-14, §11.9); v1.0 (09-19, stale status
 lines removed, Appendix B added, display formulas typeset; nothing
-computational changed or re-run since v0.3).
+computational changed or re-run since v0.3; §7.12.4's B₈ paragraph added the
+same day, SM-067).
 Claims are graded: **[P]** classical with citation or proved
 here, **[C]** computed exactly by a named verifier under a brief locked
 before code, **[obs]** observed and not explained. No physical
@@ -410,6 +411,50 @@ searches);''',
 '''No claim of novelty for §§7.8–7.13 beyond "not found" (§7.4,
 Appendix B);''')
 
+# ---------------------------------------------------------------- §7.12.4: B₈ (SM-067, Stone BC)
+rep('''reducing to the fact that the shift is exactly ±n/2 (verified at B₄; B₈ next).''',
+'''reducing to the fact that the shift is exactly ±n/2 (verified at B₄ and at B₈,
+SM-067).
+
+**B₈: the anomaly does not recur [C, SM-067].** The clock acts freely on the
+2ⁿ weights of the B_n spinor board, with orbits of size h = 2n, only when
+2n | 2ⁿ, i.e. n a power of 2, so B₈ (256 weights, W of order 10,321,920,
+h = 16) is the next board on which the two-orbit mechanism could recur and the
+last one in reach. There the clock has sixteen free orbits of sixteen; the
+orbit of λ is the full-height orbit, its half-turn shift exactly ±4, so
+Lemma BB-B applies; exactly two orbits carry the half-turn as a Weyl element,
+both by the same element −(e₂e₃)(e₄e₅)(e₆e₇) (negating e₁..e₇, fixing e₈),
+the analogue of −τ, which is also the unique nearest Weyl element to R⁸
+(agreement 52 of 256); each is preserved by −1. Lemma B applies, but the
+correction c = w⁻¹R⁸ is no longer an involution (cycle type
+8⁸ 4¹² 3¹² 2²⁸ 1⁵²) and its Weyl centralizer is {±1}: I₈ = C₈ = {±1}, and
+I_k = C_k at every lag on B₈, on the D₉ half-spin (the same clock; W(D₉), of
+order 92,897,280, enumerated in full as affine maps x ↦ π(x) ⊕ v on the even
+code), and on B₆ and B₇. Among the spinor boards B₃..B₈ the shared grammar
+exceeds the centralizer only on B₄ and, by the overgroup W(D₄), on B₃; the
+conjecture that it does so exactly when n is a power of 2 is refuted at
+n = 8. The two carrying orbits are exactly those whose ranks stay within one
+of the middle rank ({3,4,5}; on B₄, O₂\'s {1,2,3}), equivalently those on which
+every half-turn rank-shift is ±1 — an observation on two boards, not a
+theorem [obs]. One orientation slip in the record is corrected in passing:
+R(λ) = w₀λ (§7.6, Lemma (a)), so the rank list 0,1,1,2,2,3,3,4 of SM-066 is
+read in the direction of R⁻¹; nothing in Theorem BB depends on the direction.
+Nothing about B₁₆ or beyond.''')
+
+# ---------------------------------------------------------------- §13: SM-067\'s inversions
+rep('''SM-062 once, SM-063 twice), each reported in its row. SM-057, SM-059 and
+SM-065 had every registered guess confirmed.''',
+'''SM-062 once, SM-063 twice), each reported in its row. SM-057, SM-059 and
+SM-065 had every registered guess confirmed.
+
+In SM-067 (§7.12.4, B₈): the guesses that the half-turn anomaly recurs on the
+8-cube (|I₈| > |C₈|, ratio 2) and that it marks the boards with a free clock
+(inverted: I_k = C_k at every lag on B₈, the D₉ half-spin, B₆ and B₇), that
+−1 exchanges the two carrying orbits (it fixes each), and that D₉ carries a
+survivor at a lag coprime to 16 (none); two scoring slips of the executor\'s
+own (the rank list read against the clock\'s direction; a containment bar that
+demanded extras which do not exist), both kept in the first-run log.''')
+
 # ---------------------------------------------------------------- Appendix A closed
 rep('''(Stone AZ, 11 + 2); SM-065 (Stone BA, 7/7, 2026-09-11) sent, awaiting his word.''',
 '''(Stone AZ, 11 + 2); SM-065 (Stone BA, 7/7, 2026-09-11) — JOINT on his word
@@ -423,7 +468,12 @@ from scratch on his side: W(B₄) = 𝔽₂⁴ ⋊ S₄ of order 384, the rank i
 Added in v0.8 (§11.9): the second author's model of χ₆ as the Fano plane's
 deleted permutation module, his construction re-run on the Stenberg side; the
 identity with §11.3's size-7 orbits verified (`verify_fano_bitangent_identity.py`).
-All thirty-six units cited in this paper are JOINT as of 2026-09-14.
+All thirty-six units cited above are JOINT as of 2026-09-14.
+
+Added 2026-09-19 (§7.12.4, the B₈ paragraph): SM-067 (Stone BC, 14 + 4 inverted) — the
+8-cube computation, prepared on the Stenberg side under a brief locked before
+code; the second author's re-execution is invited. It is the one unit cited in
+this paper that is not yet JOINT.
 ''')
 
 # ---------------------------------------------------------------- references added

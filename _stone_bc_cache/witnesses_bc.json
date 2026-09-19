@@ -1,0 +1,1448 @@
+{
+ "brief_sha": "fb2d56104653fca5693b4cfb1f9824d61411814e4a176dc64939c3237d34433e",
+ "B8_orbits": [
+  [
+   0,
+   255,
+   127,
+   191,
+   95,
+   175,
+   87,
+   171,
+   85,
+   170,
+   84,
+   168,
+   80,
+   160,
+   64,
+   128
+  ],
+  [
+   1,
+   254,
+   63,
+   223,
+   111,
+   183,
+   91,
+   173,
+   86,
+   169,
+   82,
+   164,
+   72,
+   144,
+   32,
+   192
+  ],
+  [
+   2,
+   252,
+   31,
+   239,
+   119,
+   187,
+   93,
+   174,
+   83,
+   165,
+   74,
+   148,
+   40,
+   208,
+   96,
+   129
+  ],
+  [
+   3,
+   253,
+   126,
+   159,
+   47,
+   215,
+   107,
+   181,
+   90,
+   172,
+   81,
+   162,
+   68,
+   136,
+   16,
+   224
+  ],
+  [
+   4,
+   248,
+   15,
+   247,
+   123,
+   189,
+   94,
+   167,
+   75,
+   149,
+   42,
+   212,
+   104,
+   176,
+   65,
+   130
+  ],
+  [
+   5,
+   250,
+   124,
+   143,
+   23,
+   235,
+   117,
+   186,
+   92,
+   163,
+   69,
+   138,
+   20,
+   232,
+   112,
+   131
+  ],
+  [
+   6,
+   249,
+   62,
+   207,
+   55,
+   219,
+   109,
+   182,
+   89,
+   166,
+   73,
+   146,
+   36,
+   200,
+   48,
+   193
+  ],
+  [
+   7,
+   251,
+   125,
+   190,
+   79,
+   151,
+   43,
+   213,
+   106,
+   180,
+   88,
+   161,
+   66,
+   132,
+   8,
+   240
+  ],
+  [
+   9,
+   242,
+   60,
+   199,
+   27,
+   237,
+   118,
+   185,
+   78,
+   147,
+   37,
+   202,
+   52,
+   216,
+   97,
+   134
+  ],
+  [
+   10,
+   244,
+   120,
+   135,
+   11,
+   245,
+   122,
+   188,
+   71,
+   139,
+   21,
+   234,
+   116,
+   184,
+   67,
+   133
+  ],
+  [
+   12,
+   241,
+   30,
+   231,
+   59,
+   221,
+   110,
+   179,
+   77,
+   150,
+   41,
+   210,
+   100,
+   152,
+   33,
+   194
+  ],
+  [
+   13,
+   246,
+   121,
+   158,
+   39,
+   203,
+   53,
+   218,
+   108,
+   177,
+   70,
+   137,
+   18,
+   228,
+   56,
+   195
+  ],
+  [
+   14,
+   243,
+   61,
+   222,
+   103,
+   155,
+   45,
+   214,
+   105,
+   178,
+   76,
+   145,
+   34,
+   196,
+   24,
+   225
+  ],
+  [
+   17,
+   226,
+   28,
+   227,
+   29,
+   238,
+   115,
+   157,
+   46,
+   211,
+   101,
+   154,
+   44,
+   209,
+   98,
+   140
+  ],
+  [
+   19,
+   229,
+   58,
+   220,
+   99,
+   141,
+   22,
+   233,
+   114,
+   156,
+   35,
+   197,
+   26,
+   236,
+   113,
+   142
+  ],
+  [
+   25,
+   230,
+   57,
+   206,
+   51,
+   205,
+   54,
+   217,
+   102,
+   153,
+   38,
+   201,
+   50,
+   204,
+   49,
+   198
+  ]
+ ],
+ "orbits": [
+  {
+   "orbit": 1,
+   "min": 0,
+   "has_lambda": true,
+   "has_w0lambda": true,
+   "ranks": [
+    0,
+    8
+   ],
+   "rank_multiset": [
+    0,
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    6,
+    7,
+    7,
+    8
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-4": 8,
+    "4": 8
+   },
+   "us": [],
+   "best_agreement": 8,
+   "n_best": 240,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 1
+  },
+  {
+   "orbit": 2,
+   "min": 1,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    1,
+    7
+   ],
+   "rank_multiset": [
+    1,
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7,
+    7
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-4": 4,
+    "-3": 4,
+    "3": 4,
+    "4": 4
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 6048,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 2
+  },
+  {
+   "orbit": 3,
+   "min": 2,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    1,
+    7
+   ],
+   "rank_multiset": [
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-4": 2,
+    "-3": 4,
+    "-2": 2,
+    "2": 2,
+    "3": 4,
+    "4": 2
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 34,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 4
+  },
+  {
+   "orbit": 4,
+   "min": 3,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    1,
+    7
+   ],
+   "rank_multiset": [
+    1,
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6,
+    7
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-4": 2,
+    "-3": 4,
+    "-2": 2,
+    "2": 2,
+    "3": 4,
+    "4": 2
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 34,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 3
+  },
+  {
+   "orbit": 5,
+   "min": 4,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    1,
+    7
+   ],
+   "rank_multiset": [
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    7
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-3": 6,
+    "-1": 2,
+    "1": 2,
+    "3": 6
+   },
+   "us": [],
+   "best_agreement": 6,
+   "n_best": 3,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 8
+  },
+  {
+   "orbit": 6,
+   "min": 5,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-2": 8,
+    "2": 8
+   },
+   "us": [],
+   "best_agreement": 8,
+   "n_best": 48,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 6
+  },
+  {
+   "orbit": 7,
+   "min": 6,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-3": 4,
+    "-2": 4,
+    "2": 4,
+    "3": 4
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 7200,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 7
+  },
+  {
+   "orbit": 8,
+   "min": 7,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    1,
+    7
+   ],
+   "rank_multiset": [
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    6,
+    6,
+    7
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-3": 6,
+    "-1": 2,
+    "1": 2,
+    "3": 6
+   },
+   "us": [],
+   "best_agreement": 6,
+   "n_best": 3,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 5
+  },
+  {
+   "orbit": 9,
+   "min": 9,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-2": 4,
+    "-1": 4,
+    "1": 4,
+    "2": 4
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 45,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 12
+  },
+  {
+   "orbit": 10,
+   "min": 10,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-2": 4,
+    "-1": 4,
+    "1": 4,
+    "2": 4
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 6912,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 10
+  },
+  {
+   "orbit": 11,
+   "min": 12,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-3": 2,
+    "-2": 4,
+    "-1": 2,
+    "1": 2,
+    "2": 4,
+    "3": 2
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 28,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 13
+  },
+  {
+   "orbit": 12,
+   "min": 13,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-2": 4,
+    "-1": 4,
+    "1": 4,
+    "2": 4
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 45,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 9
+  },
+  {
+   "orbit": 13,
+   "min": 14,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-3": 2,
+    "-2": 4,
+    "-1": 2,
+    "1": 2,
+    "2": 4,
+    "3": 2
+   },
+   "us": [],
+   "best_agreement": 4,
+   "n_best": 28,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": false,
+   "linear_part_determined": false,
+   "linear_part_is_perm": false,
+   "w0_image": 11
+  },
+  {
+   "orbit": 14,
+   "min": 17,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    2,
+    6
+   ],
+   "rank_multiset": [
+    2,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5,
+    6
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-2": 4,
+    "-1": 4,
+    "1": 4,
+    "2": 4
+   },
+   "us": [],
+   "best_agreement": 8,
+   "n_best": 8,
+   "carrying": false,
+   "weyl": [],
+   "weyl_names": [],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": false,
+   "w0_image": 14
+  },
+  {
+   "orbit": 15,
+   "min": 19,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    3,
+    5
+   ],
+   "rank_multiset": [
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-1": 8,
+    "1": 8
+   },
+   "us": [
+    127
+   ],
+   "best_agreement": 16,
+   "n_best": 1,
+   "carrying": true,
+   "weyl": [
+    [
+     746,
+     127
+    ]
+   ],
+   "weyl_names": [
+    "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)"
+   ],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": true,
+   "w0_image": 15
+  },
+  {
+   "orbit": 16,
+   "min": 25,
+   "has_lambda": false,
+   "has_w0lambda": false,
+   "ranks": [
+    3,
+    5
+   ],
+   "rank_multiset": [
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    5,
+    5,
+    5,
+    5
+   ],
+   "affine_dim": 8,
+   "linear_dim": 8,
+   "shifts": {
+    "-1": 8,
+    "1": 8
+   },
+   "us": [
+    127
+   ],
+   "best_agreement": 16,
+   "n_best": 1,
+   "carrying": true,
+   "weyl": [
+    [
+     746,
+     127
+    ]
+   ],
+   "weyl_names": [
+    "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)"
+   ],
+   "affine_consistent": true,
+   "linear_part_determined": true,
+   "linear_part_is_perm": true,
+   "w0_image": 16
+  }
+ ],
+ "carrying_w": "(e1 -> -e1) (e2 -> -e3 -> e2) (e4 -> -e5 -> e4) (e6 -> -e7 -> e6)",
+ "carrying_u": "11111110",
+ "Fix_c": 52,
+ "c_type": "8^8 4^12 3^12 2^28 1^52",
+ "C8": [
+  "1",
+  "(e1 -> -e1) (e2 -> -e2) (e3 -> -e3) (e4 -> -e4) (e5 -> -e5) (e6 -> -e6) (e7 -> -e7) (e8 -> -e8)"
+ ],
+ "I8_extras": [],
+ "sizes_B8_lag8": [
+  2,
+  2
+ ],
+ "time_C8_I8": [
+  1.973466396331787,
+  3.1179983615875244
+ ],
+ "sizes_B8": {
+  "1": [
+   1,
+   1
+  ],
+  "2": [
+   1,
+   1
+  ],
+  "3": [
+   1,
+   1
+  ],
+  "4": [
+   1,
+   1
+  ],
+  "5": [
+   1,
+   1
+  ],
+  "6": [
+   1,
+   1
+  ],
+  "7": [
+   1,
+   1
+  ],
+  "8": [
+   2,
+   2
+  ],
+  "9": [
+   1,
+   1
+  ],
+  "10": [
+   1,
+   1
+  ],
+  "11": [
+   1,
+   1
+  ],
+  "12": [
+   1,
+   1
+  ],
+  "13": [
+   1,
+   1
+  ],
+  "14": [
+   1,
+   1
+  ],
+  "15": [
+   1,
+   1
+  ]
+ },
+ "altitudes_D9": {
+  "1": [
+   214,
+   3
+  ],
+  "2": [
+   236,
+   1
+  ],
+  "3": [
+   238,
+   1
+  ],
+  "4": [
+   236,
+   1
+  ],
+  "5": [
+   222,
+   1
+  ],
+  "6": [
+   224,
+   1
+  ],
+  "7": [
+   205,
+   1
+  ],
+  "8": [
+   204,
+   1
+  ],
+  "9": [
+   205,
+   1
+  ],
+  "10": [
+   224,
+   1
+  ],
+  "11": [
+   222,
+   1
+  ],
+  "12": [
+   236,
+   1
+  ],
+  "13": [
+   238,
+   1
+  ],
+  "14": [
+   236,
+   1
+  ],
+  "15": [
+   214,
+   3
+  ]
+ },
+ "altitudes_B8": {
+  "1": [
+   214,
+   3
+  ],
+  "2": [
+   236,
+   1
+  ],
+  "3": [
+   238,
+   1
+  ],
+  "4": [
+   240,
+   1
+  ],
+  "5": [
+   238,
+   1
+  ],
+  "6": [
+   224,
+   1
+  ],
+  "7": [
+   229,
+   1
+  ],
+  "8": [
+   204,
+   1
+  ],
+  "9": [
+   229,
+   1
+  ],
+  "10": [
+   224,
+   1
+  ],
+  "11": [
+   238,
+   1
+  ],
+  "12": [
+   240,
+   1
+  ],
+  "13": [
+   238,
+   1
+  ],
+  "14": [
+   236,
+   1
+  ],
+  "15": [
+   214,
+   3
+  ]
+ },
+ "fit9_per_orbit": [
+  8,
+  4,
+  4,
+  4,
+  6,
+  8,
+  4,
+  6,
+  4,
+  4,
+  4,
+  4,
+  4,
+  8,
+  16,
+  16
+ ],
+ "sizes_D9": {
+  "1": [
+   1,
+   1
+  ],
+  "2": [
+   1,
+   1
+  ],
+  "3": [
+   1,
+   1
+  ],
+  "4": [
+   1,
+   1
+  ],
+  "5": [
+   1,
+   1
+  ],
+  "6": [
+   1,
+   1
+  ],
+  "7": [
+   1,
+   1
+  ],
+  "8": [
+   2,
+   2
+  ],
+  "9": [
+   1,
+   1
+  ],
+  "10": [
+   1,
+   1
+  ],
+  "11": [
+   1,
+   1
+  ],
+  "12": [
+   1,
+   1
+  ],
+  "13": [
+   1,
+   1
+  ],
+  "14": [
+   1,
+   1
+  ],
+  "15": [
+   1,
+   1
+  ]
+ },
+ "D9_extras": {},
+ "sizes_B6": {
+  "1": [
+   1,
+   1
+  ],
+  "2": [
+   1,
+   1
+  ],
+  "3": [
+   1,
+   1
+  ],
+  "4": [
+   1,
+   1
+  ],
+  "5": [
+   1,
+   1
+  ],
+  "6": [
+   2,
+   2
+  ],
+  "7": [
+   1,
+   1
+  ],
+  "8": [
+   1,
+   1
+  ],
+  "9": [
+   1,
+   1
+  ],
+  "10": [
+   1,
+   1
+  ],
+  "11": [
+   1,
+   1
+  ]
+ },
+ "sizes_B7": {
+  "1": [
+   1,
+   1
+  ],
+  "2": [
+   1,
+   1
+  ],
+  "3": [
+   1,
+   1
+  ],
+  "4": [
+   1,
+   1
+  ],
+  "5": [
+   1,
+   1
+  ],
+  "6": [
+   1,
+   1
+  ],
+  "7": [
+   2,
+   2
+  ],
+  "8": [
+   1,
+   1
+  ],
+  "9": [
+   1,
+   1
+  ],
+  "10": [
+   1,
+   1
+  ],
+  "11": [
+   1,
+   1
+  ],
+  "12": [
+   1,
+   1
+  ],
+  "13": [
+   1,
+   1
+  ]
+ },
+ "types_B67": [
+  "12^5 4^1",
+  "14^9 2^1"
+ ],
+ "BC8_candidates": {
+  "carrying <=> some u reproduces the shift (rank-shift is necessary, not sufficient -- an observation)": true,
+  "carrying <=> affine extension of R^8|O has a permutation linear part (exact on affinely spanning orbits)": true,
+  "carrying => all half-turn shifts have |shift| = 1 (as O2 on B4)": true,
+  "non-carrying => some |shift| >= 2": true,
+  "carrying orbits avoid ranks 0 and 8": true,
+  "every orbit affinely spans F2^8": true,
+  "|shift| = 1 on every point <=> carrying (both directions)": true,
+  "carrying <=> the orbit's ranks lie in the middle band {n/2-1, n/2, n/2+1} = {3,4,5} (both directions)": true,
+  "the same band statement on B4: O2 (carrying) has ranks {1,2,3} = {n/2-1, n/2, n/2+1}, O1 has 0..4": true
+ }
+}
