@@ -1,0 +1,57 @@
+==============================================================================
+STONE BF -- WHY FOUR: THE COMMUTATION THEOREM
+==============================================================================
+[PASS] BF0: the brief is sha-locked: sha256(BRIEF_STONE_BF_WHY_FOUR.md) equals BRIEF_STONE_BF_LOCK.sha256  -> 03a0ed630bae2213...
+[t=   3.1s] clocks built for n = 3..16
+
+------------------------------------------------------------------------------
+BF1 -- Lemma BF-A (rowmotion in excess coordinates) against the clock, every weight, n = 4..12
+------------------------------------------------------------------------------
+[PASS] BF1: Lemma BF-A reproduces the clock on all 2^n weights for n = 4..12 (8176 weights in all)  -> mismatches per n: {4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0, 10: 0, 11: 0, 12: 0}
+[t=   3.2s] BF1 done
+
+------------------------------------------------------------------------------
+BF2 -- Prop. BF-B: the orbit of lambda in closed form, n = 3..16
+------------------------------------------------------------------------------
+[PASS] BF2: Prop. BF-B: R^{2j} lambda and R^{2j+1} lambda as stated, the rank sequence 0,n,n-1,n-1,...,1,1, the antipode identity R^-k lambda = -R^{k+1} lambda, and (even n) the half-turn shift exactly +-n/2 on the orbit of lambda -- n = 3..16  -> {3: True, 4: True, 5: True, 6: True, 7: True, 8: True, 9: True, 10: True, 11: True, 12: True, 13: True, 14: True, 15: True, 16: True}
+[t=   3.2s] BF2 done
+
+------------------------------------------------------------------------------
+BF3 -- Prop. BF-C: w_n on the orbit of lambda (even n)
+------------------------------------------------------------------------------
+[PASS] BF3: Prop. BF-C: w_n preserves the orbit of lambda, acting as i -> 2-i on even and i -> -i on odd clock positions, and commutes with R^n on it -- even n = 4..16  -> {4: True, 6: True, 8: True, 10: True, 12: True, 14: True, 16: True}
+[t=   3.2s] BF3 done
+
+------------------------------------------------------------------------------
+BF4 -- Prop. BF-E: H(e_2) and H({3,n}) in closed form (even n >= 6)
+------------------------------------------------------------------------------
+[PASS] BF4: Prop. BF-E: H(e_2) = {1,2} u {5,7,...,n-1} and H({3,n}) = [n] \ {4,6,7,9,...,n-1} (n >= 8; {1,2,3,5,6} at n = 6), with every excess sequence of the two inductions as the proof states -- even n = 6..16  -> {6: True, 8: True, 10: True, 12: True, 14: True, 16: True}
+  n = 6: H(e_2) = (1, 2, 5); H({3,n}) = (1, 2, 3, 5, 6)
+  n = 8: H(e_2) = (1, 2, 5, 7); H({3,n}) = (1, 2, 3, 5, 8)
+  n = 16: H(e_2) = (1, 2, 5, 7, 9, 11, 13, 15); H({3,n}) = (1, 2, 3, 5, 8, 10, 12, 14, 16)
+[t=   3.3s] BF4 done
+
+------------------------------------------------------------------------------
+BF5 -- Theorem BF: w_n commutes with R^n iff n = 4 (even n = 4..16); e_2 the witness
+------------------------------------------------------------------------------
+[PASS] BF5: Theorem BF: w_4 = -tau commutes with R^4; for even n = 6..16 it does not, and e_2 witnesses it (2 in w(H e_2), 2 not in H(w e_2))  -> {4: 'commutes=True witness=False |{x: wHx != Hwx}|=0', 6: 'commutes=False witness=True |{x: wHx != Hwx}|=24', 8: 'commutes=False witness=True |{x: wHx != Hwx}|=148', 10: 'commutes=False witness=True |{x: wHx != Hwx}|=736', 12: 'commutes=False witness=True |{x: wHx != Hwx}|=3304', 14: 'commutes=False witness=True |{x: wHx != Hwx}|=14328', 16: 'commutes=False witness=True |{x: wHx != Hwx}|=60076'}
+  the non-commuting set is empty at n = 4 and grows: {4: 0, 6: 24, 8: 148, 10: 736, 12: 3304, 14: 14328, 16: 60076}
+[t=   3.3s] BF5 done
+
+------------------------------------------------------------------------------
+BF6 -- [obs, registered guess] R^3(e_p) = -e_{n-1-p}; the closed form of H(e_p)
+------------------------------------------------------------------------------
+[PASS] BF6: REGISTERED GUESS: R^3(e_p) = -e_{n-1-p} for 1 <= p <= n-2, and H(e_p) = {1,2} u {4,...,2m} u {2m'+1,...,n-1} (m = p-1, m' = p for p <= n/2; m = m' = n-p for p >= n/2), for 2 <= p <= n-2 -- even n = 4..16 (seen to 14 in the exploration; n = 16 the new instance)  -> {4: (True, True), 6: (True, True), 8: (True, True), 10: (True, True), 12: (True, True), 14: (True, True), 16: (True, True)}
+[t=   3.3s] BF6 done
+
+------------------------------------------------------------------------------
+BF7 -- [obs, registered guess] odd n: the SM-068 shape does not commute with R^n (n = 5, 7, 9, 11, 13, 15)
+------------------------------------------------------------------------------
+[PASS] BF7: REGISTERED GUESS: for odd n = 5..15 the element -(e2 e3)(e4 e5)...(e_{n-3} e_{n-2}) with e_{n-1}, e_n negated (SM-068's nearest element on B5, B7) does not commute with R^n  -> non-commuting points: {5: 18, 7: 90, 9: 418, 11: 1798, 13: 7554, 15: 31086}
+[t=   3.3s] BF7 done
+
+------------------------------------------------------------------------------
+VERDICT
+------------------------------------------------------------------------------
+RESULT: 8 checks passed, 0 failed
+[t=   3.3s] done

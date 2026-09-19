@@ -461,8 +461,29 @@ with ranks in {7,8,9} (the band, on three boards: 1, 2, 16 carrying orbits
 [obs]); that element does not commute with R¹⁶, C_W(R¹⁶) = {±1}, the
 stabilizer of its 1,900-point agreement set is ⟨−1, w⟩ and C_W(c) = {±1}, so
 by Lemma B no half-turn survivor beyond ±1 preserves the agreement set;
-|I₁₆| itself is not decided. Open, sharpened: why does −(e₂e₃)(e₄e₅)… commute
-with the half-turn only at n = 4.''')
+|I₁₆| itself is not decided.
+
+**Why four — the commutation theorem [P, SM-070].** For even n ≥ 4 the
+element w_n = −(e₂e₃)(e₄e₅)…(e_{n−2}e_{n−1}) commutes with the half-turn Rⁿ
+if and only if n = 4. The proof rests on a one-line recursion for rowmotion on
+the shifted staircase in "excess" coordinates d_k = c_k − k (c_k the plus
+positions), from which the orbit of λ is written in closed form for every n:
+R^{2j}λ = [n] ∖ {n, n−2, …, n−2j+2}, R^{2j+1}λ = [n] ∖ {n−1, …, n−2j+1}, ranks
+0, n, n−1, n−1, …, 1, 1 around the clock — so the half-turn shifts every rank
+on the full-height orbit by exactly ±n/2 for every even n, and the hypothesis
+of the rank-shift theorem above is now proved for all n rather than verified
+at 4, 8 and 16. On that orbit w_n acts by i ↦ 2 − i (even clock positions)
+and i ↦ −i (odd), both commuting with i ↦ i + n; on a carrying orbit
+commutation is automatic (wHx = x = Hwx). At n = 4 those two orbits are the
+whole board, which is why −τ commutes with R⁴. For even n ≥ 6 the point e₂
+(one minus sign, at position 2) is a witness: the closed forms
+Rⁿ(e₂) = {1, 2} ∪ {5, 7, …, n−1} and Rⁿ({3, n}) = [n] ∖ {4, 6, 7, 9, …, n−1}
+(both by induction along the orbit in excess coordinates) give 2 ∈ w_n Rⁿ e₂
+but 2 ∉ Rⁿ w_n e₂, since w_n e₂ = −{3, n}. Together with the criterion this
+is the reason for the 4-cube: the mechanism is present on every free clock;
+its consequence needs a commutation that only the smallest board allows. Still
+open: that w_n is the nearest Weyl element for n > 8, and C_W(Rⁿ) = {±1} in
+general.''')
 
 # ---------------------------------------------------------------- §13: SM-067\'s inversions
 rep('''SM-062 once, SM-063 twice), each reported in its row. SM-057, SM-059 and
@@ -502,10 +523,11 @@ identity with §11.3's size-7 orbits verified (`verify_fano_bitangent_identity.p
 All thirty-six units cited above are JOINT as of 2026-09-14.
 
 Added 2026-09-19 (§7.12.4, the B₈ paragraphs): SM-067 (Stone BC, 14 + 4
-inverted), SM-068 (Stone BD, 7 + 3), SM-069 (Stone BE, 9 + 2) — the 8-cube,
-the criterion and the 16-cube, prepared on the Stenberg side under briefs
-locked before code; the second author's re-execution is invited. They are the
-three units cited in this paper that are not yet JOINT.
+inverted), SM-068 (Stone BD, 7 + 3), SM-069 (Stone BE, 9 + 2), SM-070 (Stone
+BF, 8/8) — the 8-cube, the criterion, the 16-cube and the commutation theorem,
+prepared on the Stenberg side under briefs locked before code; the second
+author's re-execution is invited. They are the four units cited in this paper
+that are not yet JOINT.
 ''')
 
 # ---------------------------------------------------------------- references added
