@@ -532,9 +532,9 @@ All thirty-six units cited above are JOINT as of 2026-09-14.
 Added 2026-09-19 (§7.12.4, the B₈ paragraphs): SM-067 (Stone BC, 14 + 4
 inverted), SM-068 (Stone BD, 7 + 3), SM-069 (Stone BE, 9 + 2), SM-070 (Stone
 BF, 8/8) — the 8-cube, the criterion, the 16-cube and the commutation theorem,
-prepared on the Stenberg side under briefs locked before code; the second
-author's re-execution is invited. They are the four units cited in this paper
-that are not yet JOINT.
+prepared on the Stenberg side under briefs locked before code — JOINT on the
+second author's word of 2026-09-20, given on the audited mathematics edition.
+Every unit cited in this paper is JOINT.
 ''')
 
 # ---------------------------------------------------------------- references added

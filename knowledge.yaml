@@ -24,7 +24,7 @@ maintainer:
   - selina@exoreaction.com          # Merkabit side
   - "Ilya Balashov (ORCID 0009-0001-1954-8872, OSF 10.17605/OSF.IO/3TFNY)"  # Scar-Cat side
 
-updated: "2026-09-19"
+updated: "2026-09-20"
 
 # --- TRUST -------------------------------------------------------------------
 trust:
@@ -68,7 +68,7 @@ units:
   - id: joint-registry
     path: SCAR_MERKABIT_REGISTRY.md
     audience: [human, agent]
-    title: "SCAR-MERKABIT JOINT REGISTRY v1.44 -- rows SM-001..SM-070"
+    title: "SCAR-MERKABIT JOINT REGISTRY v1.45 -- rows SM-001..SM-070"
     intent: >
       The joint world's single source of truth: the sealed units, the open
       program DQ-1..5+, the sends/publication ledger, the changelog.
@@ -77,7 +77,7 @@ units:
     hints: { load_strategy: eager, priority: primary }
     content_hash:
       algorithm: sha256
-      value: "5c874bfafb9f7bfab7da157be95fc3b0e956e509465b384baeebd013e953eb48"
+      value: "cf880736dbbffe68d66c3992f3ca3d2b2b4fbab188b958abf013f6677f83f927"
 
   - id: stone-s-brief
     path: BRIEF_STONE_S_RIGIDITY.md
