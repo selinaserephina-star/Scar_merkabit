@@ -210,7 +210,7 @@ The computations, the verification discipline (briefs hashed before code, first 
 
 Every statement marked **(C)** is established by a named Python 3 script (numpy; sympy in one place) listed in Appendix B. The scripts, their hash-locked briefs, their logs including first runs, the witnesses they write, and the two editions of this paper are kept under version control at
 
-> `https://github.com/SelinaAliens/Scar_merkabit`
+> `https://github.com/selinaserephina-star/Scar_merkabit`
 
 The repository is public under the MIT licence. Each script re-checks its brief's SHA-256 as its first test and runs from a clean checkout with no external data.
 
