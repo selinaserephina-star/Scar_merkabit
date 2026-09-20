@@ -16,6 +16,7 @@ s = A.rstrip("\n") + "\n" + B
 banned = ["first author", "second author", "Stone ", "SM-0", "registered guess", "on his word",
           "Rule 3", "2026-09", "Selina", "Ilya", "envelope", "registry"]
 body = s.split("---", 2)[2].split("# Appendix B.")[0]   # skip the YAML front matter (author names)
+body = body.replace("SelinaAliens/Scar_merkabit", "")   # the public repository address is not correspondence
 for b in banned:
     hits = [m.start() for m in re.finditer(re.escape(b), body)]
     assert not hits, f"banned phrase {b!r} in body at {hits[:3]}: {body[hits[0]-60:hits[0]+60]!r}"
